@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="8.3">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="StartAndLogin"
+      id="dbde92d2-363a-4914-a437-c6db63759543"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="StartAndLogin"
+      id="dbde92d2-363a-4914-a437-c6db63759543"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

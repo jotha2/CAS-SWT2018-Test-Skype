@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="92ddb38f-b080-4c57-8f1c-212605d9f969"
+mode="Global"
+rxversion="8.3">
+	<name>
+		Recording1
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Recording1"
+	namespace="StartAndLogin">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+	</recorditems>
+	<repository
+	id="93565fd0-5b3c-47e8-9326-19c0cae9a50a"
+	name="StartAndLoginRepository"
+	relativepath="StartAndLoginRepository.rxrep"
+	rxversion="8.3">
+		<codegen
+		classname="StartAndLoginRepository"
+		namespace="StartAndLogin">
+		</codegen>
+		<rootfolder
+		id="bd52a213-c438-436c-a532-238b176d01b5"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="VBNet">
+		Recording1.UserCode.vb
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
