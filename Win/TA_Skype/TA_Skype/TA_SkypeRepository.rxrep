@@ -129,6 +129,79 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 			searchtimeout="30000ms">
 				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/?/?/text[@name='Willkommen, Test']
 			</item>
+			<item
+			addcaps="text,uiautomation"
+			capname="text"
+			id="80d86ab2-4ee4-4b37-8860-d86203953957"
+			name="Abmelden"
+			refimgid="162d4d4e-f2bf-4f86-94fb-dafee69e01ec"
+			refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/form/contextmenu/menuitem[@name='Abmelden']/text[@automationid='TextBlock']"
+			searchtimeout="30000ms">
+				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Abmelden']
+			</item>
+			<folder
+			addcaps="container,uiautomation"
+			capname="container"
+			id="62fa1213-ccc6-451a-9235-71d577eca75a"
+			isrooted="True"
+			name="None1"
+			refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				addcaps="text,uiautomation"
+				capname="text"
+				id="2e0f183b-bce3-49ad-8325-56c10da3c271"
+				name="WeitereOptionen"
+				refimgid="44905968-dceb-496c-9ba2-fcfd0ede2d4d"
+				refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/container[1]/container[2]/container[1]/button[@name='Weitere Optionen']/container/text[@name='']"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[1]/button[@name='Weitere Optionen']/?/?/text[@name='&#57609;']
+				</item>
+				<item
+				addcaps="text,uiautomation"
+				capname="text"
+				id="ac9d2d35-7e17-4644-9015-4c097cb85a00"
+				name="JaUndAnmeldedatenLoeschen"
+				refimgid="f7cae42c-bf30-4143-a35e-c026b10014ff"
+				refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/container[2]/container[3]/container/container/button[@name~'^Ja,\ und\ Anmeldedaten\ lösc']/container/text[@name~'^Ja,\ und\ Anmeldedaten\ lösc']"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[2]/container[3]/container[@name~'^M&#246;chtest\ du\ dich\ wirklich']/?/?/button[@name~'^Ja,\ und\ Anmeldedaten\ l&#246;sc']/?/?/text[@name~'^Ja,\ und\ Anmeldedaten\ l&#246;sc']
+				</item>
+				<item
+				addcaps="container,uiautomation"
+				capname="container"
+				id="607d5e72-93be-4cf5-8eba-e0112ff5adde"
+				name="None"
+				refimgid="6c1c601f-e513-40ac-82bd-561eec156ebf"
+				refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/container[2]/container[3]/container/container/button[@name~'^Ja,\ und\ Anmeldedaten\ lösc']/container[@orientation='None']"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[2]/container[3]/container[@name~'^M&#246;chtest\ du\ dich\ wirklich']/?/?/button[@name~'^Ja,\ und\ Anmeldedaten\ l&#246;sc']/container[@orientation='None']
+				</item>
+				<item
+				addcaps="text,uiautomation,uiautomationvalue"
+				capname="text"
+				id="55b48a56-3677-451a-8f19-02eef2337ce4"
+				name="Loginfeld_Emailadresse"
+				refimgid="2dc9fc43-a306-43f8-a008-240fec465e83"
+				refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[3]/container[@orientation='None']/container[@name~'^https://login\.live\.com/oauth20_authorize\.srf\?app_version=8\.36\.0\.52&amp;client_flight=ReservedFlight33,suhs&amp;client_id=00000000480BC46C&amp;cobrandid=40ae499b-8ca8-478d-b98c-07faa9e9f98e&amp;display=touch&amp;fl=phone2&amp;lw=0&amp;mkt=de-DE&amp;nopa=0&amp;psi=skype&amp;uaid=2a0c4ba8667a465d92fa7d']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/container[1]/text[@automationid='i0116']"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[3]/?/?/container[@name~'^https://login\.live\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/?/?/text[@automationid='i0116']
+				</item>
+				<item
+				addcaps="text,uiautomation,uiautomationvalue"
+				capname="text"
+				id="e64b8548-479e-4390-827a-e8f8f160e30c"
+				name="Loginfeld_Passworte"
+				refimgid="d9022539-0ba5-4e3b-88c8-19695ecbc2df"
+				refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[3]/container[@orientation='None']/container[@name~'^https://login\.live\.com/oauth20_authorize\.srf\?app_version=8\.36\.0\.52&amp;client_flight=ReservedFlight33,suhs&amp;client_id=00000000480BC46C&amp;cobrandid=40ae499b-8ca8-478d-b98c-07faa9e9f98e&amp;display=touch&amp;fl=phone2&amp;lw=0&amp;mkt=de-DE&amp;nopa=0&amp;psi=skype&amp;uaid=608913050d4e4b9e959093']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/container[1]/text[@automationid='i0118']"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[3]/?/?/container[@name~'^https://login\.live\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/?/?/text[@automationid='i0118']
+				</item>
+				<basepath>
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']
+				</basepath>
+			</folder>
 			<basepath>
 				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']
 			</basepath>

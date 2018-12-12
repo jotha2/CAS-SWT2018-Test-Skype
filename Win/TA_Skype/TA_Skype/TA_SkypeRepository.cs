@@ -162,9 +162,11 @@ namespace TA_Skype
         [RepositoryFolder("f0a1d291-9d6e-4e9c-ac26-607165225622")]
         public partial class SkypeAppFolder : RepoGenBaseFolder
         {
+            TA_SkypeRepositoryFolders.None1Folder _none1;
             RepoItemInfo _anmeldenodererstellenInfo;
             RepoItemInfo _namedcontainerautomationpeerInfo;
             RepoItemInfo _willkommentestInfo;
+            RepoItemInfo _abmeldenInfo;
 
             /// <summary>
             /// Creates a new Skype  folder.
@@ -172,9 +174,11 @@ namespace TA_Skype
             public SkypeAppFolder(RepoGenBaseFolder parentFolder) :
                     base("Skype", "/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']", parentFolder, 30000, null, true, "f0a1d291-9d6e-4e9c-ac26-607165225622", "")
             {
+                _none1 = new TA_SkypeRepositoryFolders.None1Folder(this);
                 _anmeldenodererstellenInfo = new RepoItemInfo(this, "AnmeldenOderErstellen", "element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']", 30000, null, "86484711-50c6-4248-8edf-2f461ec41c45");
                 _namedcontainerautomationpeerInfo = new RepoItemInfo(this, "NamedContainerAutomationPeer", "element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']", 30000, null, "fcc4684b-c6fb-4463-ba41-3dbf99c93ac2");
                 _willkommentestInfo = new RepoItemInfo(this, "WillkommenTest", "element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/?/?/text[@name='Willkommen, Test']", 30000, null, "e0c5c5a9-6bc3-4300-8e17-90883f25db01");
+                _abmeldenInfo = new RepoItemInfo(this, "Abmelden", "form[@name='Popup']//text[@name='Abmelden']", 30000, null, "80d86ab2-4ee4-4b37-8860-d86203953957");
             }
 
             /// <summary>
@@ -270,6 +274,209 @@ namespace TA_Skype
                 get
                 {
                     return _willkommentestInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Abmelden item.
+            /// </summary>
+            [RepositoryItem("80d86ab2-4ee4-4b37-8860-d86203953957")]
+            public virtual Ranorex.Text Abmelden
+            {
+                get
+                {
+                    return _abmeldenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Abmelden item info.
+            /// </summary>
+            [RepositoryItemInfo("80d86ab2-4ee4-4b37-8860-d86203953957")]
+            public virtual RepoItemInfo AbmeldenInfo
+            {
+                get
+                {
+                    return _abmeldenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The None1 folder.
+            /// </summary>
+            [RepositoryFolder("62fa1213-ccc6-451a-9235-71d577eca75a")]
+            public virtual TA_SkypeRepositoryFolders.None1Folder None1
+            {
+                get { return _none1; }
+            }
+        }
+
+        /// <summary>
+        /// The None1Folder folder.
+        /// </summary>
+        [RepositoryFolder("62fa1213-ccc6-451a-9235-71d577eca75a")]
+        public partial class None1Folder : RepoGenBaseFolder
+        {
+            RepoItemInfo _weitereoptionenInfo;
+            RepoItemInfo _jaundanmeldedatenloeschenInfo;
+            RepoItemInfo _noneInfo;
+            RepoItemInfo _loginfeld_emailadresseInfo;
+            RepoItemInfo _loginfeld_passworteInfo;
+
+            /// <summary>
+            /// Creates a new None1  folder.
+            /// </summary>
+            public None1Folder(RepoGenBaseFolder parentFolder) :
+                    base("None1", "element/container[@orientation='None']/container[@orientation='None']", parentFolder, 30000, null, false, "62fa1213-ccc6-451a-9235-71d577eca75a", "")
+            {
+                _weitereoptionenInfo = new RepoItemInfo(this, "WeitereOptionen", "container[1]/container[2]/container[1]/button[@name='Weitere Optionen']/?/?/text[@name='']", 30000, null, "2e0f183b-bce3-49ad-8325-56c10da3c271");
+                _jaundanmeldedatenloeschenInfo = new RepoItemInfo(this, "JaUndAnmeldedatenLoeschen", "container[2]/container[3]/container[@name~'^Möchtest\\ du\\ dich\\ wirklich']/?/?/button[@name~'^Ja,\\ und\\ Anmeldedaten\\ lösc']/?/?/text[@name~'^Ja,\\ und\\ Anmeldedaten\\ lösc']", 30000, null, "ac9d2d35-7e17-4644-9015-4c097cb85a00");
+                _noneInfo = new RepoItemInfo(this, "None", "container[2]/container[3]/container[@name~'^Möchtest\\ du\\ dich\\ wirklich']/?/?/button[@name~'^Ja,\\ und\\ Anmeldedaten\\ lösc']/container[@orientation='None']", 30000, null, "607d5e72-93be-4cf5-8eba-e0112ff5adde");
+                _loginfeld_emailadresseInfo = new RepoItemInfo(this, "Loginfeld_Emailadresse", "container[3]/?/?/container[@name~'^https://login\\.live\\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/?/?/text[@automationid='i0116']", 30000, null, "55b48a56-3677-451a-8f19-02eef2337ce4");
+                _loginfeld_passworteInfo = new RepoItemInfo(this, "Loginfeld_Passworte", "container[3]/?/?/container[@name~'^https://login\\.live\\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/?/?/text[@automationid='i0118']", 30000, null, "e64b8548-479e-4390-827a-e8f8f160e30c");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("62fa1213-ccc6-451a-9235-71d577eca75a")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("62fa1213-ccc6-451a-9235-71d577eca75a")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The WeitereOptionen item.
+            /// </summary>
+            [RepositoryItem("2e0f183b-bce3-49ad-8325-56c10da3c271")]
+            public virtual Ranorex.Text WeitereOptionen
+            {
+                get
+                {
+                    return _weitereoptionenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The WeitereOptionen item info.
+            /// </summary>
+            [RepositoryItemInfo("2e0f183b-bce3-49ad-8325-56c10da3c271")]
+            public virtual RepoItemInfo WeitereOptionenInfo
+            {
+                get
+                {
+                    return _weitereoptionenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The JaUndAnmeldedatenLoeschen item.
+            /// </summary>
+            [RepositoryItem("ac9d2d35-7e17-4644-9015-4c097cb85a00")]
+            public virtual Ranorex.Text JaUndAnmeldedatenLoeschen
+            {
+                get
+                {
+                    return _jaundanmeldedatenloeschenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The JaUndAnmeldedatenLoeschen item info.
+            /// </summary>
+            [RepositoryItemInfo("ac9d2d35-7e17-4644-9015-4c097cb85a00")]
+            public virtual RepoItemInfo JaUndAnmeldedatenLoeschenInfo
+            {
+                get
+                {
+                    return _jaundanmeldedatenloeschenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The None item.
+            /// </summary>
+            [RepositoryItem("607d5e72-93be-4cf5-8eba-e0112ff5adde")]
+            public virtual Ranorex.Container None
+            {
+                get
+                {
+                    return _noneInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The None item info.
+            /// </summary>
+            [RepositoryItemInfo("607d5e72-93be-4cf5-8eba-e0112ff5adde")]
+            public virtual RepoItemInfo NoneInfo
+            {
+                get
+                {
+                    return _noneInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Loginfeld_Emailadresse item.
+            /// </summary>
+            [RepositoryItem("55b48a56-3677-451a-8f19-02eef2337ce4")]
+            public virtual Ranorex.Text Loginfeld_Emailadresse
+            {
+                get
+                {
+                    return _loginfeld_emailadresseInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Loginfeld_Emailadresse item info.
+            /// </summary>
+            [RepositoryItemInfo("55b48a56-3677-451a-8f19-02eef2337ce4")]
+            public virtual RepoItemInfo Loginfeld_EmailadresseInfo
+            {
+                get
+                {
+                    return _loginfeld_emailadresseInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Loginfeld_Passworte item.
+            /// </summary>
+            [RepositoryItem("e64b8548-479e-4390-827a-e8f8f160e30c")]
+            public virtual Ranorex.Text Loginfeld_Passworte
+            {
+                get
+                {
+                    return _loginfeld_passworteInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Loginfeld_Passworte item info.
+            /// </summary>
+            [RepositoryItemInfo("e64b8548-479e-4390-827a-e8f8f160e30c")]
+            public virtual RepoItemInfo Loginfeld_PassworteInfo
+            {
+                get
+                {
+                    return _loginfeld_passworteInfo;
                 }
             }
         }

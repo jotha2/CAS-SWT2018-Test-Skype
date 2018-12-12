@@ -7,6 +7,12 @@ rxversion="8.3">
 			id="0590c36e-8aeb-462a-93e9-09f254c1be1a"
 			name="TestCase">
 			</testcase>
+			<testmodule
+			id="110ffc9c-3623-4fb5-934f-12733080a9db"
+			name="Login_TestAutomation"
+			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
+			type="Recording">
+			</testmodule>
 			<setup
 			id="205ff4b4-52b0-43ab-8b63-4c354f46e025"
 			name="setup">
@@ -18,8 +24,24 @@ rxversion="8.3">
 			</testcase>
 			<testmodule
 			id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
-			name="Login_TestAutomation_Erfolgreich"
+			name="Login_TestAutomation"
 			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
+			type="Recording">
+			</testmodule>
+			<smartfoldernode
+			id="3c4ac060-1663-472d-909a-da7a46d7e5b7"
+			name="T1.1_Verbindungstest">
+			</smartfoldernode>
+			<testmodule
+			id="4e78a65d-e405-4a06-b624-330e73d1b4ff"
+			name="Logoff_TestAutomation"
+			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="506c5b33-1bd1-426f-a7c8-083aeb179c0e"
+			name="Logoff_TestAutomation"
+			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
 			type="Recording">
 			</testmodule>
 			<testsuite
@@ -44,7 +66,17 @@ rxversion="8.3">
 			</testmodule>
 			<smartfoldernode
 			id="a11f4766-ba3d-415a-bdea-b20954792a92"
-			name="Login">
+			name="T2.1_Login">
+			</smartfoldernode>
+			<testmodule
+			id="bdc1106b-c61b-407b-a6bc-d36759d26172"
+			name="Verbindungstest_Abspielen"
+			ref="62ebbcec-66ef-468d-b4f4-c6a730429668"
+			type="Recording">
+			</testmodule>
+			<smartfoldernode
+			id="be8ae243-bbdb-48a2-966c-2c7318c7f600"
+			name="T2.2_Logoff">
 			</smartfoldernode>
 		</flatlistofchildren>
 		<childhierarchy>
@@ -67,10 +99,34 @@ rxversion="8.3">
 						</setup>
 						<smartfoldernode
 						id="a11f4766-ba3d-415a-bdea-b20954792a92"
-						name="Login">
+						name="T2.1_Login">
 							<testmodule
 							id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
-							name="Login_TestAutomation_Erfolgreich">
+							name="Login_TestAutomation">
+							</testmodule>
+						</smartfoldernode>
+						<smartfoldernode
+						id="be8ae243-bbdb-48a2-966c-2c7318c7f600"
+						name="T2.2_Logoff">
+							<testmodule
+							id="4e78a65d-e405-4a06-b624-330e73d1b4ff"
+							name="Logoff_TestAutomation">
+							</testmodule>
+						</smartfoldernode>
+						<smartfoldernode
+						id="3c4ac060-1663-472d-909a-da7a46d7e5b7"
+						name="T1.1_Verbindungstest">
+							<testmodule
+							id="110ffc9c-3623-4fb5-934f-12733080a9db"
+							name="Login_TestAutomation">
+							</testmodule>
+							<testmodule
+							id="bdc1106b-c61b-407b-a6bc-d36759d26172"
+							name="Verbindungstest_Abspielen">
+							</testmodule>
+							<testmodule
+							id="506c5b33-1bd1-426f-a7c8-083aeb179c0e"
+							name="Logoff_TestAutomation">
 							</testmodule>
 						</smartfoldernode>
 					</testcase>
@@ -92,6 +148,9 @@ rxversion="8.3">
 			</testcontainer>
 			<testcontainer
 			id="a11f4766-ba3d-415a-bdea-b20954792a92">
+			</testcontainer>
+			<testcontainer
+			id="be8ae243-bbdb-48a2-966c-2c7318c7f600">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
