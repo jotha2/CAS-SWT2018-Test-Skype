@@ -33,6 +33,8 @@ Namespace StartAndLogin
         Dim _explorer1 As StartAndLoginRepositoryFolders.Explorer1AppFolder
         Dim _skypefordesktop As StartAndLoginRepositoryFolders.SkypeForDesktopAppFolder
         Dim _explorer2 As StartAndLoginRepositoryFolders.Explorer2AppFolder
+        Dim _explorer3 As StartAndLoginRepositoryFolders.Explorer3AppFolder
+        Dim _skype As StartAndLoginRepositoryFolders.SkypeAppFolder
 
         ''' <summary>
         ''' Repository class constructor.
@@ -46,6 +48,8 @@ Namespace StartAndLogin
             _explorer1 = New StartAndLoginRepositoryFolders.Explorer1AppFolder(Me)
             _skypefordesktop = New StartAndLoginRepositoryFolders.SkypeForDesktopAppFolder(Me)
             _explorer2 = New StartAndLoginRepositoryFolders.Explorer2AppFolder(Me)
+            _explorer3 = New StartAndLoginRepositoryFolders.Explorer3AppFolder(Me)
+            _skype = New StartAndLoginRepositoryFolders.SkypeAppFolder(Me)
         End Sub
 
         ''' <summary>
@@ -138,6 +142,26 @@ Namespace StartAndLogin
         Public Overridable ReadOnly Property Explorer2 As StartAndLoginRepositoryFolders.Explorer2AppFolder
             Get
                 Return _explorer2
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' The Explorer3 folder.
+        ''' </summary>
+        <RepositoryFolder("a444130d-c090-4e6a-84f4-b0163cc7eeb9")> _
+        Public Overridable ReadOnly Property Explorer3 As StartAndLoginRepositoryFolders.Explorer3AppFolder
+            Get
+                Return _explorer3
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' The Skype folder.
+        ''' </summary>
+        <RepositoryFolder("6ffe25eb-d8ea-4e84-b530-8060b9368aed")> _
+        Public Overridable ReadOnly Property Skype As StartAndLoginRepositoryFolders.SkypeAppFolder
+            Get
+                Return _skype
             End Get
         End Property
     End Class
@@ -638,6 +662,188 @@ Namespace StartAndLogin
             Public Overridable ReadOnly Property OEffnenInfo As RepoItemInfo
                 Get
                     Return _oeffnenInfo
+                End Get
+            End Property
+        End Class
+
+        ''' <summary>
+        ''' The Explorer3AppFolder folder.
+        ''' </summary>
+        <RepositoryFolder("a444130d-c090-4e6a-84f4-b0163cc7eeb9")> _
+        Partial Public Class Explorer3AppFolder
+            Inherits RepoGenBaseFolder
+
+            Dim _skypeInfo As RepoItemInfo
+
+            ''' <summary>
+            ''' Creates a new Explorer3  folder.
+            ''' </summary>
+            Public Sub New(parentFolder As RepoGenBaseFolder)
+                MyBase.New("Explorer3", "/desktop[@processname='explorer']", parentFolder, 30000, Nothing, True, "a444130d-c090-4e6a-84f4-b0163cc7eeb9", ".\RepositoryImages\StartAndLoginRepositorybd52a213.rximgres")
+                _skypeInfo = New RepoItemInfo(Me, "Skype", "?/?/list[@controlid='1']/listitem[@text='Skype']", 30000, Nothing, "bc5fdbaa-af38-4b3a-a0b2-6317ac27e616")
+            End Sub
+
+            ''' <summary>
+            ''' The Self item.
+            ''' </summary>
+            <RepositoryItem("a444130d-c090-4e6a-84f4-b0163cc7eeb9")> _
+            Public Overridable ReadOnly Property Self As Ranorex.Desktop
+                Get
+                    Return _selfInfo.CreateAdapter(Of Ranorex.Desktop)(True)
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The Self item info.
+            ''' </summary>
+            <RepositoryItemInfo("a444130d-c090-4e6a-84f4-b0163cc7eeb9")> _
+            Public Overridable ReadOnly Property SelfInfo As RepoItemInfo
+                Get
+                    Return _selfInfo
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The Skype item.
+            ''' </summary>
+            <RepositoryItem("bc5fdbaa-af38-4b3a-a0b2-6317ac27e616")> _
+            Public Overridable ReadOnly Property Skype As Ranorex.ListItem
+                Get
+                    Return _skypeInfo.CreateAdapter(Of Ranorex.ListItem)(True)
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The Skype item info.
+            ''' </summary>
+            <RepositoryItemInfo("bc5fdbaa-af38-4b3a-a0b2-6317ac27e616")> _
+            Public Overridable ReadOnly Property SkypeInfo As RepoItemInfo
+                Get
+                    Return _skypeInfo
+                End Get
+            End Property
+        End Class
+
+        ''' <summary>
+        ''' The SkypeAppFolder folder.
+        ''' </summary>
+        <RepositoryFolder("6ffe25eb-d8ea-4e84-b530-8060b9368aed")> _
+        Partial Public Class SkypeAppFolder
+            Inherits RepoGenBaseFolder
+
+            Dim _anmeldenodererstellenInfo As RepoItemInfo
+            Dim _noneInfo As RepoItemInfo
+            Dim _namedcontainerautomationpeerInfo As RepoItemInfo
+            Dim _willkommentestInfo As RepoItemInfo
+
+            ''' <summary>
+            ''' Creates a new Skype  folder.
+            ''' </summary>
+            Public Sub New(parentFolder As RepoGenBaseFolder)
+                MyBase.New("Skype", "/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']", parentFolder, 30000, Nothing, True, "6ffe25eb-d8ea-4e84-b530-8060b9368aed", ".\RepositoryImages\StartAndLoginRepositorybd52a213.rximgres")
+                _anmeldenodererstellenInfo = New RepoItemInfo(Me, "AnmeldenOderErstellen", "element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']", 30000, Nothing, "05143e02-4a90-457b-80dc-ac824303d000")
+                _noneInfo = New RepoItemInfo(Me, "None", "element[@orientation='None']//button[@name='Anmelden oder erstellen']/?/?/container[@orientation='None']", 30000, Nothing, "4aa24a87-23c7-4f3d-b1c9-aaf38d8e016a")
+                _namedcontainerautomationpeerInfo = New RepoItemInfo(Me, "NamedContainerAutomationPeer", "element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']", 30000, Nothing, "d609f043-96b3-44d4-b16e-5dd6c295484f")
+                _willkommentestInfo = New RepoItemInfo(Me, "WillkommenTest", "element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/?/?/text[@name='Willkommen, Test']", 30000, Nothing, "3367db20-4dd9-4af4-ab66-e7d43bdf15f2")
+            End Sub
+
+            ''' <summary>
+            ''' The Self item.
+            ''' </summary>
+            <RepositoryItem("6ffe25eb-d8ea-4e84-b530-8060b9368aed")> _
+            Public Overridable ReadOnly Property Self As Ranorex.WindowsApp
+                Get
+                    Return _selfInfo.CreateAdapter(Of Ranorex.WindowsApp)(True)
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The Self item info.
+            ''' </summary>
+            <RepositoryItemInfo("6ffe25eb-d8ea-4e84-b530-8060b9368aed")> _
+            Public Overridable ReadOnly Property SelfInfo As RepoItemInfo
+                Get
+                    Return _selfInfo
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The AnmeldenOderErstellen item.
+            ''' </summary>
+            <RepositoryItem("05143e02-4a90-457b-80dc-ac824303d000")> _
+            Public Overridable ReadOnly Property AnmeldenOderErstellen As Ranorex.Text
+                Get
+                    Return _anmeldenodererstellenInfo.CreateAdapter(Of Ranorex.Text)(True)
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The AnmeldenOderErstellen item info.
+            ''' </summary>
+            <RepositoryItemInfo("05143e02-4a90-457b-80dc-ac824303d000")> _
+            Public Overridable ReadOnly Property AnmeldenOderErstellenInfo As RepoItemInfo
+                Get
+                    Return _anmeldenodererstellenInfo
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The None item.
+            ''' </summary>
+            <RepositoryItem("4aa24a87-23c7-4f3d-b1c9-aaf38d8e016a")> _
+            Public Overridable ReadOnly Property None As Ranorex.Container
+                Get
+                    Return _noneInfo.CreateAdapter(Of Ranorex.Container)(True)
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The None item info.
+            ''' </summary>
+            <RepositoryItemInfo("4aa24a87-23c7-4f3d-b1c9-aaf38d8e016a")> _
+            Public Overridable ReadOnly Property NoneInfo As RepoItemInfo
+                Get
+                    Return _noneInfo
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The NamedContainerAutomationPeer item.
+            ''' </summary>
+            <RepositoryItem("d609f043-96b3-44d4-b16e-5dd6c295484f")> _
+            Public Overridable ReadOnly Property NamedContainerAutomationPeer As Ranorex.Container
+                Get
+                    Return _namedcontainerautomationpeerInfo.CreateAdapter(Of Ranorex.Container)(True)
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The NamedContainerAutomationPeer item info.
+            ''' </summary>
+            <RepositoryItemInfo("d609f043-96b3-44d4-b16e-5dd6c295484f")> _
+            Public Overridable ReadOnly Property NamedContainerAutomationPeerInfo As RepoItemInfo
+                Get
+                    Return _namedcontainerautomationpeerInfo
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The WillkommenTest item.
+            ''' </summary>
+            <RepositoryItem("3367db20-4dd9-4af4-ab66-e7d43bdf15f2")> _
+            Public Overridable ReadOnly Property WillkommenTest As Ranorex.Text
+                Get
+                    Return _willkommentestInfo.CreateAdapter(Of Ranorex.Text)(True)
+                End Get
+            End Property
+
+            ''' <summary>
+            ''' The WillkommenTest item info.
+            ''' </summary>
+            <RepositoryItemInfo("3367db20-4dd9-4af4-ab66-e7d43bdf15f2")> _
+            Public Overridable ReadOnly Property WillkommenTestInfo As RepoItemInfo
+                Get
+                    Return _willkommentestInfo
                 End Get
             End Property
         End Class

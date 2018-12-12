@@ -70,36 +70,43 @@ Namespace StartAndLogin
         ''' that will in turn invoke this method.</remarks>
         <System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.3")> _
         Sub Run() Implements ITestModule.Run
-            Mouse.DefaultMoveTime = 300
-            Keyboard.DefaultKeyPressTime = 100
-            Delay.SpeedFactor = 1.00
+            Mouse.DefaultMoveTime = 0
+            Keyboard.DefaultKeyPressTime = 20
+            Delay.SpeedFactor = 0.00
 
             Init()
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Explorer.Explorer' at 38;15.", repo.Explorer.ExplorerInfo, new RecordItemIndex(0))
-            repo.Explorer.Explorer.Click("38;15")
-            Delay.Milliseconds(200)
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left DoubleClick item 'Explorer3.Skype' at 65;38.", repo.Explorer3.SkypeInfo, new RecordItemIndex(0))
+            repo.Explorer3.Skype.DoubleClick("65;38")
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Explorer1.SkypeForDesktop' at 57;37.", repo.Explorer1.SkypeForDesktopInfo, new RecordItemIndex(1))
-            repo.Explorer1.SkypeForDesktop.Click("57;37")
-            Delay.Milliseconds(200)
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.AnmeldenOderErstellen' at 121;19.", repo.Skype.AnmeldenOderErstellenInfo, new RecordItemIndex(1))
+            repo.Skype.AnmeldenOderErstellen.Click("121;19")
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'SkypeForDesktop.ToolBar1001' at 531;5.", repo.SkypeForDesktop.ToolBar1001Info, new RecordItemIndex(2))
-            repo.SkypeForDesktop.ToolBar1001.Click("531;5")
-            Delay.Milliseconds(200)
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.NamedContainerAutomationPeer' at 740;578.", repo.Skype.NamedContainerAutomationPeerInfo, new RecordItemIndex(2))
+            repo.Skype.NamedContainerAutomationPeer.Click("740;578")
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(3))
-            Keyboard.Press("{Return}")
-            Delay.Milliseconds(0)
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'test_automation_hsr@hotmail.com'.", new RecordItemIndex(3))
+            Keyboard.Press("test_automation_hsr@hotmail.com")
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left DoubleClick item 'SkypeForDesktop.UIImage' at 9;11.", repo.SkypeForDesktop.UIImageInfo, new RecordItemIndex(4))
-            repo.SkypeForDesktop.UIImage.DoubleClick("9;11")
-            Delay.Milliseconds(200)
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.NamedContainerAutomationPeer' at 1122;739.", repo.Skype.NamedContainerAutomationPeerInfo, new RecordItemIndex(4))
+            repo.Skype.NamedContainerAutomationPeer.Click("1122;739")
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Explorer.StartAndLoginRanorexStudio' at 28;19.", repo.Explorer.StartAndLoginRanorexStudioInfo, new RecordItemIndex(5))
-            repo.Explorer.StartAndLoginRanorexStudio.Click("28;19")
-            Delay.Milliseconds(200)
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.NamedContainerAutomationPeer' at 712;585.", repo.Skype.NamedContainerAutomationPeerInfo, new RecordItemIndex(5))
+            repo.Skype.NamedContainerAutomationPeer.Click("712;585")
             
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'CASSoftwareTesting18'.", new RecordItemIndex(6))
+            Keyboard.Press("CASSoftwareTesting18")
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.NamedContainerAutomationPeer' at 1170;746.", repo.Skype.NamedContainerAutomationPeerInfo, new RecordItemIndex(7))
+            repo.Skype.NamedContainerAutomationPeer.Click("1170;746")
+            
+            Try
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)"+Chr(13)+""+Chr(10)+"Validating AttributeContains (Text>'Willkommen') on item 'Skype.WillkommenTest'.", repo.Skype.WillkommenTestInfo, new RecordItemIndex(8))
+                Validate.AttributeContains(repo.Skype.WillkommenTestInfo, "Text", "Willkommen", Nothing, False)
+            Catch ex As Exception
+                Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " & ex.Message, New RecordItemIndex(8))
+            End Try
+
         End Sub
 
 #Region "Image Feature Data"

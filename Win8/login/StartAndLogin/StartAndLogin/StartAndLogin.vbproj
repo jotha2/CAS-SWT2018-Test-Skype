@@ -186,7 +186,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <id>472a9ba4-039c-4a20-9843-5741493008b3</id>
     </Content>
-    <Content Include="StartAndLogin.rxtst">
+    <Content Include="TA_Skype.rxtst">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <id>99e9e18f-285f-4131-9b2c-83ed8162e80e</id>
     </Content>

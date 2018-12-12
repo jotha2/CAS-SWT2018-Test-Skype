@@ -436,6 +436,106 @@ DSAAos+dOwfG6ACnATANyIY0dE4iLgy6OqpBgmCA7gp0gNUAqCAYbD8IcQVJLkA2AARg3iHJBaRg
 DAPIxVgFicf/GQCdrAkiuOdOjQAAAABJRU5ErkJggg==
 			</icon>
 		</appfolder>
+		<appfolder
+		addcaps="desktop,nativewindow"
+		capname="desktop"
+		id="a444130d-c090-4e6a-84f4-b0163cc7eeb9"
+		isrooted="True"
+		name="Explorer3"
+		refpath="/desktop[@processname='explorer']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="listitem,nativeitem,checkable"
+			capname="listitem"
+			id="bc5fdbaa-af38-4b3a-a0b2-6317ac27e616"
+			name="Skype"
+			refimgid="faa551a7-c349-4a1d-af04-31e1b323bc18"
+			refpath="/desktop[@processname='explorer']/container/list/listitem[@text='Skype']"
+			searchtimeout="30000ms">
+				/desktop[@processname='explorer']/?/?/list[@controlid='1']/listitem[@text='Skype']
+			</item>
+			<basepath>
+				/desktop[@processname='explorer']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
+dC5ORVQgdjMuMzE3g3eGAAACBElEQVQ4T4WSUWgScRzHHfQcLPZcL0EQFNtTQU9FRUHSXhaTRbBA
+ixBRiIhAMIz2JERgT0bI1ALZy6BCyY0RMtuZeqPi0hlUE0JcyZXV7S6/u9/vdnezC/rDB/7c///5
+8L//net/43TmG/6m2Wxie9kYC8I6Xjc7eLL0wbH50aqMWVHm+Y2ChiMz7xGPx+3IgduStZnmmUoX
+i1IX6GsOaA8FQqEQRFG0A/kNsNzXflhQ5Pi8yhy7Vbae/zPAstphRmd/WWJvE2jJMAL6GsnEg/17
+kcvl7EDtUwv9zS8MBWiY8pp+OlMst4C3F/dBvnsYubFhFItFcOCP8tGCAor+yiQTJL5aB8sZ0bhE
+kj0eD5LJ5Hbg95oFBUz5/p1plu+97FmnGLpShtvtRjgctk/Q2XgD7aeBGRjZPcSYIkHrFPB6vYN3
+UFit6os1hgJ03J3QJZrrFHB8hReiALW3wlBg+bMtmpBM/4gjsGfqGQq1ZWjfi8xOSf363ILl8aeM
+I0CU3y1ClRegdnWB0KXRm0sDHDpxFecnLiMWi6HRaNiBXWfnMHzusUM4euoSJqem4ff7EQwGEYlE
+kEqlUKlUIMuyEZhJreDghYcYO3MdJ8evwefzIRAI8DGj0Siy2SxKpRKq1SokSUK73YaiKIZsjnw+
+j0QigXQ6DZoLgsDvWK/XBzc6hsu1BRMfpP7Bj/TsAAAAAElFTkSuQmCC
+			</icon>
+		</appfolder>
+		<appfolder
+		addcaps="form,uiautomation,nativewindow,windowsapp"
+		capname="windowsapp"
+		id="6ffe25eb-d8ea-4e84-b530-8060b9368aed"
+		isrooted="True"
+		name="Skype"
+		refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']"
+		searchtimeout="30000ms"
+		usecache="True">
+			<item
+			addcaps="text,uiautomation"
+			capname="text"
+			id="05143e02-4a90-457b-80dc-ac824303d000"
+			name="AnmeldenOderErstellen"
+			refimgid="0079288c-6273-4fff-b6d5-15532d7cf297"
+			refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/button/container/container/text[@name='Anmelden oder erstellen']"
+			searchtimeout="30000ms">
+				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']
+			</item>
+			<item
+			addcaps="container,uiautomation"
+			capname="container"
+			id="4aa24a87-23c7-4f3d-b1c9-aaf38d8e016a"
+			name="None"
+			refimgid="55e63464-0ec5-43ce-b068-1a8d8ac40c25"
+			refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/button/container/container[@orientation='None']"
+			searchtimeout="30000ms">
+				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//button[@name='Anmelden oder erstellen']/?/?/container[@orientation='None']
+			</item>
+			<item
+			addcaps="container,uiautomation"
+			capname="container"
+			id="d609f043-96b3-44d4-b16e-5dd6c295484f"
+			name="NamedContainerAutomationPeer"
+			refimgid="259a3788-44b3-49d1-9f31-141773613e19"
+			refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/container[@classname='NamedContainerAutomationPeer']"
+			searchtimeout="30000ms">
+				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']
+			</item>
+			<item
+			addcaps="text,uiautomation"
+			capname="text"
+			id="3367db20-4dd9-4af4-ab66-e7d43bdf15f2"
+			name="WillkommenTest"
+			refimgid="cb000d64-bf71-4983-b91c-b597e30db4a3"
+			refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/container[1]/text[@name='Willkommen, Test']"
+			searchtimeout="30000ms">
+				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/?/?/text[@name='Willkommen, Test']
+			</item>
+			<basepath>
+				/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
+AAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURB
+VDhP5ZO/SgNBEIcHfACr9D6EhenzADaCCjY2qXwDESwEwcZSRERj4p9zd/MaWlr6CsLtnKSzWb9M
+DFzu1vgAFt/O8pvZub373UhK6U+kiKviqnVxcUecHknQO/HxRbyWtaJJR3y5QWKXxCGFm+KrE/Yf
+kH6F5Q0mC6IRT+GxrTfIisa/ajCGAA6eoZAQn8wyrwc4MSIOYYB9N8RruCJ/yQMuaFA9SKjurcj8
+pdDrLdoWVu6jnS+F4vzV7BXsZplcjaxo0MCpz+dqZEXDbjD9LplcjaxoWIOirTdgeYevBdGgwdSN
+lt5gNkhpRca6hiM96GPRGYe3Z1E/swfnzKdxGTapoexyYI+Gxz//xqt4Lb8BRAx94scRiScAAAAA
+SUVORK5CYII=
+			</icon>
+		</appfolder>
 		<basepath>
 		</basepath>
 	</rootfolder>
