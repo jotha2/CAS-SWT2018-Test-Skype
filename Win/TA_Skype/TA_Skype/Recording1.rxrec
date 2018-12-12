@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="1978b06f-e5ec-4365-850d-91f6d059fef1"
+mode="Global"
+rxversion="8.3">
+	<name>
+		Recording1
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Recording1"
+	namespace="TA_Skype">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+	</recorditems>
+	<repository
+	id="6d5166f4-b7ba-4c2c-9921-6198d2ced1bc"
+	name="TA_SkypeRepository"
+	relativepath="TA_SkypeRepository.rxrep"
+	rxversion="8.3">
+		<codegen
+		classname="TA_SkypeRepository"
+		namespace="TA_Skype">
+		</codegen>
+		<rootfolder
+		id="bd9057c9-e431-44a7-ba05-6153dff61cc0"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Recording1.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

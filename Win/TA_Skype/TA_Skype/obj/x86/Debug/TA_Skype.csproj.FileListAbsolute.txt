@@ -1,0 +1,9 @@
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\bin\Debug\TA_Skype.rxtmg
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\bin\Debug\TA_Skype.rxtst
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\bin\Debug\TA_Skype.exe.config
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\bin\Debug\TA_Skype.exe
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\bin\Debug\TA_Skype.pdb
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\bin\Debug\Ranorex.Core.Resolver.dll
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\obj\x86\Debug\TA_Skype.csprojResolveAssemblyReference.cache
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\obj\x86\Debug\TA_Skype.exe
+C:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\obj\x86\Debug\TA_Skype.pdb

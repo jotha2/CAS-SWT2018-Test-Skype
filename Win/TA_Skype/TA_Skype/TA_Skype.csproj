@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{BFE4FEE3-152B-495B-A8E8-24D79F8C2F3A}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TA_Skype</RootNamespace>
+    <AssemblyName>TA_Skype</AssemblyName>
+    <RanorexVersion>8.3</RanorexVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RanorexTargetsPath>$(MSBuildProgramFiles32)\MSBuild\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</projectdefaultrepository>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>4bd111b2-5d38-4b88-88fd-c689d47e933d</id>
+    </Compile>
+    <Compile Include="Login_TestAutomation_Erfolgreich.cs">
+      <BoundTo>4a5e20de-fc21-45b4-b6fd-59cd808a5917</BoundTo>
+      <DependentUpon>Login_TestAutomation_Erfolgreich.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>da409c03-8a75-466a-8c00-426798f47291</id>
+    </Compile>
+    <Compile Include="Login_TestAutomation_Erfolgreich.UserCode.cs">
+      <BoundTo>4a5e20de-fc21-45b4-b6fd-59cd808a5917</BoundTo>
+      <DependentUpon>Login_TestAutomation_Erfolgreich.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ba913cb0-d3d9-4cec-b2ca-ab74fd207143</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>5e7a9db7-c058-452b-ad71-8664e7c76f26</id>
+    </Compile>
+    <Compile Include="Recording1.cs">
+      <BoundTo>b0861147-2b1c-4001-bd49-9053c0b2fbb9</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>429e76f3-a228-4bf3-908d-3830ffd8cb39</id>
+    </Compile>
+    <Compile Include="Recording1.UserCode.cs">
+      <BoundTo>b0861147-2b1c-4001-bd49-9053c0b2fbb9</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>26dfbbe8-87d2-48bf-b109-357610f53c2f</id>
+    </Compile>
+    <Compile Include="StartSkype.cs">
+      <BoundTo>2ab79a2e-6db4-4d68-8dee-7d77094cf8a5</BoundTo>
+      <DependentUpon>StartSkype.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>9c1ff56e-e5d5-4c87-9d06-0281a9d634eb</id>
+    </Compile>
+    <Compile Include="StartSkype.UserCode.cs">
+      <BoundTo>2ab79a2e-6db4-4d68-8dee-7d77094cf8a5</BoundTo>
+      <DependentUpon>StartSkype.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>cc8df062-13e8-4da1-a7ac-3f72fb3b465b</id>
+    </Compile>
+    <Compile Include="TA_SkypeRepository.cs">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <DependentUpon>TA_SkypeRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>89c4f23c-d5cc-43e7-8f8f-8eaccb22eaf2</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <id>01501114-08bd-48ab-8e46-f0c90900bf1a</id>
+    </None>
+    <None Include="Login_TestAutomation_Erfolgreich.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>4a5e20de-fc21-45b4-b6fd-59cd808a5917</id>
+      <recordtableid>be8e16e1-b2fd-4987-9305-f6cab9d6a2e3</recordtableid>
+    </None>
+    <None Include="Recording1.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>b0861147-2b1c-4001-bd49-9053c0b2fbb9</id>
+      <recordtableid>1978b06f-e5ec-4365-850d-91f6d059fef1</recordtableid>
+    </None>
+    <None Include="StartSkype.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>2ab79a2e-6db4-4d68-8dee-7d77094cf8a5</id>
+      <recordtableid>3b73c879-7922-4f33-bbe6-9867a5ef85eb</recordtableid>
+    </None>
+    <None Include="TA_SkypeRepository.rximg">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <DependentUpon>TA_SkypeRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>472ad3b8-00b2-4630-bfdb-a9e266b8f0b3</id>
+    </None>
+    <None Include="TA_SkypeRepository.rxrep">
+      <id>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</id>
+      <repoid>6d5166f4-b7ba-4c2c-9921-6198d2ced1bc</repoid>
+      <reporootid>bd9057c9-e431-44a7-ba05-6153dff61cc0</reporootid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TA_Skype.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>8eb8c418-368d-4081-98bc-0a0c4ff33910</id>
+    </Content>
+    <Content Include="TA_Skype.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>f74d655b-efa3-472b-97b0-13962b1790b9</id>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>

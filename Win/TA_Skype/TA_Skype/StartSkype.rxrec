@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="3b73c879-7922-4f33-bbe6-9867a5ef85eb"
+mode="Global"
+rxversion="8.3">
+	<name>
+		StartSkype
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		True
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="StartSkype"
+	namespace="TA_Skype">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="100ms"
+		enabled="True"
+		loc="32;36"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="cd8164c7-f771-4c88-b2d6-6e0a12ff8232"
+		sx="402"
+		sy="1056"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="e9eb9817-e9f1-41a2-a062-16a50ef80794"
+			sourcename="Recorder">
+				<element
+				capabilities="accessible"
+				dontcache="False"
+				enabled="True"
+				flavor="msaa"
+				hasfocus="False"
+				index="2"
+				prefcap="button"
+				rect="370,1020,75,60"
+				role="button"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="pressed"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Skype
+					</attribute>
+					<attribute
+					name="accessibledefaultaction"
+					type="System.String">
+						Dr&#252;cken Sie
+					</attribute>
+					<attribute
+					name="accessiblename"
+					type="System.String">
+						Skype
+					</attribute>
+					<attribute
+					name="accessiblerole"
+					type="System.Windows.Forms.AccessibleRole, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						PushButton
+					</attribute>
+					<attribute
+					name="accessiblestate"
+					type="System.Windows.Forms.AccessibleStates, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						HotTracked
+					</attribute>
+				</element>
+				<path>
+					/menubar[@processname='explorer']/container[@controlid='40965']//toolbar[@accessiblename='Ausgef&#252;hrte Anwendungen']/button[@accessiblename='Skype']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="6c266621-2df8-41de-a41a-bcf1a5f27214">
+				/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
+YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCADnAZIDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDAooor
+UzCiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopaAEoopaACkpaKACiiigAooooAKKKKYBRR
+RQAUUUUAFFFLQISlpKKAFooooAKKKKACiiigApaSigAooooAKKWkoAKKKKACilooEMooopFBRRRQ
+AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAC0lLRQAUUUUAFFFFABRRRTAKKKKQBRRRT
+EFLRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRS0UAFFFFMAooooAKKKKAGUUUVIwooooAKKKKACiil
+oASiiigAooooAKKKKACiiigAooooAKWkpaACiikoAWiiigAooooAKKKKACiiimAUUUUCClpKWgAo
+oooAKKKSgBaKKKACiiigApaSigBaSiigAooooAKKKKACiiigBtFFFIYUUUUAFFFFABRRRQAUUUUA
+FFFFABRRRQAUUUUAFFFFABRRRQAtJRS0AFFFFABRRRQAUUlLQAUUlFAC0UlFAC0UlLQAUUUUAFFF
+FABRRRTELRRRQAUUUUAFFFFABRRRQAUUUUAFFFFADaKKKQwooooAKKKKACiiigAooooAKKKKACii
+igAooooAKKKKACiiigApaSigAooooAKKKKACiiigAooooAKKWigBKWikoAWikooAWikpaACiiigA
+paSlpiCiiigAooooAKKKKACiiigAooooAbRRRSKCiiigQUUUUAFFFFABRRRQAUUUUAFFFFABRRRQ
+AUUUUAFFFFABRRRQAUtJRQAUUUUAFFFFABS0lFAC0UUUAFJRRQAUUUtACUtJS0AFFFFABS0lFMQt
+FFFABRRRQAUUUUAFFFFABRRRQAylpKWpKCiiimIKKKKACiiigAooooAKKKKACiiigAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBaKKKACiiimAUtJRQIWikoo
+AWkoooAKKKKACiiigBtFFFSULRSUtABRRRTEFFFFABRRRQAUUUUDCiiigQUUUUAFFFFABRRRQAUU
+UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAC0lLSUAFLSUtABRRRQAUUUUxBRRRQAUUUUAF
+FFFAwooooAbRRRUjCiiigBaKSimAUUUUgCiiigApaSigAooopgLRRRQIKKKKACiiigAooqWG2knB
+MYBx1yaBkVFWfsE/ov50fYLj0X86VwK1FWfsE/ov50fYLj0X86LgVqKs/YJ/Rfzo+wT+i/nRcCtR
+Vk2M4BJAwPeq1ABRRRTEFFFFABRRRQAtJRRQAtJRRQAtFFFABRRRTEFFFFIYUUUUAFFFFMAooooA
+bRRRUjCiiigAooooAKKKKACiiigAooooAKKKKAClpKWmAUUlLQAlLRRQAVo6X/q5PqKzq0dK/wBX
+J9RSYIuM6qcHOfQDNG8HbjPzdKayurl0w2eqn+lMklGI5MHGTx+FSMnoqIl1VXZsjPI7AUkjtiRl
+OAowPrQBNRUbF02sWzkgEY4phkY7ipbIOAoXINAEsv8Aqn/3TWDW9JzC3+6awRTQmLRRRVCCiiig
+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
+			</helperscreenshot>
+		</mouseitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		searchpropertyid="606cea6f-3456-4f39-96f6-512d6547fd94">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="86484711-50c6-4248-8edf-2f461ec41c45"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="831,652,261,30"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Anmelden oder erstellen
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Anmelden oder erstellen
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Anmelden oder erstellen
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						13740
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="0de88c6e-520b-40c1-965c-487e4f4dfd65">
+				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
+KKK0MwooooA//9k=
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Anmelden oder erstellen
+			</matchvalue>
+		</validationitem>
+	</recorditems>
+	<repository
+	id="6d5166f4-b7ba-4c2c-9921-6198d2ced1bc"
+	name="TA_SkypeRepository"
+	relativepath="TA_SkypeRepository.rxrep"
+	rxversion="8.3">
+		<codegen
+		classname="TA_SkypeRepository"
+		namespace="TA_Skype">
+		</codegen>
+		<rootfolder
+		id="bd9057c9-e431-44a7-ba05-6153dff61cc0"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		StartSkype.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
