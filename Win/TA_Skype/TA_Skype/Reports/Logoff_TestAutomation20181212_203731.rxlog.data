@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report
+	progress="">
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="1a7fb9a3416a0948"
+		totalerrorcount="0"
+		totalwarningcount="2"
+		totalsuccesstestcasecount="0"
+		totalfailedtestcasecount="0"
+		totalblockedtestcasecount="0"
+		childsuccesscount="0"
+		childfailedcount="0"
+		childblockedcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		totalmaintenancemodecount="0"
+		user="Sarah"
+		rxversion="8.3.1.0"
+		host="PIKETTGSN-T470P"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		oslanguage="de-DE"
+		dtnlanguage="de-CH"
+		screenresolution="1920x1080"
+		timestamp="12.12.2018 20:37:32"
+		timestampiso="2018-12-12T19:37:32"
+		endtime="12.12.2018 20:37:57"
+		timeoutfactor="1"
+		module="Logoff_TestAutomation">
+		<detail>
+			Logoff_TestAutomation
+		</detail>
+		<item
+			timeRelativeToTestSuiteStartTime="00:06.268"
+			timeRelativeToTestModuleStartTime="00:06.270"
+			timeWallClock="20:37:39"
+			time="00:06.268"
+			level="Warn"
+			category="General">
+			<message>
+				Different display DPI scaling values are in use. Please make sure all connected displays have the same DPI scaling value.<br/>The following website provides more information on this technology limitation:<br/>https://www.ranorex.com/help/v8.3/interfaces-connectivity/technology-instrumentation/general-troubleshooting/#DifferentDPIScalingValues<br/>(This message is only shown once per report.)
+			</message>
+			<metainfo
+				limitationName="DifferentDpi"
+				showInProgressDialog="False"
+				loglvl="Warn">
+			</metainfo>
+		</item>
+		<varbindings>
+		</varbindings>
+		<item
+			timeRelativeToTestSuiteStartTime="00:06.380"
+			timeRelativeToTestModuleStartTime="00:06.382"
+			timeWallClock="20:37:39"
+			time="00:06.380"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'Skype.None1.WeitereOptionen' at 20;11.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[1]/button[@name='Weitere Optionen']/?/?/text[@name='']"
+				itempath="container[1]/container[2]/container[1]/button[@name='Weitere Optionen']/?/?/text[@name='']"
+				fullname="TA_SkypeRepository.Skype.None1.WeitereOptionen"
+				id="2e0f183bbce349ad832556c10da3c271"
+				timeout="90000"
+				codefile="c:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\Logoff_TestAutomation.cs"
+				codeline="82"
+				itemindex="0"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:10.666"
+			timeRelativeToTestModuleStartTime="00:10.668"
+			timeWallClock="20:37:43"
+			time="00:10.666"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Middle Click item 'Skype.Abmelden' at 42;13.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Abmelden']"
+				itempath="form[@name='Popup']//text[@name='Abmelden']"
+				fullname="TA_SkypeRepository.Skype.Abmelden"
+				id="80d86ab24ee44b378860d86203953957"
+				timeout="60000"
+				codefile="c:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\Logoff_TestAutomation.cs"
+				codeline="85"
+				itemindex="1"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:10.780"
+			timeRelativeToTestModuleStartTime="00:10.782"
+			timeWallClock="20:37:43"
+			time="00:10.780"
+			level="Warn"
+			category="Click">
+			<message>
+				The mouse action was performed outside the boundaries of the assigned UI element.<br/>(null)
+			</message>
+			<metainfo
+				codefile="c:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\Logoff_TestAutomation.cs"
+				codeline="86"
+				loglvl="Warn">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:10.950"
+			timeRelativeToTestModuleStartTime="00:10.952"
+			timeWallClock="20:37:43"
+			time="00:10.950"
+			level="Info"
+			category="Mouse">
+			<message>
+				Mouse Left Click item 'Skype.None1.JaUndAnmeldedatenLoeschen' at 120;17.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[2]/container[3]/container[@name~'^Möchtest\ du\ dich\ wirklich']/?/?/button[@name~'^Ja,\ und\ Anmeldedaten\ lösc']/?/?/text[@name~'^Ja,\ und\ Anmeldedaten\ lösc']"
+				itempath="container[2]/container[3]/container[@name~'^Möchtest\ du\ dich\ wirklich']/?/?/button[@name~'^Ja,\ und\ Anmeldedaten\ lösc']/?/?/text[@name~'^Ja,\ und\ Anmeldedaten\ lösc']"
+				fullname="TA_SkypeRepository.Skype.None1.JaUndAnmeldedatenLoeschen"
+				id="ac9d2d357e17464490154c097cb85a00"
+				timeout="90000"
+				codefile="c:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\Logoff_TestAutomation.cs"
+				codeline="88"
+				itemindex="2"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:22.304"
+			timeRelativeToTestModuleStartTime="00:22.306"
+			timeWallClock="20:37:55"
+			time="00:22.304"
+			level="Info"
+			category="Validation">
+			<message>
+				(Optional Action)<br/>Validating AttributeEqual (Text='Anmelden oder erstellen') on item 'Skype.AnmeldenOderErstellen'.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']"
+				itempath="element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']"
+				fullname="TA_SkypeRepository.Skype.AnmeldenOderErstellen"
+				id="8648471150c642488edf2f461ec41c45"
+				timeout="60000"
+				codefile="c:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\Logoff_TestAutomation.cs"
+				codeline="92"
+				itemindex="3"
+				loglvl="Info">
+			</metainfo>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:24.781"
+			timeRelativeToTestModuleStartTime="00:24.783"
+			timeWallClock="20:37:57"
+			time="00:24.781"
+			level="Success"
+			category="Validation">
+			<message>
+				Attribute 'Text' of element for item 'TA_SkypeRepository.Skype.AnmeldenOderErstellen' does match the specified value.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']"
+				itempath="element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']"
+				fullname="TA_SkypeRepository.Skype.AnmeldenOderErstellen"
+				id="8648471150c642488edf2f461ec41c45"
+				timeout="60000"
+				codefile="c:\Ranorex\CAS-SWT2018-Test-Skype\Win\TA_Skype\TA_Skype\Logoff_TestAutomation.cs"
+				codeline="93"
+				loglvl="Success"
+				itemindex="3">
+			</metainfo>
+		</item>
+	</activity>
+</report>
