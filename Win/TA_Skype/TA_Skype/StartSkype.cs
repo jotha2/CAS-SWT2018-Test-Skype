@@ -79,10 +79,13 @@ namespace TA_Skype
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Explorer.Skype' at 32;36.", repo.Explorer.SkypeInfo, new RecordItemIndex(0));
+            //Report.Log(ReportLevel.Info, "Application", "Run application 'C:\\Program Files\\Skype\\Phone\\Skype.exe' with arguments '' in normal mode.", new RecordItemIndex(0));
+            //Host.Local.RunApplication("C:\\Program Files\\Skype\\Phone\\Skype.exe", "", "C:\\Program Files\\Skype\\Phone", false);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Explorer.Skype' at 32;36.", repo.Explorer.SkypeInfo, new RecordItemIndex(1));
             repo.Explorer.Skype.Click("32;36");
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Anmelden oder erstellen') on item 'Skype.AnmeldenOderErstellen'.", repo.Skype.AnmeldenOderErstellenInfo, new RecordItemIndex(1));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Anmelden oder erstellen') on item 'Skype.AnmeldenOderErstellen'.", repo.Skype.AnmeldenOderErstellenInfo, new RecordItemIndex(2));
             Validate.AttributeEqual(repo.Skype.AnmeldenOderErstellenInfo, "Text", "Anmelden oder erstellen");
             
         }

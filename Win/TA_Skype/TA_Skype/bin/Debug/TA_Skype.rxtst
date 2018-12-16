@@ -9,7 +9,7 @@ rxversion="8.3">
 			</testcase>
 			<testmodule
 			id="110ffc9c-3623-4fb5-934f-12733080a9db"
-			name="Login_TestAutomation_Erfolgreich"
+			name="Login_TestAutomation"
 			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
 			type="Recording">
 			</testmodule>
@@ -24,7 +24,7 @@ rxversion="8.3">
 			</testcase>
 			<testmodule
 			id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
-			name="Login_TestAutomation_Erfolgreich"
+			name="Login_TestAutomation"
 			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
 			type="Recording">
 			</testmodule>
@@ -58,19 +58,13 @@ rxversion="8.3">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
-			<testmodule
-			id="9b7a58db-c027-489b-889f-f7d1259c5225"
-			name="StartSkype"
-			ref="3b73c879-7922-4f33-bbe6-9867a5ef85eb"
-			type="Recording">
-			</testmodule>
 			<smartfoldernode
 			id="a11f4766-ba3d-415a-bdea-b20954792a92"
 			name="T2.1_Login">
 			</smartfoldernode>
 			<testmodule
 			id="bdc1106b-c61b-407b-a6bc-d36759d26172"
-			name="Echo_Soundtest_Abspielen"
+			name="Verbindungstest_Abspielen"
 			ref="62ebbcec-66ef-468d-b4f4-c6a730429668"
 			type="Recording">
 			</testmodule>
@@ -92,17 +86,13 @@ rxversion="8.3">
 						<setup
 						id="205ff4b4-52b0-43ab-8b63-4c354f46e025"
 						name="setup">
-							<testmodule
-							id="9b7a58db-c027-489b-889f-f7d1259c5225"
-							name="StartSkype">
-							</testmodule>
 						</setup>
 						<smartfoldernode
 						id="a11f4766-ba3d-415a-bdea-b20954792a92"
 						name="T2.1_Login">
 							<testmodule
 							id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
-							name="Login_TestAutomation_Erfolgreich">
+							name="Login_TestAutomation">
 							</testmodule>
 						</smartfoldernode>
 						<smartfoldernode
@@ -118,11 +108,11 @@ rxversion="8.3">
 						name="T1.1_Verbindungstest">
 							<testmodule
 							id="110ffc9c-3623-4fb5-934f-12733080a9db"
-							name="Login_TestAutomation_Erfolgreich">
+							name="Login_TestAutomation">
 							</testmodule>
 							<testmodule
 							id="bdc1106b-c61b-407b-a6bc-d36759d26172"
-							name="Echo_Soundtest_Abspielen">
+							name="Verbindungstest_Abspielen">
 							</testmodule>
 							<testmodule
 							id="506c5b33-1bd1-426f-a7c8-083aeb179c0e"

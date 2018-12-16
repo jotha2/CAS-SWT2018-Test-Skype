@@ -58,12 +58,6 @@ rxversion="8.3">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
-			<testmodule
-			id="9b7a58db-c027-489b-889f-f7d1259c5225"
-			name="StartSkype"
-			ref="3b73c879-7922-4f33-bbe6-9867a5ef85eb"
-			type="Recording">
-			</testmodule>
 			<smartfoldernode
 			id="a11f4766-ba3d-415a-bdea-b20954792a92"
 			name="T2.1_Login">
@@ -92,10 +86,6 @@ rxversion="8.3">
 						<setup
 						id="205ff4b4-52b0-43ab-8b63-4c354f46e025"
 						name="setup">
-							<testmodule
-							id="9b7a58db-c027-489b-889f-f7d1259c5225"
-							name="StartSkype">
-							</testmodule>
 						</setup>
 						<smartfoldernode
 						id="a11f4766-ba3d-415a-bdea-b20954792a92"

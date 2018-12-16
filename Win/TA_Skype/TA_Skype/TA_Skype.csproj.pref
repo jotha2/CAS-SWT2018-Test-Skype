@@ -1,10 +1,14 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="TA_Skype.rxtst" />
+    <Element value="StartSkype.rxrec" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="StartSkype.rxrec" />
     <Element value="TA_Skype.rxtst" />
+    <Element value="Login_TestAutomation.rxrec" />
+    <Element value="AssemblyInfo.cs" />
+    <Element value="StartSkype.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Array name="recentusercodeselections" />

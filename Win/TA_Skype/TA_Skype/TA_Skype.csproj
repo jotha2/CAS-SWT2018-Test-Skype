@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <RanorexTargetsPath>$(MSBuildProgramFiles32)\MSBuild\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
     <projectdefaultrepository>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</projectdefaultrepository>
+    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -115,6 +116,9 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs">
       <id>4bd111b2-5d38-4b88-88fd-c689d47e933d</id>
+    </Compile>
+    <Compile Include="UserCodeModule1.cs">
+      <id>39fe38df-fe4f-4f8b-af1e-94de9a5a6afc</id>
     </Compile>
     <Compile Include="Verbindungstest_Abspielen.cs">
       <BoundTo>251ff14d-2573-4917-95dc-27ad0a2a322c</BoundTo>

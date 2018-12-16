@@ -29,6 +29,23 @@ rxversion="8.3">
 	<variables>
 	</variables>
 	<recorditems>
+		<runapprecorditem
+		enabled="False"
+		maximized="False"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<filename>
+				C:\Program Files\Skype\Phone\Skype.exe
+			</filename>
+			<workingdir>
+				C:\Program Files\Skype\Phone
+			</workingdir>
+			<args>
+			</args>
+		</runapprecorditem>
 		<mouseitem
 		action="Click"
 		button="Left"
