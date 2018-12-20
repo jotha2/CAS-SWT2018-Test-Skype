@@ -117,6 +117,18 @@
     <Compile Include="AssemblyInfo.cs">
       <id>4bd111b2-5d38-4b88-88fd-c689d47e933d</id>
     </Compile>
+    <Compile Include="StarteEinstellungenDialog.cs">
+      <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>
+      <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b37dcf4c-7e7c-4008-8dc6-3fe53633b14e</id>
+    </Compile>
+    <Compile Include="StarteEinstellungenDialog.UserCode.cs">
+      <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>
+      <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c6d757c5-d1e9-46d2-9c43-59b11b708d7d</id>
+    </Compile>
     <Compile Include="UserCodeModule1.cs">
       <id>39fe38df-fe4f-4f8b-af1e-94de9a5a6afc</id>
     </Compile>
@@ -181,6 +193,11 @@
   <ItemGroup>
     <None Include="app.config">
       <id>01501114-08bd-48ab-8e46-f0c90900bf1a</id>
+    </None>
+    <None Include="StarteEinstellungenDialog.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</id>
+      <recordtableid>4dd71afe-152b-4370-976e-3a13e41b710d</recordtableid>
     </None>
     <None Include="Verbindungstest_Abspielen.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
