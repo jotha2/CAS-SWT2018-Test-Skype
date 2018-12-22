@@ -1,18 +1,11 @@
 ﻿<Properties>
-  <Array name="active">
-    <Element value="TA_SkypeRepository.rxrep" />
-  </Array>
   <Array name="bookmarks" />
   <Array name="files">
-    <Element value="Login_TestAutomation.cs" />
-    <Element value="TA_SkypeRepository.rximg" />
     <Element value="TA_SkypeRepository.rxrep" />
-    <Element value="StartSkype.rxrec" />
+    <Element value="StarteEinstellungenDialog.rxrec" />
     <Element value="TA_Skype.rxtst" />
     <Element value="Login_TestAutomation.rxrec" />
-    <Element value="AssemblyInfo.cs" />
-    <Element value="StartSkype.cs" />
-    <Element value="Verbindungstest_Abspielen.rxrec" />
+    <Element value="Logoff_TestAutomation.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

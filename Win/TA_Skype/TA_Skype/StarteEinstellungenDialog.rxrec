@@ -33,52 +33,6 @@ rxversion="8.3">
 		action="Click"
 		button="Left"
 		enabled="True"
-		loc="UpperCenter"
-		movetime="0ms"
-		optional="False"
-		searchpropertyid="5273aa32-914f-44c7-8a88-08a725997631"
-		sx="420"
-		sy="109"
-		warnoutofbounds="False">
-			<comment>
-			</comment>
-			<bindings>
-			</bindings>
-			<info
-			id="5aa5a870-123d-4704-a329-534311aa601d"
-			sourcename="Recorder">
-				<path>
-					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]
-				</path>
-			</info>
-		</mouseitem>
-		<validationitem
-		action="Exists"
-		enabled="True"
-		optional="False"
-		searchpropertyid="2d9ac75d-5a67-4825-b18e-27b23f4e394b">
-			<comment>
-			</comment>
-			<bindings>
-			</bindings>
-			<info
-			id="5aa5a870-123d-4704-a329-534311aa601d"
-			sourcename="ItemRecorderEditor">
-				<path>
-					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				yourtext
-			</matchvalue>
-		</validationitem>
-		<mouseitem
-		action="Click"
-		button="Left"
-		enabled="True"
 		loc="Center"
 		movetime="0ms"
 		optional="False"
@@ -98,34 +52,85 @@ rxversion="8.3">
 				</path>
 			</info>
 		</mouseitem>
-		<keyitem
-		action="Press"
-		data="Return"
+		<validationitem
+		action="Exists"
 		enabled="True"
 		optional="False"
-		presstime="100ms"
-		scancode="0"
-		searchpropertyid="2ae4fc50-34c5-44ae-ba13-23214cbf9717"
-		setModifiers="True">
+		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
 			<comment>
 			</comment>
 			<bindings>
 			</bindings>
-		</keyitem>
-		<keyitem
-		action="Press"
-		data="Return"
+			<info
+			id="8805602d-800e-4666-b193-10151d283d95"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<explicitdelayitem
+		duration="1000ms"
 		enabled="True"
-		optional="False"
-		presstime="100ms"
-		scancode="0"
-		searchpropertyid="2ae4fc50-34c5-44ae-ba13-23214cbf9717"
-		setModifiers="True">
+		optional="False">
 			<comment>
 			</comment>
 			<bindings>
 			</bindings>
-		</keyitem>
+		</explicitdelayitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="75e4319d-71ea-4037-ba9e-837b56213ef2"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Einstellungen']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="d9fce4a2-9ee2-4b79-8686-77b317607375"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="75e4319d-71ea-4037-ba9e-837b56213ef2"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Einstellungen']
+				</path>
+			</info>
+		</mouseitem>
 		<validationitem
 		action="Exists"
 		enabled="True"

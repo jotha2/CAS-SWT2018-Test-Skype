@@ -104,8 +104,8 @@ namespace TA_Skype
             repo.Skype.NamedContainerAutomationPeer.Click("1098;725");
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeContains (Text>'Willkommen') on item 'Skype.WillkommenTest'.", repo.Skype.WillkommenTestInfo, new RecordItemIndex(8));
-                Validate.AttributeContains(repo.Skype.WillkommenTestInfo, "Text", "Willkommen", null, false);
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeContains (Text>'Willkommen') on item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommen'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommenInfo, new RecordItemIndex(8));
+                Validate.AttributeContains(repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommenInfo, "Text", "Willkommen", null, false);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(8)); }
             
         }

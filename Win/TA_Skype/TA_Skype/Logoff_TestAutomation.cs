@@ -79,22 +79,28 @@ namespace TA_Skype
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.None1.WeitereOptionen' at 20;11.", repo.Skype.None1.WeitereOptionenInfo, new RecordItemIndex(0));
-            repo.Skype.None1.WeitereOptionen.Click("20;11");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen' at 20;11.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionenInfo, new RecordItemIndex(0));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen.Click("20;11");
             
-            Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(1));
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu'.", repo.Skype.PopupMenu.SelfInfo, new RecordItemIndex(1));
+            Validate.Exists(repo.Skype.PopupMenu.SelfInfo);
+            
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(2));
             Delay.Duration(1000, false);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.Abmelden' at Center.", repo.Skype.AbmeldenInfo, new RecordItemIndex(2));
-            repo.Skype.Abmelden.Click();
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.ItemAbmelden'.", repo.Skype.PopupMenu.ItemAbmeldenInfo, new RecordItemIndex(3));
+            Validate.Exists(repo.Skype.PopupMenu.ItemAbmeldenInfo);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.None1.JaUndAnmeldedatenLoeschen' at 120;17.", repo.Skype.None1.JaUndAnmeldedatenLoeschenInfo, new RecordItemIndex(3));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.ItemAbmelden' at Center.", repo.Skype.PopupMenu.ItemAbmeldenInfo, new RecordItemIndex(4));
+            repo.Skype.PopupMenu.ItemAbmelden.Click();
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.None1.JaUndAnmeldedatenLoeschen' at 120;17.", repo.Skype.None1.JaUndAnmeldedatenLoeschenInfo, new RecordItemIndex(5));
             repo.Skype.None1.JaUndAnmeldedatenLoeschen.Click("120;17");
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='Anmelden oder erstellen') on item 'Skype.AnmeldenOderErstellen'.", repo.Skype.AnmeldenOderErstellenInfo, new RecordItemIndex(4));
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='Anmelden oder erstellen') on item 'Skype.AnmeldenOderErstellen'.", repo.Skype.AnmeldenOderErstellenInfo, new RecordItemIndex(6));
                 Validate.AttributeEqual(repo.Skype.AnmeldenOderErstellenInfo, "Text", "Anmelden oder erstellen", null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(4)); }
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(6)); }
             
         }
 

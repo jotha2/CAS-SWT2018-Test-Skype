@@ -79,25 +79,24 @@ namespace TA_Skype
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain' at UpperCenter.", repo.Skype.frmSkypeMain.SelfInfo, new RecordItemIndex(0));
-            repo.Skype.frmSkypeMain.Self.Click(Location.UpperCenter, new Duration(0));
-            Delay.Milliseconds(0);
-            
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain'.", repo.Skype.frmSkypeMain.SelfInfo, new RecordItemIndex(1));
-            Validate.Exists(repo.Skype.frmSkypeMain.SelfInfo);
-            Delay.Milliseconds(0);
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionenInfo, new RecordItemIndex(2));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionenInfo, new RecordItemIndex(0));
             repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen.Click(new Duration(0));
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press.", new RecordItemIndex(3));
-            Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu'.", repo.Skype.PopupMenu.SelfInfo, new RecordItemIndex(1));
+            Validate.Exists(repo.Skype.PopupMenu.SelfInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press.", new RecordItemIndex(4));
-            Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(2));
+            Delay.Duration(1000, false);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.ItemEinstellungen'.", repo.Skype.PopupMenu.ItemEinstellungenInfo, new RecordItemIndex(3));
+            Validate.Exists(repo.Skype.PopupMenu.ItemEinstellungenInfo);
             Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.ItemEinstellungen' at Center.", repo.Skype.PopupMenu.ItemEinstellungenInfo, new RecordItemIndex(4));
+            repo.Skype.PopupMenu.ItemEinstellungen.Click();
+            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmEinstellungen'.", repo.Skype.frmSkypeMain.frmEinstellungen.SelfInfo, new RecordItemIndex(5));
             Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.SelfInfo);

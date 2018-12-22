@@ -46,123 +46,36 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="2e0f183b-bce3-49ad-8325-56c10da3c271"
+			id="0454c710-8615-4339-9ee4-a76964f09952"
 			sourcename="Recorder">
-				<element
-				capabilities="uiautomation"
-				dontcache="False"
-				enabled="True"
-				flavor="uia"
-				hasfocus="False"
-				index="0"
-				prefcap="text"
-				rect="429,72,30,30"
-				role="text"
-				snapElem=""
-				valid="True"
-				visible="True">
-					<attribute
-					name="caption"
-					type="System.String">
-						&#57609;
-					</attribute>
-					<attribute
-					name="text"
-					type="System.String">
-						&#57609;
-					</attribute>
-					<attribute
-					name="classname"
-					type="System.String">
-						TextBlock
-					</attribute>
-					<attribute
-					name="controltype"
-					type="System.String">
-						Text
-					</attribute>
-					<attribute
-					name="frameworkid"
-					type="System.String">
-						XAML
-					</attribute>
-					<attribute
-					name="iscontentelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iscontrolelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iskeyboardfocusable"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="ispassword"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="isrequiredforform"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="localizedcontroltype"
-					type="System.String">
-						text
-					</attribute>
-					<attribute
-					name="name"
-					type="System.String">
-						&#57609;
-					</attribute>
-					<attribute
-					name="orientation"
-					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-						None
-					</attribute>
-					<attribute
-					name="processid"
-					type="System.Int32">
-						18200
-					</attribute>
-				</element>
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[1]/button[@name='Weitere Optionen']/?/?/text[@name='&#57609;']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[1]/button[@name='Weitere Optionen']
 				</path>
 			</info>
-			<helperscreenshot
-			guid="0943608e-82fa-4646-960a-3016c562f4b4">
-				/9j/4AAQSkZJRgABAQEAkACQAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
-YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCABBAEEDASIA
-AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
-AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
-ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
-p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
-AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
-BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
-U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
-uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDoaKKZ
-NKkERkkbag6nGaYJNuyH0VT/ALUsv+e3/jrf4Uf2pZf89v8Ax1v8KnmXc09jU/lf3Fyiqf8Aall/
-z2/8db/Cj+1LL/nt/wCOt/hRzLuHsan8r+4uUVFBcRXKF4W3KDjOCOalqjNpp2YUUUUCCqer/wDI
-Nl/D+Yq5VPV/+QbL+H8xUy2ZrR/iR9ULaWtu1pCzQREmNSSUHPFS/ZLb/n3i/wC+BUMV1Fb2dsJW
-wWjXHGewqxLMkURkc4X1oSVgnOXM9Rv2S2/594v++BR9ktv+feL/AL4FQz32yGKWCJp/MfbtU4OA
-CTgdzgdKltbyC7UmB9wHtinZE88u5U0L/jyf/rof5CtKs3Qv+PJ/+uh/kK0qmHwo0xH8WQUUUVZg
-FU9X/wCQbL+H8xVyqer/APINl/D+YqZbM1o/xI+qCK1iuLO2Mq5KxrjnHYVYlhSWIxuMr6U2z/48
-oP8Armv8qmprYmfxMqPEkMtkkYwomP8A6Lem3Fs1pcPeWke8P/r4VHLf7S/7Xt3+tS3H/HzZ/wDX
-Y/8Aot6neeJEldnGIhl8c7eM8/hQSZugMGsWKnIMh/kK06ykuIvtaz6cZJI5nAmj8pwuT/GDjAPr
-6itWhKysXUk5ycmFFFFMzCoriBbmBonJCtjOOvXNS0UDTad0Zv8AYlt/fl/Mf4Uf2Jbf35fzH+Fa
-VFRyR7G31ir/ADGZ/ZCxOktrO0cqE4Z1DDkEdOPWkjtRpVyssXnTRTZWbI3tnkhuBz3B+talFUkl
-sZynKTvJlHSIGt7eRdjJG0haMN1CkDGefw/Cr1FFMlu+4UUUUCCiiigAooooAKKKKACiiigAoooo
-A//Z
-			</helperscreenshot>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="8805602d-800e-4666-b193-10151d283d95"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<explicitdelayitem
 		duration="1000ms"
 		enabled="True"
@@ -172,6 +85,29 @@ A//Z
 			<bindings>
 			</bindings>
 		</explicitdelayitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="af79c8cc-bc67-4a90-b82f-fafcdcdad07a"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Abmelden']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -189,10 +125,10 @@ A//Z
 			<bindings>
 			</bindings>
 			<info
-			id="80d86ab2-4ee4-4b37-8860-d86203953957"
+			id="af79c8cc-bc67-4a90-b82f-fafcdcdad07a"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Abmelden']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Abmelden']
 				</path>
 			</info>
 		</mouseitem>
