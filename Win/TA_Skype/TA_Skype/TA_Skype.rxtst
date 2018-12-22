@@ -23,6 +23,20 @@ rxversion="8.3">
 			reportlevel="Info;20">
 			</testcase>
 			<testmodule
+			id="31a5ef2e-eba0-456f-b9bf-9cdcdcf806fc"
+			name="KontaktHinzufuegen"
+			ref="fbcedd80-444f-4a2c-aa01-ddc4e9f3f02e"
+			type="Recording">
+				<databinding>
+					<var
+					dataname="NameUndVorname"
+					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					variableid="8a9aef5b-8d59-41ca-a2c0-9978215f7c68"
+					variablename="VornameUndName">
+					</var>
+				</databinding>
+			</testmodule>
+			<testmodule
 			id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
 			name="Login_TestAutomation"
 			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
@@ -31,6 +45,11 @@ rxversion="8.3">
 			<smartfoldernode
 			id="3c4ac060-1663-472d-909a-da7a46d7e5b7"
 			name="T1.1_Verbindungstest">
+			</smartfoldernode>
+			<smartfoldernode
+			datasource="NewConnector"
+			id="4a754bbb-8b7a-422e-aaf5-51d7428d29ac"
+			name="T1.3.1_Kontakt_hinzufuegen">
 			</smartfoldernode>
 			<testmodule
 			id="4e78a65d-e405-4a06-b624-330e73d1b4ff"
@@ -119,12 +138,55 @@ rxversion="8.3">
 							name="Logoff_TestAutomation">
 							</testmodule>
 						</smartfoldernode>
+						<smartfoldernode
+						id="4a754bbb-8b7a-422e-aaf5-51d7428d29ac"
+						name="T1.3.1_Kontakt_hinzufuegen">
+							<testmodule
+							id="31a5ef2e-eba0-456f-b9bf-9cdcdcf806fc"
+							name="KontaktHinzufuegen">
+							</testmodule>
+						</smartfoldernode>
 					</testcase>
 				</testcase>
 			</testsuite>
 		</childhierarchy>
 	</testsuiteentryhierarchy>
 	<datasources>
+		<DataSource
+		id="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+		lastknownrowcount="3"
+		name="NewConnector"
+		type="Ranorex.Core.Data.SimpleDataConnector">
+			<lastknowncolumns>
+				<column>
+					NameUndVorname
+				</column>
+			</lastknowncolumns>
+			<maskedcolumns>
+			</maskedcolumns>
+			<table>
+				<tr>
+					<th>
+						NameUndVorname
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Hans Meier
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Kurt M&#252;ller
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Fritz Schuster
+					</td>
+				</tr>
+			</table>
+		</DataSource>
 	</datasources>
 	<testconfigurations
 	default="TestRun">
@@ -137,10 +199,7 @@ rxversion="8.3">
 			id="26caff6d-67ac-4fb4-bb74-401c1ab18d6b">
 			</testcontainer>
 			<testcontainer
-			id="a11f4766-ba3d-415a-bdea-b20954792a92">
-			</testcontainer>
-			<testcontainer
-			id="be8ae243-bbdb-48a2-966c-2c7318c7f600">
+			id="4a754bbb-8b7a-422e-aaf5-51d7428d29ac">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

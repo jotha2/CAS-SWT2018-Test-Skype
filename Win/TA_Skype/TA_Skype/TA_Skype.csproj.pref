@@ -1,6 +1,7 @@
 ﻿<Properties>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="KontaktHinzufuegen.rxrec" />
     <Element value="TA_SkypeRepository.rxrep" />
     <Element value="StarteEinstellungenDialog.rxrec" />
     <Element value="TA_Skype.rxtst" />

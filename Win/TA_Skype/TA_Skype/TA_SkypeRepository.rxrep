@@ -163,7 +163,7 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 						name="btnChats"
 						refimgid="f4e2513d-af85-45e0-999d-f786afe39586"
 						searchtimeout="10000ms">
-							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[@name~'^Ausgew&#228;hlt\.\ Chats,\ Keine\ ']
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[1]
 						</item>
 						<item
 						addcaps="button,uiautomation,uiautomationinvoke"
@@ -172,7 +172,7 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 						name="btnAnrufe"
 						refimgid="f4e78ba7-5a3d-41a5-89ec-0e8787ac9e5b"
 						searchtimeout="10000ms">
-							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[@name~'^Anrufe,\ Registerkarte\ 2\ v']
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[2]
 						</item>
 						<item
 						addcaps="button,uiautomation,uiautomationinvoke"
@@ -181,7 +181,7 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 						name="btnKontakte"
 						refimgid="320e50cd-007f-44d1-987b-e55c6afc1d1e"
 						searchtimeout="10000ms">
-							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[@name~'^Kontakte,\ Registerkarte\ 3']
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[3]
 						</item>
 						<item
 						addcaps="button,uiautomation,uiautomationinvoke"
@@ -190,7 +190,7 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 						name="btnBenachrichtigungen"
 						refimgid="08a5aefb-3f4d-4de2-b4f1-1150a7306913"
 						searchtimeout="10000ms">
-							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[@name~'^Benachrichtig\.,\ Keine\ neu']
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]/button[4]
 						</item>
 						<basepath>
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[2]
@@ -200,9 +200,19 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 					capname="container"
 					id="5735fb83-eb90-491d-9581-9d117dc21cd5"
 					isrooted="True"
-					name="History"
+					name="Detailbereich"
 					searchtimeout="10000ms"
 					usecache="False">
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="8eb3a25b-f19e-4644-b0cd-3396ceea227a"
+						name="btnKontaktHinzufuegen"
+						refimgid="d2c29591-b822-4e0f-9913-eb9494259240"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[1]/container[3]/button[@name='Neuen Kontakt hinzufügen']"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/button[@name='Neuen Kontakt hinzuf&#252;gen']
+						</item>
 						<basepath>
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]
 						</basepath>
@@ -354,6 +364,204 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 					</folder>
 					<basepath>
 						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]
+					</basepath>
+				</folder>
+				<folder
+				capname="container"
+				id="8d5da8c9-94d8-434d-a729-46b7cfac64f4"
+				isrooted="True"
+				name="frmKontaktHinzufuegen"
+				searchtimeout="30000ms"
+				usecache="False">
+					<folder
+					capname="container"
+					id="10c8a60b-4d80-4cbe-bb10-e14950e0ec8f"
+					isrooted="True"
+					name="Titelzeile"
+					searchtimeout="30000ms"
+					usecache="False">
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="042561ce-0c01-43e2-9c38-92c374bb0118"
+						name="btnSchliessen"
+						refimgid="fc64a58e-032a-42ff-b481-d5e391f6c7e8"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[1]/button[@name='Schlie&#223;en']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="88dde387-34ba-4562-88c0-903028cb362e"
+						name="lblTitel"
+						refimgid="0363b5e9-e082-40e7-890d-e8696fda67be"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[1]/text[@name='Neuen Kontakt hinzuf&#252;gen']
+						</item>
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[1]
+						</basepath>
+					</folder>
+					<folder
+					capname="container"
+					id="e8fc8a73-09ff-4854-b3e0-ad7ea304e7d9"
+					isrooted="True"
+					name="Kontaktsuche"
+					searchtimeout="30000ms"
+					usecache="False">
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="b8e35b13-ca10-4574-b7d9-49a28236d978"
+						name="btnSucheSchliessen"
+						refimgid="de8dc29a-4d42-4200-9ea9-4da54a69dfa8"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[2]/button[@name='Suche schlie&#223;en']
+						</item>
+						<item
+						addcaps="text,uiautomation,uiautomationvalue"
+						capname="text"
+						id="fa7f6a40-fe51-4ca7-80c5-da41a5684a7e"
+						name="txtKontakteSuchen"
+						refimgid="bd26e1a4-87df-44a8-9f37-1ed623aa334c"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Neuen Kontakt hinzufügen']/container[@orientation='None']/container[2]/container[@name='Kontakte suchen']/container[@orientation='None']/text[@name='Kontakte suchen']"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[2]/container[@name='Kontakte suchen']/?/?/text[@classname='TextBox']
+						</item>
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[2]
+						</basepath>
+					</folder>
+					<folder
+					capname="container"
+					id="9438d7d2-c5d3-4f32-959f-a04bc253d4ad"
+					isrooted="True"
+					name="Detailbereich"
+					searchtimeout="30000ms"
+					usecache="False">
+						<item
+						addcaps="listitem,uiautomation,uiautomationinvoke"
+						capname="listitem"
+						id="74da48b8-c270-4521-98a7-bef9ccae8f72"
+						name="ListItemEinladung"
+						refimgid="4643ae5b-1511-4ef3-8019-e9edf25ff4c3"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/?/?/listitem[@text~'^Zu\ Skype\ einladen,\ Lade\ F' and @orientation='None' and @iscontentelement='True']
+						</item>
+						<item
+						addcaps="listitem,uiautomation,uiautomationinvoke"
+						capname="listitem"
+						id="b2a9b8f2-6748-4dee-9996-e39b7dce5db6"
+						name="ListItemTelefonnummerHinzufuegen"
+						refimgid="96c24fba-47e8-4675-82a3-98f515c916f8"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/?/?/listitem[@name~'^Telefonnummer\ hinzuf&#252;gen,']
+						</item>
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']
+						</basepath>
+					</folder>
+					<basepath>
+						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']
+					</basepath>
+				</folder>
+				<folder
+				capname="container"
+				id="2f0a9e0f-3d65-4078-a666-d33c67eca43b"
+				isrooted="True"
+				name="frmTelefonnummerHinzufuegen"
+				searchtimeout="30000ms"
+				usecache="False">
+					<folder
+					capname="container"
+					id="49a439df-44e9-4f57-acb8-947d32f4dfec"
+					isrooted="True"
+					name="Titelzeile"
+					searchtimeout="30000ms"
+					usecache="False">
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="31e951f5-1321-44c6-8de9-7bb039a68517"
+						name="btnZurueck"
+						refimgid="cbfe6b89-febc-4ced-8e0d-fb8a729c65c0"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Telefonnummer hinzufügen']/container[@orientation='None']/container[1]/button[@name='Zurück']"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container[1]/button[@name='Zur&#252;ck']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="ac4dbfef-ce72-4157-9c5b-d05b9c0b7b2f"
+						name="txtTelefonnummerHinzufuegen"
+						refimgid="9bb26b3b-9e46-488d-9a1f-b2d572a45d5b"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Telefonnummer hinzufügen']/container[@orientation='None']/container[1]/text[@name='Telefonnummer hinzufügen']"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container[1]/text[@name='Telefonnummer hinzuf&#252;gen']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="d51edf63-4aa3-4867-8d02-1dc7c4579b56"
+						name="btnSpeichern"
+						refimgid="259ee4d7-1982-4fac-9a0e-d36338f4bb49"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Telefonnummer hinzufügen']/container[@orientation='None']/container[1]/button[@name='Speichern']"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container[1]/button[@name='Speichern']
+						</item>
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container[1]
+						</basepath>
+					</folder>
+					<folder
+					capname="container"
+					id="51dbd103-03b4-4b27-a49d-67344ea1f4b1"
+					isrooted="True"
+					name="Detailbereich"
+					searchtimeout="30000ms"
+					usecache="False">
+						<item
+						addcaps="text,uiautomation,uiautomationvalue"
+						capname="text"
+						id="8e5091a1-3056-4eb9-b96b-632824ce9790"
+						name="txtVornameUndName"
+						refimgid="b3f11610-a8d1-4a2c-8db2-fbb04f876e6b"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name='Vor- und Nachname']//text
+						</item>
+						<item
+						addcaps="text,uiautomation,uiautomationvalue"
+						capname="text"
+						id="d7055de0-22a6-4729-9ba6-91bbf2cb168d"
+						name="txtTelefonnummer"
+						refimgid="64bed88e-3386-45a3-8ca2-6138460b5ec4"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//text
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="f0eb7897-7c74-4236-bff8-9b8248c1b9aa"
+						name="btnLaendervorwahl"
+						refimgid="72a2a786-dd2a-4fbe-a600-4a1111d62cc3"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="fda8ac53-aee5-4bda-9a22-e2e03688f029"
+						name="btnTelefontyp"
+						refimgid="8486383c-5fdc-4a14-a997-2b6d3b7af53c"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[2]
+						</item>
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']
+						</basepath>
+					</folder>
+					<basepath>
+						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']
 					</basepath>
 				</folder>
 				<basepath>

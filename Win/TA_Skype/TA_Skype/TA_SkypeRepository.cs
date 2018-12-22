@@ -316,6 +316,8 @@ namespace TA_Skype
             TA_SkypeRepositoryFolders.FrmSkypeMainAreaLinksFolder _frmskypemainarealinks;
             TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder _frmskypemainarearechts;
             TA_SkypeRepositoryFolders.FrmEinstellungenFolder _frmeinstellungen;
+            TA_SkypeRepositoryFolders.FrmKontaktHinzufuegenFolder _frmkontakthinzufuegen;
+            TA_SkypeRepositoryFolders.FrmTelefonnummerHinzufuegenFolder _frmtelefonnummerhinzufuegen;
 
             /// <summary>
             /// Creates a new frmSkypeMain  folder.
@@ -326,6 +328,8 @@ namespace TA_Skype
                 _frmskypemainarealinks = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaLinksFolder(this);
                 _frmskypemainarearechts = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder(this);
                 _frmeinstellungen = new TA_SkypeRepositoryFolders.FrmEinstellungenFolder(this);
+                _frmkontakthinzufuegen = new TA_SkypeRepositoryFolders.FrmKontaktHinzufuegenFolder(this);
+                _frmtelefonnummerhinzufuegen = new TA_SkypeRepositoryFolders.FrmTelefonnummerHinzufuegenFolder(this);
             }
 
             /// <summary>
@@ -378,6 +382,24 @@ namespace TA_Skype
             {
                 get { return _frmeinstellungen; }
             }
+
+            /// <summary>
+            /// The frmKontaktHinzufuegen folder.
+            /// </summary>
+            [RepositoryFolder("8d5da8c9-94d8-434d-a729-46b7cfac64f4")]
+            public virtual TA_SkypeRepositoryFolders.FrmKontaktHinzufuegenFolder frmKontaktHinzufuegen
+            {
+                get { return _frmkontakthinzufuegen; }
+            }
+
+            /// <summary>
+            /// The frmTelefonnummerHinzufuegen folder.
+            /// </summary>
+            [RepositoryFolder("2f0a9e0f-3d65-4078-a666-d33c67eca43b")]
+            public virtual TA_SkypeRepositoryFolders.FrmTelefonnummerHinzufuegenFolder frmTelefonnummerHinzufuegen
+            {
+                get { return _frmtelefonnummerhinzufuegen; }
+            }
         }
 
         /// <summary>
@@ -388,7 +410,7 @@ namespace TA_Skype
         {
             TA_SkypeRepositoryFolders.SucheFolder _suche;
             TA_SkypeRepositoryFolders.MainBarFolder _mainbar;
-            TA_SkypeRepositoryFolders.HistoryFolder _history;
+            TA_SkypeRepositoryFolders.DetailbereichFolder _detailbereich;
             RepoItemInfo _btnprofilInfo;
             RepoItemInfo _btnoptionenInfo;
 
@@ -400,7 +422,7 @@ namespace TA_Skype
             {
                 _suche = new TA_SkypeRepositoryFolders.SucheFolder(this);
                 _mainbar = new TA_SkypeRepositoryFolders.MainBarFolder(this);
-                _history = new TA_SkypeRepositoryFolders.HistoryFolder(this);
+                _detailbereich = new TA_SkypeRepositoryFolders.DetailbereichFolder(this);
                 _btnprofilInfo = new RepoItemInfo(this, "btnProfil", "button[@name='Meine Info, Aktiv']", 10000, null, "ac746c6c-56ae-4781-90b8-29adf1473341");
                 _btnoptionenInfo = new RepoItemInfo(this, "btnOptionen", "button[@name='Weitere Optionen']", 10000, null, "0454c710-8615-4339-9ee4-a76964f09952");
             }
@@ -496,12 +518,12 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The History folder.
+            /// The Detailbereich folder.
             /// </summary>
             [RepositoryFolder("5735fb83-eb90-491d-9581-9d117dc21cd5")]
-            public virtual TA_SkypeRepositoryFolders.HistoryFolder History
+            public virtual TA_SkypeRepositoryFolders.DetailbereichFolder Detailbereich
             {
-                get { return _history; }
+                get { return _detailbereich; }
             }
         }
 
@@ -562,10 +584,10 @@ namespace TA_Skype
             public MainBarFolder(RepoGenBaseFolder parentFolder) :
                     base("MainBar", "container[2]", parentFolder, 10000, null, false, "d46f09db-2e81-4265-b5bd-4f82e1c7e37f", "")
             {
-                _btnchatsInfo = new RepoItemInfo(this, "btnChats", "button[@name~'^Ausgewählt\\.\\ Chats,\\ Keine\\ ']", 10000, null, "8a080763-543f-4881-8e59-43f755dd6809");
-                _btnanrufeInfo = new RepoItemInfo(this, "btnAnrufe", "button[@name~'^Anrufe,\\ Registerkarte\\ 2\\ v']", 10000, null, "a05cd0ed-9d6a-406e-87db-45679143f2e1");
-                _btnkontakteInfo = new RepoItemInfo(this, "btnKontakte", "button[@name~'^Kontakte,\\ Registerkarte\\ 3']", 10000, null, "5ebbd5d5-b170-4cdf-8c3a-d51216c01caa");
-                _btnbenachrichtigungenInfo = new RepoItemInfo(this, "btnBenachrichtigungen", "button[@name~'^Benachrichtig\\.,\\ Keine\\ neu']", 10000, null, "454a3072-f5de-436d-b4d8-bb558fde03e5");
+                _btnchatsInfo = new RepoItemInfo(this, "btnChats", "button[1]", 10000, null, "8a080763-543f-4881-8e59-43f755dd6809");
+                _btnanrufeInfo = new RepoItemInfo(this, "btnAnrufe", "button[2]", 10000, null, "a05cd0ed-9d6a-406e-87db-45679143f2e1");
+                _btnkontakteInfo = new RepoItemInfo(this, "btnKontakte", "button[3]", 10000, null, "5ebbd5d5-b170-4cdf-8c3a-d51216c01caa");
+                _btnbenachrichtigungenInfo = new RepoItemInfo(this, "btnBenachrichtigungen", "button[4]", 10000, null, "454a3072-f5de-436d-b4d8-bb558fde03e5");
             }
 
             /// <summary>
@@ -690,18 +712,20 @@ namespace TA_Skype
         }
 
         /// <summary>
-        /// The HistoryFolder folder.
+        /// The DetailbereichFolder folder.
         /// </summary>
         [RepositoryFolder("5735fb83-eb90-491d-9581-9d117dc21cd5")]
-        public partial class HistoryFolder : RepoGenBaseFolder
+        public partial class DetailbereichFolder : RepoGenBaseFolder
         {
+            RepoItemInfo _btnkontakthinzufuegenInfo;
 
             /// <summary>
-            /// Creates a new History  folder.
+            /// Creates a new Detailbereich  folder.
             /// </summary>
-            public HistoryFolder(RepoGenBaseFolder parentFolder) :
-                    base("History", "container[3]", parentFolder, 10000, null, false, "5735fb83-eb90-491d-9581-9d117dc21cd5", "")
+            public DetailbereichFolder(RepoGenBaseFolder parentFolder) :
+                    base("Detailbereich", "container[3]", parentFolder, 10000, null, false, "5735fb83-eb90-491d-9581-9d117dc21cd5", "")
             {
+                _btnkontakthinzufuegenInfo = new RepoItemInfo(this, "btnKontaktHinzufuegen", "button[@name='Neuen Kontakt hinzufügen']", 30000, null, "8eb3a25b-f19e-4644-b0cd-3396ceea227a");
             }
 
             /// <summary>
@@ -725,6 +749,30 @@ namespace TA_Skype
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnKontaktHinzufuegen item.
+            /// </summary>
+            [RepositoryItem("8eb3a25b-f19e-4644-b0cd-3396ceea227a")]
+            public virtual Ranorex.Button btnKontaktHinzufuegen
+            {
+                get
+                {
+                    return _btnkontakthinzufuegenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnKontaktHinzufuegen item info.
+            /// </summary>
+            [RepositoryItemInfo("8eb3a25b-f19e-4644-b0cd-3396ceea227a")]
+            public virtual RepoItemInfo btnKontaktHinzufuegenInfo
+            {
+                get
+                {
+                    return _btnkontakthinzufuegenInfo;
                 }
             }
         }
@@ -1218,6 +1266,679 @@ namespace TA_Skype
                 get
                 {
                     return _btnstandortmitbingteilenausInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmKontaktHinzufuegenFolder folder.
+        /// </summary>
+        [RepositoryFolder("8d5da8c9-94d8-434d-a729-46b7cfac64f4")]
+        public partial class FrmKontaktHinzufuegenFolder : RepoGenBaseFolder
+        {
+            TA_SkypeRepositoryFolders.TitelzeileFolder _titelzeile;
+            TA_SkypeRepositoryFolders.KontaktsucheFolder _kontaktsuche;
+            TA_SkypeRepositoryFolders.DetailbereichFolder1 _detailbereich;
+
+            /// <summary>
+            /// Creates a new frmKontaktHinzufuegen  folder.
+            /// </summary>
+            public FrmKontaktHinzufuegenFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmKontaktHinzufuegen", "container[6]/container[@name='Neuen Kontakt hinzufügen']/container[@orientation='None']", parentFolder, 30000, null, false, "8d5da8c9-94d8-434d-a729-46b7cfac64f4", "")
+            {
+                _titelzeile = new TA_SkypeRepositoryFolders.TitelzeileFolder(this);
+                _kontaktsuche = new TA_SkypeRepositoryFolders.KontaktsucheFolder(this);
+                _detailbereich = new TA_SkypeRepositoryFolders.DetailbereichFolder1(this);
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("8d5da8c9-94d8-434d-a729-46b7cfac64f4")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("8d5da8c9-94d8-434d-a729-46b7cfac64f4")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Titelzeile folder.
+            /// </summary>
+            [RepositoryFolder("10c8a60b-4d80-4cbe-bb10-e14950e0ec8f")]
+            public virtual TA_SkypeRepositoryFolders.TitelzeileFolder Titelzeile
+            {
+                get { return _titelzeile; }
+            }
+
+            /// <summary>
+            /// The Kontaktsuche folder.
+            /// </summary>
+            [RepositoryFolder("e8fc8a73-09ff-4854-b3e0-ad7ea304e7d9")]
+            public virtual TA_SkypeRepositoryFolders.KontaktsucheFolder Kontaktsuche
+            {
+                get { return _kontaktsuche; }
+            }
+
+            /// <summary>
+            /// The Detailbereich folder.
+            /// </summary>
+            [RepositoryFolder("9438d7d2-c5d3-4f32-959f-a04bc253d4ad")]
+            public virtual TA_SkypeRepositoryFolders.DetailbereichFolder1 Detailbereich
+            {
+                get { return _detailbereich; }
+            }
+        }
+
+        /// <summary>
+        /// The TitelzeileFolder folder.
+        /// </summary>
+        [RepositoryFolder("10c8a60b-4d80-4cbe-bb10-e14950e0ec8f")]
+        public partial class TitelzeileFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _btnschliessenInfo;
+            RepoItemInfo _lbltitelInfo;
+
+            /// <summary>
+            /// Creates a new Titelzeile  folder.
+            /// </summary>
+            public TitelzeileFolder(RepoGenBaseFolder parentFolder) :
+                    base("Titelzeile", "container[1]", parentFolder, 30000, null, false, "10c8a60b-4d80-4cbe-bb10-e14950e0ec8f", "")
+            {
+                _btnschliessenInfo = new RepoItemInfo(this, "btnSchliessen", "button[@name='Schließen']", 30000, null, "042561ce-0c01-43e2-9c38-92c374bb0118");
+                _lbltitelInfo = new RepoItemInfo(this, "lblTitel", "text[@name='Neuen Kontakt hinzufügen']", 30000, null, "88dde387-34ba-4562-88c0-903028cb362e");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("10c8a60b-4d80-4cbe-bb10-e14950e0ec8f")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("10c8a60b-4d80-4cbe-bb10-e14950e0ec8f")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnSchliessen item.
+            /// </summary>
+            [RepositoryItem("042561ce-0c01-43e2-9c38-92c374bb0118")]
+            public virtual Ranorex.Button btnSchliessen
+            {
+                get
+                {
+                    return _btnschliessenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnSchliessen item info.
+            /// </summary>
+            [RepositoryItemInfo("042561ce-0c01-43e2-9c38-92c374bb0118")]
+            public virtual RepoItemInfo btnSchliessenInfo
+            {
+                get
+                {
+                    return _btnschliessenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblTitel item.
+            /// </summary>
+            [RepositoryItem("88dde387-34ba-4562-88c0-903028cb362e")]
+            public virtual Ranorex.Text lblTitel
+            {
+                get
+                {
+                    return _lbltitelInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblTitel item info.
+            /// </summary>
+            [RepositoryItemInfo("88dde387-34ba-4562-88c0-903028cb362e")]
+            public virtual RepoItemInfo lblTitelInfo
+            {
+                get
+                {
+                    return _lbltitelInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The KontaktsucheFolder folder.
+        /// </summary>
+        [RepositoryFolder("e8fc8a73-09ff-4854-b3e0-ad7ea304e7d9")]
+        public partial class KontaktsucheFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _btnsucheschliessenInfo;
+            RepoItemInfo _txtkontaktesuchenInfo;
+
+            /// <summary>
+            /// Creates a new Kontaktsuche  folder.
+            /// </summary>
+            public KontaktsucheFolder(RepoGenBaseFolder parentFolder) :
+                    base("Kontaktsuche", "container[2]", parentFolder, 30000, null, false, "e8fc8a73-09ff-4854-b3e0-ad7ea304e7d9", "")
+            {
+                _btnsucheschliessenInfo = new RepoItemInfo(this, "btnSucheSchliessen", "button[@name='Suche schließen']", 30000, null, "b8e35b13-ca10-4574-b7d9-49a28236d978");
+                _txtkontaktesuchenInfo = new RepoItemInfo(this, "txtKontakteSuchen", "container[@name='Kontakte suchen']/?/?/text[@classname='TextBox']", 30000, null, "fa7f6a40-fe51-4ca7-80c5-da41a5684a7e");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("e8fc8a73-09ff-4854-b3e0-ad7ea304e7d9")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("e8fc8a73-09ff-4854-b3e0-ad7ea304e7d9")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnSucheSchliessen item.
+            /// </summary>
+            [RepositoryItem("b8e35b13-ca10-4574-b7d9-49a28236d978")]
+            public virtual Ranorex.Button btnSucheSchliessen
+            {
+                get
+                {
+                    return _btnsucheschliessenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnSucheSchliessen item info.
+            /// </summary>
+            [RepositoryItemInfo("b8e35b13-ca10-4574-b7d9-49a28236d978")]
+            public virtual RepoItemInfo btnSucheSchliessenInfo
+            {
+                get
+                {
+                    return _btnsucheschliessenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtKontakteSuchen item.
+            /// </summary>
+            [RepositoryItem("fa7f6a40-fe51-4ca7-80c5-da41a5684a7e")]
+            public virtual Ranorex.Text txtKontakteSuchen
+            {
+                get
+                {
+                    return _txtkontaktesuchenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtKontakteSuchen item info.
+            /// </summary>
+            [RepositoryItemInfo("fa7f6a40-fe51-4ca7-80c5-da41a5684a7e")]
+            public virtual RepoItemInfo txtKontakteSuchenInfo
+            {
+                get
+                {
+                    return _txtkontaktesuchenInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The DetailbereichFolder1 folder.
+        /// </summary>
+        [RepositoryFolder("9438d7d2-c5d3-4f32-959f-a04bc253d4ad")]
+        public partial class DetailbereichFolder1 : RepoGenBaseFolder
+        {
+            RepoItemInfo _listitemeinladungInfo;
+            RepoItemInfo _listitemtelefonnummerhinzufuegenInfo;
+
+            /// <summary>
+            /// Creates a new Detailbereich  folder.
+            /// </summary>
+            public DetailbereichFolder1(RepoGenBaseFolder parentFolder) :
+                    base("Detailbereich", "container[@classname='ScrollViewer']/container[@orientation='None']", parentFolder, 30000, null, false, "9438d7d2-c5d3-4f32-959f-a04bc253d4ad", "")
+            {
+                _listitemeinladungInfo = new RepoItemInfo(this, "ListItemEinladung", "?/?/listitem[@text~'^Zu\\ Skype\\ einladen,\\ Lade\\ F' and @orientation='None' and @iscontentelement='True']", 30000, null, "74da48b8-c270-4521-98a7-bef9ccae8f72");
+                _listitemtelefonnummerhinzufuegenInfo = new RepoItemInfo(this, "ListItemTelefonnummerHinzufuegen", "?/?/listitem[@name~'^Telefonnummer\\ hinzufügen,']", 30000, null, "b2a9b8f2-6748-4dee-9996-e39b7dce5db6");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("9438d7d2-c5d3-4f32-959f-a04bc253d4ad")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("9438d7d2-c5d3-4f32-959f-a04bc253d4ad")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ListItemEinladung item.
+            /// </summary>
+            [RepositoryItem("74da48b8-c270-4521-98a7-bef9ccae8f72")]
+            public virtual Ranorex.ListItem ListItemEinladung
+            {
+                get
+                {
+                    return _listitemeinladungInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ListItemEinladung item info.
+            /// </summary>
+            [RepositoryItemInfo("74da48b8-c270-4521-98a7-bef9ccae8f72")]
+            public virtual RepoItemInfo ListItemEinladungInfo
+            {
+                get
+                {
+                    return _listitemeinladungInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ListItemTelefonnummerHinzufuegen item.
+            /// </summary>
+            [RepositoryItem("b2a9b8f2-6748-4dee-9996-e39b7dce5db6")]
+            public virtual Ranorex.ListItem ListItemTelefonnummerHinzufuegen
+            {
+                get
+                {
+                    return _listitemtelefonnummerhinzufuegenInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ListItemTelefonnummerHinzufuegen item info.
+            /// </summary>
+            [RepositoryItemInfo("b2a9b8f2-6748-4dee-9996-e39b7dce5db6")]
+            public virtual RepoItemInfo ListItemTelefonnummerHinzufuegenInfo
+            {
+                get
+                {
+                    return _listitemtelefonnummerhinzufuegenInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmTelefonnummerHinzufuegenFolder folder.
+        /// </summary>
+        [RepositoryFolder("2f0a9e0f-3d65-4078-a666-d33c67eca43b")]
+        public partial class FrmTelefonnummerHinzufuegenFolder : RepoGenBaseFolder
+        {
+            TA_SkypeRepositoryFolders.TitelzeileFolder1 _titelzeile;
+            TA_SkypeRepositoryFolders.DetailbereichFolder2 _detailbereich;
+
+            /// <summary>
+            /// Creates a new frmTelefonnummerHinzufuegen  folder.
+            /// </summary>
+            public FrmTelefonnummerHinzufuegenFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmTelefonnummerHinzufuegen", "container[6]/container[@name='Telefonnummer hinzufügen']/container[@orientation='None']", parentFolder, 30000, null, false, "2f0a9e0f-3d65-4078-a666-d33c67eca43b", "")
+            {
+                _titelzeile = new TA_SkypeRepositoryFolders.TitelzeileFolder1(this);
+                _detailbereich = new TA_SkypeRepositoryFolders.DetailbereichFolder2(this);
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("2f0a9e0f-3d65-4078-a666-d33c67eca43b")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("2f0a9e0f-3d65-4078-a666-d33c67eca43b")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Titelzeile folder.
+            /// </summary>
+            [RepositoryFolder("49a439df-44e9-4f57-acb8-947d32f4dfec")]
+            public virtual TA_SkypeRepositoryFolders.TitelzeileFolder1 Titelzeile
+            {
+                get { return _titelzeile; }
+            }
+
+            /// <summary>
+            /// The Detailbereich folder.
+            /// </summary>
+            [RepositoryFolder("51dbd103-03b4-4b27-a49d-67344ea1f4b1")]
+            public virtual TA_SkypeRepositoryFolders.DetailbereichFolder2 Detailbereich
+            {
+                get { return _detailbereich; }
+            }
+        }
+
+        /// <summary>
+        /// The TitelzeileFolder1 folder.
+        /// </summary>
+        [RepositoryFolder("49a439df-44e9-4f57-acb8-947d32f4dfec")]
+        public partial class TitelzeileFolder1 : RepoGenBaseFolder
+        {
+            RepoItemInfo _btnzurueckInfo;
+            RepoItemInfo _txttelefonnummerhinzufuegenInfo;
+            RepoItemInfo _btnspeichernInfo;
+
+            /// <summary>
+            /// Creates a new Titelzeile  folder.
+            /// </summary>
+            public TitelzeileFolder1(RepoGenBaseFolder parentFolder) :
+                    base("Titelzeile", "container[1]", parentFolder, 30000, null, false, "49a439df-44e9-4f57-acb8-947d32f4dfec", "")
+            {
+                _btnzurueckInfo = new RepoItemInfo(this, "btnZurueck", "button[@name='Zurück']", 30000, null, "31e951f5-1321-44c6-8de9-7bb039a68517");
+                _txttelefonnummerhinzufuegenInfo = new RepoItemInfo(this, "txtTelefonnummerHinzufuegen", "text[@name='Telefonnummer hinzufügen']", 30000, null, "ac4dbfef-ce72-4157-9c5b-d05b9c0b7b2f");
+                _btnspeichernInfo = new RepoItemInfo(this, "btnSpeichern", "button[@name='Speichern']", 30000, null, "d51edf63-4aa3-4867-8d02-1dc7c4579b56");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("49a439df-44e9-4f57-acb8-947d32f4dfec")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("49a439df-44e9-4f57-acb8-947d32f4dfec")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnZurueck item.
+            /// </summary>
+            [RepositoryItem("31e951f5-1321-44c6-8de9-7bb039a68517")]
+            public virtual Ranorex.Button btnZurueck
+            {
+                get
+                {
+                    return _btnzurueckInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnZurueck item info.
+            /// </summary>
+            [RepositoryItemInfo("31e951f5-1321-44c6-8de9-7bb039a68517")]
+            public virtual RepoItemInfo btnZurueckInfo
+            {
+                get
+                {
+                    return _btnzurueckInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtTelefonnummerHinzufuegen item.
+            /// </summary>
+            [RepositoryItem("ac4dbfef-ce72-4157-9c5b-d05b9c0b7b2f")]
+            public virtual Ranorex.Text txtTelefonnummerHinzufuegen
+            {
+                get
+                {
+                    return _txttelefonnummerhinzufuegenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtTelefonnummerHinzufuegen item info.
+            /// </summary>
+            [RepositoryItemInfo("ac4dbfef-ce72-4157-9c5b-d05b9c0b7b2f")]
+            public virtual RepoItemInfo txtTelefonnummerHinzufuegenInfo
+            {
+                get
+                {
+                    return _txttelefonnummerhinzufuegenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnSpeichern item.
+            /// </summary>
+            [RepositoryItem("d51edf63-4aa3-4867-8d02-1dc7c4579b56")]
+            public virtual Ranorex.Button btnSpeichern
+            {
+                get
+                {
+                    return _btnspeichernInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnSpeichern item info.
+            /// </summary>
+            [RepositoryItemInfo("d51edf63-4aa3-4867-8d02-1dc7c4579b56")]
+            public virtual RepoItemInfo btnSpeichernInfo
+            {
+                get
+                {
+                    return _btnspeichernInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The DetailbereichFolder2 folder.
+        /// </summary>
+        [RepositoryFolder("51dbd103-03b4-4b27-a49d-67344ea1f4b1")]
+        public partial class DetailbereichFolder2 : RepoGenBaseFolder
+        {
+            RepoItemInfo _txtvornameundnameInfo;
+            RepoItemInfo _txttelefonnummerInfo;
+            RepoItemInfo _btnlaendervorwahlInfo;
+            RepoItemInfo _btntelefontypInfo;
+
+            /// <summary>
+            /// Creates a new Detailbereich  folder.
+            /// </summary>
+            public DetailbereichFolder2(RepoGenBaseFolder parentFolder) :
+                    base("Detailbereich", "container/container[@classname='ScrollViewer']/container[@orientation='None']", parentFolder, 30000, null, false, "51dbd103-03b4-4b27-a49d-67344ea1f4b1", "")
+            {
+                _txtvornameundnameInfo = new RepoItemInfo(this, "txtVornameUndName", "?/listitem[@name='Vor- und Nachname']//text", 30000, null, "8e5091a1-3056-4eb9-b96b-632824ce9790");
+                _txttelefonnummerInfo = new RepoItemInfo(this, "txtTelefonnummer", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//text", 30000, null, "d7055de0-22a6-4729-9ba6-91bbf2cb168d");
+                _btnlaendervorwahlInfo = new RepoItemInfo(this, "btnLaendervorwahl", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//button[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']", 30000, null, "f0eb7897-7c74-4236-bff8-9b8248c1b9aa");
+                _btntelefontypInfo = new RepoItemInfo(this, "btnTelefontyp", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//button[2]", 30000, null, "fda8ac53-aee5-4bda-9a22-e2e03688f029");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("51dbd103-03b4-4b27-a49d-67344ea1f4b1")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("51dbd103-03b4-4b27-a49d-67344ea1f4b1")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtVornameUndName item.
+            /// </summary>
+            [RepositoryItem("8e5091a1-3056-4eb9-b96b-632824ce9790")]
+            public virtual Ranorex.Text txtVornameUndName
+            {
+                get
+                {
+                    return _txtvornameundnameInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtVornameUndName item info.
+            /// </summary>
+            [RepositoryItemInfo("8e5091a1-3056-4eb9-b96b-632824ce9790")]
+            public virtual RepoItemInfo txtVornameUndNameInfo
+            {
+                get
+                {
+                    return _txtvornameundnameInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtTelefonnummer item.
+            /// </summary>
+            [RepositoryItem("d7055de0-22a6-4729-9ba6-91bbf2cb168d")]
+            public virtual Ranorex.Text txtTelefonnummer
+            {
+                get
+                {
+                    return _txttelefonnummerInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtTelefonnummer item info.
+            /// </summary>
+            [RepositoryItemInfo("d7055de0-22a6-4729-9ba6-91bbf2cb168d")]
+            public virtual RepoItemInfo txtTelefonnummerInfo
+            {
+                get
+                {
+                    return _txttelefonnummerInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnLaendervorwahl item.
+            /// </summary>
+            [RepositoryItem("f0eb7897-7c74-4236-bff8-9b8248c1b9aa")]
+            public virtual Ranorex.Button btnLaendervorwahl
+            {
+                get
+                {
+                    return _btnlaendervorwahlInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnLaendervorwahl item info.
+            /// </summary>
+            [RepositoryItemInfo("f0eb7897-7c74-4236-bff8-9b8248c1b9aa")]
+            public virtual RepoItemInfo btnLaendervorwahlInfo
+            {
+                get
+                {
+                    return _btnlaendervorwahlInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnTelefontyp item.
+            /// </summary>
+            [RepositoryItem("fda8ac53-aee5-4bda-9a22-e2e03688f029")]
+            public virtual Ranorex.Button btnTelefontyp
+            {
+                get
+                {
+                    return _btntelefontypInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnTelefontyp item info.
+            /// </summary>
+            [RepositoryItemInfo("fda8ac53-aee5-4bda-9a22-e2e03688f029")]
+            public virtual RepoItemInfo btnTelefontypInfo
+            {
+                get
+                {
+                    return _btntelefontypInfo;
                 }
             }
         }
