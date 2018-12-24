@@ -32,6 +32,26 @@ rxversion="8.3">
 		name="VornameUndName">
 			Hans Mueller
 		</var>
+		<var
+		id="b385e338-b49b-4280-bc0e-bf8c96b59910"
+		name="Telefonnummer">
+			100 10 00
+		</var>
+		<var
+		id="744d9200-96cb-436c-897d-b2d708ef12b4"
+		name="Land">
+			Schweiz
+		</var>
+		<var
+		id="118a8ba9-effe-49dd-8709-1d9f58a69bf2"
+		name="Laendervorwahl">
+			+41
+		</var>
+		<var
+		id="cf945fe1-cbed-4d3b-84d6-91fc9e758dfa"
+		name="TelefonnummerTyp">
+			Privat
+		</var>
 	</variables>
 	<recorditems>
 		<mouseitem
@@ -192,13 +212,82 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="31e951f5-1321-44c6-8de9-7bb039a68517"
+			id="f0eb7897-7c74-4236-bff8-9b8248c1b9aa"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container[1]/button[@name='Zur&#252;ck']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4f065539-26cf-4744-af7e-74246c546e60">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="601baf19-5e57-496d-80f6-7dd89fb4fd2e"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<keysequenceitem
+		KeySequence=""
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		presstime="100ms"
+		searchpropertyid="db395a2d-5d1f-4870-acd5-5bf84f75c5a6">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="KeySequence"
+				variable="Land">
+				</binding>
+			</bindings>
+			<info
+			id="8096e225-167f-4d94-852a-faa311ec5163"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container/container[@name='Land/Region suchen']/?/?/text[@classname='TextBox']/text
+				</path>
+			</info>
+		</keysequenceitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4f065539-26cf-4744-af7e-74246c546e60">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="a854ca3e-cb15-4e70-b937-5447eea38f9d"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container/container[@classname='ScrollViewer']/?/?/listitem[@name=$Land+' '+$Landervorwahl]
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -216,10 +305,205 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="042561ce-0c01-43e2-9c38-92c374bb0118"
+			id="a854ca3e-cb15-4e70-b937-5447eea38f9d"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuen Kontakt hinzuf&#252;gen']/container[@orientation='None']/container[1]/button[@name='Schlie&#223;en']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container/container[@classname='ScrollViewer']/?/?/listitem[@name=$Land+' '+$Landervorwahl]
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4f065539-26cf-4744-af7e-74246c546e60">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="2f0a9e0f-3d65-4078-a666-d33c67eca43b"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="AttributeEqual"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4f065539-26cf-4744-af7e-74246c546e60">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="MatchValue"
+				variable="Laendervorwahl">
+				</binding>
+			</bindings>
+			<info
+			id="ae85308c-686b-47ee-87e4-ecb994cb5a7f"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']/container/container/text
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<keysequenceitem
+		KeySequence=""
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		presstime="100ms"
+		searchpropertyid="db395a2d-5d1f-4870-acd5-5bf84f75c5a6">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="KeySequence"
+				variable="Telefonnummer">
+				</binding>
+			</bindings>
+			<info
+			id="d7055de0-22a6-4729-9ba6-91bbf2cb168d"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//text
+				</path>
+			</info>
+		</keysequenceitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="8c2911c7-8d3f-4e25-a877-b9f6d15dad25"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="fda8ac53-aee5-4bda-9a22-e2e03688f029"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[2]
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4f065539-26cf-4744-af7e-74246c546e60">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="8805602d-800e-4666-b193-10151d283d95"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="8c2911c7-8d3f-4e25-a877-b9f6d15dad25"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="a354cecb-9f0c-472b-a171-beb730b4f3b6"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name=$TelefonnummerTyp]
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="AttributeEqual"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4f065539-26cf-4744-af7e-74246c546e60">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="MatchValue"
+				variable="TelefonnummerTyp">
+				</binding>
+			</bindings>
+			<info
+			id="a3b3bb83-0d16-47ec-9551-f4cfef310d6a"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[2]/container/container/text
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="8c2911c7-8d3f-4e25-a877-b9f6d15dad25"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="d51edf63-4aa3-4867-8d02-1dc7c4579b56"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container[1]/button[@name='Speichern']
 				</path>
 			</info>
 		</mouseitem>

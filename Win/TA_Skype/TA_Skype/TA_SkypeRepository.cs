@@ -51,6 +51,54 @@ namespace TA_Skype
 
 #region Variables
 
+        string _TelefonnummerTyp = "Privat";
+
+        /// <summary>
+        /// Gets or sets the value of variable TelefonnummerTyp.
+        /// </summary>
+        [TestVariable("cf945fe1-cbed-4d3b-84d6-91fc9e758dfa")]
+        public string TelefonnummerTyp
+        {
+            get { return _TelefonnummerTyp; }
+            set { _TelefonnummerTyp = value; }
+        }
+
+        string _Land = "";
+
+        /// <summary>
+        /// Gets or sets the value of variable Land.
+        /// </summary>
+        [TestVariable("bb7c91da-e47b-4ad4-ab9f-ff4139a43613")]
+        public string Land
+        {
+            get { return _Land; }
+            set { _Land = value; }
+        }
+
+        string _Landervorwahl = "";
+
+        /// <summary>
+        /// Gets or sets the value of variable Landervorwahl.
+        /// </summary>
+        [TestVariable("bc0eeed2-c9a5-46c9-b692-9f0d58dca290")]
+        public string Landervorwahl
+        {
+            get { return _Landervorwahl; }
+            set { _Landervorwahl = value; }
+        }
+
+        string _Laendervorwahl = "";
+
+        /// <summary>
+        /// Gets or sets the value of variable Laendervorwahl.
+        /// </summary>
+        [TestVariable("2475f7bf-414a-41e8-b6c0-309e6564c1a4")]
+        public string Laendervorwahl
+        {
+            get { return _Laendervorwahl; }
+            set { _Laendervorwahl = value; }
+        }
+
 #endregion
 
         /// <summary>
@@ -163,6 +211,7 @@ namespace TA_Skype
         public partial class SkypeAppFolder : RepoGenBaseFolder
         {
             TA_SkypeRepositoryFolders.FrmSkypeMainFolder _frmskypemain;
+            TA_SkypeRepositoryFolders.FrmLaendervorwahlFolder _frmlaendervorwahl;
             TA_SkypeRepositoryFolders.None1Folder _none1;
             TA_SkypeRepositoryFolders.PopupMenuFolder _popupmenu;
             RepoItemInfo _btncloseInfo;
@@ -176,6 +225,7 @@ namespace TA_Skype
                     base("Skype", "/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']", parentFolder, 30000, null, true, "f0a1d291-9d6e-4e9c-ac26-607165225622", "")
             {
                 _frmskypemain = new TA_SkypeRepositoryFolders.FrmSkypeMainFolder(this);
+                _frmlaendervorwahl = new TA_SkypeRepositoryFolders.FrmLaendervorwahlFolder(this);
                 _none1 = new TA_SkypeRepositoryFolders.None1Folder(this);
                 _popupmenu = new TA_SkypeRepositoryFolders.PopupMenuFolder(this);
                 _btncloseInfo = new RepoItemInfo(this, "btnClose", "titlebar[@name='Skype' and @classname='ApplicationFrameTitleBarWindow']/?/?/button[@automationid='Close']", 30000, null, "800e7cb4-3e1d-448f-ab90-44eab8d8a0fc");
@@ -286,6 +336,15 @@ namespace TA_Skype
             public virtual TA_SkypeRepositoryFolders.FrmSkypeMainFolder frmSkypeMain
             {
                 get { return _frmskypemain; }
+            }
+
+            /// <summary>
+            /// The frmLaendervorwahl folder.
+            /// </summary>
+            [RepositoryFolder("601baf19-5e57-496d-80f6-7dd89fb4fd2e")]
+            public virtual TA_SkypeRepositoryFolders.FrmLaendervorwahlFolder frmLaendervorwahl
+            {
+                get { return _frmlaendervorwahl; }
             }
 
             /// <summary>
@@ -1808,7 +1867,9 @@ namespace TA_Skype
             RepoItemInfo _txtvornameundnameInfo;
             RepoItemInfo _txttelefonnummerInfo;
             RepoItemInfo _btnlaendervorwahlInfo;
-            RepoItemInfo _btntelefontypInfo;
+            RepoItemInfo _txtlaendervorwahlInfo;
+            RepoItemInfo _btntelefonnummertypInfo;
+            RepoItemInfo _txttelefonnummertypInfo;
 
             /// <summary>
             /// Creates a new Detailbereich  folder.
@@ -1819,7 +1880,9 @@ namespace TA_Skype
                 _txtvornameundnameInfo = new RepoItemInfo(this, "txtVornameUndName", "?/listitem[@name='Vor- und Nachname']//text", 30000, null, "8e5091a1-3056-4eb9-b96b-632824ce9790");
                 _txttelefonnummerInfo = new RepoItemInfo(this, "txtTelefonnummer", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//text", 30000, null, "d7055de0-22a6-4729-9ba6-91bbf2cb168d");
                 _btnlaendervorwahlInfo = new RepoItemInfo(this, "btnLaendervorwahl", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//button[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']", 30000, null, "f0eb7897-7c74-4236-bff8-9b8248c1b9aa");
-                _btntelefontypInfo = new RepoItemInfo(this, "btnTelefontyp", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//button[2]", 30000, null, "fda8ac53-aee5-4bda-9a22-e2e03688f029");
+                _txtlaendervorwahlInfo = new RepoItemInfo(this, "txtLaendervorwahl", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//button[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']/container/container/text", 30000, null, "ae85308c-686b-47ee-87e4-ecb994cb5a7f");
+                _btntelefonnummertypInfo = new RepoItemInfo(this, "btnTelefonnummerTyp", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//button[2]", 30000, null, "fda8ac53-aee5-4bda-9a22-e2e03688f029");
+                _txttelefonnummertypInfo = new RepoItemInfo(this, "txtTelefonnummerTyp", "?/listitem[@name~'^Anrufcode\\ für\\ Länder\\ und\\ ']//button[2]/container/container/text", 30000, null, "a3b3bb83-0d16-47ec-9551-f4cfef310d6a");
             }
 
             /// <summary>
@@ -1919,26 +1982,166 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The btnTelefontyp item.
+            /// The txtLaendervorwahl item.
             /// </summary>
-            [RepositoryItem("fda8ac53-aee5-4bda-9a22-e2e03688f029")]
-            public virtual Ranorex.Button btnTelefontyp
+            [RepositoryItem("ae85308c-686b-47ee-87e4-ecb994cb5a7f")]
+            public virtual Ranorex.Text txtLaendervorwahl
             {
                 get
                 {
-                    return _btntelefontypInfo.CreateAdapter<Ranorex.Button>(true);
+                    return _txtlaendervorwahlInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The btnTelefontyp item info.
+            /// The txtLaendervorwahl item info.
             /// </summary>
-            [RepositoryItemInfo("fda8ac53-aee5-4bda-9a22-e2e03688f029")]
-            public virtual RepoItemInfo btnTelefontypInfo
+            [RepositoryItemInfo("ae85308c-686b-47ee-87e4-ecb994cb5a7f")]
+            public virtual RepoItemInfo txtLaendervorwahlInfo
             {
                 get
                 {
-                    return _btntelefontypInfo;
+                    return _txtlaendervorwahlInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnTelefonnummerTyp item.
+            /// </summary>
+            [RepositoryItem("fda8ac53-aee5-4bda-9a22-e2e03688f029")]
+            public virtual Ranorex.Button btnTelefonnummerTyp
+            {
+                get
+                {
+                    return _btntelefonnummertypInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnTelefonnummerTyp item info.
+            /// </summary>
+            [RepositoryItemInfo("fda8ac53-aee5-4bda-9a22-e2e03688f029")]
+            public virtual RepoItemInfo btnTelefonnummerTypInfo
+            {
+                get
+                {
+                    return _btntelefonnummertypInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtTelefonnummerTyp item.
+            /// </summary>
+            [RepositoryItem("a3b3bb83-0d16-47ec-9551-f4cfef310d6a")]
+            public virtual Ranorex.Text txtTelefonnummerTyp
+            {
+                get
+                {
+                    return _txttelefonnummertypInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtTelefonnummerTyp item info.
+            /// </summary>
+            [RepositoryItemInfo("a3b3bb83-0d16-47ec-9551-f4cfef310d6a")]
+            public virtual RepoItemInfo txtTelefonnummerTypInfo
+            {
+                get
+                {
+                    return _txttelefonnummertypInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmLaendervorwahlFolder folder.
+        /// </summary>
+        [RepositoryFolder("601baf19-5e57-496d-80f6-7dd89fb4fd2e")]
+        public partial class FrmLaendervorwahlFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _txtlandregionsuchenInfo;
+            RepoItemInfo _listitemlaendervorwahlInfo;
+
+            /// <summary>
+            /// Creates a new frmLaendervorwahl  folder.
+            /// </summary>
+            public FrmLaendervorwahlFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmLaendervorwahl", "element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container", parentFolder, 30000, null, false, "601baf19-5e57-496d-80f6-7dd89fb4fd2e", "")
+            {
+                _txtlandregionsuchenInfo = new RepoItemInfo(this, "txtLandRegionSuchen", "container[@name='Land/Region suchen']/?/?/text[@classname='TextBox']/text", 30000, null, "8096e225-167f-4d94-852a-faa311ec5163");
+                _listitemlaendervorwahlInfo = new RepoItemInfo(this, "ListItemLaendervorwahl", "container[@classname='ScrollViewer']/?/?/listitem[@name=$Land+' '+$Laendervorwahl]", 30000, null, "a854ca3e-cb15-4e70-b937-5447eea38f9d");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("601baf19-5e57-496d-80f6-7dd89fb4fd2e")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("601baf19-5e57-496d-80f6-7dd89fb4fd2e")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtLandRegionSuchen item.
+            /// </summary>
+            [RepositoryItem("8096e225-167f-4d94-852a-faa311ec5163")]
+            public virtual Ranorex.Text txtLandRegionSuchen
+            {
+                get
+                {
+                    return _txtlandregionsuchenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtLandRegionSuchen item info.
+            /// </summary>
+            [RepositoryItemInfo("8096e225-167f-4d94-852a-faa311ec5163")]
+            public virtual RepoItemInfo txtLandRegionSuchenInfo
+            {
+                get
+                {
+                    return _txtlandregionsuchenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ListItemLaendervorwahl item.
+            /// </summary>
+            [RepositoryItem("a854ca3e-cb15-4e70-b937-5447eea38f9d")]
+            public virtual Ranorex.ListItem ListItemLaendervorwahl
+            {
+                get
+                {
+                    return _listitemlaendervorwahlInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ListItemLaendervorwahl item info.
+            /// </summary>
+            [RepositoryItemInfo("a854ca3e-cb15-4e70-b937-5447eea38f9d")]
+            public virtual RepoItemInfo ListItemLaendervorwahlInfo
+            {
+                get
+                {
+                    return _listitemlaendervorwahlInfo;
                 }
             }
         }
@@ -2069,6 +2272,7 @@ namespace TA_Skype
         {
             RepoItemInfo _itemeinstellungenInfo;
             RepoItemInfo _itemabmeldenInfo;
+            RepoItemInfo _itemtelefonnummertypInfo;
 
             /// <summary>
             /// Creates a new PopupMenu  folder.
@@ -2078,6 +2282,7 @@ namespace TA_Skype
             {
                 _itemeinstellungenInfo = new RepoItemInfo(this, "ItemEinstellungen", ".//text[@name='Einstellungen']", 30000, null, "75e4319d-71ea-4037-ba9e-837b56213ef2");
                 _itemabmeldenInfo = new RepoItemInfo(this, "ItemAbmelden", ".//text[@name='Abmelden']", 30000, null, "af79c8cc-bc67-4a90-b82f-fafcdcdad07a");
+                _itemtelefonnummertypInfo = new RepoItemInfo(this, "ItemTelefonnummerTyp", ".//text[@name=$TelefonnummerTyp]", 30000, null, "a354cecb-9f0c-472b-a171-beb730b4f3b6");
             }
 
             /// <summary>
@@ -2149,6 +2354,30 @@ namespace TA_Skype
                 get
                 {
                     return _itemabmeldenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ItemTelefonnummerTyp item.
+            /// </summary>
+            [RepositoryItem("a354cecb-9f0c-472b-a171-beb730b4f3b6")]
+            public virtual Ranorex.Text ItemTelefonnummerTyp
+            {
+                get
+                {
+                    return _itemtelefonnummertypInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ItemTelefonnummerTyp item info.
+            /// </summary>
+            [RepositoryItemInfo("a354cecb-9f0c-472b-a171-beb730b4f3b6")]
+            public virtual RepoItemInfo ItemTelefonnummerTypInfo
+            {
+                get
+                {
+                    return _itemtelefonnummertypInfo;
                 }
             }
         }

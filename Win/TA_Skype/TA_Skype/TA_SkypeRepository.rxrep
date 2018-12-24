@@ -549,12 +549,30 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 						</item>
 						<item
 						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="text"
+						id="ae85308c-686b-47ee-87e4-ecb994cb5a7f"
+						name="txtLaendervorwahl"
+						refimgid="72a2a786-dd2a-4fbe-a600-4a1111d62cc3"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']/container/container/text
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
 						capname="button"
 						id="fda8ac53-aee5-4bda-9a22-e2e03688f029"
-						name="btnTelefontyp"
+						name="btnTelefonnummerTyp"
 						refimgid="8486383c-5fdc-4a14-a997-2b6d3b7af53c"
 						searchtimeout="30000ms">
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[2]
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="text"
+						id="a3b3bb83-0d16-47ec-9551-f4cfef310d6a"
+						name="txtTelefonnummerTyp"
+						refimgid="8486383c-5fdc-4a14-a997-2b6d3b7af53c"
+						searchtimeout="30000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']/?/listitem[@name~'^Anrufcode\ f&#252;r\ L&#228;nder\ und\ ']//button[2]/container/container/text
 						</item>
 						<basepath>
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Telefonnummer hinzuf&#252;gen']/container[@orientation='None']/container/container[@classname='ScrollViewer']/container[@orientation='None']
@@ -577,15 +595,35 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 			searchtimeout="30000ms">
 				/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']
 			</item>
-			<item
-			addcaps="container,uiautomation"
+			<folder
 			capname="container"
-			id="fcc4684b-c6fb-4463-ba41-3dbf99c93ac2"
-			name="NamedContainerAutomationPeer"
-			refimgid="2fc92b5a-c26c-4df5-80cd-807b5c798886"
-			searchtimeout="30000ms">
-				/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']
-			</item>
+			id="601baf19-5e57-496d-80f6-7dd89fb4fd2e"
+			isrooted="True"
+			name="frmLaendervorwahl"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				addcaps="text,uiautomation,uiautomationvalue"
+				capname="text"
+				id="8096e225-167f-4d94-852a-faa311ec5163"
+				name="txtLandRegionSuchen"
+				refimgid="b4a1938a-4571-442f-b596-68005fefc906"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container/container[@name='Land/Region suchen']/?/?/text[@classname='TextBox']/text
+				</item>
+				<item
+				addcaps="listitem,uiautomation,uiautomationinvoke"
+				capname="listitem"
+				id="a854ca3e-cb15-4e70-b937-5447eea38f9d"
+				name="ListItemLaendervorwahl"
+				refimgid="d02e5f39-2ee0-4c9c-a907-f4e4c25abb9e"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container/container[@classname='ScrollViewer']/?/?/listitem[@name=$Land+' '+$Laendervorwahl]
+				</item>
+				<basepath>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']/following-sibling::container
+				</basepath>
+			</folder>
 			<folder
 			addcaps="container,uiautomation"
 			capname="container"
@@ -650,10 +688,28 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 				searchtimeout="30000ms">
 					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Abmelden']
 				</item>
+				<item
+				addcaps="text,uiautomation"
+				capname="text"
+				id="a354cecb-9f0c-472b-a171-beb730b4f3b6"
+				name="ItemTelefonnummerTyp"
+				refimgid="162d4d4e-f2bf-4f86-94fb-dafee69e01ec"
+				searchtimeout="30000ms">
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name=$TelefonnummerTyp]
+				</item>
 				<basepath>
 					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']
 				</basepath>
 			</folder>
+			<item
+			addcaps="container,uiautomation"
+			capname="container"
+			id="fcc4684b-c6fb-4463-ba41-3dbf99c93ac2"
+			name="NamedContainerAutomationPeer"
+			refimgid="2fc92b5a-c26c-4df5-80cd-807b5c798886"
+			searchtimeout="30000ms">
+				/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']
+			</item>
 			<basepath>
 				/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']
 			</basepath>
@@ -672,5 +728,22 @@ SUVORK5CYII=
 		</basepath>
 	</rootfolder>
 	<variables>
+		<var
+		id="cf945fe1-cbed-4d3b-84d6-91fc9e758dfa"
+		name="TelefonnummerTyp">
+			Privat
+		</var>
+		<var
+		id="bb7c91da-e47b-4ad4-ab9f-ff4139a43613"
+		name="Land">
+		</var>
+		<var
+		id="bc0eeed2-c9a5-46c9-b692-9f0d58dca290"
+		name="Landervorwahl">
+		</var>
+		<var
+		id="2475f7bf-414a-41e8-b6c0-309e6564c1a4"
+		name="Laendervorwahl">
+		</var>
 	</variables>
 </repository>

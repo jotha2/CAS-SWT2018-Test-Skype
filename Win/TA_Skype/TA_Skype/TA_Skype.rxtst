@@ -34,6 +34,30 @@ rxversion="8.3">
 					variableid="8a9aef5b-8d59-41ca-a2c0-9978215f7c68"
 					variablename="VornameUndName">
 					</var>
+					<var
+					dataname="Telefonnummer"
+					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					variableid="b385e338-b49b-4280-bc0e-bf8c96b59910"
+					variablename="Telefonnummer">
+					</var>
+					<var
+					dataname="Land"
+					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					variableid="744d9200-96cb-436c-897d-b2d708ef12b4"
+					variablename="Land">
+					</var>
+					<var
+					dataname="Vorwahl"
+					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					variableid="118a8ba9-effe-49dd-8709-1d9f58a69bf2"
+					variablename="Laendervorwahl">
+					</var>
+					<var
+					dataname="TelefonnumerTyp"
+					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					variableid="cf945fe1-cbed-4d3b-84d6-91fc9e758dfa"
+					variablename="TelefonnummerTyp">
+					</var>
 				</databinding>
 			</testmodule>
 			<testmodule
@@ -161,6 +185,18 @@ rxversion="8.3">
 				<column>
 					NameUndVorname
 				</column>
+				<column>
+					Vorwahl
+				</column>
+				<column>
+					Telefonnummer
+				</column>
+				<column>
+					TelefonnumerTyp
+				</column>
+				<column>
+					Land
+				</column>
 			</lastknowncolumns>
 			<maskedcolumns>
 			</maskedcolumns>
@@ -169,20 +205,68 @@ rxversion="8.3">
 					<th>
 						NameUndVorname
 					</th>
+					<th>
+						Vorwahl
+					</th>
+					<th>
+						Telefonnummer
+					</th>
+					<th>
+						TelefonnumerTyp
+					</th>
+					<th>
+						Land
+					</th>
 				</tr>
 				<tr>
 					<td>
-						Hans Meier
+						Sarah Pfister
+					</td>
+					<td>
+						+41
+					</td>
+					<td>
+						100 10 01
+					</td>
+					<td>
+						Privat
+					</td>
+					<td>
+						Schweiz
 					</td>
 				</tr>
 				<tr>
 					<td>
-						Kurt M&#252;ller
+						J&#246;rg Hoffmann
+					</td>
+					<td>
+						+49
+					</td>
+					<td>
+						100 10 02
+					</td>
+					<td>
+						B&#252;ro
+					</td>
+					<td>
+						Deutschland
 					</td>
 				</tr>
 				<tr>
 					<td>
-						Fritz Schuster
+						Thomas Th&#252;r
+					</td>
+					<td>
+						+41
+					</td>
+					<td>
+						100 10 03
+					</td>
+					<td>
+						Mobiltelefon
+					</td>
+					<td>
+						Schweiz
 					</td>
 				</tr>
 			</table>
