@@ -129,6 +129,18 @@
       <UserCode>true</UserCode>
       <id>8065ef2c-2d5c-4892-86de-a2c97579cc58</id>
     </Compile>
+    <Compile Include="KontaktLoeschen.cs">
+      <BoundTo>42b479f3-7174-42b0-b238-f28c5ec303df</BoundTo>
+      <DependentUpon>KontaktLoeschen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>24a16212-c321-4a6b-b641-97011c0eaabe</id>
+    </Compile>
+    <Compile Include="KontaktLoeschen.UserCode.cs">
+      <BoundTo>42b479f3-7174-42b0-b238-f28c5ec303df</BoundTo>
+      <DependentUpon>KontaktLoeschen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>80711dbe-2566-4928-8f46-7fe7c51547da</id>
+    </Compile>
     <Compile Include="StarteEinstellungenDialog.cs">
       <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>
       <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
@@ -210,6 +222,11 @@
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
       <id>cc1881f6-04e8-45bc-8dba-df35ceda664b</id>
       <recordtableid>fbcedd80-444f-4a2c-aa01-ddc4e9f3f02e</recordtableid>
+    </None>
+    <None Include="KontaktLoeschen.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>42b479f3-7174-42b0-b238-f28c5ec303df</id>
+      <recordtableid>402a155c-fb0f-4b6d-9e63-c420293392a5</recordtableid>
     </None>
     <None Include="StarteEinstellungenDialog.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>

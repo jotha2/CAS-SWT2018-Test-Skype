@@ -58,18 +58,6 @@ namespace TA_Skype
 
 #region Variables
 
-        string _VornameUndName;
-
-        /// <summary>
-        /// Gets or sets the value of variable VornameUndName.
-        /// </summary>
-        [TestVariable("8a9aef5b-8d59-41ca-a2c0-9978215f7c68")]
-        public string VornameUndName
-        {
-            get { return _VornameUndName; }
-            set { _VornameUndName = value; }
-        }
-
         string _Telefonnummer;
 
         /// <summary>
@@ -110,6 +98,16 @@ namespace TA_Skype
         {
             get { return repo.TelefonnummerTyp; }
             set { repo.TelefonnummerTyp = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the value of variable VornameUndName.
+        /// </summary>
+        [TestVariable("8a9aef5b-8d59-41ca-a2c0-9978215f7c68")]
+        public string VornameUndName
+        {
+            get { return repo.VornameUndName; }
+            set { repo.VornameUndName = value; }
         }
 
 #endregion

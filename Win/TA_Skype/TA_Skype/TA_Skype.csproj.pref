@@ -1,27 +1,22 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="KontaktHinzufuegen.rxrec" />
+    <Element value="TA_Skype.rxtst" />
   </Array>
-  <Array name="bookmarks">
-    <Element value="Breakpoint|C:\SkypeGit\Win\TA_Skype\TA_Skype\KontaktHinzufuegen.cs|68|9|True|Break||" />
-    <Element value="Breakpoint|C:\SkypeGit\Win\TA_Skype\TA_Skype\KontaktHinzufuegen.cs|70|13|True|Break||" />
-  </Array>
+  <Array name="bookmarks" />
   <Array name="files">
-    <Element value="KontaktHinzufuegen.cs" />
-    <Element value="KontaktHinzufuegen.UserCode.cs" />
+    <Element value="TA_Skype.rxtst" />
+    <Element value="KontaktLoeschen.rxrec" />
     <Element value="KontaktHinzufuegen.rxrec" />
     <Element value="TA_SkypeRepository.rxrep" />
-    <Element value="StarteEinstellungenDialog.rxrec" />
-    <Element value="TA_Skype.rxtst" />
-    <Element value="Login_TestAutomation.rxrec" />
-    <Element value="Logoff_TestAutomation.rxrec" />
     <Element value="StartSkype.rxrec" />
+    <Element value="KontaktLoeschen.UserCode.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
       <runOnBuild value="False" />
     </Properties>
     <Array name="recentusercodeselections">
+      <Element value="TA_Skype.KontaktLoeschen.HandleModalDialog()" />
       <Element value="TA_Skype.KontaktHinzufuegen.SetPhoneType()" />
     </Array>
   </Properties>
