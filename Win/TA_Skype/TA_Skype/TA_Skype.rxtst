@@ -134,6 +134,12 @@ rxversion="8.3">
 					</var>
 				</databinding>
 			</testmodule>
+			<testmodule
+			id="db260212-4c59-43ef-b884-5abb4908f831"
+			name="StartSkype"
+			ref="3b73c879-7922-4f33-bbe6-9867a5ef85eb"
+			type="Recording">
+			</testmodule>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -148,6 +154,10 @@ rxversion="8.3">
 						<setup
 						id="205ff4b4-52b0-43ab-8b63-4c354f46e025"
 						name="setup">
+							<testmodule
+							id="db260212-4c59-43ef-b884-5abb4908f831"
+							name="StartSkype">
+							</testmodule>
 						</setup>
 						<smartfoldernode
 						id="a11f4766-ba3d-415a-bdea-b20954792a92"
@@ -345,10 +355,10 @@ rxversion="8.3">
 			id="26caff6d-67ac-4fb4-bb74-401c1ab18d6b">
 			</testcontainer>
 			<testcontainer
-			id="4a754bbb-8b7a-422e-aaf5-51d7428d29ac">
+			id="a11f4766-ba3d-415a-bdea-b20954792a92">
 			</testcontainer>
 			<testcontainer
-			id="9b74e20f-6d22-4864-a976-723ddc010bfd">
+			id="be8ae243-bbdb-48a2-966c-2c7318c7f600">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

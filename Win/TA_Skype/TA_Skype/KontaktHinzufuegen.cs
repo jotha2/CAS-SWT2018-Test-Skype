@@ -200,8 +200,8 @@ namespace TA_Skype
             Validate.Exists(repo.Skype.PopupMenu.SelfInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.ItemTelefonnummerTyp' at Center.", repo.Skype.PopupMenu.ItemTelefonnummerTypInfo, new RecordItemIndex(16));
-            repo.Skype.PopupMenu.ItemTelefonnummerTyp.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemTelefonnummerTyp' at Center.", repo.Skype.PopupMenu.PopupItemTelefonnummerTypInfo, new RecordItemIndex(16));
+            repo.Skype.PopupMenu.PopupItemTelefonnummerTyp.Click();
             Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text=$TelefonnummerTyp) on item 'Skype.frmSkypeMain.frmTelefonnummerHinzufuegen.Detailbereich.txtTelefonnummerTyp'.", repo.Skype.frmSkypeMain.frmTelefonnummerHinzufuegen.Detailbereich.txtTelefonnummerTypInfo, new RecordItemIndex(17));

@@ -224,12 +224,10 @@ namespace TA_Skype
         {
             TA_SkypeRepositoryFolders.FrmSkypeMainFolder _frmskypemain;
             TA_SkypeRepositoryFolders.FrmLaendervorwahlFolder _frmlaendervorwahl;
-            TA_SkypeRepositoryFolders.None1Folder _none1;
+            TA_SkypeRepositoryFolders.FrmLogOnOffFolder _frmlogonoff;
             TA_SkypeRepositoryFolders.PopupMenuFolder _popupmenu;
             TA_SkypeRepositoryFolders.PopupWindowFolder _popupwindow;
             RepoItemInfo _btncloseInfo;
-            RepoItemInfo _anmeldenodererstellenInfo;
-            RepoItemInfo _namedcontainerautomationpeerInfo;
 
             /// <summary>
             /// Creates a new Skype  folder.
@@ -239,12 +237,10 @@ namespace TA_Skype
             {
                 _frmskypemain = new TA_SkypeRepositoryFolders.FrmSkypeMainFolder(this);
                 _frmlaendervorwahl = new TA_SkypeRepositoryFolders.FrmLaendervorwahlFolder(this);
-                _none1 = new TA_SkypeRepositoryFolders.None1Folder(this);
+                _frmlogonoff = new TA_SkypeRepositoryFolders.FrmLogOnOffFolder(this);
                 _popupmenu = new TA_SkypeRepositoryFolders.PopupMenuFolder(this);
                 _popupwindow = new TA_SkypeRepositoryFolders.PopupWindowFolder(this);
                 _btncloseInfo = new RepoItemInfo(this, "btnClose", "titlebar[@name='Skype' and @classname='ApplicationFrameTitleBarWindow']/?/?/button[@automationid='Close']", 30000, null, "800e7cb4-3e1d-448f-ab90-44eab8d8a0fc");
-                _anmeldenodererstellenInfo = new RepoItemInfo(this, "AnmeldenOderErstellen", "element[@orientation='None']/container[@orientation='None']/?/?/button[@name='Anmelden oder erstellen']//text[@name='Anmelden oder erstellen']", 30000, null, "86484711-50c6-4248-8edf-2f461ec41c45");
-                _namedcontainerautomationpeerInfo = new RepoItemInfo(this, "NamedContainerAutomationPeer", "element[@orientation='None']//container[@classname='NamedContainerAutomationPeer']", 30000, null, "fcc4684b-c6fb-4463-ba41-3dbf99c93ac2");
             }
 
             /// <summary>
@@ -296,54 +292,6 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The AnmeldenOderErstellen item.
-            /// </summary>
-            [RepositoryItem("86484711-50c6-4248-8edf-2f461ec41c45")]
-            public virtual Ranorex.Text AnmeldenOderErstellen
-            {
-                get
-                {
-                    return _anmeldenodererstellenInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The AnmeldenOderErstellen item info.
-            /// </summary>
-            [RepositoryItemInfo("86484711-50c6-4248-8edf-2f461ec41c45")]
-            public virtual RepoItemInfo AnmeldenOderErstellenInfo
-            {
-                get
-                {
-                    return _anmeldenodererstellenInfo;
-                }
-            }
-
-            /// <summary>
-            /// The NamedContainerAutomationPeer item.
-            /// </summary>
-            [RepositoryItem("fcc4684b-c6fb-4463-ba41-3dbf99c93ac2")]
-            public virtual Ranorex.Container NamedContainerAutomationPeer
-            {
-                get
-                {
-                    return _namedcontainerautomationpeerInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The NamedContainerAutomationPeer item info.
-            /// </summary>
-            [RepositoryItemInfo("fcc4684b-c6fb-4463-ba41-3dbf99c93ac2")]
-            public virtual RepoItemInfo NamedContainerAutomationPeerInfo
-            {
-                get
-                {
-                    return _namedcontainerautomationpeerInfo;
-                }
-            }
-
-            /// <summary>
             /// The frmSkypeMain folder.
             /// </summary>
             [RepositoryFolder("5aa5a870-123d-4704-a329-534311aa601d")]
@@ -362,12 +310,12 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The None1 folder.
+            /// The frmLogOnOff folder.
             /// </summary>
             [RepositoryFolder("62fa1213-ccc6-451a-9235-71d577eca75a")]
-            public virtual TA_SkypeRepositoryFolders.None1Folder None1
+            public virtual TA_SkypeRepositoryFolders.FrmLogOnOffFolder frmLogOnOff
             {
-                get { return _none1; }
+                get { return _frmlogonoff; }
             }
 
             /// <summary>
@@ -2325,24 +2273,24 @@ namespace TA_Skype
         }
 
         /// <summary>
-        /// The None1Folder folder.
+        /// The FrmLogOnOffFolder folder.
         /// </summary>
         [RepositoryFolder("62fa1213-ccc6-451a-9235-71d577eca75a")]
-        public partial class None1Folder : RepoGenBaseFolder
+        public partial class FrmLogOnOffFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _jaundanmeldedatenloeschenInfo;
-            RepoItemInfo _loginfeld_emailadresseInfo;
-            RepoItemInfo _loginfeld_passworteInfo;
+            TA_SkypeRepositoryFolders.FrmLogOnFolder _frmlogon;
+            TA_SkypeRepositoryFolders.FrmLogOffFolder _frmlogoff;
+            RepoItemInfo _btnanmeldenodererstellenInfo;
 
             /// <summary>
-            /// Creates a new None1  folder.
+            /// Creates a new frmLogOnOff  folder.
             /// </summary>
-            public None1Folder(RepoGenBaseFolder parentFolder) :
-                    base("None1", "element/container[@orientation='None']/container[@orientation='None']", parentFolder, 30000, null, false, "62fa1213-ccc6-451a-9235-71d577eca75a", "")
+            public FrmLogOnOffFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmLogOnOff", "element/container[@orientation='None']/container[@orientation='None']", parentFolder, 30000, null, false, "62fa1213-ccc6-451a-9235-71d577eca75a", "")
             {
-                _jaundanmeldedatenloeschenInfo = new RepoItemInfo(this, "JaUndAnmeldedatenLoeschen", "container[2]/container[3]/container[@name~'^Möchtest\\ du\\ dich\\ wirklich']/?/?/button[@name~'^Ja,\\ und\\ Anmeldedaten\\ lösc']/?/?/text[@name~'^Ja,\\ und\\ Anmeldedaten\\ lösc']", 30000, null, "ac9d2d35-7e17-4644-9015-4c097cb85a00");
-                _loginfeld_emailadresseInfo = new RepoItemInfo(this, "Loginfeld_Emailadresse", "container[3]/?/?/container[@name~'^https://login\\.live\\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/?/?/text[@automationid='i0116']", 30000, null, "55b48a56-3677-451a-8f19-02eef2337ce4");
-                _loginfeld_passworteInfo = new RepoItemInfo(this, "Loginfeld_Passworte", "container[3]/?/?/container[@name~'^https://login\\.live\\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/?/?/text[@automationid='i0118']", 30000, null, "e64b8548-479e-4390-827a-e8f8f160e30c");
+                _frmlogon = new TA_SkypeRepositoryFolders.FrmLogOnFolder(this);
+                _frmlogoff = new TA_SkypeRepositoryFolders.FrmLogOffFolder(this);
+                _btnanmeldenodererstellenInfo = new RepoItemInfo(this, "btnAnmeldenOderErstellen", "button[@name='Anmelden oder erstellen']", 5000, null, "a39fa253-bd71-42f5-869c-bafc503458e0");
             }
 
             /// <summary>
@@ -2370,74 +2318,228 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The JaUndAnmeldedatenLoeschen item.
+            /// The btnAnmeldenOderErstellen item.
             /// </summary>
-            [RepositoryItem("ac9d2d35-7e17-4644-9015-4c097cb85a00")]
-            public virtual Ranorex.Text JaUndAnmeldedatenLoeschen
+            [RepositoryItem("a39fa253-bd71-42f5-869c-bafc503458e0")]
+            public virtual Ranorex.Button btnAnmeldenOderErstellen
             {
                 get
                 {
-                    return _jaundanmeldedatenloeschenInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _btnanmeldenodererstellenInfo.CreateAdapter<Ranorex.Button>(true);
                 }
             }
 
             /// <summary>
-            /// The JaUndAnmeldedatenLoeschen item info.
+            /// The btnAnmeldenOderErstellen item info.
             /// </summary>
-            [RepositoryItemInfo("ac9d2d35-7e17-4644-9015-4c097cb85a00")]
-            public virtual RepoItemInfo JaUndAnmeldedatenLoeschenInfo
+            [RepositoryItemInfo("a39fa253-bd71-42f5-869c-bafc503458e0")]
+            public virtual RepoItemInfo btnAnmeldenOderErstellenInfo
             {
                 get
                 {
-                    return _jaundanmeldedatenloeschenInfo;
+                    return _btnanmeldenodererstellenInfo;
                 }
             }
 
             /// <summary>
-            /// The Loginfeld_Emailadresse item.
+            /// The frmLogOn folder.
+            /// </summary>
+            [RepositoryFolder("6881d33b-d464-4b89-82f0-89bf156cf329")]
+            public virtual TA_SkypeRepositoryFolders.FrmLogOnFolder frmLogOn
+            {
+                get { return _frmlogon; }
+            }
+
+            /// <summary>
+            /// The frmLogOff folder.
+            /// </summary>
+            [RepositoryFolder("3cf06fb4-ce39-468d-b0f0-087aa759ffc7")]
+            public virtual TA_SkypeRepositoryFolders.FrmLogOffFolder frmLogOff
+            {
+                get { return _frmlogoff; }
+            }
+        }
+
+        /// <summary>
+        /// The FrmLogOnFolder folder.
+        /// </summary>
+        [RepositoryFolder("6881d33b-d464-4b89-82f0-89bf156cf329")]
+        public partial class FrmLogOnFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _txtloginfeld_emailadresseInfo;
+            RepoItemInfo _txtloginfeld_passwortInfo;
+
+            /// <summary>
+            /// Creates a new frmLogOn  folder.
+            /// </summary>
+            public FrmLogOnFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmLogOn", "container[3]/container/container[@name~'^https://login\\.live\\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/container", parentFolder, 30000, null, false, "6881d33b-d464-4b89-82f0-89bf156cf329", "")
+            {
+                _txtloginfeld_emailadresseInfo = new RepoItemInfo(this, "txtLoginfeld_Emailadresse", "text[@automationid='i0116']", 30000, null, "55b48a56-3677-451a-8f19-02eef2337ce4");
+                _txtloginfeld_passwortInfo = new RepoItemInfo(this, "txtLoginfeld_Passwort", "text[@automationid='i0118']", 30000, null, "e64b8548-479e-4390-827a-e8f8f160e30c");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("6881d33b-d464-4b89-82f0-89bf156cf329")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("6881d33b-d464-4b89-82f0-89bf156cf329")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtLoginfeld_Emailadresse item.
             /// </summary>
             [RepositoryItem("55b48a56-3677-451a-8f19-02eef2337ce4")]
-            public virtual Ranorex.Text Loginfeld_Emailadresse
+            public virtual Ranorex.Text txtLoginfeld_Emailadresse
             {
                 get
                 {
-                    return _loginfeld_emailadresseInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _txtloginfeld_emailadresseInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The Loginfeld_Emailadresse item info.
+            /// The txtLoginfeld_Emailadresse item info.
             /// </summary>
             [RepositoryItemInfo("55b48a56-3677-451a-8f19-02eef2337ce4")]
-            public virtual RepoItemInfo Loginfeld_EmailadresseInfo
+            public virtual RepoItemInfo txtLoginfeld_EmailadresseInfo
             {
                 get
                 {
-                    return _loginfeld_emailadresseInfo;
+                    return _txtloginfeld_emailadresseInfo;
                 }
             }
 
             /// <summary>
-            /// The Loginfeld_Passworte item.
+            /// The txtLoginfeld_Passwort item.
             /// </summary>
             [RepositoryItem("e64b8548-479e-4390-827a-e8f8f160e30c")]
-            public virtual Ranorex.Text Loginfeld_Passworte
+            public virtual Ranorex.Text txtLoginfeld_Passwort
             {
                 get
                 {
-                    return _loginfeld_passworteInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _txtloginfeld_passwortInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The Loginfeld_Passworte item info.
+            /// The txtLoginfeld_Passwort item info.
             /// </summary>
             [RepositoryItemInfo("e64b8548-479e-4390-827a-e8f8f160e30c")]
-            public virtual RepoItemInfo Loginfeld_PassworteInfo
+            public virtual RepoItemInfo txtLoginfeld_PasswortInfo
             {
                 get
                 {
-                    return _loginfeld_passworteInfo;
+                    return _txtloginfeld_passwortInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmLogOffFolder folder.
+        /// </summary>
+        [RepositoryFolder("3cf06fb4-ce39-468d-b0f0-087aa759ffc7")]
+        public partial class FrmLogOffFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _lblabmeldenInfo;
+            RepoItemInfo _btnjaundanmeldedatenloeschenInfo;
+
+            /// <summary>
+            /// Creates a new frmLogOff  folder.
+            /// </summary>
+            public FrmLogOffFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmLogOff", "container[2]/container[3]/container[@name~'^Möchtest\\ du\\ dich\\ wirklich']/container", parentFolder, 30000, null, false, "3cf06fb4-ce39-468d-b0f0-087aa759ffc7", "")
+            {
+                _lblabmeldenInfo = new RepoItemInfo(this, "lblAbmelden", "text[@name='Abmelden']", 5000, null, "305e54d8-cf7c-4727-85f0-d248ab668c65");
+                _btnjaundanmeldedatenloeschenInfo = new RepoItemInfo(this, "btnJaUndAnmeldedatenLoeschen", "button[@name~'^Ja,\\ und\\ Anmeldedaten\\ lösc']", 30000, null, "ac9d2d35-7e17-4644-9015-4c097cb85a00");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("3cf06fb4-ce39-468d-b0f0-087aa759ffc7")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("3cf06fb4-ce39-468d-b0f0-087aa759ffc7")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblAbmelden item.
+            /// </summary>
+            [RepositoryItem("305e54d8-cf7c-4727-85f0-d248ab668c65")]
+            public virtual Ranorex.Text lblAbmelden
+            {
+                get
+                {
+                    return _lblabmeldenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblAbmelden item info.
+            /// </summary>
+            [RepositoryItemInfo("305e54d8-cf7c-4727-85f0-d248ab668c65")]
+            public virtual RepoItemInfo lblAbmeldenInfo
+            {
+                get
+                {
+                    return _lblabmeldenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnJaUndAnmeldedatenLoeschen item.
+            /// </summary>
+            [RepositoryItem("ac9d2d35-7e17-4644-9015-4c097cb85a00")]
+            public virtual Ranorex.Button btnJaUndAnmeldedatenLoeschen
+            {
+                get
+                {
+                    return _btnjaundanmeldedatenloeschenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnJaUndAnmeldedatenLoeschen item info.
+            /// </summary>
+            [RepositoryItemInfo("ac9d2d35-7e17-4644-9015-4c097cb85a00")]
+            public virtual RepoItemInfo btnJaUndAnmeldedatenLoeschenInfo
+            {
+                get
+                {
+                    return _btnjaundanmeldedatenloeschenInfo;
                 }
             }
         }
@@ -2448,10 +2550,10 @@ namespace TA_Skype
         [RepositoryFolder("8805602d-800e-4666-b193-10151d283d95")]
         public partial class PopupMenuFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _itemeinstellungenInfo;
-            RepoItemInfo _itemabmeldenInfo;
-            RepoItemInfo _itemtelefonnummertypInfo;
-            RepoItemInfo _itemprofilanzeigenInfo;
+            RepoItemInfo _popupitemeinstellungenInfo;
+            RepoItemInfo _popupitemabmeldenInfo;
+            RepoItemInfo _popupitemtelefonnummertypInfo;
+            RepoItemInfo _popupitemprofilanzeigenInfo;
 
             /// <summary>
             /// Creates a new PopupMenu  folder.
@@ -2459,10 +2561,10 @@ namespace TA_Skype
             public PopupMenuFolder(RepoGenBaseFolder parentFolder) :
                     base("PopupMenu", "form[@name='Popup']", parentFolder, 30000, null, false, "8805602d-800e-4666-b193-10151d283d95", "")
             {
-                _itemeinstellungenInfo = new RepoItemInfo(this, "ItemEinstellungen", ".//text[@name='Einstellungen']", 30000, null, "75e4319d-71ea-4037-ba9e-837b56213ef2");
-                _itemabmeldenInfo = new RepoItemInfo(this, "ItemAbmelden", ".//text[@name='Abmelden']", 30000, null, "af79c8cc-bc67-4a90-b82f-fafcdcdad07a");
-                _itemtelefonnummertypInfo = new RepoItemInfo(this, "ItemTelefonnummerTyp", ".//text[@name=$TelefonnummerTyp]", 30000, null, "a354cecb-9f0c-472b-a171-beb730b4f3b6");
-                _itemprofilanzeigenInfo = new RepoItemInfo(this, "ItemProfilAnzeigen", ".//text[@name='Profil anzeigen']", 30000, null, "6c0f8cb4-9d77-4337-84ce-ea99879b44d0");
+                _popupitemeinstellungenInfo = new RepoItemInfo(this, "PopupItemEinstellungen", ".//text[@name='Einstellungen']", 30000, null, "75e4319d-71ea-4037-ba9e-837b56213ef2");
+                _popupitemabmeldenInfo = new RepoItemInfo(this, "PopupItemAbmelden", ".//text[@name='Abmelden']", 30000, null, "af79c8cc-bc67-4a90-b82f-fafcdcdad07a");
+                _popupitemtelefonnummertypInfo = new RepoItemInfo(this, "PopupItemTelefonnummerTyp", ".//text[@name=$TelefonnummerTyp]", 30000, null, "a354cecb-9f0c-472b-a171-beb730b4f3b6");
+                _popupitemprofilanzeigenInfo = new RepoItemInfo(this, "PopupItemProfilAnzeigen", ".//text[@name='Profil anzeigen']", 30000, null, "6c0f8cb4-9d77-4337-84ce-ea99879b44d0");
             }
 
             /// <summary>
@@ -2490,98 +2592,98 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The ItemEinstellungen item.
+            /// The PopupItemEinstellungen item.
             /// </summary>
             [RepositoryItem("75e4319d-71ea-4037-ba9e-837b56213ef2")]
-            public virtual Ranorex.Text ItemEinstellungen
+            public virtual Ranorex.Text PopupItemEinstellungen
             {
                 get
                 {
-                    return _itemeinstellungenInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _popupitemeinstellungenInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The ItemEinstellungen item info.
+            /// The PopupItemEinstellungen item info.
             /// </summary>
             [RepositoryItemInfo("75e4319d-71ea-4037-ba9e-837b56213ef2")]
-            public virtual RepoItemInfo ItemEinstellungenInfo
+            public virtual RepoItemInfo PopupItemEinstellungenInfo
             {
                 get
                 {
-                    return _itemeinstellungenInfo;
+                    return _popupitemeinstellungenInfo;
                 }
             }
 
             /// <summary>
-            /// The ItemAbmelden item.
+            /// The PopupItemAbmelden item.
             /// </summary>
             [RepositoryItem("af79c8cc-bc67-4a90-b82f-fafcdcdad07a")]
-            public virtual Ranorex.Text ItemAbmelden
+            public virtual Ranorex.Text PopupItemAbmelden
             {
                 get
                 {
-                    return _itemabmeldenInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _popupitemabmeldenInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The ItemAbmelden item info.
+            /// The PopupItemAbmelden item info.
             /// </summary>
             [RepositoryItemInfo("af79c8cc-bc67-4a90-b82f-fafcdcdad07a")]
-            public virtual RepoItemInfo ItemAbmeldenInfo
+            public virtual RepoItemInfo PopupItemAbmeldenInfo
             {
                 get
                 {
-                    return _itemabmeldenInfo;
+                    return _popupitemabmeldenInfo;
                 }
             }
 
             /// <summary>
-            /// The ItemTelefonnummerTyp item.
+            /// The PopupItemTelefonnummerTyp item.
             /// </summary>
             [RepositoryItem("a354cecb-9f0c-472b-a171-beb730b4f3b6")]
-            public virtual Ranorex.Text ItemTelefonnummerTyp
+            public virtual Ranorex.Text PopupItemTelefonnummerTyp
             {
                 get
                 {
-                    return _itemtelefonnummertypInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _popupitemtelefonnummertypInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The ItemTelefonnummerTyp item info.
+            /// The PopupItemTelefonnummerTyp item info.
             /// </summary>
             [RepositoryItemInfo("a354cecb-9f0c-472b-a171-beb730b4f3b6")]
-            public virtual RepoItemInfo ItemTelefonnummerTypInfo
+            public virtual RepoItemInfo PopupItemTelefonnummerTypInfo
             {
                 get
                 {
-                    return _itemtelefonnummertypInfo;
+                    return _popupitemtelefonnummertypInfo;
                 }
             }
 
             /// <summary>
-            /// The ItemProfilAnzeigen item.
+            /// The PopupItemProfilAnzeigen item.
             /// </summary>
             [RepositoryItem("6c0f8cb4-9d77-4337-84ce-ea99879b44d0")]
-            public virtual Ranorex.Text ItemProfilAnzeigen
+            public virtual Ranorex.Text PopupItemProfilAnzeigen
             {
                 get
                 {
-                    return _itemprofilanzeigenInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _popupitemprofilanzeigenInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The ItemProfilAnzeigen item info.
+            /// The PopupItemProfilAnzeigen item info.
             /// </summary>
             [RepositoryItemInfo("6c0f8cb4-9d77-4337-84ce-ea99879b44d0")]
-            public virtual RepoItemInfo ItemProfilAnzeigenInfo
+            public virtual RepoItemInfo PopupItemProfilAnzeigenInfo
             {
                 get
                 {
-                    return _itemprofilanzeigenInfo;
+                    return _popupitemprofilanzeigenInfo;
                 }
             }
         }

@@ -1,15 +1,19 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="TA_Skype.rxtst" />
+    <Element value="Login_TestAutomation.rxrec" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Login_TestAutomation.rxrec" />
+    <Element value="Logoff_TestAutomation.rxrec" />
+    <Element value="Logoff_TestAutomation.cs" />
     <Element value="TA_Skype.rxtst" />
     <Element value="KontaktLoeschen.rxrec" />
     <Element value="KontaktHinzufuegen.rxrec" />
     <Element value="TA_SkypeRepository.rxrep" />
     <Element value="StartSkype.rxrec" />
     <Element value="KontaktLoeschen.UserCode.cs" />
+    <Element value="Login_TestAutomation.cs" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

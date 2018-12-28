@@ -90,12 +90,12 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(2));
             Delay.Duration(1000, false);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.ItemEinstellungen'.", repo.Skype.PopupMenu.ItemEinstellungenInfo, new RecordItemIndex(3));
-            Validate.Exists(repo.Skype.PopupMenu.ItemEinstellungenInfo);
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.PopupItemEinstellungen'.", repo.Skype.PopupMenu.PopupItemEinstellungenInfo, new RecordItemIndex(3));
+            Validate.Exists(repo.Skype.PopupMenu.PopupItemEinstellungenInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.ItemEinstellungen' at Center.", repo.Skype.PopupMenu.ItemEinstellungenInfo, new RecordItemIndex(4));
-            repo.Skype.PopupMenu.ItemEinstellungen.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemEinstellungen' at Center.", repo.Skype.PopupMenu.PopupItemEinstellungenInfo, new RecordItemIndex(4));
+            repo.Skype.PopupMenu.PopupItemEinstellungen.Click();
             Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmEinstellungen'.", repo.Skype.frmSkypeMain.frmEinstellungen.SelfInfo, new RecordItemIndex(5));
