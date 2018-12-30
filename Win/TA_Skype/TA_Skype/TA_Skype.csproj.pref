@@ -1,13 +1,14 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="Login_TestAutomation.rxrec" />
+    <Element value="TA_Skype.rxtst" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="TA_Skype.rxtst" />
+    <Element value="Verbindungstest_Abspielen.rxrec" />
     <Element value="Login_TestAutomation.rxrec" />
     <Element value="Logoff_TestAutomation.rxrec" />
     <Element value="Logoff_TestAutomation.cs" />
-    <Element value="TA_Skype.rxtst" />
     <Element value="KontaktLoeschen.rxrec" />
     <Element value="KontaktHinzufuegen.rxrec" />
     <Element value="TA_SkypeRepository.rxrep" />
