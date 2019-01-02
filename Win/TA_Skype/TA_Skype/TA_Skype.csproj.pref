@@ -5,16 +5,9 @@
   <Array name="bookmarks" />
   <Array name="files">
     <Element value="TA_Skype.rxtst" />
-    <Element value="Verbindungstest_Abspielen.rxrec" />
-    <Element value="Login_TestAutomation.rxrec" />
-    <Element value="Logoff_TestAutomation.rxrec" />
-    <Element value="Logoff_TestAutomation.cs" />
-    <Element value="KontaktLoeschen.rxrec" />
     <Element value="KontaktHinzufuegen.rxrec" />
     <Element value="TA_SkypeRepository.rxrep" />
-    <Element value="StartSkype.rxrec" />
-    <Element value="KontaktLoeschen.UserCode.cs" />
-    <Element value="Login_TestAutomation.cs" />
+    <Element value="EigenesProfilBearbeiten.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
