@@ -7,7 +7,6 @@
     <Element value="TA_Skype.rxtst" />
     <Element value="KontaktHinzufuegen.rxrec" />
     <Element value="TA_SkypeRepository.rxrep" />
-    <Element value="EigenesProfilBearbeiten.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

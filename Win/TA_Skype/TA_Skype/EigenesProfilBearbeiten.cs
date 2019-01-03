@@ -73,52 +73,63 @@ namespace TA_Skype
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.3")]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 0;
-            Keyboard.DefaultKeyPressTime = 20;
-            Delay.SpeedFactor = 0.00;
+            Mouse.DefaultMoveTime = 300;
+            Keyboard.DefaultKeyPressTime = 100;
+            Delay.SpeedFactor = 1.00;
 
             Init();
 
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionenInfo, new RecordItemIndex(0));
             repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen.Click();
+            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmEinstellungen.EinstellungenSideBar' at Center.", repo.Skype.frmSkypeMain.frmEinstellungen.EinstellungenSideBar.SelfInfo, new RecordItemIndex(1));
             repo.Skype.frmSkypeMain.frmEinstellungen.EinstellungenSideBar.Self.Click();
+            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblTitel'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblTitelInfo, new RecordItemIndex(2));
             Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblTitelInfo);
+            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.btnProfilbild' at Center.", repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.btnProfilbildInfo, new RecordItemIndex(3));
             repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.btnProfilbild.Click();
+            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil' at Center.", repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.SelfInfo, new RecordItemIndex(4));
             repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.Self.Click();
+            Delay.Milliseconds(200);
             
             try {
                 Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='yourtext') on item 'Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblAngemeldetAls'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblAngemeldetAlsInfo, new RecordItemIndex(5));
                 Validate.AttributeEqual(repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblAngemeldetAlsInfo, "Text", "yourtext", null, false);
+                Delay.Milliseconds(0);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(5)); }
             
             try {
                 Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='yourtext') on item 'Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.txtAngemeldetAls'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.txtAngemeldetAlsInfo, new RecordItemIndex(6));
                 Validate.AttributeEqual(repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.txtAngemeldetAlsInfo, "Text", "yourtext", null, false);
+                Delay.Milliseconds(0);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(6)); }
             
             try {
                 Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='yourtext') on item 'Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblSkypeName'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblSkypeNameInfo, new RecordItemIndex(7));
                 Validate.AttributeEqual(repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.lblSkypeNameInfo, "Text", "yourtext", null, false);
+                Delay.Milliseconds(0);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(7)); }
             
             try {
                 Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='yourtext') on item 'Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.txtSkypeName'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.txtSkypeNameInfo, new RecordItemIndex(8));
                 Validate.AttributeEqual(repo.Skype.frmSkypeMain.frmEinstellungen.frmKontoUndProfil.txtSkypeNameInfo, "Text", "yourtext", null, false);
+                Delay.Milliseconds(0);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(8)); }
             
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmEinstellungen.frmAllgemein' at Center.", repo.Skype.frmSkypeMain.frmEinstellungen.frmAllgemein.SelfInfo, new RecordItemIndex(9));
             repo.Skype.frmSkypeMain.frmEinstellungen.frmAllgemein.Self.Click();
+            Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.frmAllgemein.lblTitel'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmAllgemein.lblTitelInfo, new RecordItemIndex(10));
             Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.frmAllgemein.lblTitelInfo);
+            Delay.Milliseconds(0);
             
         }
 
