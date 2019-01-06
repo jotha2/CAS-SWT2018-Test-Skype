@@ -27,7 +27,6 @@ namespace TA_Skype
     public partial class TA_SkypeRepository : RepoGenBaseFolder
     {
         static TA_SkypeRepository instance = new TA_SkypeRepository();
-        TA_SkypeRepositoryFolders.ExplorerAppFolder _explorer;
         TA_SkypeRepositoryFolders.SkypeAppFolder _skype;
 
         /// <summary>
@@ -45,7 +44,6 @@ namespace TA_Skype
         public TA_SkypeRepository() 
             : base("TA_SkypeRepository", "/", null, 0, false, "bd9057c9-e431-44a7-ba05-6153dff61cc0", ".\\RepositoryImages\\TA_SkypeRepositorybd9057c9.rximgres")
         {
-            _explorer = new TA_SkypeRepositoryFolders.ExplorerAppFolder(this);
             _skype = new TA_SkypeRepositoryFolders.SkypeAppFolder(this);
         }
 
@@ -126,15 +124,6 @@ namespace TA_Skype
         }
 
         /// <summary>
-        /// The Explorer folder.
-        /// </summary>
-        [RepositoryFolder("4431fc6e-46f6-4e85-b084-435feecea8e6")]
-        public virtual TA_SkypeRepositoryFolders.ExplorerAppFolder Explorer
-        {
-            get { return _explorer; }
-        }
-
-        /// <summary>
         /// The Skype folder.
         /// </summary>
         [RepositoryFolder("f0a1d291-9d6e-4e9c-ac26-607165225622")]
@@ -150,72 +139,6 @@ namespace TA_Skype
     [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.3")]
     public partial class TA_SkypeRepositoryFolders
     {
-        /// <summary>
-        /// The ExplorerAppFolder folder.
-        /// </summary>
-        [RepositoryFolder("4431fc6e-46f6-4e85-b084-435feecea8e6")]
-        public partial class ExplorerAppFolder : RepoGenBaseFolder
-        {
-            RepoItemInfo _skypeInfo;
-
-            /// <summary>
-            /// Creates a new Explorer  folder.
-            /// </summary>
-            public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("Explorer", "/menubar[@processname='explorer']", parentFolder, 30000, null, true, "4431fc6e-46f6-4e85-b084-435feecea8e6", "")
-            {
-                _skypeInfo = new RepoItemInfo(this, "Skype", "container[@controlid='40965']//toolbar[@accessiblename='Ausgeführte Anwendungen']/button[@accessiblename='Skype']", 30000, null, "e9eb9817-e9f1-41a2-a062-16a50ef80794");
-            }
-
-            /// <summary>
-            /// The Self item.
-            /// </summary>
-            [RepositoryItem("4431fc6e-46f6-4e85-b084-435feecea8e6")]
-            public virtual Ranorex.MenuBar Self
-            {
-                get
-                {
-                    return _selfInfo.CreateAdapter<Ranorex.MenuBar>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Self item info.
-            /// </summary>
-            [RepositoryItemInfo("4431fc6e-46f6-4e85-b084-435feecea8e6")]
-            public virtual RepoItemInfo SelfInfo
-            {
-                get
-                {
-                    return _selfInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Skype item.
-            /// </summary>
-            [RepositoryItem("e9eb9817-e9f1-41a2-a062-16a50ef80794")]
-            public virtual Ranorex.Button Skype
-            {
-                get
-                {
-                    return _skypeInfo.CreateAdapter<Ranorex.Button>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Skype item info.
-            /// </summary>
-            [RepositoryItemInfo("e9eb9817-e9f1-41a2-a062-16a50ef80794")]
-            public virtual RepoItemInfo SkypeInfo
-            {
-                get
-                {
-                    return _skypeInfo;
-                }
-            }
-        }
-
         /// <summary>
         /// The SkypeAppFolder folder.
         /// </summary>
@@ -919,6 +842,8 @@ namespace TA_Skype
             TA_SkypeRepositoryFolders.EinstellungenSideBarFolder _einstellungensidebar;
             TA_SkypeRepositoryFolders.FrmKontoUndProfilFolder _frmkontoundprofil;
             TA_SkypeRepositoryFolders.FrmAllgemeinFolder _frmallgemein;
+            TA_SkypeRepositoryFolders.FrmProfilbildFolder _frmprofilbild;
+            TA_SkypeRepositoryFolders.FrmDarstellungFolder _frmdarstellung;
 
             /// <summary>
             /// Creates a new frmEinstellungen  folder.
@@ -929,6 +854,8 @@ namespace TA_Skype
                 _einstellungensidebar = new TA_SkypeRepositoryFolders.EinstellungenSideBarFolder(this);
                 _frmkontoundprofil = new TA_SkypeRepositoryFolders.FrmKontoUndProfilFolder(this);
                 _frmallgemein = new TA_SkypeRepositoryFolders.FrmAllgemeinFolder(this);
+                _frmprofilbild = new TA_SkypeRepositoryFolders.FrmProfilbildFolder(this);
+                _frmdarstellung = new TA_SkypeRepositoryFolders.FrmDarstellungFolder(this);
             }
 
             /// <summary>
@@ -981,6 +908,24 @@ namespace TA_Skype
             {
                 get { return _frmallgemein; }
             }
+
+            /// <summary>
+            /// The frmProfilbild folder.
+            /// </summary>
+            [RepositoryFolder("6f1cff53-ee65-42e6-9c62-5f84615232b9")]
+            public virtual TA_SkypeRepositoryFolders.FrmProfilbildFolder frmProfilbild
+            {
+                get { return _frmprofilbild; }
+            }
+
+            /// <summary>
+            /// The frmDarstellung folder.
+            /// </summary>
+            [RepositoryFolder("499ad638-dec7-4fc3-ade7-d03b3982d5cd")]
+            public virtual TA_SkypeRepositoryFolders.FrmDarstellungFolder frmDarstellung
+            {
+                get { return _frmdarstellung; }
+            }
         }
 
         /// <summary>
@@ -989,13 +934,31 @@ namespace TA_Skype
         [RepositoryFolder("1fc62bd2-8a5c-438d-86c7-42368263ecf8")]
         public partial class EinstellungenSideBarFolder : RepoGenBaseFolder
         {
+            RepoItemInfo _btnkontoprofilInfo;
+            RepoItemInfo _btnallgemeinInfo;
+            RepoItemInfo _btndarstellungInfo;
+            RepoItemInfo _btnaudioundvideoInfo;
+            RepoItemInfo _btnanrufeInfo;
+            RepoItemInfo _btnnachrichtenInfo;
+            RepoItemInfo _btnbenachrichtigungenInfo;
+            RepoItemInfo _btnkontakteInfo;
+            RepoItemInfo _btnhilfefeedbackausgewaehltInfo;
 
             /// <summary>
             /// Creates a new EinstellungenSideBar  folder.
             /// </summary>
             public EinstellungenSideBarFolder(RepoGenBaseFolder parentFolder) :
-                    base("EinstellungenSideBar", "container[@name='Konto & Profil']/container[1]", parentFolder, 10000, null, false, "1fc62bd2-8a5c-438d-86c7-42368263ecf8", "")
+                    base("EinstellungenSideBar", "container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']", parentFolder, 10000, null, false, "1fc62bd2-8a5c-438d-86c7-42368263ecf8", "")
             {
+                _btnkontoprofilInfo = new RepoItemInfo(this, "btnKontoProfil", "container[1]/button[@name='Konto & Profil']", 5000, null, "0671f144-e635-4097-a4c6-1eb865734862");
+                _btnallgemeinInfo = new RepoItemInfo(this, "btnAllgemein", "container[2]/button[@name='Allgemein']", 5000, null, "ab58c3e8-73cb-41fc-9a2f-e183672e7296");
+                _btndarstellungInfo = new RepoItemInfo(this, "btnDarstellung", "container[3]/button[@name='Darstellung']", 5000, null, "00a2d755-7050-43c9-9a50-cf8461d57a4a");
+                _btnaudioundvideoInfo = new RepoItemInfo(this, "btnAudioUndVideo", "container[4]/button[@name='Audio und Video']", 5000, null, "3383aa47-6bf2-4cd4-a40c-1b007d2995b2");
+                _btnanrufeInfo = new RepoItemInfo(this, "btnAnrufe", "container[5]/button[@name='Anrufe']", 5000, null, "f4589c8e-9008-487d-a6b9-4345a5565f0e");
+                _btnnachrichtenInfo = new RepoItemInfo(this, "btnNachrichten", "container[6]/button[@name='Nachrichten']", 5000, null, "2c13aaca-3b90-436f-ba51-a648b8881796");
+                _btnbenachrichtigungenInfo = new RepoItemInfo(this, "btnBenachrichtigungen", "container[7]/button[@name='Benachrichtigungen']", 5000, null, "9159aa9a-151c-4442-b95e-96e512a80b71");
+                _btnkontakteInfo = new RepoItemInfo(this, "btnKontakte", "container[8]/button[@name='Kontakte']", 5000, null, "62f65dd5-2281-4c96-b40c-d4aded43a4c6");
+                _btnhilfefeedbackausgewaehltInfo = new RepoItemInfo(this, "btnHilfeFeedbackAusgewaehlt", "container[9]/button[@name~'^Hilfe\\ &\\ Feedback,\\ ausgewä']", 5000, null, "570f7dfe-952d-4ca0-be02-606215802575");
             }
 
             /// <summary>
@@ -1019,6 +982,222 @@ namespace TA_Skype
                 get
                 {
                     return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnKontoProfil item.
+            /// </summary>
+            [RepositoryItem("0671f144-e635-4097-a4c6-1eb865734862")]
+            public virtual Ranorex.Button btnKontoProfil
+            {
+                get
+                {
+                    return _btnkontoprofilInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnKontoProfil item info.
+            /// </summary>
+            [RepositoryItemInfo("0671f144-e635-4097-a4c6-1eb865734862")]
+            public virtual RepoItemInfo btnKontoProfilInfo
+            {
+                get
+                {
+                    return _btnkontoprofilInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnAllgemein item.
+            /// </summary>
+            [RepositoryItem("ab58c3e8-73cb-41fc-9a2f-e183672e7296")]
+            public virtual Ranorex.Button btnAllgemein
+            {
+                get
+                {
+                    return _btnallgemeinInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnAllgemein item info.
+            /// </summary>
+            [RepositoryItemInfo("ab58c3e8-73cb-41fc-9a2f-e183672e7296")]
+            public virtual RepoItemInfo btnAllgemeinInfo
+            {
+                get
+                {
+                    return _btnallgemeinInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnDarstellung item.
+            /// </summary>
+            [RepositoryItem("00a2d755-7050-43c9-9a50-cf8461d57a4a")]
+            public virtual Ranorex.Button btnDarstellung
+            {
+                get
+                {
+                    return _btndarstellungInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnDarstellung item info.
+            /// </summary>
+            [RepositoryItemInfo("00a2d755-7050-43c9-9a50-cf8461d57a4a")]
+            public virtual RepoItemInfo btnDarstellungInfo
+            {
+                get
+                {
+                    return _btndarstellungInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnAudioUndVideo item.
+            /// </summary>
+            [RepositoryItem("3383aa47-6bf2-4cd4-a40c-1b007d2995b2")]
+            public virtual Ranorex.Button btnAudioUndVideo
+            {
+                get
+                {
+                    return _btnaudioundvideoInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnAudioUndVideo item info.
+            /// </summary>
+            [RepositoryItemInfo("3383aa47-6bf2-4cd4-a40c-1b007d2995b2")]
+            public virtual RepoItemInfo btnAudioUndVideoInfo
+            {
+                get
+                {
+                    return _btnaudioundvideoInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnAnrufe item.
+            /// </summary>
+            [RepositoryItem("f4589c8e-9008-487d-a6b9-4345a5565f0e")]
+            public virtual Ranorex.Button btnAnrufe
+            {
+                get
+                {
+                    return _btnanrufeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnAnrufe item info.
+            /// </summary>
+            [RepositoryItemInfo("f4589c8e-9008-487d-a6b9-4345a5565f0e")]
+            public virtual RepoItemInfo btnAnrufeInfo
+            {
+                get
+                {
+                    return _btnanrufeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnNachrichten item.
+            /// </summary>
+            [RepositoryItem("2c13aaca-3b90-436f-ba51-a648b8881796")]
+            public virtual Ranorex.Button btnNachrichten
+            {
+                get
+                {
+                    return _btnnachrichtenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnNachrichten item info.
+            /// </summary>
+            [RepositoryItemInfo("2c13aaca-3b90-436f-ba51-a648b8881796")]
+            public virtual RepoItemInfo btnNachrichtenInfo
+            {
+                get
+                {
+                    return _btnnachrichtenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnBenachrichtigungen item.
+            /// </summary>
+            [RepositoryItem("9159aa9a-151c-4442-b95e-96e512a80b71")]
+            public virtual Ranorex.Button btnBenachrichtigungen
+            {
+                get
+                {
+                    return _btnbenachrichtigungenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnBenachrichtigungen item info.
+            /// </summary>
+            [RepositoryItemInfo("9159aa9a-151c-4442-b95e-96e512a80b71")]
+            public virtual RepoItemInfo btnBenachrichtigungenInfo
+            {
+                get
+                {
+                    return _btnbenachrichtigungenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnKontakte item.
+            /// </summary>
+            [RepositoryItem("62f65dd5-2281-4c96-b40c-d4aded43a4c6")]
+            public virtual Ranorex.Button btnKontakte
+            {
+                get
+                {
+                    return _btnkontakteInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnKontakte item info.
+            /// </summary>
+            [RepositoryItemInfo("62f65dd5-2281-4c96-b40c-d4aded43a4c6")]
+            public virtual RepoItemInfo btnKontakteInfo
+            {
+                get
+                {
+                    return _btnkontakteInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnHilfeFeedbackAusgewaehlt item.
+            /// </summary>
+            [RepositoryItem("570f7dfe-952d-4ca0-be02-606215802575")]
+            public virtual Ranorex.Button btnHilfeFeedbackAusgewaehlt
+            {
+                get
+                {
+                    return _btnhilfefeedbackausgewaehltInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnHilfeFeedbackAusgewaehlt item info.
+            /// </summary>
+            [RepositoryItemInfo("570f7dfe-952d-4ca0-be02-606215802575")]
+            public virtual RepoItemInfo btnHilfeFeedbackAusgewaehltInfo
+            {
+                get
+                {
+                    return _btnhilfefeedbackausgewaehltInfo;
                 }
             }
         }
@@ -1333,6 +1512,450 @@ namespace TA_Skype
                 get
                 {
                     return _btnstandortmitbingteilenausInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmProfilbildFolder folder.
+        /// </summary>
+        [RepositoryFolder("6f1cff53-ee65-42e6-9c62-5f84615232b9")]
+        public partial class FrmProfilbildFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _btnzurueckInfo;
+            RepoItemInfo _lblprofilbildInfo;
+            RepoItemInfo _btnprofilbildauswaehlenInfo;
+
+            /// <summary>
+            /// Creates a new frmProfilbild  folder.
+            /// </summary>
+            public FrmProfilbildFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmProfilbild", "container[@name='Profilbild']", parentFolder, 30000, null, false, "6f1cff53-ee65-42e6-9c62-5f84615232b9", "")
+            {
+                _btnzurueckInfo = new RepoItemInfo(this, "btnZurueck", "container[2]/button[@name='Zurück']", 5000, null, "8523806a-3f3f-494b-ab90-8e73b972ac0a");
+                _lblprofilbildInfo = new RepoItemInfo(this, "lblProfilbild", "container[2]/text[@name='Profilbild']", 5000, null, "5ecab979-bf6c-4c79-a05c-0502675f64b5");
+                _btnprofilbildauswaehlenInfo = new RepoItemInfo(this, "btnProfilbildAuswaehlen", "container[@classname='ScrollViewer']/?/?/button[@name='Profilbild auswählen']", 5000, null, "81137b37-0a43-4a73-8913-ca56181fa339");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("6f1cff53-ee65-42e6-9c62-5f84615232b9")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("6f1cff53-ee65-42e6-9c62-5f84615232b9")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnZurueck item.
+            /// </summary>
+            [RepositoryItem("8523806a-3f3f-494b-ab90-8e73b972ac0a")]
+            public virtual Ranorex.Button btnZurueck
+            {
+                get
+                {
+                    return _btnzurueckInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnZurueck item info.
+            /// </summary>
+            [RepositoryItemInfo("8523806a-3f3f-494b-ab90-8e73b972ac0a")]
+            public virtual RepoItemInfo btnZurueckInfo
+            {
+                get
+                {
+                    return _btnzurueckInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblProfilbild item.
+            /// </summary>
+            [RepositoryItem("5ecab979-bf6c-4c79-a05c-0502675f64b5")]
+            public virtual Ranorex.Text lblProfilbild
+            {
+                get
+                {
+                    return _lblprofilbildInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblProfilbild item info.
+            /// </summary>
+            [RepositoryItemInfo("5ecab979-bf6c-4c79-a05c-0502675f64b5")]
+            public virtual RepoItemInfo lblProfilbildInfo
+            {
+                get
+                {
+                    return _lblprofilbildInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnProfilbildAuswaehlen item.
+            /// </summary>
+            [RepositoryItem("81137b37-0a43-4a73-8913-ca56181fa339")]
+            public virtual Ranorex.Button btnProfilbildAuswaehlen
+            {
+                get
+                {
+                    return _btnprofilbildauswaehlenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnProfilbildAuswaehlen item info.
+            /// </summary>
+            [RepositoryItemInfo("81137b37-0a43-4a73-8913-ca56181fa339")]
+            public virtual RepoItemInfo btnProfilbildAuswaehlenInfo
+            {
+                get
+                {
+                    return _btnprofilbildauswaehlenInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmDarstellungFolder folder.
+        /// </summary>
+        [RepositoryFolder("499ad638-dec7-4fc3-ade7-d03b3982d5cd")]
+        public partial class FrmDarstellungFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _btnklassischInfo;
+            RepoItemInfo _btnblauInfo;
+            RepoItemInfo _btnfuchsieInfo;
+            RepoItemInfo _btnminzeInfo;
+            RepoItemInfo _btnrosaInfo;
+            RepoItemInfo _btngelbInfo;
+            RepoItemInfo _opthellInfo;
+            RepoItemInfo _optdunkelInfo;
+            RepoItemInfo _optsystemeinstellungverwendenInfo;
+            RepoItemInfo _opthoherkontrasthellInfo;
+            RepoItemInfo _opthoherkontrastdunkelInfo;
+
+            /// <summary>
+            /// Creates a new frmDarstellung  folder.
+            /// </summary>
+            public FrmDarstellungFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmDarstellung", "container[@name='Wähle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']", parentFolder, 30000, null, false, "499ad638-dec7-4fc3-ade7-d03b3982d5cd", "")
+            {
+                _btnklassischInfo = new RepoItemInfo(this, "btnKlassisch", "button[@name~'^Klassisch']", 5000, null, "1c2526ec-344f-44f6-b181-f92e37e56c05");
+                _btnblauInfo = new RepoItemInfo(this, "btnBlau", "button[@name~'^Blau']", 5000, null, "58fdaee8-528a-42ae-920a-736d8e4f179f");
+                _btnfuchsieInfo = new RepoItemInfo(this, "btnFuchsie", "button[@name~'^Fuchsie']", 5000, null, "c33ee7be-0cee-4041-b493-843686faeed6");
+                _btnminzeInfo = new RepoItemInfo(this, "btnMinze", "button[@name~'^Minze']", 5000, null, "6b39f12e-dbc3-4024-bf26-2aca0b0e682c");
+                _btnrosaInfo = new RepoItemInfo(this, "btnRosa", "button[@name~'^Rosa']", 5000, null, "b5e1de91-0228-473d-b038-6e4ee28c13a4");
+                _btngelbInfo = new RepoItemInfo(this, "btnGelb", "button[@name~'^Gelb']", 5000, null, "369d2f63-f1fc-4efd-9d7a-2bf236d70ae6");
+                _opthellInfo = new RepoItemInfo(this, "optHell", "text[@name~'^Hell']", 5000, null, "d60814b9-4be9-4050-8fda-96f38a7f26d4");
+                _optdunkelInfo = new RepoItemInfo(this, "optDunkel", "text[@name~'^Dunkel']", 5000, null, "2a9f7798-7e10-4a94-9ca6-091e3d413cab");
+                _optsystemeinstellungverwendenInfo = new RepoItemInfo(this, "optSystemeinstellungVerwenden", "text[@name~'^Systemeinstellung verwenden']", 5000, null, "991e3181-6083-4fc3-a707-9821b685bf3e");
+                _opthoherkontrasthellInfo = new RepoItemInfo(this, "optHoherKontrastHell", "text[@name~'^Hoher Kontrast hell']", 5000, null, "78a62bd1-d861-419a-a67d-8b777fd872e6");
+                _opthoherkontrastdunkelInfo = new RepoItemInfo(this, "optHoherKontrastDunkel", "text[@name~'^Hoher Kontrast dunkel']", 5000, null, "c65d36b4-4eb4-4a37-94ae-1ca93f68fcd0");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("499ad638-dec7-4fc3-ade7-d03b3982d5cd")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("499ad638-dec7-4fc3-ade7-d03b3982d5cd")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnKlassisch item.
+            /// </summary>
+            [RepositoryItem("1c2526ec-344f-44f6-b181-f92e37e56c05")]
+            public virtual Ranorex.Button btnKlassisch
+            {
+                get
+                {
+                    return _btnklassischInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnKlassisch item info.
+            /// </summary>
+            [RepositoryItemInfo("1c2526ec-344f-44f6-b181-f92e37e56c05")]
+            public virtual RepoItemInfo btnKlassischInfo
+            {
+                get
+                {
+                    return _btnklassischInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnBlau item.
+            /// </summary>
+            [RepositoryItem("58fdaee8-528a-42ae-920a-736d8e4f179f")]
+            public virtual Ranorex.Button btnBlau
+            {
+                get
+                {
+                    return _btnblauInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnBlau item info.
+            /// </summary>
+            [RepositoryItemInfo("58fdaee8-528a-42ae-920a-736d8e4f179f")]
+            public virtual RepoItemInfo btnBlauInfo
+            {
+                get
+                {
+                    return _btnblauInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnFuchsie item.
+            /// </summary>
+            [RepositoryItem("c33ee7be-0cee-4041-b493-843686faeed6")]
+            public virtual Ranorex.Button btnFuchsie
+            {
+                get
+                {
+                    return _btnfuchsieInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnFuchsie item info.
+            /// </summary>
+            [RepositoryItemInfo("c33ee7be-0cee-4041-b493-843686faeed6")]
+            public virtual RepoItemInfo btnFuchsieInfo
+            {
+                get
+                {
+                    return _btnfuchsieInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnMinze item.
+            /// </summary>
+            [RepositoryItem("6b39f12e-dbc3-4024-bf26-2aca0b0e682c")]
+            public virtual Ranorex.Button btnMinze
+            {
+                get
+                {
+                    return _btnminzeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnMinze item info.
+            /// </summary>
+            [RepositoryItemInfo("6b39f12e-dbc3-4024-bf26-2aca0b0e682c")]
+            public virtual RepoItemInfo btnMinzeInfo
+            {
+                get
+                {
+                    return _btnminzeInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnRosa item.
+            /// </summary>
+            [RepositoryItem("b5e1de91-0228-473d-b038-6e4ee28c13a4")]
+            public virtual Ranorex.Button btnRosa
+            {
+                get
+                {
+                    return _btnrosaInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnRosa item info.
+            /// </summary>
+            [RepositoryItemInfo("b5e1de91-0228-473d-b038-6e4ee28c13a4")]
+            public virtual RepoItemInfo btnRosaInfo
+            {
+                get
+                {
+                    return _btnrosaInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnGelb item.
+            /// </summary>
+            [RepositoryItem("369d2f63-f1fc-4efd-9d7a-2bf236d70ae6")]
+            public virtual Ranorex.Button btnGelb
+            {
+                get
+                {
+                    return _btngelbInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnGelb item info.
+            /// </summary>
+            [RepositoryItemInfo("369d2f63-f1fc-4efd-9d7a-2bf236d70ae6")]
+            public virtual RepoItemInfo btnGelbInfo
+            {
+                get
+                {
+                    return _btngelbInfo;
+                }
+            }
+
+            /// <summary>
+            /// The optHell item.
+            /// </summary>
+            [RepositoryItem("d60814b9-4be9-4050-8fda-96f38a7f26d4")]
+            public virtual Ranorex.Text optHell
+            {
+                get
+                {
+                    return _opthellInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The optHell item info.
+            /// </summary>
+            [RepositoryItemInfo("d60814b9-4be9-4050-8fda-96f38a7f26d4")]
+            public virtual RepoItemInfo optHellInfo
+            {
+                get
+                {
+                    return _opthellInfo;
+                }
+            }
+
+            /// <summary>
+            /// The optDunkel item.
+            /// </summary>
+            [RepositoryItem("2a9f7798-7e10-4a94-9ca6-091e3d413cab")]
+            public virtual Ranorex.Text optDunkel
+            {
+                get
+                {
+                    return _optdunkelInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The optDunkel item info.
+            /// </summary>
+            [RepositoryItemInfo("2a9f7798-7e10-4a94-9ca6-091e3d413cab")]
+            public virtual RepoItemInfo optDunkelInfo
+            {
+                get
+                {
+                    return _optdunkelInfo;
+                }
+            }
+
+            /// <summary>
+            /// The optSystemeinstellungVerwenden item.
+            /// </summary>
+            [RepositoryItem("991e3181-6083-4fc3-a707-9821b685bf3e")]
+            public virtual Ranorex.Text optSystemeinstellungVerwenden
+            {
+                get
+                {
+                    return _optsystemeinstellungverwendenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The optSystemeinstellungVerwenden item info.
+            /// </summary>
+            [RepositoryItemInfo("991e3181-6083-4fc3-a707-9821b685bf3e")]
+            public virtual RepoItemInfo optSystemeinstellungVerwendenInfo
+            {
+                get
+                {
+                    return _optsystemeinstellungverwendenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The optHoherKontrastHell item.
+            /// </summary>
+            [RepositoryItem("78a62bd1-d861-419a-a67d-8b777fd872e6")]
+            public virtual Ranorex.Text optHoherKontrastHell
+            {
+                get
+                {
+                    return _opthoherkontrasthellInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The optHoherKontrastHell item info.
+            /// </summary>
+            [RepositoryItemInfo("78a62bd1-d861-419a-a67d-8b777fd872e6")]
+            public virtual RepoItemInfo optHoherKontrastHellInfo
+            {
+                get
+                {
+                    return _opthoherkontrasthellInfo;
+                }
+            }
+
+            /// <summary>
+            /// The optHoherKontrastDunkel item.
+            /// </summary>
+            [RepositoryItem("c65d36b4-4eb4-4a37-94ae-1ca93f68fcd0")]
+            public virtual Ranorex.Text optHoherKontrastDunkel
+            {
+                get
+                {
+                    return _opthoherkontrastdunkelInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The optHoherKontrastDunkel item info.
+            /// </summary>
+            [RepositoryItemInfo("c65d36b4-4eb4-4a37-94ae-1ca93f68fcd0")]
+            public virtual RepoItemInfo optHoherKontrastDunkelInfo
+            {
+                get
+                {
+                    return _opthoherkontrastdunkelInfo;
                 }
             }
         }

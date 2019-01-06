@@ -14,83 +14,6 @@ rxversion="8.3">
 	searchtimeout="0ms"
 	usecache="True">
 		<appfolder
-		addcaps="menubar,nativewindow"
-		capname="menubar"
-		id="4431fc6e-46f6-4e85-b084-435feecea8e6"
-		isrooted="True"
-		name="Explorer"
-		refpath="/menubar[@processname='explorer']"
-		searchtimeout="30000ms"
-		usecache="True">
-			<item
-			addcaps="button,accessible"
-			capname="button"
-			id="e9eb9817-e9f1-41a2-a062-16a50ef80794"
-			name="Skype"
-			refimgid="d9086d7c-6114-433c-8d53-e05a8082e297"
-			refpath="/menubar[@processname='explorer']/container[@controlid='40965']/container/element/toolbar/button[@accessiblename='Skype']"
-			searchtimeout="30000ms">
-				/menubar[@processname='explorer']/container[@controlid='40965']//toolbar[@accessiblename='Ausgef&#252;hrte Anwendungen']/button[@accessiblename='Skype']
-			</item>
-			<basepath>
-				/menubar[@processname='explorer']
-			</basepath>
-			<icon>
-				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
-VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
-			</icon>
-		</appfolder>
-		<appfolder
 		addcaps="form,uiautomation,nativewindow,windowsapp"
 		capname="windowsapp"
 		id="f0a1d291-9d6e-4e9c-ac26-607165225622"
@@ -264,8 +187,98 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 					name="EinstellungenSideBar"
 					searchtimeout="10000ms"
 					usecache="False">
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="0671f144-e635-4097-a4c6-1eb865734862"
+						name="btnKontoProfil"
+						refimgid="8354ddbc-1b31-4cc4-b916-29e11b2b0bd1"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[1]/button[@name='Konto &amp; Profil']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[1]/button[@name='Konto &amp; Profil']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="ab58c3e8-73cb-41fc-9a2f-e183672e7296"
+						name="btnAllgemein"
+						refimgid="6e44b61a-645a-42d9-8c42-9c13040ea8d9"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[2]/button[@name='Allgemein']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[2]/button[@name='Allgemein']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="00a2d755-7050-43c9-9a50-cf8461d57a4a"
+						name="btnDarstellung"
+						refimgid="c4a3ab46-6f24-422f-9e2e-8db1b4c7577d"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[3]/button[@name='Darstellung']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[3]/button[@name='Darstellung']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="3383aa47-6bf2-4cd4-a40c-1b007d2995b2"
+						name="btnAudioUndVideo"
+						refimgid="6b4dba0d-ebab-4488-912b-918cdee2c959"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[4]/button[@name='Audio und Video']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[4]/button[@name='Audio und Video']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="f4589c8e-9008-487d-a6b9-4345a5565f0e"
+						name="btnAnrufe"
+						refimgid="0ea05135-ff87-4581-9eee-5571f5509a3f"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[5]/button[@name='Anrufe']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[5]/button[@name='Anrufe']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="2c13aaca-3b90-436f-ba51-a648b8881796"
+						name="btnNachrichten"
+						refimgid="4a0ac4a9-288d-4526-820e-94c0c65e481f"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[6]/button[@name='Nachrichten']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[6]/button[@name='Nachrichten']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="9159aa9a-151c-4442-b95e-96e512a80b71"
+						name="btnBenachrichtigungen"
+						refimgid="c8b612d6-05d8-41ca-b11d-fd48889c6a2d"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[7]/button[@name='Benachrichtigungen']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[7]/button[@name='Benachrichtigungen']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="62f65dd5-2281-4c96-b40c-d4aded43a4c6"
+						name="btnKontakte"
+						refimgid="f256f334-f9d0-44d0-9f54-727388edf7ff"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[8]/button[@name='Kontakte']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[8]/button[@name='Kontakte']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="570f7dfe-952d-4ca0-be02-606215802575"
+						name="btnHilfeFeedbackAusgewaehlt"
+						refimgid="9f7e37c7-b77b-4479-83d8-dd69bfcda998"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[6]/container[@name='Hilfe &amp; Feedback']/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[9]/button[@name='Hilfe &amp; Feedback, ausgewählt']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[9]/button[@name~'^Hilfe\ &amp;\ Feedback,\ ausgew&#228;']
+						</item>
 						<basepath>
-							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[1]
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']
 						</basepath>
 					</folder>
 					<folder
@@ -369,6 +382,157 @@ VZB4/J8BADyZI3kwAy98AAAAAElFTkSuQmCC
 						</item>
 						<basepath>
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Allgemein']/container[@classname='ScrollViewer']
+						</basepath>
+					</folder>
+					<folder
+					capname="container"
+					id="6f1cff53-ee65-42e6-9c62-5f84615232b9"
+					isrooted="True"
+					name="frmProfilbild"
+					searchtimeout="30000ms"
+					usecache="False">
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="8523806a-3f3f-494b-ab90-8e73b972ac0a"
+						name="btnZurueck"
+						refimgid="1d84104a-ec28-40ad-9aa3-e56ee4a75029"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']/container[2]/button[@name='Zurück']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']/container[2]/button[@name='Zur&#252;ck']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="5ecab979-bf6c-4c79-a05c-0502675f64b5"
+						name="lblProfilbild"
+						refimgid="2e59bd83-2e03-45f3-a050-c7705814f52f"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']/container[2]/text[@name='Profilbild']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']/container[2]/text[@name='Profilbild']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="81137b37-0a43-4a73-8913-ca56181fa339"
+						name="btnProfilbildAuswaehlen"
+						refimgid="13b41600-a41a-4a76-89c7-59d227bd26ba"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name='Profilbild auswählen']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']/container[@classname='ScrollViewer']/?/?/button[@name='Profilbild ausw&#228;hlen']
+						</item>
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']
+						</basepath>
+					</folder>
+					<folder
+					capname="container"
+					id="499ad638-dec7-4fc3-ade7-d03b3982d5cd"
+					isrooted="True"
+					name="frmDarstellung"
+					searchtimeout="30000ms"
+					usecache="False">
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="1c2526ec-344f-44f6-b181-f92e37e56c05"
+						name="btnKlassisch"
+						refimgid="014dda16-1aef-4de5-953f-e7070e278e4d"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Klassisch']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="58fdaee8-528a-42ae-920a-736d8e4f179f"
+						name="btnBlau"
+						refimgid="2e0b332b-ba5e-4e0c-bc38-0dc3a03c1308"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Blau']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="c33ee7be-0cee-4041-b493-843686faeed6"
+						name="btnFuchsie"
+						refimgid="5d74b33c-136e-42c2-bbb9-7ca5472e9ed1"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Fuchsie']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="6b39f12e-dbc3-4024-bf26-2aca0b0e682c"
+						name="btnMinze"
+						refimgid="da0fbc49-0dfd-476c-9a3e-68becf62303b"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Minze']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="b5e1de91-0228-473d-b038-6e4ee28c13a4"
+						name="btnRosa"
+						refimgid="1730f9ea-e64c-4663-af1b-f55922747a35"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Rosa']
+						</item>
+						<item
+						addcaps="button,uiautomation,uiautomationinvoke"
+						capname="button"
+						id="369d2f63-f1fc-4efd-9d7a-2bf236d70ae6"
+						name="btnGelb"
+						refimgid="cdb1d376-ff74-4af1-8802-644eff0e4d5a"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Gelb']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="d60814b9-4be9-4050-8fda-96f38a7f26d4"
+						name="optHell"
+						refimgid="939b2a70-dbaa-4297-8b6d-d89b81e09068"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/text[@name~'^Hell']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="2a9f7798-7e10-4a94-9ca6-091e3d413cab"
+						name="optDunkel"
+						refimgid="412e5f53-3a7f-4fe7-ac48-45b2881c6d27"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/text[@name~'^Dunkel']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="991e3181-6083-4fc3-a707-9821b685bf3e"
+						name="optSystemeinstellungVerwenden"
+						refimgid="8c5267cb-dfc7-48f0-ae45-8cb436c2594f"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/text[@name~'^Systemeinstellung verwenden']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="78a62bd1-d861-419a-a67d-8b777fd872e6"
+						name="optHoherKontrastHell"
+						refimgid="0ce5278c-99a4-4a28-88b8-ceed48c51159"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/text[@name~'^Hoher Kontrast hell']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="c65d36b4-4eb4-4a37-94ae-1ca93f68fcd0"
+						name="optHoherKontrastDunkel"
+						refimgid="710b178e-cf01-4f7f-8203-45058532bbd1"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/text[@name~'^Hoher Kontrast dunkel']
+						</item>
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']
 						</basepath>
 					</folder>
 					<basepath>
