@@ -28,7 +28,6 @@ namespace TA_Skype
     {
         static TA_SkypeRepository instance = new TA_SkypeRepository();
         TA_SkypeRepositoryFolders.SkypeAppFolder _skype;
-        TA_SkypeRepositoryFolders.ExplorerAppFolder _explorer;
 
         /// <summary>
         /// Gets the singleton class instance representing the TA_SkypeRepository element repository.
@@ -46,7 +45,6 @@ namespace TA_Skype
             : base("TA_SkypeRepository", "/", null, 0, false, "bd9057c9-e431-44a7-ba05-6153dff61cc0", ".\\RepositoryImages\\TA_SkypeRepositorybd9057c9.rximgres")
         {
             _skype = new TA_SkypeRepositoryFolders.SkypeAppFolder(this);
-            _explorer = new TA_SkypeRepositoryFolders.ExplorerAppFolder(this);
         }
 
 #region Variables
@@ -132,15 +130,6 @@ namespace TA_Skype
         public virtual TA_SkypeRepositoryFolders.SkypeAppFolder Skype
         {
             get { return _skype; }
-        }
-
-        /// <summary>
-        /// The Explorer folder.
-        /// </summary>
-        [RepositoryFolder("a8ad6083-39d2-445b-9001-a1d0d2edade6")]
-        public virtual TA_SkypeRepositoryFolders.ExplorerAppFolder Explorer
-        {
-            get { return _explorer; }
         }
     }
 
@@ -855,13 +844,10 @@ namespace TA_Skype
             TA_SkypeRepositoryFolders.FrmAllgemeinFolder _frmallgemein;
             TA_SkypeRepositoryFolders.FrmProfilbildFolder _frmprofilbild;
             TA_SkypeRepositoryFolders.FrmDarstellungFolder _frmdarstellung;
-            RepoItemInfo _verifikationspracheInfo;
-            RepoItemInfo _geraetesprachedevicelanguageInfo;
-            RepoItemInfo _benachrichtigungstoeneInfo;
-            RepoItemInfo _benachrichtigungstoenedeaktivierenInfo;
-            RepoItemInfo _textgroesseInfo;
-            RepoItemInfo _normalInfo;
-            RepoItemInfo _schliessenInfo;
+            TA_SkypeRepositoryFolders.FrmSpracheFolder _frmsprache;
+            TA_SkypeRepositoryFolders.FrmNachrichtenFolder _frmnachrichten;
+            TA_SkypeRepositoryFolders.FrmBenachrichtigungenFolder _frmbenachrichtigungen;
+            TA_SkypeRepositoryFolders.FrmKontakteFolder _frmkontakte;
 
             /// <summary>
             /// Creates a new frmEinstellungen  folder.
@@ -874,13 +860,10 @@ namespace TA_Skype
                 _frmallgemein = new TA_SkypeRepositoryFolders.FrmAllgemeinFolder(this);
                 _frmprofilbild = new TA_SkypeRepositoryFolders.FrmProfilbildFolder(this);
                 _frmdarstellung = new TA_SkypeRepositoryFolders.FrmDarstellungFolder(this);
-                _verifikationspracheInfo = new RepoItemInfo(this, "VerifikationSprache", "container[@name='Sprache']/container[2]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Gerätesprache\\ -\\ Device\\ la']//text[@name='']", 5000, null, "42ec9a75-1b70-417c-b85f-46367d0c07ae");
-                _geraetesprachedevicelanguageInfo = new RepoItemInfo(this, "GeraetespracheDeviceLanguage", "container[@name='Sprache']/container[2]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Gerätesprache\\ -\\ Device\\ la']//text[@name~'^Gerätesprache\\ -\\ Device\\ la']", 5000, null, "0f1eb496-9f6e-4053-a84f-6cce5a0f42b2");
-                _benachrichtigungstoeneInfo = new RepoItemInfo(this, "Benachrichtigungstoene", "container[@name='Benachrichtigungen']/container[@classname='ScrollViewer']/?/?/button[@name~'^Benachrichtigungstöne,\\ Tö']//text[@name='Benachrichtigungstöne']", 5000, null, "f258eae1-41cc-4604-ad22-da4a066adb07");
-                _benachrichtigungstoenedeaktivierenInfo = new RepoItemInfo(this, "BenachrichtigungstoeneDeaktivieren", "container[@name='Benachrichtigungen']/container[@classname='ScrollViewer']/?/?/button[@name~'^Benachrichtigungstöne,\\ Tö']/container/container[@orientation='None']/container[@orientation='None']/?/?/container[@orientation='None']", 5000, null, "6b6e0d45-9c5d-4971-bc9a-a9ad38cad109");
-                _textgroesseInfo = new RepoItemInfo(this, "Textgroesse", "container[@name='Nachrichten']/container[@classname='ScrollViewer']/?/?/text[@name='Textgröße']", 5000, null, "94e77fa2-a064-4b9c-be90-04cfd0cb31b4");
-                _normalInfo = new RepoItemInfo(this, "Normal", "container[@name='Nachrichten']/container[@classname='ScrollViewer']/?/?/button[@name~'^Textgröße,\\ Normal,\\ ausgew']/?/?/text[@name='Normal']", 5000, null, "d0ee00dd-bd32-46ce-bd7c-7eea0265738f");
-                _schliessenInfo = new RepoItemInfo(this, "Schliessen", "container[@name='Konto & Profil']/container[1]//button[@name='Schließen']", 5000, null, "b4716e86-02e8-4c89-a7b2-de078e25d6ab");
+                _frmsprache = new TA_SkypeRepositoryFolders.FrmSpracheFolder(this);
+                _frmnachrichten = new TA_SkypeRepositoryFolders.FrmNachrichtenFolder(this);
+                _frmbenachrichtigungen = new TA_SkypeRepositoryFolders.FrmBenachrichtigungenFolder(this);
+                _frmkontakte = new TA_SkypeRepositoryFolders.FrmKontakteFolder(this);
             }
 
             /// <summary>
@@ -904,174 +887,6 @@ namespace TA_Skype
                 get
                 {
                     return _selfInfo;
-                }
-            }
-
-            /// <summary>
-            /// The VerifikationSprache item.
-            /// </summary>
-            [RepositoryItem("42ec9a75-1b70-417c-b85f-46367d0c07ae")]
-            public virtual Ranorex.Text VerifikationSprache
-            {
-                get
-                {
-                    return _verifikationspracheInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The VerifikationSprache item info.
-            /// </summary>
-            [RepositoryItemInfo("42ec9a75-1b70-417c-b85f-46367d0c07ae")]
-            public virtual RepoItemInfo VerifikationSpracheInfo
-            {
-                get
-                {
-                    return _verifikationspracheInfo;
-                }
-            }
-
-            /// <summary>
-            /// The GeraetespracheDeviceLanguage item.
-            /// </summary>
-            [RepositoryItem("0f1eb496-9f6e-4053-a84f-6cce5a0f42b2")]
-            public virtual Ranorex.Text GeraetespracheDeviceLanguage
-            {
-                get
-                {
-                    return _geraetesprachedevicelanguageInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The GeraetespracheDeviceLanguage item info.
-            /// </summary>
-            [RepositoryItemInfo("0f1eb496-9f6e-4053-a84f-6cce5a0f42b2")]
-            public virtual RepoItemInfo GeraetespracheDeviceLanguageInfo
-            {
-                get
-                {
-                    return _geraetesprachedevicelanguageInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Benachrichtigungstoene item.
-            /// </summary>
-            [RepositoryItem("f258eae1-41cc-4604-ad22-da4a066adb07")]
-            public virtual Ranorex.Text Benachrichtigungstoene
-            {
-                get
-                {
-                    return _benachrichtigungstoeneInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Benachrichtigungstoene item info.
-            /// </summary>
-            [RepositoryItemInfo("f258eae1-41cc-4604-ad22-da4a066adb07")]
-            public virtual RepoItemInfo BenachrichtigungstoeneInfo
-            {
-                get
-                {
-                    return _benachrichtigungstoeneInfo;
-                }
-            }
-
-            /// <summary>
-            /// The BenachrichtigungstoeneDeaktivieren item.
-            /// </summary>
-            [RepositoryItem("6b6e0d45-9c5d-4971-bc9a-a9ad38cad109")]
-            public virtual Ranorex.Container BenachrichtigungstoeneDeaktivieren
-            {
-                get
-                {
-                    return _benachrichtigungstoenedeaktivierenInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The BenachrichtigungstoeneDeaktivieren item info.
-            /// </summary>
-            [RepositoryItemInfo("6b6e0d45-9c5d-4971-bc9a-a9ad38cad109")]
-            public virtual RepoItemInfo BenachrichtigungstoeneDeaktivierenInfo
-            {
-                get
-                {
-                    return _benachrichtigungstoenedeaktivierenInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Textgroesse item.
-            /// </summary>
-            [RepositoryItem("94e77fa2-a064-4b9c-be90-04cfd0cb31b4")]
-            public virtual Ranorex.Text Textgroesse
-            {
-                get
-                {
-                    return _textgroesseInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Textgroesse item info.
-            /// </summary>
-            [RepositoryItemInfo("94e77fa2-a064-4b9c-be90-04cfd0cb31b4")]
-            public virtual RepoItemInfo TextgroesseInfo
-            {
-                get
-                {
-                    return _textgroesseInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Normal item.
-            /// </summary>
-            [RepositoryItem("d0ee00dd-bd32-46ce-bd7c-7eea0265738f")]
-            public virtual Ranorex.Text Normal
-            {
-                get
-                {
-                    return _normalInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Normal item info.
-            /// </summary>
-            [RepositoryItemInfo("d0ee00dd-bd32-46ce-bd7c-7eea0265738f")]
-            public virtual RepoItemInfo NormalInfo
-            {
-                get
-                {
-                    return _normalInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Schliessen item.
-            /// </summary>
-            [RepositoryItem("b4716e86-02e8-4c89-a7b2-de078e25d6ab")]
-            public virtual Ranorex.Button Schliessen
-            {
-                get
-                {
-                    return _schliessenInfo.CreateAdapter<Ranorex.Button>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Schliessen item info.
-            /// </summary>
-            [RepositoryItemInfo("b4716e86-02e8-4c89-a7b2-de078e25d6ab")]
-            public virtual RepoItemInfo SchliessenInfo
-            {
-                get
-                {
-                    return _schliessenInfo;
                 }
             }
 
@@ -1118,6 +933,42 @@ namespace TA_Skype
             public virtual TA_SkypeRepositoryFolders.FrmDarstellungFolder frmDarstellung
             {
                 get { return _frmdarstellung; }
+            }
+
+            /// <summary>
+            /// The frmSprache folder.
+            /// </summary>
+            [RepositoryFolder("7d9bd5d0-bc42-4aeb-a139-cf08701db7a5")]
+            public virtual TA_SkypeRepositoryFolders.FrmSpracheFolder frmSprache
+            {
+                get { return _frmsprache; }
+            }
+
+            /// <summary>
+            /// The frmNachrichten folder.
+            /// </summary>
+            [RepositoryFolder("ed601bf7-0c85-4230-9a4e-569325a4e778")]
+            public virtual TA_SkypeRepositoryFolders.FrmNachrichtenFolder frmNachrichten
+            {
+                get { return _frmnachrichten; }
+            }
+
+            /// <summary>
+            /// The frmBenachrichtigungen folder.
+            /// </summary>
+            [RepositoryFolder("b8174386-d07a-42e3-856b-1b82e0185f3f")]
+            public virtual TA_SkypeRepositoryFolders.FrmBenachrichtigungenFolder frmBenachrichtigungen
+            {
+                get { return _frmbenachrichtigungen; }
+            }
+
+            /// <summary>
+            /// The frmKontakte folder.
+            /// </summary>
+            [RepositoryFolder("a52e1944-83c2-4990-9bb8-4633e1d6c559")]
+            public virtual TA_SkypeRepositoryFolders.FrmKontakteFolder frmKontakte
+            {
+                get { return _frmkontakte; }
             }
         }
 
@@ -1609,7 +1460,7 @@ namespace TA_Skype
             {
                 _lbltitelInfo = new RepoItemInfo(this, "lblTitel", "?/?/text[@name='ALLGEMEIN']", 10000, null, "b2ee7b14-95bf-48eb-98c8-1b92205830ee");
                 _btnspracheInfo = new RepoItemInfo(this, "btnSprache", "container/container[@orientation='None']/button[@name='Sprache']", 10000, null, "5195c865-9032-4094-98ba-a0bccfbab17e");
-                _btnstandortmitbingteilenausInfo = new RepoItemInfo(this, "BtnStandortMitBingTeilenAus", "?/?/button[@name~'^Standort\\ mit\\ Bing\\ teilen,']", 10000, null, "0bd2e3f6-dbb9-4919-ba4a-bfc1a5ef9166");
+                _btnstandortmitbingteilenausInfo = new RepoItemInfo(this, "btnStandortMitBingTeilenAus", "?/?/button[@name~'^Standort\\ mit\\ Bing\\ teilen,']", 10000, null, "0bd2e3f6-dbb9-4919-ba4a-bfc1a5ef9166");
             }
 
             /// <summary>
@@ -1685,10 +1536,10 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The BtnStandortMitBingTeilenAus item.
+            /// The btnStandortMitBingTeilenAus item.
             /// </summary>
             [RepositoryItem("0bd2e3f6-dbb9-4919-ba4a-bfc1a5ef9166")]
-            public virtual Ranorex.Button BtnStandortMitBingTeilenAus
+            public virtual Ranorex.Button btnStandortMitBingTeilenAus
             {
                 get
                 {
@@ -1697,10 +1548,10 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The BtnStandortMitBingTeilenAus item info.
+            /// The btnStandortMitBingTeilenAus item info.
             /// </summary>
             [RepositoryItemInfo("0bd2e3f6-dbb9-4919-ba4a-bfc1a5ef9166")]
-            public virtual RepoItemInfo BtnStandortMitBingTeilenAusInfo
+            public virtual RepoItemInfo btnStandortMitBingTeilenAusInfo
             {
                 get
                 {
@@ -1845,7 +1696,7 @@ namespace TA_Skype
             RepoItemInfo _opthoherkontrasthellInfo;
             RepoItemInfo _opthoherkontrastdunkelInfo;
             RepoItemInfo _lbititelInfo;
-            RepoItemInfo _verifikationfarbeInfo;
+            RepoItemInfo _cbverifikationfarbeInfo;
 
             /// <summary>
             /// Creates a new frmDarstellung  folder.
@@ -1865,7 +1716,7 @@ namespace TA_Skype
                 _opthoherkontrasthellInfo = new RepoItemInfo(this, "optHoherKontrastHell", "text[@name~'^Hoher Kontrast hell']", 5000, null, "78a62bd1-d861-419a-a67d-8b777fd872e6");
                 _opthoherkontrastdunkelInfo = new RepoItemInfo(this, "optHoherKontrastDunkel", "text[@name~'^Hoher Kontrast dunkel']", 5000, null, "c65d36b4-4eb4-4a37-94ae-1ca93f68fcd0");
                 _lbititelInfo = new RepoItemInfo(this, "lbITitel", "?/?/text[@name='VORSCHAU']", 5000, null, "ee54406d-e6e3-4fa9-a226-14d48e7964f9");
-                _verifikationfarbeInfo = new RepoItemInfo(this, "VerifikationFarbe", "?/?/text[@name='Ein']/text[@name='']", 5000, null, "01b8b69c-db86-4957-8c4e-1bfd2745534b");
+                _cbverifikationfarbeInfo = new RepoItemInfo(this, "cbVerifikationFarbe", "?/?/text[@name='Ein']", 5000, null, "01b8b69c-db86-4957-8c4e-1bfd2745534b");
             }
 
             /// <summary>
@@ -2181,26 +2032,368 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The VerifikationFarbe item.
+            /// The cbVerifikationFarbe item.
             /// </summary>
             [RepositoryItem("01b8b69c-db86-4957-8c4e-1bfd2745534b")]
-            public virtual Ranorex.Text VerifikationFarbe
+            public virtual Ranorex.Text cbVerifikationFarbe
             {
                 get
                 {
-                    return _verifikationfarbeInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _cbverifikationfarbeInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The VerifikationFarbe item info.
+            /// The cbVerifikationFarbe item info.
             /// </summary>
             [RepositoryItemInfo("01b8b69c-db86-4957-8c4e-1bfd2745534b")]
-            public virtual RepoItemInfo VerifikationFarbeInfo
+            public virtual RepoItemInfo cbVerifikationFarbeInfo
             {
                 get
                 {
-                    return _verifikationfarbeInfo;
+                    return _cbverifikationfarbeInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmSpracheFolder folder.
+        /// </summary>
+        [RepositoryFolder("7d9bd5d0-bc42-4aeb-a139-cf08701db7a5")]
+        public partial class FrmSpracheFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _lblgeraetespracheInfo;
+
+            /// <summary>
+            /// Creates a new frmSprache  folder.
+            /// </summary>
+            public FrmSpracheFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmSprache", "container[@name='Sprache']/container[2]", parentFolder, 5000, null, false, "7d9bd5d0-bc42-4aeb-a139-cf08701db7a5", "")
+            {
+                _lblgeraetespracheInfo = new RepoItemInfo(this, "lblGeraetesprache", "container[@classname='ScrollViewer']/?/?/listitem[@name~'^Gerätesprache']//text[@name~'^Gerätesprache']", 5000, null, "0f1eb496-9f6e-4053-a84f-6cce5a0f42b2");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("7d9bd5d0-bc42-4aeb-a139-cf08701db7a5")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("7d9bd5d0-bc42-4aeb-a139-cf08701db7a5")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblGeraetesprache item.
+            /// </summary>
+            [RepositoryItem("0f1eb496-9f6e-4053-a84f-6cce5a0f42b2")]
+            public virtual Ranorex.Text lblGeraetesprache
+            {
+                get
+                {
+                    return _lblgeraetespracheInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblGeraetesprache item info.
+            /// </summary>
+            [RepositoryItemInfo("0f1eb496-9f6e-4053-a84f-6cce5a0f42b2")]
+            public virtual RepoItemInfo lblGeraetespracheInfo
+            {
+                get
+                {
+                    return _lblgeraetespracheInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmNachrichtenFolder folder.
+        /// </summary>
+        [RepositoryFolder("ed601bf7-0c85-4230-9a4e-569325a4e778")]
+        public partial class FrmNachrichtenFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _lbltextgroesseInfo;
+            RepoItemInfo _lblnormalInfo;
+
+            /// <summary>
+            /// Creates a new frmNachrichten  folder.
+            /// </summary>
+            public FrmNachrichtenFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmNachrichten", "container[@name='Nachrichten']/container[@classname='ScrollViewer']/container", parentFolder, 5000, null, false, "ed601bf7-0c85-4230-9a4e-569325a4e778", "")
+            {
+                _lbltextgroesseInfo = new RepoItemInfo(this, "lblTextgroesse", "text[@name='Textgröße']", 5000, null, "94e77fa2-a064-4b9c-be90-04cfd0cb31b4");
+                _lblnormalInfo = new RepoItemInfo(this, "lblNormal", "button[@name~'^Textgröße']/container/text[@name='Normal']", 5000, null, "d0ee00dd-bd32-46ce-bd7c-7eea0265738f");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("ed601bf7-0c85-4230-9a4e-569325a4e778")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("ed601bf7-0c85-4230-9a4e-569325a4e778")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblTextgroesse item.
+            /// </summary>
+            [RepositoryItem("94e77fa2-a064-4b9c-be90-04cfd0cb31b4")]
+            public virtual Ranorex.Text lblTextgroesse
+            {
+                get
+                {
+                    return _lbltextgroesseInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblTextgroesse item info.
+            /// </summary>
+            [RepositoryItemInfo("94e77fa2-a064-4b9c-be90-04cfd0cb31b4")]
+            public virtual RepoItemInfo lblTextgroesseInfo
+            {
+                get
+                {
+                    return _lbltextgroesseInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblNormal item.
+            /// </summary>
+            [RepositoryItem("d0ee00dd-bd32-46ce-bd7c-7eea0265738f")]
+            public virtual Ranorex.Text lblNormal
+            {
+                get
+                {
+                    return _lblnormalInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblNormal item info.
+            /// </summary>
+            [RepositoryItemInfo("d0ee00dd-bd32-46ce-bd7c-7eea0265738f")]
+            public virtual RepoItemInfo lblNormalInfo
+            {
+                get
+                {
+                    return _lblnormalInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmBenachrichtigungenFolder folder.
+        /// </summary>
+        [RepositoryFolder("b8174386-d07a-42e3-856b-1b82e0185f3f")]
+        public partial class FrmBenachrichtigungenFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _lblbenachrichtigungstoeneInfo;
+            RepoItemInfo _optbenachrichtigungstoenedeaktivierenInfo;
+
+            /// <summary>
+            /// Creates a new frmBenachrichtigungen  folder.
+            /// </summary>
+            public FrmBenachrichtigungenFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmBenachrichtigungen", "container[@name='Benachrichtigungen']/container[@classname='ScrollViewer']/container[@orientation='None']", parentFolder, 5000, null, false, "b8174386-d07a-42e3-856b-1b82e0185f3f", "")
+            {
+                _lblbenachrichtigungstoeneInfo = new RepoItemInfo(this, "lblBenachrichtigungstoene", "button[@name~'^Benachrichtigungstöne']//text[@name='Benachrichtigungstöne']", 5000, null, "f258eae1-41cc-4604-ad22-da4a066adb07");
+                _optbenachrichtigungstoenedeaktivierenInfo = new RepoItemInfo(this, "optBenachrichtigungstoeneDeaktivieren", "button[@name~'^Benachrichtigungstöne']/container/container[@orientation='None']/container[@orientation='None']", 5000, null, "6b6e0d45-9c5d-4971-bc9a-a9ad38cad109");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("b8174386-d07a-42e3-856b-1b82e0185f3f")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("b8174386-d07a-42e3-856b-1b82e0185f3f")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblBenachrichtigungstoene item.
+            /// </summary>
+            [RepositoryItem("f258eae1-41cc-4604-ad22-da4a066adb07")]
+            public virtual Ranorex.Text lblBenachrichtigungstoene
+            {
+                get
+                {
+                    return _lblbenachrichtigungstoeneInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblBenachrichtigungstoene item info.
+            /// </summary>
+            [RepositoryItemInfo("f258eae1-41cc-4604-ad22-da4a066adb07")]
+            public virtual RepoItemInfo lblBenachrichtigungstoeneInfo
+            {
+                get
+                {
+                    return _lblbenachrichtigungstoeneInfo;
+                }
+            }
+
+            /// <summary>
+            /// The optBenachrichtigungstoeneDeaktivieren item.
+            /// </summary>
+            [RepositoryItem("6b6e0d45-9c5d-4971-bc9a-a9ad38cad109")]
+            public virtual Ranorex.Container optBenachrichtigungstoeneDeaktivieren
+            {
+                get
+                {
+                    return _optbenachrichtigungstoenedeaktivierenInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The optBenachrichtigungstoeneDeaktivieren item info.
+            /// </summary>
+            [RepositoryItemInfo("6b6e0d45-9c5d-4971-bc9a-a9ad38cad109")]
+            public virtual RepoItemInfo optBenachrichtigungstoeneDeaktivierenInfo
+            {
+                get
+                {
+                    return _optbenachrichtigungstoenedeaktivierenInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmKontakteFolder folder.
+        /// </summary>
+        [RepositoryFolder("a52e1944-83c2-4990-9bb8-4633e1d6c559")]
+        public partial class FrmKontakteFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _btnschliessenInfo;
+            RepoItemInfo _lblkontakteInfo;
+
+            /// <summary>
+            /// Creates a new frmKontakte  folder.
+            /// </summary>
+            public FrmKontakteFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmKontakte", "container[@name='Kontakte']", parentFolder, 5000, null, false, "a52e1944-83c2-4990-9bb8-4633e1d6c559", "")
+            {
+                _btnschliessenInfo = new RepoItemInfo(this, "btnSchliessen", "container[1]/container[@orientation='None']/container[1]/button[@name='Schließen']", 5000, null, "fb775665-732e-438c-83e2-ac8667a6c42a");
+                _lblkontakteInfo = new RepoItemInfo(this, "lblKontakte", "container[@classname='ScrollViewer']/container[@orientation='None']/text[@name='KONTAKTE']", 5000, null, "5f1df8e0-6032-47d6-8720-270aab6b8416");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("a52e1944-83c2-4990-9bb8-4633e1d6c559")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("a52e1944-83c2-4990-9bb8-4633e1d6c559")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The btnSchliessen item.
+            /// </summary>
+            [RepositoryItem("fb775665-732e-438c-83e2-ac8667a6c42a")]
+            public virtual Ranorex.Button btnSchliessen
+            {
+                get
+                {
+                    return _btnschliessenInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnSchliessen item info.
+            /// </summary>
+            [RepositoryItemInfo("fb775665-732e-438c-83e2-ac8667a6c42a")]
+            public virtual RepoItemInfo btnSchliessenInfo
+            {
+                get
+                {
+                    return _btnschliessenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lblKontakte item.
+            /// </summary>
+            [RepositoryItem("5f1df8e0-6032-47d6-8720-270aab6b8416")]
+            public virtual Ranorex.Text lblKontakte
+            {
+                get
+                {
+                    return _lblkontakteInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lblKontakte item info.
+            /// </summary>
+            [RepositoryItemInfo("5f1df8e0-6032-47d6-8720-270aab6b8416")]
+            public virtual RepoItemInfo lblKontakteInfo
+            {
+                get
+                {
+                    return _lblkontakteInfo;
                 }
             }
         }
@@ -3670,72 +3863,6 @@ namespace TA_Skype
                 get
                 {
                     return _lblpopupwindowtitelInfo;
-                }
-            }
-        }
-
-        /// <summary>
-        /// The ExplorerAppFolder folder.
-        /// </summary>
-        [RepositoryFolder("a8ad6083-39d2-445b-9001-a1d0d2edade6")]
-        public partial class ExplorerAppFolder : RepoGenBaseFolder
-        {
-            RepoItemInfo _ranorexstudio1aktivesfensterInfo;
-
-            /// <summary>
-            /// Creates a new Explorer  folder.
-            /// </summary>
-            public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("Explorer", "/menubar[@class='Shell_SecondaryTrayWnd']", parentFolder, 30000, null, true, "a8ad6083-39d2-445b-9001-a1d0d2edade6", "")
-            {
-                _ranorexstudio1aktivesfensterInfo = new RepoItemInfo(this, "RanorexStudio1AktivesFenster", ".//toolbar[@accessiblename='Ausgeführte Anwendungen']/button[@accessiblename~'^RanorexStudio\\ –\\ 1\\ aktives']", 5000, null, "d5c661d3-e3d6-4c2d-8932-64783525a3c5");
-            }
-
-            /// <summary>
-            /// The Self item.
-            /// </summary>
-            [RepositoryItem("a8ad6083-39d2-445b-9001-a1d0d2edade6")]
-            public virtual Ranorex.MenuBar Self
-            {
-                get
-                {
-                    return _selfInfo.CreateAdapter<Ranorex.MenuBar>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Self item info.
-            /// </summary>
-            [RepositoryItemInfo("a8ad6083-39d2-445b-9001-a1d0d2edade6")]
-            public virtual RepoItemInfo SelfInfo
-            {
-                get
-                {
-                    return _selfInfo;
-                }
-            }
-
-            /// <summary>
-            /// The RanorexStudio1AktivesFenster item.
-            /// </summary>
-            [RepositoryItem("d5c661d3-e3d6-4c2d-8932-64783525a3c5")]
-            public virtual Ranorex.Button RanorexStudio1AktivesFenster
-            {
-                get
-                {
-                    return _ranorexstudio1aktivesfensterInfo.CreateAdapter<Ranorex.Button>(true);
-                }
-            }
-
-            /// <summary>
-            /// The RanorexStudio1AktivesFenster item info.
-            /// </summary>
-            [RepositoryItemInfo("d5c661d3-e3d6-4c2d-8932-64783525a3c5")]
-            public virtual RepoItemInfo RanorexStudio1AktivesFensterInfo
-            {
-                get
-                {
-                    return _ranorexstudio1aktivesfensterInfo;
                 }
             }
         }

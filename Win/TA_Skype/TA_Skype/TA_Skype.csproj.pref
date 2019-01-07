@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <Array name="active">
-    <Element value="EigenesProfilBearbeiten.rxrec" />
-  </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Login_TestAutomation.rxrec" />
     <Element value="TA_Skype.rxtst" />
+    <Element value="Verbindungstest_Abspielen.rxrec" />
     <Element value="EigenesProfilBearbeiten.rxrec" />
+    <Element value="KontaktHinzufuegen.rxrec" />
+    <Element value="TA_SkypeRepository.rxrep" />
     <Element value="StartSkype.rxrec" />
+    <Element value="StarteEinstellungenDialog.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

@@ -1011,30 +1011,6 @@ AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKrX3/Lv/12WiigDIuf+PqX
 				Ger&#228;tesprache - Device language
 			</matchvalue>
 		</validationitem>
-		<validationitem
-		action="AttributeEqual"
-		duration="100ms"
-		enabled="True"
-		optional="True"
-		searchpropertyid="c40a35e5-60ed-4386-8630-914168448b1e">
-			<comment>
-			</comment>
-			<bindings>
-			</bindings>
-			<info
-			id="42ec9a75-1b70-417c-b85f-46367d0c07ae"
-			sourcename="ElementTree">
-				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Sprache']/container[2]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Ger&#228;tesprache\ -\ Device\ la']//text[@name='&#58386;']
-				</path>
-			</info>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				&#58386;
-			</matchvalue>
-		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -2721,10 +2697,10 @@ KKKAJm/cKAPvsOW9BTpWMSCLOTjk/wBBRRQBXooooAKKKKACiiigD//Z
 			<bindings>
 			</bindings>
 			<info
-			id="b4716e86-02e8-4c89-a7b2-de078e25d6ab"
+			id="fb775665-732e-438c-83e2-ac8667a6c42a"
 			sourcename="Recorder">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[1]//button[@name='Schlie&#223;en']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Kontakte']/container[1]/container[@orientation='None']/container[1]/button[@name='Schlie&#223;en']
 				</path>
 			</info>
 		</mouseitem>
