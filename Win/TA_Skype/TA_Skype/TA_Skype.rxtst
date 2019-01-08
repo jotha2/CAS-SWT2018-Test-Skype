@@ -88,6 +88,12 @@ rxversion="8.3">
 			type="Recording">
 			</testmodule>
 			<testmodule
+			id="70e19bf5-7554-4b6a-b15f-31f3583e4b24"
+			name="Testchat_TestAutomation_DialogStarten"
+			ref="48fd798d-d761-484e-b9d6-b99033bb5de0"
+			type="Recording">
+			</testmodule>
+			<testmodule
 			id="78f55682-3825-4b3e-909c-dd2477f0c9e0"
 			name="EigenesProfilBearbeiten"
 			ref="628edbaf-f045-4d8a-b74f-9d5a079bd8dc"
@@ -121,6 +127,12 @@ rxversion="8.3">
 			name="T1.2.3_Testchat_im_Dialog">
 			</smartfoldernode>
 			<testmodule
+			id="b5d50454-abf6-45ec-9177-e86b9db097e9"
+			name="Logoff_TestAutomation"
+			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
+			type="Recording">
+			</testmodule>
+			<testmodule
 			id="bdc1106b-c61b-407b-a6bc-d36759d26172"
 			name="Verbindungstest_Abspielen"
 			ref="62ebbcec-66ef-468d-b4f4-c6a730429668"
@@ -150,10 +162,28 @@ rxversion="8.3">
 			ref="3b73c879-7922-4f33-bbe6-9867a5ef85eb"
 			type="Recording">
 			</testmodule>
+			<testmodule
+			id="de4dea6f-7ad9-45c4-83b8-d47d3bae7d35"
+			name="Login_TestAutomation"
+			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
+			type="Recording">
+			</testmodule>
 			<smartfoldernode
 			id="e86331d6-26e6-4f26-8199-5057acfc72f4"
 			name="T1.4.1_Eigenes_Profil_bearbeiten">
 			</smartfoldernode>
+			<testmodule
+			id="f9f010e7-2a8a-459f-aa17-6904e2e086ff"
+			name="Logoff_TestAutomation"
+			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="fe6225de-b49d-4f97-b8ab-762dd2536dce"
+			name="Login_TestAutomation"
+			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
+			type="Recording">
+			</testmodule>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -217,13 +247,33 @@ rxversion="8.3">
 						id="e86331d6-26e6-4f26-8199-5057acfc72f4"
 						name="T1.4.1_Eigenes_Profil_bearbeiten">
 							<testmodule
+							id="fe6225de-b49d-4f97-b8ab-762dd2536dce"
+							name="Login_TestAutomation">
+							</testmodule>
+							<testmodule
 							id="78f55682-3825-4b3e-909c-dd2477f0c9e0"
 							name="EigenesProfilBearbeiten">
+							</testmodule>
+							<testmodule
+							id="b5d50454-abf6-45ec-9177-e86b9db097e9"
+							name="Logoff_TestAutomation">
 							</testmodule>
 						</smartfoldernode>
 						<smartfoldernode
 						id="a1905381-c15d-49dd-abb1-eab24986dff3"
 						name="T1.2.3_Testchat_im_Dialog">
+							<testmodule
+							id="de4dea6f-7ad9-45c4-83b8-d47d3bae7d35"
+							name="Login_TestAutomation">
+							</testmodule>
+							<testmodule
+							id="70e19bf5-7554-4b6a-b15f-31f3583e4b24"
+							name="Testchat_TestAutomation_DialogStarten">
+							</testmodule>
+							<testmodule
+							id="f9f010e7-2a8a-459f-aa17-6904e2e086ff"
+							name="Logoff_TestAutomation">
+							</testmodule>
 						</smartfoldernode>
 						<smartfoldernode
 						id="be8ae243-bbdb-48a2-966c-2c7318c7f600"

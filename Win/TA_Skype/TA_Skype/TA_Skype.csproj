@@ -165,6 +165,18 @@
       <UserCode>true</UserCode>
       <id>c6d757c5-d1e9-46d2-9c43-59b11b708d7d</id>
     </Compile>
+    <Compile Include="Testchat_TestAutomation_DialogStarten.cs">
+      <BoundTo>de47adfc-c613-4ac1-a669-2de8748db230</BoundTo>
+      <DependentUpon>Testchat_TestAutomation_DialogStarten.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e0e1e831-3193-4c5e-9123-4b258b52cd29</id>
+    </Compile>
+    <Compile Include="Testchat_TestAutomation_DialogStarten.UserCode.cs">
+      <BoundTo>de47adfc-c613-4ac1-a669-2de8748db230</BoundTo>
+      <DependentUpon>Testchat_TestAutomation_DialogStarten.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>4182245e-c97b-494e-aa4c-3496a625868f</id>
+    </Compile>
     <Compile Include="UserCodeModule1.cs">
       <id>39fe38df-fe4f-4f8b-af1e-94de9a5a6afc</id>
     </Compile>
@@ -249,6 +261,11 @@
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
       <id>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</id>
       <recordtableid>4dd71afe-152b-4370-976e-3a13e41b710d</recordtableid>
+    </None>
+    <None Include="Testchat_TestAutomation_DialogStarten.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>de47adfc-c613-4ac1-a669-2de8748db230</id>
+      <recordtableid>48fd798d-d761-484e-b9d6-b99033bb5de0</recordtableid>
     </None>
     <None Include="Verbindungstest_Abspielen.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
