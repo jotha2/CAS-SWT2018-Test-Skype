@@ -1,16 +1,18 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="StartSkype.rxrec" />
+    <Element value="TA_Skype.rxtst" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
-    <Element value="StartSkype.rxrec" />
     <Element value="TA_Skype.rxtst" />
-    <Element value="Login_TestAutomation.rxrec" />
-    <Element value="AssemblyInfo.cs" />
-    <Element value="StartSkype.cs" />
   </Array>
   <Properties name="projectSavedData">
-    <Array name="recentusercodeselections" />
+    <Properties name="customTool">
+      <runOnBuild value="False" />
+    </Properties>
+    <Array name="recentusercodeselections">
+      <Element value="TA_Skype.KontaktLoeschen.HandleModalDialog()" />
+      <Element value="TA_Skype.KontaktHinzufuegen.SetPhoneType()" />
+    </Array>
   </Properties>
 </Properties>

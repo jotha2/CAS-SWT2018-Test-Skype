@@ -1,0 +1,2728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="628edbaf-f045-4d8a-b74f-9d5a079bd8dc"
+mode="Global"
+rxversion="8.3">
+	<name>
+		EigenesProfilBearbeiten
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		True
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="EigenesProfilBearbeiten"
+	namespace="TA_Skype">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="db3184f7-22f1-430a-b739-6b4887209701"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="0454c710-8615-4339-9ee4-a76964f09952"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/button[@name='Weitere Optionen']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="8805602d-800e-4666-b193-10151d283d95"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<explicitdelayitem
+		duration="1000ms"
+		enabled="True"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</explicitdelayitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="75e4319d-71ea-4037-ba9e-837b56213ef2"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Einstellungen']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="d9fce4a2-9ee2-4b79-8686-77b317607375"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="75e4319d-71ea-4037-ba9e-837b56213ef2"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Einstellungen']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="7ccabb5d-56e8-429a-b556-2274bfd1ad25"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4373b768-82db-46ed-8379-01c1c0716a26">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="3e1d50eb-633f-40e4-a124-441fafaa5644"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[@classname='ScrollViewer']/?/?/text[@name='DEIN SKYPE-PROFIL']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="8557ed73-0b2e-4a61-87a8-b7a753390655"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="cc141fb3-b234-462c-b963-573b39eecbb7"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[@classname='ScrollViewer']/container/container[1]/button[@name='Profilbild']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="4373b768-82db-46ed-8379-01c1c0716a26">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="6f1cff53-ee65-42e6-9c62-5f84615232b9"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="8dcae719-7239-44c1-acc8-4bf8e0e330eb"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="8523806a-3f3f-494b-ab90-8e73b972ac0a"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profilbild']/container[2]/button[@name='Zur&#252;ck']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="9438b09e-e877-42cc-93f7-6c2a287ad516">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="ab63f76c-9ce1-466c-8ed1-240b7d6aef70"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="1"
+				prefcap="text"
+				rect="794,344,110,20"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Angemeldet als
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Angemeldet als
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Angemeldet als
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[@classname='ScrollViewer']/container/container[2]/button[@name~'^Angemeldet\ als,\ test_auto']/?/?/text[@name='Angemeldet als']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="ec906640-7f99-40f1-a15b-42b7f5468460">
+				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
+KAP/2Q==
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Angemeldet als
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="9fe5c3d2-06f8-45b7-8f67-9f5b8576fa1e">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="60361f35-ecc5-49fd-964a-7111de14a5ee"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="935,344,235,20"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						test_automation_hsr@hotmail.com
+					</attribute>
+					<attribute
+					name="selectionlength"
+					type="System.Int32">
+						0
+					</attribute>
+					<attribute
+					name="selectionstart"
+					type="System.Int32">
+						0
+					</attribute>
+					<attribute
+					name="selectiontext"
+					type="System.String">
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						test_automation_hsr@hotmail.com
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						test_automation_hsr@hotmail.com
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[@classname='ScrollViewer']/container/container[2]/button[@name~'^Angemeldet\ als,\ test_auto']/?/?/container[@orientation='None']/text[@name~'^test_automation_hsr@hotma']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="1fdecd92-177e-4246-9718-bda3fd6df8bc">
+				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
+AP/Z
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				test_automation_hsr@hotmail.com
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="104f8a08-7c23-4221-bc9d-2634fa833f93">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="340e4ffd-74a6-46b3-89d5-310b9adee755"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="1"
+				prefcap="text"
+				rect="794,394,91,20"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Skype-Name
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Skype-Name
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Skype-Name
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[@classname='ScrollViewer']/container/container[3]/button[@name~'^Skype-Name,\ live:test_aut']/?/?/text[@name='Skype-Name']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="9f6b16ad-088e-48f4-9a47-ba22fa252d36">
+				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
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Skype-Name
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="7393fe7b-558f-41e3-a6a0-f20f4707fa53">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="9793f053-f480-46a2-b093-ae6b2bd4bef9"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="1006,394,164,20"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						live:test_automation_hsr
+					</attribute>
+					<attribute
+					name="selectionlength"
+					type="System.Int32">
+						0
+					</attribute>
+					<attribute
+					name="selectionstart"
+					type="System.Int32">
+						0
+					</attribute>
+					<attribute
+					name="selectiontext"
+					type="System.String">
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						live:test_automation_hsr
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						live:test_automation_hsr
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Konto &amp; Profil']/container[@classname='ScrollViewer']/container/container[3]/button[@name~'^Skype-Name,\ live:test_aut']/?/?/container[@orientation='None']/text[@name='live:test_automation_hsr']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="f69bece9-f9be-428b-b801-d32bb1ba6148">
+				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
+/fP86joooAKKKKACiiigAooooAKKKKAP/9k=
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				live:test_automation_hsr
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="274ef962-2a20-4457-8b82-d924efa996d6"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="ab58c3e8-73cb-41fc-9a2f-e183672e7296"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[2]/button[@name='Allgemein']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="13c9b861-19e3-4f00-aecb-49ded633e4ae">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="b2ee7b14-95bf-48eb-98c8-1b92205830ee"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Allgemein']/container[@classname='ScrollViewer']/?/?/text[@name='ALLGEMEIN']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="100ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="da5b8996-c925-4b88-a64a-265472a97c94"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="5195c865-9032-4094-98ba-a0bccfbab17e"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Allgemein']/container[@classname='ScrollViewer']/container/container[@orientation='None']/button[@name='Sprache']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="dff4eab1-ea0d-4ff5-b846-5d1b8a14861b">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="0f1eb496-9f6e-4053-a84f-6cce5a0f42b2"
+			sourcename="ElementTree">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Sprache']/container[2]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Ger&#228;tesprache\ -\ Device\ la']//text[@name~'^Ger&#228;tesprache\ -\ Device\ la']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Ger&#228;tesprache - Device language
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="100ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="1e1575cb-131c-4235-874a-5223bf104623"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="00a2d755-7050-43c9-9a50-cf8461d57a4a"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[3]/button[@name='Darstellung']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		searchpropertyid="041ce354-3f23-4c7d-a0e5-3c8047a56569">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="ee54406d-e6e3-4fa9-a226-14d48e7964f9"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="760,223,410,40"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						VORSCHAU
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						VORSCHAU
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						True
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						True
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						VORSCHAU
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/?/?/text[@name='VORSCHAU']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="2dfdd93e-27f3-4d5e-8e0e-428710ee952a">
+				/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
+YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCAHtAdYDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDdooop
+gFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF
+FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUU
+AFFFFABRRRQBhUUUUgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooo
+AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigA
+ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKk+zzf88ZP++TR9nnP/LGT/vk0AR0VJ9nn/wCeMn/fJqGQSpMI
+vJcuwyFwcn8KTaW4m0tx1FJsuv8Anzm/75P+FGy6/wCfOb/vk/4UudE88RaKTZdf8+c3/fJ/wo2X
+X/PnN/3yf8KOdBzxFopNl1/z5zf98n/CjZdf8+c3/fJ/wo50HPEWik2XX/PnN/3yf8KNl1/z5zf9
+8n/CjnQc8QPTjk1Ti1DzJVQxbdxxnd/9army6/585v8Avk/4VSOmXXnGRYJh82QPLPFHOg54l0kA
+EnoKorqQLAGLAJ67v/rVblhupImQWsy7hjOw/wCFUv7Juv8AnjN/36NHOg54mjVOG+82ZYxF1PXd
+/wDWqwYrsxbPss2duM7D/hVe20+5gl3m3mbjA/dkUc6DniMmv3jnKBBtU456mp7udoIQ6AZJxzUp
+hnLbjYyFh32HP8qjurW6uIwn2aZcHOdhNHOg54iWc7TxszgAg44qvDfSyXCxlUwTjgGrFraXVuhX
+7NM2Tn7hFRRabdRzCTyJjg5x5Zo50HPEde3L25QIFOc9amtpDNArsACc9PrUV1ZXVwVP2eZdv/TM
+mpYLe6hhWP7LM2O+w/4Uc6DniS0Umy6/585v++T/AIUbLr/nzm/75P8AhRzoOeItFJsuv+fOb/vk
+/wCFGy6/585v++T/AIUc6DniLRSbLr/nzm/75P8AhRsuv+fOb/vk/wCFHOg54i0Umy6/585v++T/
+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
+cYz+FIZ4odUm86VI8xJjcwGeWq7RQBkOqyXMvmXEMcpkGwshL4/h2nPT6D1p1xKkdteQuwEhkJC9
+yDjn6Vq0UAZkyLHc3nlKi3DRho8AbjwckU2FIdkrxXFuV8lgyxRkD6tyeevv1rVooAZDgwx4ORtH
+P4VIvWkpy9aAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiig
+AooooAKKKKACiiigAooooAKKKKACiiigBH+430paR/uN9KWgArDm/wCPG1/4H/OtysOb/jxtf+B/
+zoAr0UUUAdDSp938TTefQfnTo/u/iaYDqR+n4j+dLSP0/EfzpALSEZpaKAG4NGDTqKAG4NGDTqKA
+G4NGDTqKAG4NGDTqKAG4NGDTqKAG4NOAxRRQAUUUUAFFFFABRRRQAUUUUAFFFNLelADqKZuPrRuP
+rTsK4+imbj60bj60WC4+imbj60bj60WC4+imbj60bj60WC4+imbj60bj60WC4+imbj60bj60WC4+
+imbj60bj60WC4+imbj60bj60WC4+imbj60bj60WC4+imbj60bj60WC4+imbj60bj60WC4+imbj60
+bj60WC4+imbjTwciiwXEf7jfSlpH+430paQwrDm/48bX/gf863Kw5v8Ajxtf+B/zoAr0UUUAdDSp
+938TSUqfd/E0wHUj9PxH86Wkfp+I/nSAWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+KKKACiiigAooooAD0NRVKehqKmiWFFUxGJ7y4DvKAu3aFkZcZHsaSKdt8ccpZ2ErR792OgJyQODx
+TEXaKoxanHLIgHllZCQu2QF/xXtU9pcNcoJNiBCMgh8n6EY4NAE9FVJrlYZJztJKKnVzjkkfQe5p
+J57lRAUSIb5MHEmQwwT12/5xQBcoqG5nNvD5mzedyrtB9TioWvZk84G3GYRufEnGMZ445PX0oAuU
+VTuNQSJyq+WSq7jvkCdegHqaQ3qqJpUjZgEjYDd13e3QUAXaKqteGLzftEYQogcbWzkE49u9FreC
+eUx/u9wXdmOTeMfkOaALVFV0ZjqMyljtEaEDPA5ao2vEhEpIwRN5Y3ycE4Bzk9BQBcorOe9Mqp5e
+C6zKpEcmVbIPf0p9xcyGGVGXypUZD8rZBBYdDx7igLF6iqZuvLMmyJmbzxHgueSQDnnp16U77Yyr
+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
+Kw5v+PG1/wCB/wA6AK9FFFAH/9k=
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				VORSCHAU
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="True"
+		searchpropertyid="d17388af-caea-4db8-b2e7-abb0e3f95921">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="1c2526ec-344f-44f6-b181-f92e37e56c05"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Klassisch']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="True"
+		searchpropertyid="d17388af-caea-4db8-b2e7-abb0e3f95921">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="58fdaee8-528a-42ae-920a-736d8e4f179f"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Blau']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="True"
+		searchpropertyid="d17388af-caea-4db8-b2e7-abb0e3f95921">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="c33ee7be-0cee-4041-b493-843686faeed6"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Fuchsie']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="True"
+		searchpropertyid="d17388af-caea-4db8-b2e7-abb0e3f95921">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="6b39f12e-dbc3-4024-bf26-2aca0b0e682c"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Minze']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="True"
+		searchpropertyid="d17388af-caea-4db8-b2e7-abb0e3f95921">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="b5e1de91-0228-473d-b038-6e4ee28c13a4"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Rosa']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="True"
+		searchpropertyid="d17388af-caea-4db8-b2e7-abb0e3f95921">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="369d2f63-f1fc-4efd-9d7a-2bf236d70ae6"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Gelb']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="True"
+		searchpropertyid="f4893a1e-c285-4aa7-8aaf-49777b1a3867">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="01b8b69c-db86-4957-8c4e-1bfd2745534b"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/?/?/text[@name='Ein']/text[@name='&#58386;']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="100ms"
+		enabled="True"
+		loc="27;23"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="76182fa1-6847-4bba-8a46-eceede13c8c4"
+		sx="887"
+		sy="476"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="c33ee7be-0cee-4041-b493-843686faeed6"
+			sourcename="Recorder">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/button[@name~'^Fuchsie']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		searchpropertyid="fc9a3080-e24a-47a6-a25b-ce9dadb1af37">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="01b8b69c-db86-4957-8c4e-1bfd2745534b"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="884,476,22,24"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						&#58386;
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						&#58386;
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						&#58386;
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/?/?/text[@name='Ein']/text[@name='&#58386;']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="02233bfd-96a9-4e06-a45e-c4da88f2bfda">
+				/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
+YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCABGAEYDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDopJFi
+Qu5wo6msm41KWQkRfu0/U0mqTmSfygfkT9TVMVtGPVnRCCSuxxd2OWdifc1LFczxH5ZG+hORUIpa
+uxo7GxZ3qz/I4Cyfoat1zykggg4I6Gty1l86BX79D9axnG2qOecbaolrKvNVwxS2xx1c/wBKk1i5
+McQhQ4L9fpWNWtKmmuZnDWqtPlRI9xNIcvK5/GimUV02Ry3ZM5LSMx6kk0gqa6jMVzIp9cj6VFXO
+fQX0GSv5ag4zzimiaT/ng3+fwou/9UP96rEspiJjiOCOGYdc+g9qyfM5NJmPvym0nYiLzqMm1kA9
+SD/hVm01CaCJ8Wbuo5JycD9KqLI6tuV2B9Qa0be4WWwukYASeWxOBjIxSnGSW5NSnNRvzFG7uTeS
+iXbsyuMZzUVSGIizt5OzKw/EMaZXVSd4JnkTvzahRS0VoZm5f2vnqHT/AFi/qKycEHBGCO1dDUU1
+tFN99efUda4Yztoz24ztoznbv/VD/epWGyYiQE4b5hVrWLNbe2V1YnLgYP0NXLnTPNUMj/vAMcjg
+0RkudjhNKo/kZwEUX7zcJM/cX/H/AAog3yG4ckk+S5Y/hUq6XclsEKo9S1X2tUtdNuFU5Yxtub14
+qpyXKzSpOKi9bkVhbrc6LFG3HUg+hyazZYXgkKSDBH61r6P/AMguH/gX/oRq1LFHMu2RQw96mjU5
+Ul0POnR54prc5yitdtKiJ+V2X260V0+2ic31ep2L9FFFcZ6JBeWkd5EI5CwAbd8p/wA+tU/7Ctf+
+ek35j/CtOik4p7kuKe5mf2Fa/wDPSb8x/hR/YVr/AM9JvzH+FadFLkj2FyR7EVtAttAsKElVzgt1
+65qWiiqL2CiiigAooooAKKKKACiiigAooooAKKKKAP/Z
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				&#58386;
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="56e88aaa-8664-4a77-b918-6ad46e3df21a"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="2a9f7798-7e10-4a94-9ca6-091e3d413cab"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']/text[@name~'^Dunkel']
+				</path>
+			</info>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="85ef3468-9567-444d-acf6-a28aeb567271"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="3383aa47-6bf2-4cd4-a40c-1b007d2995b2"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[4]/button[@name='Audio und Video']
+				</path>
+			</info>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="b1c0959f-318c-4a45-a63f-5740db4a6432"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="f4589c8e-9008-487d-a6b9-4345a5565f0e"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[5]/button[@name='Anrufe']
+				</path>
+			</info>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="100ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="0a3b35d8-1155-436f-88d3-500a10207e0b"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="2c13aaca-3b90-436f-ba51-a648b8881796"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[6]/button[@name='Nachrichten']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="02474026-8293-4bb6-89ee-6f817506b628">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="94e77fa2-a064-4b9c-be90-04cfd0cb31b4"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="4"
+				prefcap="text"
+				rect="761,475,72,20"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Textgr&#246;&#223;e
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Textgr&#246;&#223;e
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						True
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						True
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Textgr&#246;&#223;e
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Nachrichten']/container[@classname='ScrollViewer']/?/?/text[@name='Textgr&#246;&#223;e']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="3011c549-a3fb-4b49-91f5-3933bc5f39e7">
+				/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
+YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCAG1AawDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDnqKk/
+AflR+A/KgCOipPwH5UfgPyoAjoqT8B+VH4D8qAI6Kk/AflR+A/KgCOipPwH5UfgPyoAt6Y/yunvm
+odQXbc5/vAGo1dkOVO0+o4pWdn++d2PXmgDRtF8u2QHvz+dVdTTDo/qMVD50mMb2/OkaR3GHYsPf
+mgC/ZLstATxnJNUopphM7xKW3HJGM0nmyBdu846YzSK7J9w7c+nFACXDyySZlBU44GMVpXf/AB6y
+fSs1nZzljuPqeacZpGGGckHsTQBa03/Ut/vf0qFv+Qn/AMCFRLI6DCMVHtxSb23bs/N696ALupf8
+e6/739DWesUjjKozD1AqRpXcYdiw9DzSrLIowrkD0BoAhZSpwwIPoRSrFIwysbEewp5Yk5PJ9af5
+8v8Az0b86AIGVlOGBB9xQqM5wilj6AZqVpHcYdiw9+aRXZDlDtPqOKAGGN1IBRgT0BFDRugyyMo9
+xipfOk3bt5z65oM0jDDOSPQmgCJY3cZVGYewzTSCDggg+hqcTSKMB2AHYGms7Ocsdx9TzQA0RSEZ
+EbkeoU0ixu4+VGb6DNSiaQDAdgPQGgTSKMK5AHYGgCEgg4IOfSlMUijLIwHqRUnmPu3bju9e9KZ5
+SMF2/OgCCnLG7/dRm+gzTvwH5U8TSKMK5AHYGgCFlZDhlKn3FKsbv9xGbHoM1I0juMMxYe/NCyOn
+3GK59OKAI/Lfdt2Nu9Mc0jIyffUr9RiphNICSHOT1OetI0ruMMxYeh5oAhoqT8B+VH4D8qAI6uf2
+i/8AcWq/4D8qPwH5UAa0zmOJnAyQM1nyXzyRshRQCMUwzSMMF2IPYmmfgPyoAasbuMqjN9BmkZWU
+4YEH3FTCaQDAdgB70jSO/wB9i315oAhAJOAMn2p5hlAyY3/75NOV2Q5Q7fpxT/Pl/wCejfnQA22h
+MsqgqxTPJAqzeWyrCohj53c4GTVZZXXO1iM8nFO8+X/no350AQEFTgggjsaSpSxY5OCT3IpPwH5U
+AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFWIrR
+pbR51blWxsx1oAr0Va+xf6QkXmcFN5bH3RSGzKzyozgJFyz47duKAK1FTi3R4pZI5CRGAcFcdTj1
+qSOxDCMmTAeMv93pj8aAKlFW/sQLDEvBiMgyvP0xmo5LdIlHmyESMu4KFzj0yc0AQUVb+xf6WsHm
+dV3btvtmmLbxG1M/mvgHaRsHX86AK9FWZLVEljj81i8m0/c4Gfxp0lg0ckql+EQuDj71AFSip7W3
++0Mw3EbRnAGSfwpk0LROw+8oYqGA4NAEdFTmBI0QzSFTIMgBc4HqeacLTNxBFv8A9agbOOmaAK1F
+WobIzRyMHA2khRj7xAzTVt4jamfzXwDtI2Dr+dAFeirFxbLb/KznzNoONvB+hzVegAooooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
+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
+eD+dAuWEe3YhO3Zu5zj88VDRQBMbknO6NGBADA55x0PXrR9pfIOF4cOOPToPpUNFAEqXDIMbVI+b
+IOec4z/Kle5Zw4KJhgBjnjHTHNQ0UAT/AGp/3hCqrSHLMM+ufXFI1wSWYRorMCGIzzn8ahooAeZm
+LxtxmMAD8KkN0xIxGgA3ZXnBz171BRQBK9wzqV2qoKhcDPABzUVFFABRRRQAUUUUAWInSWIQTHbg
+/I/p7GmvaTr/AAFh2K85qGnLI6fcdl+hxQBYhsJpGG8bF9T1rVjRY0CIMAVifaJv+e0n/fRo+0Tf
+89pP++jQBu1Uu7xYlKxkGQ+nasxpZWGGkcj3Y0ymAUUUUgCporgxhRsRthypYHioaM+1AEy3LBdp
+VWXGCDnnnNIs+xXCRou8YJBPT86iz7CjPsKAJXnDtuaKMtnLHn5vrzSPO7zCXOGGMY9qjz7CjPsK
+AJvtLD/VxpGdwYlc84+ppDPyxSJE3KVOM9/qaiz7CjPsKAJmuWaIpsTlQpbnOB0prTk3Am2qGB3c
+ZwTUefYUZ9hQBKlwyLtwpGSSD3yOf5Uhl+VlVFVWxkDPb6mo8+woz7CgCx9sfOQiBtwYnB5I/GmJ
+cMm3AU4Ytz3yMVFn2FGfYUAStNvQK0SHAwp5yB+dPSbzJJDKYgHIJDhsZ9sc1Xz7CjPsKALM1yGk
+f5FdC2RuBGOMdjTFuWC7SiMu0Lg57HPr71Dn2FGfYUAWBeP5m8xxswcuCQeCTn1qNpt0YVo0JAwG
+5yB+eKjz7CjPsKAJvtLb3Yqh3sGII44z/jUNGfYUZ9hQAUUZ9hRn2FABRRn2FGfYUAFFGfYUZ9hQ
+AUUZ9hRn2FABRRn2FGfYUAFFGfYUZ9hQAUUZ9hRn2FABRRn2FGfYUAFFGfYUZ9hQAUUZ9hRn2FAB
+RRn2FGfYUAFFGfYUZ9hQAUUZ9hRn2FABRRn2FGfYUAFFGfYUZ9hQAUUUUAFFFFABRRRQAUUUUAFF
+FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUU
+UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/2Q==
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Textgr&#246;&#223;e
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="4ec17b08-8c3f-4472-9245-fcee30cbc4ef">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="d0ee00dd-bd32-46ce-bd7c-7eea0265738f"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="1105,476,50,19"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Normal
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Normal
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Normal
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Nachrichten']/container[@classname='ScrollViewer']/?/?/button[@name~'^Textgr&#246;&#223;e,\ Normal,\ ausgew']/?/?/text[@name='Normal']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="d2a086df-d22d-482e-abbf-f61635fdffc7">
+				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
+UAf/2Q==
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Normal
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="100ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="e26eb517-15a1-4d63-9a5e-7a456a7e1166"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="9159aa9a-151c-4442-b95e-96e512a80b71"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[7]/button[@name='Benachrichtigungen']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="AttributeEqual"
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		searchpropertyid="c9028d1c-bd08-4913-9d8d-9ff05c959d44">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="f258eae1-41cc-4604-ad22-da4a066adb07"
+			sourcename="ElementTree">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="761,400,346,21"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Benachrichtigungst&#246;ne
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Benachrichtigungst&#246;ne
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Benachrichtigungst&#246;ne
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Benachrichtigungen']/container[@classname='ScrollViewer']/?/?/button[@name~'^Benachrichtigungst&#246;ne,\ T&#246;']//text[@name='Benachrichtigungst&#246;ne']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="c941913d-c5d2-4f9b-a75e-d2071b2e3c44">
+				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
+DYfajYfaiigA2H2o2H2oooA//9k=
+			</helperscreenshot>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Benachrichtigungst&#246;ne
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="b8d98231-c89e-4dfb-9a69-5c686e4af655"
+		sx="1135"
+		sy="419"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="6b6e0d45-9c5d-4971-bc9a-a9ad38cad109"
+			sourcename="Recorder">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="container"
+				rect="1119,405,50,30"
+				role="container"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="controltype"
+					type="System.String">
+						Group
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						group
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12068
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Benachrichtigungen']/container[@classname='ScrollViewer']/?/?/button[@name~'^Benachrichtigungst&#246;ne,\ T&#246;']/container/container[@orientation='None']/container[@orientation='None']/?/?/container[@orientation='None']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="4b5ea8d8-45b4-40a4-ac0e-0901203acb17">
+				/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
+YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCABGAOQDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwChFct5
+kI/dIsYYDcCVwc5B6nvipp7yNFijhWJ0VGV1AbYcnOOeewOao4T/AJ6r+R/wown/AD1X8j/hQBYS
+82KyfZ4SjMG2HcQCB9c0PeNKhWaOOU5JDNkEZ69CKr4T/nqv5H/CjCf89V/I/wCFAEy3OZD5ijY6
+JG+Ou1dvT3+UU2Kcwyu6Iu1gVKHJGD29ajwn/PVfyP8AhRhP+eq/kf8ACgCeO8aJ8xRRoN6vtGSM
+jPqfeomlZoUiIG1CSPXnH+FNwn/PVfyP+FGE/wCeq/kf8KAEopcJ/wA9V/I/4UYT/nqv5H/CgBKK
+XCf89V/I/wCFGE/56r+R/wAKAEopcJ/z1X8j/hRhP+eq/kf8KAEopcJ/z1X8j/hRhP8Anqv5H/Cg
+BKKXCf8APVfyP+FGE/56r+R/woASilwn/PVfyP8AhRhP+eq/kf8ACgBKKMx/89V/I/4UZj/56r+R
+/wAKACijMf8Az1X8j/hRmP8A56r+R/woAKKMx/8APVfyP+FGY/8Anqv5H/CgAoozH/z1X8j/AIUZ
+j/56r+R/woAKKMx/89V/I/4UUARUUUUAFFFFABRRRQAUUUUAFFFFAD4QDKARkVJvXeVEIJzjio4P
+9ctX7SILukP3mJ/AUlHmnY66Tkqfu9/0Q2O1LDLoi+3WpPsSf7P/AHzU4pwrb2MDXnkv+GRWNnGo
+yzKAO5WoilrnAmjz/u8fnVa6uGnkPPyDoKhrJxh0Rg8RLp+SLc0ZhUMYkZD0ZTkVGpV0fEYGBSWt
+wYXw3MbcMvtUkkPkSTx9QBkH2qJRSV0XSqynKz216LsVaF+8KKF+8Ks4yOiiigAooooAKKKKACii
+igAooooAkooooAKKKKACiiigAooooAKKKKAHwf65a1IyCgxWXB/rlq1bXAV2jc4G44NODtM66ckq
+Wvf9EXhUbpOlmZ3O6GQuoYD/AFZDEAH2OOtSCtbSjH/ZaJLtxI8i7W/i+ZuPfjNbTdiara2OOoq5
+eW0JmLaezSwMMj5GG325HNVNjbtu07vTHNYnNYSr91wSp+8sKhvrzUcMAgxPcjaByqHqxpgkaUzS
+N1YZqZ6ROihpP7/yZXoX7wooX7wpnOR0UUUAFFFFABRRRQAUUUUAFFFFAElFHHofzo49D+dABRRx
+6H86OPQ/nQAUUceh/Ojj0P50AFFHHofzo49D+dABRRx6H86OPQ/nQA6JgsgJ4FSEQkklzzUPHofz
+o49D+dS43dzWNXljy2TLMcwjGEmcD06/0oacnYRO26Mkx5HCnO7PT1qtx6H86OPQ/nTs+5TrXVuV
+fj/mXnvd00kiMYldt2wfMAT15I9cmkN4xH/Hw3/fI/wqlx6H86OPQ/nRZ9wVaytyr8f8yZjE7bnl
+dj6mgGJEYKxJI71Dx6H86KXL5gq9tVFf18woX7wooX7wqjAjooooAKKUAsQAMk1MYADsLHfjPTig
+CCiiigAooooAKKKKAJKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKF+8KKKAI6
+KKKAJm/cKAPvsOW9BTpWMSCLOTjk/wBBRRQBXooooAKKKKACiiigD//Z
+			</helperscreenshot>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="d630de91-3890-4b24-a127-2df1d75f106f"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="62f65dd5-2281-4c96-b40c-d4aded43a4c6"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container/container[1]/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[8]/button[@name='Kontakte']
+				</path>
+			</info>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="100ms"
+		enabled="True"
+		loc="7;6"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="27529dc0-fafc-4f1c-9845-c3cc20f225ec"
+		sx="510"
+		sy="246"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="fb775665-732e-438c-83e2-ac8667a6c42a"
+			sourcename="Recorder">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Kontakte']/container[1]/container[@orientation='None']/container[1]/button[@name='Schlie&#223;en']
+				</path>
+			</info>
+		</mouseitem>
+	</recorditems>
+	<repository
+	id="6d5166f4-b7ba-4c2c-9921-6198d2ced1bc"
+	name="TA_SkypeRepository"
+	relativepath="TA_SkypeRepository.rxrep"
+	rxversion="8.3">
+		<codegen
+		classname="TA_SkypeRepository"
+		namespace="TA_Skype">
+		</codegen>
+		<rootfolder
+		id="bd9057c9-e431-44a7-ba05-6153dff61cc0"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		EigenesProfilBearbeiten.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

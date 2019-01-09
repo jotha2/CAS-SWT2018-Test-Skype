@@ -46,7 +46,7 @@ rxversion="8.3">
 		100ms
 	</recorder.keyactiontime>
 	<recorder.keysequencesplittime>
-		1000ms
+		100ms
 	</recorder.keysequencesplittime>
 	<repository.appfoldertimeout>
 		30000ms
@@ -55,7 +55,7 @@ rxversion="8.3">
 		30000ms
 	</repository.foldertimeout>
 	<repository.itemtimeout>
-		30000ms
+		5000ms
 	</repository.itemtimeout>
 	<repository.useappfoldercache>
 		True
@@ -576,4 +576,7 @@ rxversion="8.3">
 	<plugin.webdriver.screenshotUpdate>
 		False
 	</plugin.webdriver.screenshotUpdate>
+	<plugin.delphi.enabled>
+		True
+	</plugin.delphi.enabled>
 </configuration>

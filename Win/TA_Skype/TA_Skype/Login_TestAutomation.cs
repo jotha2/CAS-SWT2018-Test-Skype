@@ -79,34 +79,33 @@ namespace TA_Skype
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.AnmeldenOderErstellen' at 82;8.", repo.Skype.AnmeldenOderErstellenInfo, new RecordItemIndex(0));
-            repo.Skype.AnmeldenOderErstellen.Click("82;8");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.btnAnmeldenOderErstellen' at 82;8.", repo.Skype.frmLogOnOff.btnAnmeldenOderErstellenInfo, new RecordItemIndex(0));
+            repo.Skype.frmLogOnOff.btnAnmeldenOderErstellen.Click("82;8");
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.NamedContainerAutomationPeer' at 788;568.", repo.Skype.NamedContainerAutomationPeerInfo, new RecordItemIndex(1));
-            repo.Skype.NamedContainerAutomationPeer.Click("788;568");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(1));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse.Click();
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.None1.Loginfeld_Emailadresse' at Center.", repo.Skype.None1.Loginfeld_EmailadresseInfo, new RecordItemIndex(2));
-            repo.Skype.None1.Loginfeld_Emailadresse.Click();
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'test_automation_hsr@hotmail.com' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(2));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse.PressKeys("test_automation_hsr@hotmail.com");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'test_automation_hsr@hotmail.com' with focus on 'Skype.None1.Loginfeld_Emailadresse'.", repo.Skype.None1.Loginfeld_EmailadresseInfo, new RecordItemIndex(3));
-            repo.Skype.None1.Loginfeld_Emailadresse.PressKeys("test_automation_hsr@hotmail.com");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(3));
+            Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse);
+            Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.NamedContainerAutomationPeer' at 1121;742.", repo.Skype.NamedContainerAutomationPeerInfo, new RecordItemIndex(4));
-            repo.Skype.NamedContainerAutomationPeer.Click("1121;742");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(4));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort.Click();
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.None1.Loginfeld_Passworte' at Center.", repo.Skype.None1.Loginfeld_PassworteInfo, new RecordItemIndex(5));
-            repo.Skype.None1.Loginfeld_Passworte.Click();
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'CASSoftwareTesting18' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(5));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort.PressKeys("CASSoftwareTesting18");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'CASSoftwareTesting18' with focus on 'Skype.None1.Loginfeld_Passworte'.", repo.Skype.None1.Loginfeld_PassworteInfo, new RecordItemIndex(6));
-            repo.Skype.None1.Loginfeld_Passworte.PressKeys("CASSoftwareTesting18");
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.NamedContainerAutomationPeer' at 1098;725.", repo.Skype.NamedContainerAutomationPeerInfo, new RecordItemIndex(7));
-            repo.Skype.NamedContainerAutomationPeer.Click("1098;725");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(6));
+            Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort);
+            Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeContains (Text>'Willkommen') on item 'Skype.WillkommenTest'.", repo.Skype.WillkommenTestInfo, new RecordItemIndex(8));
-                Validate.AttributeContains(repo.Skype.WillkommenTestInfo, "Text", "Willkommen", null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(8)); }
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeContains (Text>'Willkommen') on item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommen'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommenInfo, new RecordItemIndex(7));
+                Validate.AttributeContains(repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommenInfo, "Text", "Willkommen", null, false);
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(7)); }
             
         }
 

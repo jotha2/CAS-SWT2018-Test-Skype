@@ -24,29 +24,29 @@ namespace TA_Skype
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Logoff_TestAutomation recording.
+    ///The StarteEinstellungenDialog recording.
     /// </summary>
-    [TestModule("17f5c6f4-53d1-4fad-a022-3e8df59bb7ab", ModuleType.Recording, 1)]
-    public partial class Logoff_TestAutomation : ITestModule
+    [TestModule("4dd71afe-152b-4370-976e-3a13e41b710d", ModuleType.Recording, 1)]
+    public partial class StarteEinstellungenDialog : ITestModule
     {
         /// <summary>
         /// Holds an instance of the TA_SkypeRepository repository.
         /// </summary>
         public static TA_SkypeRepository repo = TA_SkypeRepository.Instance;
 
-        static Logoff_TestAutomation instance = new Logoff_TestAutomation();
+        static StarteEinstellungenDialog instance = new StarteEinstellungenDialog();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Logoff_TestAutomation()
+        public StarteEinstellungenDialog()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Logoff_TestAutomation Instance
+        public static StarteEinstellungenDialog Instance
         {
             get { return instance; }
         }
@@ -73,39 +73,34 @@ namespace TA_Skype
         [System.CodeDom.Compiler.GeneratedCode("Ranorex", "8.3")]
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 0;
-            Keyboard.DefaultKeyPressTime = 20;
-            Delay.SpeedFactor = 0.00;
+            Mouse.DefaultMoveTime = 300;
+            Keyboard.DefaultKeyPressTime = 100;
+            Delay.SpeedFactor = 1.00;
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen' at 20;11.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionenInfo, new RecordItemIndex(0));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen.Click("20;11");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionenInfo, new RecordItemIndex(0));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.btnOptionen.Click(new Duration(0));
+            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu'.", repo.Skype.PopupMenu.SelfInfo, new RecordItemIndex(1));
             Validate.Exists(repo.Skype.PopupMenu.SelfInfo);
+            Delay.Milliseconds(0);
             
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(2));
             Delay.Duration(1000, false);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.PopupItemAbmelden'.", repo.Skype.PopupMenu.PopupItemAbmeldenInfo, new RecordItemIndex(3));
-            Validate.Exists(repo.Skype.PopupMenu.PopupItemAbmeldenInfo);
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.PopupItemEinstellungen'.", repo.Skype.PopupMenu.PopupItemEinstellungenInfo, new RecordItemIndex(3));
+            Validate.Exists(repo.Skype.PopupMenu.PopupItemEinstellungenInfo);
+            Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemAbmelden' at Center.", repo.Skype.PopupMenu.PopupItemAbmeldenInfo, new RecordItemIndex(4));
-            repo.Skype.PopupMenu.PopupItemAbmelden.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemEinstellungen' at Center.", repo.Skype.PopupMenu.PopupItemEinstellungenInfo, new RecordItemIndex(4));
+            repo.Skype.PopupMenu.PopupItemEinstellungen.Click();
+            Delay.Milliseconds(200);
             
-            try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmLogOnOff.frmLogOff'.", repo.Skype.frmLogOnOff.frmLogOff.SelfInfo, new RecordItemIndex(5));
-                Validate.Exists(repo.Skype.frmLogOnOff.frmLogOff.SelfInfo, null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(5)); }
-            
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOff.btnJaUndAnmeldedatenLoeschen' at 120;17.", repo.Skype.frmLogOnOff.frmLogOff.btnJaUndAnmeldedatenLoeschenInfo, new RecordItemIndex(6));
-            repo.Skype.frmLogOnOff.frmLogOff.btnJaUndAnmeldedatenLoeschen.Click("120;17");
-            
-            try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmLogOnOff.btnAnmeldenOderErstellen'.", repo.Skype.frmLogOnOff.btnAnmeldenOderErstellenInfo, new RecordItemIndex(7));
-                Validate.Exists(repo.Skype.frmLogOnOff.btnAnmeldenOderErstellenInfo, null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(7)); }
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmEinstellungen'.", repo.Skype.frmSkypeMain.frmEinstellungen.SelfInfo, new RecordItemIndex(5));
+            Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.SelfInfo);
+            Delay.Milliseconds(0);
             
         }
 

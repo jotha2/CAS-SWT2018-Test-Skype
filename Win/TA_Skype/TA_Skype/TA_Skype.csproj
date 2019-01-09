@@ -117,6 +117,66 @@
     <Compile Include="AssemblyInfo.cs">
       <id>4bd111b2-5d38-4b88-88fd-c689d47e933d</id>
     </Compile>
+    <Compile Include="EigenesProfilBearbeiten.cs">
+      <BoundTo>6ab9b34b-130b-4639-8551-e24e0d693cad</BoundTo>
+      <DependentUpon>EigenesProfilBearbeiten.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>64fb467a-8490-40a2-9ef0-cfb78e8d623c</id>
+    </Compile>
+    <Compile Include="EigenesProfilBearbeiten.UserCode.cs">
+      <BoundTo>6ab9b34b-130b-4639-8551-e24e0d693cad</BoundTo>
+      <DependentUpon>EigenesProfilBearbeiten.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>11f39531-d69f-4f46-bfec-1e11f81a9906</id>
+    </Compile>
+    <Compile Include="KontaktHinzufuegen.cs">
+      <BoundTo>cc1881f6-04e8-45bc-8dba-df35ceda664b</BoundTo>
+      <DependentUpon>KontaktHinzufuegen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>cd9b20ca-3a70-40a4-a25e-2019d7de80c0</id>
+    </Compile>
+    <Compile Include="KontaktHinzufuegen.UserCode.cs">
+      <BoundTo>cc1881f6-04e8-45bc-8dba-df35ceda664b</BoundTo>
+      <DependentUpon>KontaktHinzufuegen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>8065ef2c-2d5c-4892-86de-a2c97579cc58</id>
+    </Compile>
+    <Compile Include="KontaktLoeschen.cs">
+      <BoundTo>42b479f3-7174-42b0-b238-f28c5ec303df</BoundTo>
+      <DependentUpon>KontaktLoeschen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>24a16212-c321-4a6b-b641-97011c0eaabe</id>
+    </Compile>
+    <Compile Include="KontaktLoeschen.UserCode.cs">
+      <BoundTo>42b479f3-7174-42b0-b238-f28c5ec303df</BoundTo>
+      <DependentUpon>KontaktLoeschen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>80711dbe-2566-4928-8f46-7fe7c51547da</id>
+    </Compile>
+    <Compile Include="StarteEinstellungenDialog.cs">
+      <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>
+      <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b37dcf4c-7e7c-4008-8dc6-3fe53633b14e</id>
+    </Compile>
+    <Compile Include="StarteEinstellungenDialog.UserCode.cs">
+      <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>
+      <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c6d757c5-d1e9-46d2-9c43-59b11b708d7d</id>
+    </Compile>
+    <Compile Include="Testchat_TestAutomation_DialogStarten.cs">
+      <BoundTo>de47adfc-c613-4ac1-a669-2de8748db230</BoundTo>
+      <DependentUpon>Testchat_TestAutomation_DialogStarten.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e0e1e831-3193-4c5e-9123-4b258b52cd29</id>
+    </Compile>
+    <Compile Include="Testchat_TestAutomation_DialogStarten.UserCode.cs">
+      <BoundTo>de47adfc-c613-4ac1-a669-2de8748db230</BoundTo>
+      <DependentUpon>Testchat_TestAutomation_DialogStarten.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>4182245e-c97b-494e-aa4c-3496a625868f</id>
+    </Compile>
     <Compile Include="UserCodeModule1.cs">
       <id>39fe38df-fe4f-4f8b-af1e-94de9a5a6afc</id>
     </Compile>
@@ -181,6 +241,31 @@
   <ItemGroup>
     <None Include="app.config">
       <id>01501114-08bd-48ab-8e46-f0c90900bf1a</id>
+    </None>
+    <None Include="EigenesProfilBearbeiten.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>6ab9b34b-130b-4639-8551-e24e0d693cad</id>
+      <recordtableid>628edbaf-f045-4d8a-b74f-9d5a079bd8dc</recordtableid>
+    </None>
+    <None Include="KontaktHinzufuegen.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>cc1881f6-04e8-45bc-8dba-df35ceda664b</id>
+      <recordtableid>fbcedd80-444f-4a2c-aa01-ddc4e9f3f02e</recordtableid>
+    </None>
+    <None Include="KontaktLoeschen.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>42b479f3-7174-42b0-b238-f28c5ec303df</id>
+      <recordtableid>402a155c-fb0f-4b6d-9e63-c420293392a5</recordtableid>
+    </None>
+    <None Include="StarteEinstellungenDialog.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</id>
+      <recordtableid>4dd71afe-152b-4370-976e-3a13e41b710d</recordtableid>
+    </None>
+    <None Include="Testchat_TestAutomation_DialogStarten.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>de47adfc-c613-4ac1-a669-2de8748db230</id>
+      <recordtableid>48fd798d-d761-484e-b9d6-b99033bb5de0</recordtableid>
     </None>
     <None Include="Verbindungstest_Abspielen.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
