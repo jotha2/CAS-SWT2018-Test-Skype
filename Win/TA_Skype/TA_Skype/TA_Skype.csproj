@@ -153,6 +153,18 @@
       <UserCode>true</UserCode>
       <id>80711dbe-2566-4928-8f46-7fe7c51547da</id>
     </Compile>
+    <Compile Include="Login_SarahPfister.cs">
+      <BoundTo>41a61abf-7c6c-48ad-96a5-afc14ecd5405</BoundTo>
+      <DependentUpon>Login_SarahPfister.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>189beb68-fc77-4776-ba57-2b33a6c3111d</id>
+    </Compile>
+    <Compile Include="Login_SarahPfister.UserCode.cs">
+      <BoundTo>41a61abf-7c6c-48ad-96a5-afc14ecd5405</BoundTo>
+      <DependentUpon>Login_SarahPfister.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>15d68a34-295f-41a7-b7f7-cfbed5e44421</id>
+    </Compile>
     <Compile Include="StarteEinstellungenDialog.cs">
       <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>
       <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
@@ -164,6 +176,30 @@
       <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>c6d757c5-d1e9-46d2-9c43-59b11b708d7d</id>
+    </Compile>
+    <Compile Include="Testchat_SarahPfister_Dialogfuehren.cs">
+      <BoundTo>9b5d6883-b52d-430e-aeae-f64e0e5500a7</BoundTo>
+      <DependentUpon>Testchat_SarahPfister_Dialogführen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c559f0d8-88d1-40e7-9678-6ee5c75b2475</id>
+    </Compile>
+    <Compile Include="Testchat_SarahPfister_Dialogfuehren.UserCode.cs">
+      <BoundTo>9b5d6883-b52d-430e-aeae-f64e0e5500a7</BoundTo>
+      <DependentUpon>Testchat_SarahPfister_Dialogführen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>fa0d0c7c-efba-447c-8533-bff522bb5fc0</id>
+    </Compile>
+    <Compile Include="Testchat_TestAutomation_DialogLoeschen.cs">
+      <BoundTo>2e3d0a03-1b89-4eca-8350-5fb071103217</BoundTo>
+      <DependentUpon>Testchat_TestAutomation_DialogLöschen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8a1a0b30-93d2-46af-9d7f-01919601ed8a</id>
+    </Compile>
+    <Compile Include="Testchat_TestAutomation_DialogLoeschen.UserCode.cs">
+      <BoundTo>2e3d0a03-1b89-4eca-8350-5fb071103217</BoundTo>
+      <DependentUpon>Testchat_TestAutomation_DialogLöschen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>66a9c739-299c-4a9b-84c8-48ce4dea8af7</id>
     </Compile>
     <Compile Include="Testchat_TestAutomation_DialogStarten.cs">
       <BoundTo>de47adfc-c613-4ac1-a669-2de8748db230</BoundTo>
@@ -257,10 +293,25 @@
       <id>42b479f3-7174-42b0-b238-f28c5ec303df</id>
       <recordtableid>402a155c-fb0f-4b6d-9e63-c420293392a5</recordtableid>
     </None>
+    <None Include="Login_SarahPfister.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>41a61abf-7c6c-48ad-96a5-afc14ecd5405</id>
+      <recordtableid>41f64bae-8a9f-419e-9108-17122424abd2</recordtableid>
+    </None>
     <None Include="StarteEinstellungenDialog.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
       <id>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</id>
       <recordtableid>4dd71afe-152b-4370-976e-3a13e41b710d</recordtableid>
+    </None>
+    <None Include="Testchat_SarahPfister_Dialogführen.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>9b5d6883-b52d-430e-aeae-f64e0e5500a7</id>
+      <recordtableid>925b537f-8e6a-4d59-b0bb-6a30fbad67f8</recordtableid>
+    </None>
+    <None Include="Testchat_TestAutomation_DialogLöschen.rxrec">
+      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
+      <id>2e3d0a03-1b89-4eca-8350-5fb071103217</id>
+      <recordtableid>2af4ab27-dd76-435b-8113-e8b7e8060627</recordtableid>
     </None>
     <None Include="Testchat_TestAutomation_DialogStarten.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>

@@ -155,6 +155,36 @@ rxversion="8.3">
 						searchtimeout="5000ms">
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/button[@name='Neuer Chat']/?/?/container[@orientation='None']
 						</item>
+						<item
+						addcaps="container,uiautomation"
+						capname="container"
+						id="87733f58-8125-4580-89a8-b0f8fb146bd6"
+						name="Chatfenster_TestAutomation"
+						refimgid="57fa6f37-1e78-4db9-8b60-0610e291bc12"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^Test\ Automation,\ Chat,\ Wa']/container/container/container[@orientation='None']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Test\ Automation,\ Chat,\ Wa']/container/container[@orientation='None']/container[@orientation='None']
+						</item>
+						<item
+						addcaps="text,uiautomation"
+						capname="text"
+						id="2269d5e2-67d0-4862-95e3-22a85c308742"
+						name="SarahPfister"
+						refimgid="4151d773-8263-430c-ab2c-d181f32a3d70"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container/container/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^Favorit,\ Sarah\ Pfister,\ C']/container/container/container/container[2]/text[@name='Sarah Pfister']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\ Sarah\ Pfister,\ C']/container/container[@orientation='None']/container[@orientation='None']/container[2]/text[@name='Sarah Pfister']
+						</item>
+						<item
+						addcaps="container,uiautomation"
+						capname="container"
+						id="e690fda8-ff26-440d-8f1b-ce0f6d61c63f"
+						name="Chatfenster"
+						refimgid="c3ab3bf1-21bc-46ac-afa2-f66d19a10fae"
+						refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[@orientation='None']/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container[@orientation='None']/listitem[@name='Favorit, Sarah Pfister, Chat, Hattest Du auch schöne Ferien?, 10:09, Keine neuen Nachrichten, ausgewählt']/container[@orientation='None']/container[@orientation='None']"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\ Sarah\ Pfister,\ C']/container/container[@orientation='None']
+						</item>
 						<basepath>
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]
 						</basepath>
@@ -167,7 +197,7 @@ rxversion="8.3">
 				capname="container"
 				id="412b5203-a9e8-4a5f-a98e-4d28fe688301"
 				isrooted="True"
-				name="frmSkypeMainAreaRechts"
+				name="frmSkypeMainAreaRechts_Chatfenster"
 				searchtimeout="10000ms"
 				usecache="False">
 					<item
@@ -200,24 +230,14 @@ rxversion="8.3">
 						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container[2]//container[@iscontentelement='False']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/text[@name='Nachricht hier eingeben']
 					</item>
 					<item
-					addcaps="text,uiautomation"
-					capname="text"
-					id="6f89b081-5400-4099-affa-90c0e824d948"
-					name="HalloSarahWieGehtEsDir"
-					refimgid="d8ff648c-26c6-4251-86e9-5fafb9edf3f2"
-					refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container[2]/container[@orientation='None']/container[1]/container[@orientation='None']/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[2]/listitem[@name='Test Automation, Hallo Sarah, wie geht es Dir?, gesendet um 17:56.']/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/text[@name='Hallo Sarah, wie geht es Dir?']"
+					addcaps="container,uiautomation"
+					capname="container"
+					id="e125d5e4-8989-41ec-a7d1-2e025f05ed7b"
+					name="Chatfenster_Textfeld"
+					refimgid="612165af-44e5-4e3c-bc38-c6bd21480f91"
+					refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container[@orientation='None']/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']"
 					searchtimeout="5000ms">
-						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container[2]/container/container[1]//container[@classname='ScrollViewer']/container/container[2]/listitem[@name~'^Test\ Automation,\ Hallo\ Sa']/container/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/?/?/text[@name~'^Hallo\ Sarah,\ wie\ geht\ es\ ']
-					</item>
-					<item
-					addcaps="text,uiautomation"
-					capname="text"
-					id="125f7659-eb52-44fc-9c19-d3098de6c43d"
-					name="HattestDuSchoeneFerien"
-					refimgid="bb98817b-035b-45cc-95c3-271f474be8fc"
-					refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container[2]/container[@orientation='None']/container[1]/container[@orientation='None']/container[@orientation='None']/container[@classname='ScrollViewer']/container[@orientation='None']/container[2]/listitem[@name='Test Automation, Hattest Du schöne Ferien?  Emoticon Grinsen., gesendet um 17:56.']/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/text[@name='Hattest Du schöne Ferien? ']"
-					searchtimeout="5000ms">
-						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container[2]/container/container[1]//container[@classname='ScrollViewer']/container/container[2]/listitem[@name~'^Test\ Automation,\ Hattest\ ']//text[@name~'^Hattest\ Du\ sch&#246;ne\ Ferien\?']
+						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']
 					</item>
 					<basepath>
 						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]
@@ -1223,6 +1243,16 @@ rxversion="8.3">
 					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@automationid='Popup Window']
 				</basepath>
 			</folder>
+			<item
+			addcaps="text,uiautomation"
+			capname="text"
+			id="27d4ad40-9213-4154-bcaf-3dd055e29f33"
+			name="UnterhaltungLoeschen"
+			refimgid="5231d4e9-ac87-434f-a514-4c81056543bd"
+			refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/form/contextmenu/menuitem[@name='Unterhaltung löschen']/text[@automationid='TextBlock']"
+			searchtimeout="5000ms">
+				/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']//menuitem[@name='Unterhaltung l&#246;schen']/text[@automationid='TextBlock']
+			</item>
 			<basepath>
 				/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']
 			</basepath>

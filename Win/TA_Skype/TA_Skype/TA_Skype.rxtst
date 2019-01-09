@@ -8,6 +8,12 @@ rxversion="8.3">
 			name="TestCase">
 			</testcase>
 			<testmodule
+			id="0add9909-e137-4685-855e-2ac61ae4444a"
+			name="Logoff_TestAutomation"
+			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
+			type="Recording">
+			</testmodule>
+			<testmodule
 			id="110ffc9c-3623-4fb5-934f-12733080a9db"
 			name="Login_TestAutomation"
 			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
@@ -17,6 +23,12 @@ rxversion="8.3">
 			id="205ff4b4-52b0-43ab-8b63-4c354f46e025"
 			name="setup">
 			</setup>
+			<testmodule
+			id="20dca20f-dbd0-4182-b5e3-85f1c14cd81c"
+			name="Testchat_SarahPfister_Dialogfuehren"
+			ref="925b537f-8e6a-4d59-b0bb-6a30fbad67f8"
+			type="Recording">
+			</testmodule>
 			<testcase
 			id="26caff6d-67ac-4fb4-bb74-401c1ab18d6b"
 			name="TA_Skype"
@@ -88,6 +100,18 @@ rxversion="8.3">
 			type="Recording">
 			</testmodule>
 			<testmodule
+			id="57ebe6f8-3d49-4b3e-bcc6-425084a3df31"
+			name="Testchat_TestAutomation_DialogLoeschen"
+			ref="2af4ab27-dd76-435b-8113-e8b7e8060627"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="5e665ea5-aaef-4681-8755-3aad0c9dea55"
+			name="Login_TestAutomation"
+			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
+			type="Recording">
+			</testmodule>
+			<testmodule
 			id="70e19bf5-7554-4b6a-b15f-31f3583e4b24"
 			name="Testchat_TestAutomation_DialogStarten"
 			ref="48fd798d-d761-484e-b9d6-b99033bb5de0"
@@ -113,6 +137,12 @@ rxversion="8.3">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
+			<testmodule
+			id="8dcdd87c-a3f0-444a-b87d-2a701bdd48f8"
+			name="Login_SarahPfister"
+			ref="41f64bae-8a9f-419e-9108-17122424abd2"
+			type="Recording">
+			</testmodule>
 			<smartfoldernode
 			datasource="NewConnector1"
 			id="9b74e20f-6d22-4864-a976-723ddc010bfd"
@@ -126,12 +156,6 @@ rxversion="8.3">
 			id="a1905381-c15d-49dd-abb1-eab24986dff3"
 			name="T1.2.3_Testchat_im_Dialog">
 			</smartfoldernode>
-			<testmodule
-			id="b5d50454-abf6-45ec-9177-e86b9db097e9"
-			name="Logoff_TestAutomation"
-			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
-			type="Recording">
-			</testmodule>
 			<testmodule
 			id="bdc1106b-c61b-407b-a6bc-d36759d26172"
 			name="Verbindungstest_Abspielen"
@@ -162,12 +186,6 @@ rxversion="8.3">
 			ref="3b73c879-7922-4f33-bbe6-9867a5ef85eb"
 			type="Recording">
 			</testmodule>
-			<testmodule
-			id="de4dea6f-7ad9-45c4-83b8-d47d3bae7d35"
-			name="Login_TestAutomation"
-			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
-			type="Recording">
-			</testmodule>
 			<smartfoldernode
 			id="e86331d6-26e6-4f26-8199-5057acfc72f4"
 			name="T1.4.1_Eigenes_Profil_bearbeiten">
@@ -176,12 +194,6 @@ rxversion="8.3">
 			id="f9f010e7-2a8a-459f-aa17-6904e2e086ff"
 			name="Logoff_TestAutomation"
 			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
-			type="Recording">
-			</testmodule>
-			<testmodule
-			id="fe6225de-b49d-4f97-b8ab-762dd2536dce"
-			name="Login_TestAutomation"
-			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
 			type="Recording">
 			</testmodule>
 		</flatlistofchildren>
@@ -247,25 +259,13 @@ rxversion="8.3">
 						id="e86331d6-26e6-4f26-8199-5057acfc72f4"
 						name="T1.4.1_Eigenes_Profil_bearbeiten">
 							<testmodule
-							id="fe6225de-b49d-4f97-b8ab-762dd2536dce"
-							name="Login_TestAutomation">
-							</testmodule>
-							<testmodule
 							id="78f55682-3825-4b3e-909c-dd2477f0c9e0"
 							name="EigenesProfilBearbeiten">
-							</testmodule>
-							<testmodule
-							id="b5d50454-abf6-45ec-9177-e86b9db097e9"
-							name="Logoff_TestAutomation">
 							</testmodule>
 						</smartfoldernode>
 						<smartfoldernode
 						id="a1905381-c15d-49dd-abb1-eab24986dff3"
 						name="T1.2.3_Testchat_im_Dialog">
-							<testmodule
-							id="de4dea6f-7ad9-45c4-83b8-d47d3bae7d35"
-							name="Login_TestAutomation">
-							</testmodule>
 							<testmodule
 							id="70e19bf5-7554-4b6a-b15f-31f3583e4b24"
 							name="Testchat_TestAutomation_DialogStarten">
@@ -273,6 +273,26 @@ rxversion="8.3">
 							<testmodule
 							id="f9f010e7-2a8a-459f-aa17-6904e2e086ff"
 							name="Logoff_TestAutomation">
+							</testmodule>
+							<testmodule
+							id="8dcdd87c-a3f0-444a-b87d-2a701bdd48f8"
+							name="Login_SarahPfister">
+							</testmodule>
+							<testmodule
+							id="20dca20f-dbd0-4182-b5e3-85f1c14cd81c"
+							name="Testchat_SarahPfister_Dialogfuehren">
+							</testmodule>
+							<testmodule
+							id="0add9909-e137-4685-855e-2ac61ae4444a"
+							name="Logoff_TestAutomation">
+							</testmodule>
+							<testmodule
+							id="5e665ea5-aaef-4681-8755-3aad0c9dea55"
+							name="Login_TestAutomation">
+							</testmodule>
+							<testmodule
+							id="57ebe6f8-3d49-4b3e-bcc6-425084a3df31"
+							name="Testchat_TestAutomation_DialogLoeschen">
 							</testmodule>
 						</smartfoldernode>
 						<smartfoldernode
@@ -431,19 +451,10 @@ rxversion="8.3">
 			id="26caff6d-67ac-4fb4-bb74-401c1ab18d6b">
 			</testcontainer>
 			<testcontainer
-			id="4a754bbb-8b7a-422e-aaf5-51d7428d29ac">
-			</testcontainer>
-			<testcontainer
-			id="9b74e20f-6d22-4864-a976-723ddc010bfd">
-			</testcontainer>
-			<testcontainer
 			id="a11f4766-ba3d-415a-bdea-b20954792a92">
 			</testcontainer>
 			<testcontainer
-			id="be8ae243-bbdb-48a2-966c-2c7318c7f600">
-			</testcontainer>
-			<testcontainer
-			id="e86331d6-26e6-4f26-8199-5057acfc72f4">
+			id="a1905381-c15d-49dd-abb1-eab24986dff3">
 			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>

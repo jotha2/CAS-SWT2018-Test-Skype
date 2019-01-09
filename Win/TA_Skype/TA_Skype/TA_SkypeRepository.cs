@@ -162,6 +162,7 @@ namespace TA_Skype
             TA_SkypeRepositoryFolders.PopupMenuFolder _popupmenu;
             TA_SkypeRepositoryFolders.PopupWindowFolder _popupwindow;
             RepoItemInfo _btncloseInfo;
+            RepoItemInfo _unterhaltungloeschenInfo;
 
             /// <summary>
             /// Creates a new Skype  folder.
@@ -175,6 +176,7 @@ namespace TA_Skype
                 _popupmenu = new TA_SkypeRepositoryFolders.PopupMenuFolder(this);
                 _popupwindow = new TA_SkypeRepositoryFolders.PopupWindowFolder(this);
                 _btncloseInfo = new RepoItemInfo(this, "btnClose", "titlebar[@name='Skype' and @classname='ApplicationFrameTitleBarWindow']/?/?/button[@automationid='Close']", 30000, null, "800e7cb4-3e1d-448f-ab90-44eab8d8a0fc");
+                _unterhaltungloeschenInfo = new RepoItemInfo(this, "UnterhaltungLoeschen", ".//menuitem[@name='Unterhaltung löschen']/text[@automationid='TextBlock']", 5000, null, "27d4ad40-9213-4154-bcaf-3dd055e29f33");
             }
 
             /// <summary>
@@ -222,6 +224,30 @@ namespace TA_Skype
                 get
                 {
                     return _btncloseInfo;
+                }
+            }
+
+            /// <summary>
+            /// The UnterhaltungLoeschen item.
+            /// </summary>
+            [RepositoryItem("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
+            public virtual Ranorex.Text UnterhaltungLoeschen
+            {
+                get
+                {
+                    return _unterhaltungloeschenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The UnterhaltungLoeschen item info.
+            /// </summary>
+            [RepositoryItemInfo("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
+            public virtual RepoItemInfo UnterhaltungLoeschenInfo
+            {
+                get
+                {
+                    return _unterhaltungloeschenInfo;
                 }
             }
 
@@ -278,7 +304,7 @@ namespace TA_Skype
         public partial class FrmSkypeMainFolder : RepoGenBaseFolder
         {
             TA_SkypeRepositoryFolders.FrmSkypeMainAreaLinksFolder _frmskypemainarealinks;
-            TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder _frmskypemainarearechts;
+            TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechts_ChatfensterFolder _frmskypemainarearechts_chatfenster;
             TA_SkypeRepositoryFolders.FrmEinstellungenFolder _frmeinstellungen;
             TA_SkypeRepositoryFolders.FrmKontaktHinzufuegenFolder _frmkontakthinzufuegen;
             TA_SkypeRepositoryFolders.FrmTelefonnummerHinzufuegenFolder _frmtelefonnummerhinzufuegen;
@@ -291,7 +317,7 @@ namespace TA_Skype
                     base("frmSkypeMain", "element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]", parentFolder, 10000, null, false, "5aa5a870-123d-4704-a329-534311aa601d", "")
             {
                 _frmskypemainarealinks = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaLinksFolder(this);
-                _frmskypemainarearechts = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder(this);
+                _frmskypemainarearechts_chatfenster = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechts_ChatfensterFolder(this);
                 _frmeinstellungen = new TA_SkypeRepositoryFolders.FrmEinstellungenFolder(this);
                 _frmkontakthinzufuegen = new TA_SkypeRepositoryFolders.FrmKontaktHinzufuegenFolder(this);
                 _frmtelefonnummerhinzufuegen = new TA_SkypeRepositoryFolders.FrmTelefonnummerHinzufuegenFolder(this);
@@ -332,12 +358,12 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The frmSkypeMainAreaRechts folder.
+            /// The frmSkypeMainAreaRechts_Chatfenster folder.
             /// </summary>
             [RepositoryFolder("412b5203-a9e8-4a5f-a98e-4d28fe688301")]
-            public virtual TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder frmSkypeMainAreaRechts
+            public virtual TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechts_ChatfensterFolder frmSkypeMainAreaRechts_Chatfenster
             {
-                get { return _frmskypemainarearechts; }
+                get { return _frmskypemainarearechts_chatfenster; }
             }
 
             /// <summary>
@@ -695,6 +721,9 @@ namespace TA_Skype
             RepoItemInfo _btnkontakthinzufuegenInfo;
             RepoItemInfo _listitemkontaktInfo;
             RepoItemInfo _neuerchatstartInfo;
+            RepoItemInfo _chatfenster_testautomationInfo;
+            RepoItemInfo _sarahpfisterInfo;
+            RepoItemInfo _chatfensterInfo;
 
             /// <summary>
             /// Creates a new Detailbereich  folder.
@@ -705,6 +734,9 @@ namespace TA_Skype
                 _btnkontakthinzufuegenInfo = new RepoItemInfo(this, "btnKontaktHinzufuegen", "button[@name='Neuen Kontakt hinzufügen']", 30000, null, "8eb3a25b-f19e-4644-b0cd-3396ceea227a");
                 _listitemkontaktInfo = new RepoItemInfo(this, "ListItemKontakt", "container[1]/container[1]/container[@classname='ScrollViewer']/?/?/listitem[@name=$VornameUndName+',']", 30000, null, "51a6586f-d516-4a68-bb0d-7a9a4db7b80c");
                 _neuerchatstartInfo = new RepoItemInfo(this, "NeuerChatStart", "button[@name='Neuer Chat']/?/?/container[@orientation='None']", 5000, null, "c2410e72-a0ec-4a1d-99b0-ccaa48386078");
+                _chatfenster_testautomationInfo = new RepoItemInfo(this, "Chatfenster_TestAutomation", "container[@classname='ScrollViewer']/?/?/listitem[@name~'^Test\\ Automation,\\ Chat,\\ Wa']/container/container[@orientation='None']/container[@orientation='None']", 5000, null, "87733f58-8125-4580-89a8-b0f8fb146bd6");
+                _sarahpfisterInfo = new RepoItemInfo(this, "SarahPfister", "container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\\ Sarah\\ Pfister,\\ C']/container/container[@orientation='None']/container[@orientation='None']/container[2]/text[@name='Sarah Pfister']", 5000, null, "2269d5e2-67d0-4862-95e3-22a85c308742");
+                _chatfensterInfo = new RepoItemInfo(this, "Chatfenster", "container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\\ Sarah\\ Pfister,\\ C']/container/container[@orientation='None']", 5000, null, "e690fda8-ff26-440d-8f1b-ce0f6d61c63f");
             }
 
             /// <summary>
@@ -802,31 +834,101 @@ namespace TA_Skype
                     return _neuerchatstartInfo;
                 }
             }
+
+            /// <summary>
+            /// The Chatfenster_TestAutomation item.
+            /// </summary>
+            [RepositoryItem("87733f58-8125-4580-89a8-b0f8fb146bd6")]
+            public virtual Ranorex.Container Chatfenster_TestAutomation
+            {
+                get
+                {
+                    return _chatfenster_testautomationInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Chatfenster_TestAutomation item info.
+            /// </summary>
+            [RepositoryItemInfo("87733f58-8125-4580-89a8-b0f8fb146bd6")]
+            public virtual RepoItemInfo Chatfenster_TestAutomationInfo
+            {
+                get
+                {
+                    return _chatfenster_testautomationInfo;
+                }
+            }
+
+            /// <summary>
+            /// The SarahPfister item.
+            /// </summary>
+            [RepositoryItem("2269d5e2-67d0-4862-95e3-22a85c308742")]
+            public virtual Ranorex.Text SarahPfister
+            {
+                get
+                {
+                    return _sarahpfisterInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The SarahPfister item info.
+            /// </summary>
+            [RepositoryItemInfo("2269d5e2-67d0-4862-95e3-22a85c308742")]
+            public virtual RepoItemInfo SarahPfisterInfo
+            {
+                get
+                {
+                    return _sarahpfisterInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Chatfenster item.
+            /// </summary>
+            [RepositoryItem("e690fda8-ff26-440d-8f1b-ce0f6d61c63f")]
+            public virtual Ranorex.Container Chatfenster
+            {
+                get
+                {
+                    return _chatfensterInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Chatfenster item info.
+            /// </summary>
+            [RepositoryItemInfo("e690fda8-ff26-440d-8f1b-ce0f6d61c63f")]
+            public virtual RepoItemInfo ChatfensterInfo
+            {
+                get
+                {
+                    return _chatfensterInfo;
+                }
+            }
         }
 
         /// <summary>
-        /// The FrmSkypeMainAreaRechtsFolder folder.
+        /// The FrmSkypeMainAreaRechts_ChatfensterFolder folder.
         /// </summary>
         [RepositoryFolder("412b5203-a9e8-4a5f-a98e-4d28fe688301")]
-        public partial class FrmSkypeMainAreaRechtsFolder : RepoGenBaseFolder
+        public partial class FrmSkypeMainAreaRechts_ChatfensterFolder : RepoGenBaseFolder
         {
             RepoItemInfo _txtwillkommenInfo;
             RepoItemInfo _chattextfeldInfo;
             RepoItemInfo _nachrichthiereingebenInfo;
-            RepoItemInfo _hallosarahwiegehtesdirInfo;
-            RepoItemInfo _hattestduschoeneferienInfo;
+            RepoItemInfo _chatfenster_textfeldInfo;
 
             /// <summary>
-            /// Creates a new frmSkypeMainAreaRechts  folder.
+            /// Creates a new frmSkypeMainAreaRechts_Chatfenster  folder.
             /// </summary>
-            public FrmSkypeMainAreaRechtsFolder(RepoGenBaseFolder parentFolder) :
-                    base("frmSkypeMainAreaRechts", "container[2]", parentFolder, 10000, null, false, "412b5203-a9e8-4a5f-a98e-4d28fe688301", "")
+            public FrmSkypeMainAreaRechts_ChatfensterFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmSkypeMainAreaRechts_Chatfenster", "container[2]", parentFolder, 10000, null, false, "412b5203-a9e8-4a5f-a98e-4d28fe688301", "")
             {
                 _txtwillkommenInfo = new RepoItemInfo(this, "txtWillkommen", "?/?/text[@name='Willkommen, Test']", 30000, null, "e0c5c5a9-6bc3-4300-8e17-90883f25db01");
                 _chattextfeldInfo = new RepoItemInfo(this, "ChatTextfeld", "container[2]/container/container[@orientation='None']/container[2]/container[1]/container/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']", 5000, null, "2b072423-2400-4295-9a67-01825c2c6536");
                 _nachrichthiereingebenInfo = new RepoItemInfo(this, "NachrichtHierEingeben", "container[2]/container[2]//container[@iscontentelement='False']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/text[@name='Nachricht hier eingeben']", 5000, null, "f8ba80de-8a26-46f3-996f-af7256356113");
-                _hallosarahwiegehtesdirInfo = new RepoItemInfo(this, "HalloSarahWieGehtEsDir", "container[2]/container[2]/container/container[1]//container[@classname='ScrollViewer']/container/container[2]/listitem[@name~'^Test\\ Automation,\\ Hallo\\ Sa']/container/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/?/?/text[@name~'^Hallo\\ Sarah,\\ wie\\ geht\\ es\\ ']", 5000, null, "6f89b081-5400-4099-affa-90c0e824d948");
-                _hattestduschoeneferienInfo = new RepoItemInfo(this, "HattestDuSchoeneFerien", "container[2]/container[2]/container/container[1]//container[@classname='ScrollViewer']/container/container[2]/listitem[@name~'^Test\\ Automation,\\ Hattest\\ ']//text[@name~'^Hattest\\ Du\\ schöne\\ Ferien\\?']", 5000, null, "125f7659-eb52-44fc-9c19-d3098de6c43d");
+                _chatfenster_textfeldInfo = new RepoItemInfo(this, "Chatfenster_Textfeld", "container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']", 5000, null, "e125d5e4-8989-41ec-a7d1-2e025f05ed7b");
             }
 
             /// <summary>
@@ -926,50 +1028,26 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The HalloSarahWieGehtEsDir item.
+            /// The Chatfenster_Textfeld item.
             /// </summary>
-            [RepositoryItem("6f89b081-5400-4099-affa-90c0e824d948")]
-            public virtual Ranorex.Text HalloSarahWieGehtEsDir
+            [RepositoryItem("e125d5e4-8989-41ec-a7d1-2e025f05ed7b")]
+            public virtual Ranorex.Container Chatfenster_Textfeld
             {
                 get
                 {
-                    return _hallosarahwiegehtesdirInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _chatfenster_textfeldInfo.CreateAdapter<Ranorex.Container>(true);
                 }
             }
 
             /// <summary>
-            /// The HalloSarahWieGehtEsDir item info.
+            /// The Chatfenster_Textfeld item info.
             /// </summary>
-            [RepositoryItemInfo("6f89b081-5400-4099-affa-90c0e824d948")]
-            public virtual RepoItemInfo HalloSarahWieGehtEsDirInfo
+            [RepositoryItemInfo("e125d5e4-8989-41ec-a7d1-2e025f05ed7b")]
+            public virtual RepoItemInfo Chatfenster_TextfeldInfo
             {
                 get
                 {
-                    return _hallosarahwiegehtesdirInfo;
-                }
-            }
-
-            /// <summary>
-            /// The HattestDuSchoeneFerien item.
-            /// </summary>
-            [RepositoryItem("125f7659-eb52-44fc-9c19-d3098de6c43d")]
-            public virtual Ranorex.Text HattestDuSchoeneFerien
-            {
-                get
-                {
-                    return _hattestduschoeneferienInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The HattestDuSchoeneFerien item info.
-            /// </summary>
-            [RepositoryItemInfo("125f7659-eb52-44fc-9c19-d3098de6c43d")]
-            public virtual RepoItemInfo HattestDuSchoeneFerienInfo
-            {
-                get
-                {
-                    return _hattestduschoeneferienInfo;
+                    return _chatfenster_textfeldInfo;
                 }
             }
         }

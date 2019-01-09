@@ -114,30 +114,20 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmEinstellungen.NeuerChatSarahPfister' at 105;48.", repo.Skype.frmSkypeMain.frmEinstellungen.NeuerChatSarahPfisterInfo, new RecordItemIndex(8));
             repo.Skype.frmSkypeMain.frmEinstellungen.NeuerChatSarahPfister.Click("105;48");
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeld' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeldInfo, new RecordItemIndex(9));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeld.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeldInfo, new RecordItemIndex(9));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld.Click();
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hallo Sarah, wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeldInfo, new RecordItemIndex(10));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeld.PressKeys("Hallo Sarah, wie geht es Dir?");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hallo Sarah, wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeldInfo, new RecordItemIndex(10));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld.PressKeys("Hallo Sarah, wie geht es Dir?");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.NachrichtHierEingeben'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.NachrichtHierEingebenInfo, new RecordItemIndex(11));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.NachrichtHierEingeben.PressKeys("{Return}");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(11));
+            Keyboard.Press("{Return}");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hattest Du schöne Ferien? :)' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeldInfo, new RecordItemIndex(12));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.ChatTextfeld.PressKeys("Hattest Du schöne Ferien? :)");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Was hast Du während den Ferien gemacht? :)' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeldInfo, new RecordItemIndex(12));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld.PressKeys("Was hast Du während den Ferien gemacht? :)");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.NachrichtHierEingeben'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.NachrichtHierEingebenInfo, new RecordItemIndex(13));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.NachrichtHierEingeben.PressKeys("{Return}");
-            
-            try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='Hallo Sarah, wie geht es Dir?') on item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.HalloSarahWieGehtEsDir'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.HalloSarahWieGehtEsDirInfo, new RecordItemIndex(14));
-                Validate.AttributeEqual(repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.HalloSarahWieGehtEsDirInfo, "Text", "Hallo Sarah, wie geht es Dir?", null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(14)); }
-            
-            try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeEqual (Text='Hattest Du schöne Ferien? \r\n') on item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.HattestDuSchoeneFerien'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.HattestDuSchoeneFerienInfo, new RecordItemIndex(15));
-                Validate.AttributeEqual(repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.HattestDuSchoeneFerienInfo, "Text", "Hattest Du schöne Ferien? \r\n", null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(15)); }
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(13));
+            Keyboard.Press("{Return}");
             
         }
 

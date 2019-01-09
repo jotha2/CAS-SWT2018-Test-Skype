@@ -24,29 +24,29 @@ namespace TA_Skype
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Login_TestAutomation recording.
+    ///The Login_SarahPfister recording.
     /// </summary>
-    [TestModule("be8e16e1-b2fd-4987-9305-f6cab9d6a2e3", ModuleType.Recording, 1)]
-    public partial class Login_TestAutomation : ITestModule
+    [TestModule("41f64bae-8a9f-419e-9108-17122424abd2", ModuleType.Recording, 1)]
+    public partial class Login_SarahPfister : ITestModule
     {
         /// <summary>
         /// Holds an instance of the TA_SkypeRepository repository.
         /// </summary>
         public static TA_SkypeRepository repo = TA_SkypeRepository.Instance;
 
-        static Login_TestAutomation instance = new Login_TestAutomation();
+        static Login_SarahPfister instance = new Login_SarahPfister();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Login_TestAutomation()
+        public Login_SarahPfister()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Login_TestAutomation Instance
+        public static Login_SarahPfister Instance
         {
             get { return instance; }
         }
@@ -85,8 +85,8 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(1));
             repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse.Click();
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'test_automation_hsr@hotmail.com' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(2));
-            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse.PressKeys("test_automation_hsr@hotmail.com");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'test_automation_hsr2@hotmail.com' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(2));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse.PressKeys("test_automation_hsr2@hotmail.com");
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(3));
             Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse);
@@ -95,17 +95,12 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(4));
             repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort.Click();
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'CASSoftwareTesting18' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(5));
-            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort.PressKeys("CASSoftwareTesting18");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'CASSoftwareTesting19' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(5));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort.PressKeys("CASSoftwareTesting19");
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(6));
             Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort);
             Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
-            
-            try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating AttributeContains (Text>'Willkommen') on item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.txtWillkommen'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.txtWillkommenInfo, new RecordItemIndex(7));
-                Validate.AttributeContains(repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.txtWillkommenInfo, "Text", "Willkommen", null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(7)); }
             
         }
 

@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="2af4ab27-dd76-435b-8113-e8b7e8060627"
+mode="Global"
+rxversion="8.3">
+	<name>
+		Testchat_TestAutomation_DialogLoeschen
+	</name>
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		True
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Testchat_TestAutomation_DialogLoeschen"
+	namespace="TA_Skype">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="59;10"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="5547b004-2adb-4e16-96a5-80a51ebcf9eb"
+		sx="113"
+		sy="269"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="2269d5e2-67d0-4862-95e3-22a85c308742"
+			sourcename="Recorder">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="54,259,90,20"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Sarah Pfister
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Sarah Pfister
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Sarah Pfister
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						5484
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\ Sarah\ Pfister,\ C']/container/container[@orientation='None']/container[@orientation='None']/container[2]/text[@name='Sarah Pfister']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="cfd03d2e-43fe-4478-98de-e5b11dcb0767">
+				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
+			</helperscreenshot>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Right"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="c565ca48-89b1-4ff1-b87b-e79acdddd1ec"
+		sx="295"
+		sy="260"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="e690fda8-ff26-440d-8f1b-ce0f6d61c63f"
+			sourcename="Recorder">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\ Sarah\ Pfister,\ C']/container/container[@orientation='None']
+				</path>
+			</info>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="88;13"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="0101e297-c46a-49e7-8b66-297f2b652469"
+		sx="299"
+		sy="233"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="27d4ad40-9213-4154-bcaf-3dd055e29f33"
+			sourcename="Recorder">
+				<element
+				capabilities="uiautomation"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="text"
+				rect="211,220,169,20"
+				role="text"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="caption"
+					type="System.String">
+						Unterhaltung l&#246;schen
+					</attribute>
+					<attribute
+					name="text"
+					type="System.String">
+						Unterhaltung l&#246;schen
+					</attribute>
+					<attribute
+					name="automationid"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						TextBlock
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Text
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						True
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						True
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						text
+					</attribute>
+					<attribute
+					name="name"
+					type="System.String">
+						Unterhaltung l&#246;schen
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						18844
+					</attribute>
+				</element>
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']//menuitem[@name='Unterhaltung l&#246;schen']/text[@automationid='TextBlock']
+				</path>
+			</info>
+			<helperscreenshot
+			guid="bc8b3e06-3527-4bda-af74-ede23c3e0123">
+				/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
+YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCAA0ANUDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDF3Nt2
+7jtznGeKkk+8P91f5CoqsMgO08/dX+QoAioqQRA96XyvepckjWNCpJXSIqKl8r3o8r3o549yvq9X
++UioqXyvejyvejnj3D6vV/lIqKl8r3o8r3o549w+r1f5SKipfK96PK96OePcPq9X+UZGwRwzIrgf
+wtnB/LFPmnMqKgRI40yQqZxk9Tzk0eV70eV70c8e4fV6v8pFRUvle9Hle9HPHuH1er/KRUVL5XvR
+5XvRzx7h9Xq/ykVFS+V70eV70c8e4fV6v8pFRUvle9Hle9HPHuH1er/KRUVL5XvR5XvRzx7h9Xq/
+ykVEv+pT/eb+lSGMD1pk4xEn+8f6VSdzGUXF2ZDRRRQIkwKsN2/3R/KoKnbt/uj+VMB0SGVljXGW
+YKM+9OS3d53iBXcgYn046/yotWCTxOxwquCfzq6IZILu4nkQrHtchz0bIOMHv1qI9TettH0/zM2n
+NE6xpIwwr52nPXHWtWORzc2UG4+U0A3J2bIPX1psTl7ax81maAMRJknaOeAaowMqpEhZ4ZJQRtjI
+B9ef/wBVaZeU3ECzwTKftCkPK4OOeQvA4+nHSohcTeReyeY24OoU5+6MngelAGbUiQs8MkoI2x4z
+681plZGdp0MpkMMZZYuGYnqc9ulJdfIb5kO05ibIPfrnI96AMuWJ4ZDHIMMOozTa2LrzppbqP528
+yNTEDnDAFSdv/wBaiMPAsefldbRzz2OTQBj0VqwsZY7aRzvnKSCNm5JYH5ev6VFdm4/syIXAkaUz
+EBSMueBgetAFPyW8gTZG0uUx3zgH+tI8TIMkoecfK4P8jV6wMbWsBbaVM743dM7BjP44py/aNg+2
+I0kvnL5SSdW/vAZ7dPagDMqRIWeKSQEYjAJz7nFaZDmdGd5DKyM0Uc33kfj/AOviokku47a5eZpF
+lEa7S/3gN35+tAGbRWupDMsmGe4a2UrtbDsckEg4POB9aaJXDzOYnikW26u2WPzDBPA5/wDrUAZV
+FW71jJBayuSzshDE9ThiBVSgAooooAVutRXH+rT6n+lSt1qK4/1afU/0qYfCjfEfxZEFFFFUYEtT
+t2/3R/KoKkkchgOPuj+QpgPHK0bTUW8+1G8+1Ryvozf2sGkpR28yXaaNpqLefajefai0u4c9L+X8
+f+AS7TRtNRbz7Ubz7UWl3Dnpfy/j/wAAl2mjaai3n2o3n2otLuHPS/l/H/gEu00bTUW8+1G8+1Fp
+dw56X8v4/wDAJ0+VwSquB/C2cH8qnjlaS6tECJGizIQqZ6lhzzzVHefanwzeXcRSMMhJFYgdcAg0
+WfcTlTtpH8f+Abms6SSWu7Rct1kjH8XuPf8An9euIvzKCpBBq7Jq093DcK832dlxLFtfbwOCmepy
+Dn61nbzkk8knJJOSTTafQiDiviVyXaaNpqLefajefalaXc056X8v4/8AAJdpo2mot59qN59qLS7h
+z0v5fx/4BLtNG01FvPtRvPtRaXcOel/L+P8AwCXaaNpqLefajefai0u4c9L+X8f+ASt1qK4/1afU
+/wBKN59qSY5iT/eP9KaVlYzqT55OXchooopkEtXFtkkRWJbJUdPpRRTAX7HH/eb86Pscf95vzoop
+AH2OP+8350fY4/7zfnRRQAfY4/7zfnR9jj/vN+dFFAB9jj/vN+dH2OP+8350UUAH2OP+8350fY4/
+7zfnRRQAfY4/7zfnR9jj/vN+dFFAB9jj/vN+dH2OP+8350UUAH2OP+8350fY4/7zfnRRQAfY4/7z
+fnR9jj/vN+dFFAB9jj/vN+dH2OP+8350UUAH2OP+8350fY4/7zfnRRQAfY4/7zfnVe9jWJY1UkjJ
+PP4UUUAVaKKKAP/Z
+			</helperscreenshot>
+		</mouseitem>
+		<keysequenceitem
+		KeySequence="{Return}"
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		presstime="100ms"
+		searchpropertyid="70afec56-b8b8-4002-91e0-b0194ef7fae9">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</keysequenceitem>
+	</recorditems>
+	<repository
+	id="6d5166f4-b7ba-4c2c-9921-6198d2ced1bc"
+	name="TA_SkypeRepository"
+	relativepath="TA_SkypeRepository.rxrep"
+	rxversion="8.3">
+		<codegen
+		classname="TA_SkypeRepository"
+		namespace="TA_Skype">
+		</codegen>
+		<rootfolder
+		id="bd9057c9-e431-44a7-ba05-6153dff61cc0"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Testchat_TestAutomation_DialogLoeschen.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
