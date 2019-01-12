@@ -24,29 +24,29 @@ namespace TA_Skype
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Logoff_TestAutomation recording.
+    ///The Logoff recording.
     /// </summary>
     [TestModule("17f5c6f4-53d1-4fad-a022-3e8df59bb7ab", ModuleType.Recording, 1)]
-    public partial class Logoff_TestAutomation : ITestModule
+    public partial class Logoff : ITestModule
     {
         /// <summary>
         /// Holds an instance of the TA_SkypeRepository repository.
         /// </summary>
         public static TA_SkypeRepository repo = TA_SkypeRepository.Instance;
 
-        static Logoff_TestAutomation instance = new Logoff_TestAutomation();
+        static Logoff instance = new Logoff();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Logoff_TestAutomation()
+        public Logoff()
         {
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Logoff_TestAutomation Instance
+        public static Logoff Instance
         {
             get { return instance; }
         }

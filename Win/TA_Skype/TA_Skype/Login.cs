@@ -24,31 +24,31 @@ namespace TA_Skype
 {
 #pragma warning disable 0436 //(CS0436) The type 'type' in 'assembly' conflicts with the imported type 'type2' in 'assembly'. Using the type defined in 'assembly'.
     /// <summary>
-    ///The Login_SarahPfister recording.
+    ///The Login recording.
     /// </summary>
-    [TestModule("41f64bae-8a9f-419e-9108-17122424abd2", ModuleType.Recording, 1)]
-    public partial class Login_SarahPfister : ITestModule
+    [TestModule("be8e16e1-b2fd-4987-9305-f6cab9d6a2e3", ModuleType.Recording, 1)]
+    public partial class Login : ITestModule
     {
         /// <summary>
         /// Holds an instance of the TA_SkypeRepository repository.
         /// </summary>
         public static TA_SkypeRepository repo = TA_SkypeRepository.Instance;
 
-        static Login_SarahPfister instance = new Login_SarahPfister();
+        static Login instance = new Login();
 
         /// <summary>
         /// Constructs a new instance.
         /// </summary>
-        public Login_SarahPfister()
+        public Login()
         {
-            Username = "test_automation_hsr2@hotmail.com";
-            Passwort = "CASSoftwareTesting19";
+            Username = "test_automation_hsr@hotmail.com";
+            Passwort = "CASSoftwareTesting18";
         }
 
         /// <summary>
         /// Gets a static instance of this recording.
         /// </summary>
-        public static Login_SarahPfister Instance
+        public static Login Instance
         {
             get { return instance; }
         }
@@ -60,7 +60,7 @@ namespace TA_Skype
         /// <summary>
         /// Gets or sets the value of variable Username.
         /// </summary>
-        [TestVariable("21a01815-62a6-473f-b38d-026eb4ea8248")]
+        [TestVariable("c301a966-2afa-4edb-a383-c13b1e73b0fd")]
         public string Username
         {
             get { return _Username; }
@@ -72,11 +72,21 @@ namespace TA_Skype
         /// <summary>
         /// Gets or sets the value of variable Passwort.
         /// </summary>
-        [TestVariable("0272f0f8-52bb-4740-ba14-e1cc87ffba09")]
+        [TestVariable("c9a4babc-9433-4fe2-89fc-08d4104e2081")]
         public string Passwort
         {
             get { return _Passwort; }
             set { _Passwort = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the value of variable Vorname.
+        /// </summary>
+        [TestVariable("ca8b6c9f-adb8-4d94-8d82-75c3385a5a50")]
+        public string Vorname
+        {
+            get { return repo.Vorname; }
+            set { repo.Vorname = value; }
         }
 
 #endregion
@@ -127,6 +137,11 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginPasswort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswortInfo, new RecordItemIndex(6));
             Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswort);
             Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
+            
+            try {
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommen'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommenInfo, new RecordItemIndex(7));
+                Validate.Exists(repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts.txtWillkommenInfo, null, false);
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(7)); }
             
         }
 

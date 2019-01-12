@@ -5,7 +5,7 @@ id="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
 mode="Global"
 rxversion="8.3">
 	<name>
-		Logoff_TestAutomation
+		Logoff
 	</name>
 	<repeatcount>
 		1
@@ -23,7 +23,7 @@ rxversion="8.3">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Logoff_TestAutomation"
+	classname="Logoff"
 	namespace="TA_Skype">
 	</codegen>
 	<variables>
@@ -384,7 +384,7 @@ QAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Logoff_TestAutomation.UserCode.cs
+		Logoff.UserCode.cs
 	</usercodefile>
 	<references>
 	</references>

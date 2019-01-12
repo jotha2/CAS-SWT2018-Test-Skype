@@ -5,7 +5,7 @@ id="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
 mode="Global"
 rxversion="8.3">
 	<name>
-		Login_TestAutomation
+		Login
 	</name>
 	<repeatcount>
 		1
@@ -23,7 +23,7 @@ rxversion="8.3">
 		True
 	</useDefaultItemLogging>
 	<codegen
-	classname="Login_TestAutomation"
+	classname="Login"
 	namespace="TA_Skype">
 	</codegen>
 	<variables>
@@ -500,7 +500,7 @@ ooAKKKKAP//Z
 	</repository>
 	<usercodefile
 	lang="CSharp">
-		Login_TestAutomation.UserCode.cs
+		Login.UserCode.cs
 	</usercodefile>
 	<references>
 	</references>

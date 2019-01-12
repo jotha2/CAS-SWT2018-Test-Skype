@@ -22,7 +22,7 @@ using Ranorex.Core.Testing;
 
 namespace TA_Skype
 {
-    public partial class Login_SarahPfister
+    public partial class Login
     {
         /// <summary>
         /// This method gets called right after the recording has been started.

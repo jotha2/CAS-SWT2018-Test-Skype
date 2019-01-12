@@ -153,18 +153,6 @@
       <UserCode>true</UserCode>
       <id>80711dbe-2566-4928-8f46-7fe7c51547da</id>
     </Compile>
-    <Compile Include="Login_SarahPfister.cs">
-      <BoundTo>41a61abf-7c6c-48ad-96a5-afc14ecd5405</BoundTo>
-      <DependentUpon>Login_SarahPfister.rxrec</DependentUpon>
-      <RecorderCode>true</RecorderCode>
-      <id>189beb68-fc77-4776-ba57-2b33a6c3111d</id>
-    </Compile>
-    <Compile Include="Login_SarahPfister.UserCode.cs">
-      <BoundTo>41a61abf-7c6c-48ad-96a5-afc14ecd5405</BoundTo>
-      <DependentUpon>Login_SarahPfister.rxrec</DependentUpon>
-      <UserCode>true</UserCode>
-      <id>15d68a34-295f-41a7-b7f7-cfbed5e44421</id>
-    </Compile>
     <Compile Include="StarteEinstellungenDialog.cs">
       <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>
       <DependentUpon>StarteEinstellungenDialog.rxrec</DependentUpon>
@@ -228,27 +216,27 @@
       <UserCode>true</UserCode>
       <id>a780da65-8584-433c-8854-63b70648328a</id>
     </Compile>
-    <Compile Include="Login_TestAutomation.cs">
+    <Compile Include="Login.cs">
       <BoundTo>4a5e20de-fc21-45b4-b6fd-59cd808a5917</BoundTo>
-      <DependentUpon>Login_TestAutomation.rxrec</DependentUpon>
+      <DependentUpon>Login.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
       <id>da409c03-8a75-466a-8c00-426798f47291</id>
     </Compile>
-    <Compile Include="Login_TestAutomation.UserCode.cs">
+    <Compile Include="Login.UserCode.cs">
       <BoundTo>4a5e20de-fc21-45b4-b6fd-59cd808a5917</BoundTo>
-      <DependentUpon>Login_TestAutomation.rxrec</DependentUpon>
+      <DependentUpon>Login.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>ba913cb0-d3d9-4cec-b2ca-ab74fd207143</id>
     </Compile>
-    <Compile Include="Logoff_TestAutomation.cs">
+    <Compile Include="Logoff.cs">
       <BoundTo>15ae91c4-59e1-4ec3-89ba-fc268d71f6d4</BoundTo>
-      <DependentUpon>Logoff_TestAutomation.rxrec</DependentUpon>
+      <DependentUpon>Logoff.rxrec</DependentUpon>
       <RecorderCode>true</RecorderCode>
       <id>2e633809-dd9c-4bd1-99b6-4a9b998da5b7</id>
     </Compile>
-    <Compile Include="Logoff_TestAutomation.UserCode.cs">
+    <Compile Include="Logoff.UserCode.cs">
       <BoundTo>15ae91c4-59e1-4ec3-89ba-fc268d71f6d4</BoundTo>
-      <DependentUpon>Logoff_TestAutomation.rxrec</DependentUpon>
+      <DependentUpon>Logoff.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>a61007f4-98e0-4a61-a34d-0a3198658e10</id>
     </Compile>
@@ -293,11 +281,6 @@
       <id>42b479f3-7174-42b0-b238-f28c5ec303df</id>
       <recordtableid>402a155c-fb0f-4b6d-9e63-c420293392a5</recordtableid>
     </None>
-    <None Include="Login_SarahPfister.rxrec">
-      <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
-      <id>41a61abf-7c6c-48ad-96a5-afc14ecd5405</id>
-      <recordtableid>41f64bae-8a9f-419e-9108-17122424abd2</recordtableid>
-    </None>
     <None Include="StarteEinstellungenDialog.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
       <id>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</id>
@@ -323,12 +306,12 @@
       <id>251ff14d-2573-4917-95dc-27ad0a2a322c</id>
       <recordtableid>62ebbcec-66ef-468d-b4f4-c6a730429668</recordtableid>
     </None>
-    <None Include="Login_TestAutomation.rxrec">
+    <None Include="Login.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
       <id>4a5e20de-fc21-45b4-b6fd-59cd808a5917</id>
       <recordtableid>be8e16e1-b2fd-4987-9305-f6cab9d6a2e3</recordtableid>
     </None>
-    <None Include="Logoff_TestAutomation.rxrec">
+    <None Include="Logoff.rxrec">
       <BoundTo>7b7198b3-9b32-4815-9e8c-f76c7d2e25fe</BoundTo>
       <id>15ae91c4-59e1-4ec3-89ba-fc268d71f6d4</id>
       <recordtableid>17f5c6f4-53d1-4fad-a022-3e8df59bb7ab</recordtableid>
