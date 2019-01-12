@@ -41,6 +41,7 @@ namespace TA_Skype
         /// </summary>
         public Testchat_SarahPfister_Dialogfuehren()
         {
+            VornameUndName = "";
         }
 
         /// <summary>
@@ -52,6 +53,16 @@ namespace TA_Skype
         }
 
 #region Variables
+
+        /// <summary>
+        /// Gets or sets the value of variable VornameUndName.
+        /// </summary>
+        [TestVariable("c880ee55-32ec-4543-be01-a612266cf2bc")]
+        public string VornameUndName
+        {
+            get { return repo.VornameUndName; }
+            set { repo.VornameUndName = value; }
+        }
 
 #endregion
 
@@ -82,29 +93,29 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnChats' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnChatsInfo, new RecordItemIndex(0));
             repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnChats.Click();
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster_TestAutomation'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster_TestAutomationInfo, new RecordItemIndex(1));
-            Validate.Exists(repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster_TestAutomationInfo);
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUserInfo, new RecordItemIndex(1));
+            Validate.Exists(repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUserInfo);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster_TestAutomation' at 69;12.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster_TestAutomationInfo, new RecordItemIndex(2));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster_TestAutomation.Click("69;12");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser' at 69;12.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUserInfo, new RecordItemIndex(2));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser.Click("69;12");
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_TextfeldInfo, new RecordItemIndex(3));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmChat.txtNachricht' at Center.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(3));
+            repo.Skype.frmSkypeMain.frmChat.txtNachricht.Click();
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hoi Test, mir gehts blendend. Und wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_TextfeldInfo, new RecordItemIndex(4));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld.PressKeys("Hoi Test, mir gehts blendend. Und wie geht es Dir?");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hoi Test, mir gehts blendend. Und wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(4));
+            repo.Skype.frmSkypeMain.frmChat.txtNachricht.PressKeys("Hoi Test, mir gehts blendend. Und wie geht es Dir?");
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(5));
             Keyboard.Press("{Return}");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Am ersten Ferientag war ich in Leukerbad bädelen. Dann kam der obligatorische Familientürk mit viel Essen und Trinken. Dann war ich noch auf dem Pilatus  und bin für einen Tag nach Bellinzona gegangen, um das schöne und warme Wetter zu geniessen. ' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_TextfeldInfo, new RecordItemIndex(6));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld.PressKeys("Am ersten Ferientag war ich in Leukerbad bädelen. Dann kam der obligatorische Familientürk mit viel Essen und Trinken. Dann war ich noch auf dem Pilatus  und bin für einen Tag nach Bellinzona gegangen, um das schöne und warme Wetter zu geniessen. ");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Am ersten Ferientag war ich in Leukerbad bädelen. Dann kam der obligatorische Familientürk mit viel Essen und Trinken. Dann war ich noch auf dem Pilatus  und bin für einen Tag nach Bellinzona gegangen, um das schöne und warme Wetter zu geniessen. ' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(6));
+            repo.Skype.frmSkypeMain.frmChat.txtNachricht.PressKeys("Am ersten Ferientag war ich in Leukerbad bädelen. Dann kam der obligatorische Familientürk mit viel Essen und Trinken. Dann war ich noch auf dem Pilatus  und bin für einen Tag nach Bellinzona gegangen, um das schöne und warme Wetter zu geniessen. ");
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(7));
             Keyboard.Press("{Return}");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hattest Du auch schöne Ferien?' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_TextfeldInfo, new RecordItemIndex(8));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.Chatfenster_Textfeld.PressKeys("Hattest Du auch schöne Ferien?");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hattest Du auch schöne Ferien?' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(8));
+            repo.Skype.frmSkypeMain.frmChat.txtNachricht.PressKeys("Hattest Du auch schöne Ferien?");
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(9));
             Keyboard.Press("{Return}");

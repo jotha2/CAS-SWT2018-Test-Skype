@@ -41,6 +41,8 @@ namespace TA_Skype
         /// </summary>
         public Login_SarahPfister()
         {
+            Username = "test_automation_hsr2@hotmail.com";
+            Passwort = "CASSoftwareTesting19";
         }
 
         /// <summary>
@@ -52,6 +54,30 @@ namespace TA_Skype
         }
 
 #region Variables
+
+        string _Username;
+
+        /// <summary>
+        /// Gets or sets the value of variable Username.
+        /// </summary>
+        [TestVariable("21a01815-62a6-473f-b38d-026eb4ea8248")]
+        public string Username
+        {
+            get { return _Username; }
+            set { _Username = value; }
+        }
+
+        string _Passwort;
+
+        /// <summary>
+        /// Gets or sets the value of variable Passwort.
+        /// </summary>
+        [TestVariable("0272f0f8-52bb-4740-ba14-e1cc87ffba09")]
+        public string Passwort
+        {
+            get { return _Passwort; }
+            set { _Passwort = value; }
+        }
 
 #endregion
 
@@ -82,24 +108,24 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.btnAnmeldenOderErstellen' at 82;8.", repo.Skype.frmLogOnOff.btnAnmeldenOderErstellenInfo, new RecordItemIndex(0));
             repo.Skype.frmLogOnOff.btnAnmeldenOderErstellen.Click("82;8");
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(1));
-            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresse' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresseInfo, new RecordItemIndex(1));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresse.Click();
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'test_automation_hsr2@hotmail.com' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(2));
-            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse.PressKeys("test_automation_hsr2@hotmail.com");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$Username' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresseInfo, new RecordItemIndex(2));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresse.PressKeys(Username);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_EmailadresseInfo, new RecordItemIndex(3));
-            Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Emailadresse);
+            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresse'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresseInfo, new RecordItemIndex(3));
+            Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginEmailadresse);
             Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(4));
-            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmLogOnOff.frmLogOn.txtLoginPasswort' at Center.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswortInfo, new RecordItemIndex(4));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswort.Click();
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'CASSoftwareTesting19' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(5));
-            repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort.PressKeys("CASSoftwareTesting19");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$Passwort' with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginPasswort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswortInfo, new RecordItemIndex(5));
+            repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswort.PressKeys(Passwort);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_PasswortInfo, new RecordItemIndex(6));
-            Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginfeld_Passwort);
+            Report.Log(ReportLevel.Info, "Keyboard", "Key 'Enter' Press with focus on 'Skype.frmLogOnOff.frmLogOn.txtLoginPasswort'.", repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswortInfo, new RecordItemIndex(6));
+            Keyboard.PrepareFocus(repo.Skype.frmLogOnOff.frmLogOn.txtLoginPasswort);
             Keyboard.Press(System.Windows.Forms.Keys.Return, Keyboard.DefaultScanCode, Keyboard.DefaultKeyPressTime, 1, true);
             
         }

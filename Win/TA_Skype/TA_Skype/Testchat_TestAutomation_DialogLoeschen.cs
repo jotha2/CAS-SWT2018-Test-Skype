@@ -53,6 +53,16 @@ namespace TA_Skype
 
 #region Variables
 
+        /// <summary>
+        /// Gets or sets the value of variable VornameUndName.
+        /// </summary>
+        [TestVariable("c880ee55-32ec-4543-be01-a612266cf2bc")]
+        public string VornameUndName
+        {
+            get { return repo.VornameUndName; }
+            set { repo.VornameUndName = value; }
+        }
+
 #endregion
 
         /// <summary>
@@ -79,16 +89,19 @@ namespace TA_Skype
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.SarahPfister' at 59;10.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.SarahPfisterInfo, new RecordItemIndex(0));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.SarahPfister.Click("59;10");
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUserInfo, new RecordItemIndex(0));
+            Validate.Exists(repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUserInfo);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ChatfensterInfo, new RecordItemIndex(1));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.Chatfenster.Click(System.Windows.Forms.MouseButtons.Right);
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUserInfo, new RecordItemIndex(1));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser.Click(System.Windows.Forms.MouseButtons.Right);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.UnterhaltungLoeschen' at 88;13.", repo.Skype.UnterhaltungLoeschenInfo, new RecordItemIndex(2));
-            repo.Skype.UnterhaltungLoeschen.Click("88;13");
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.PopupItemUnterhaltungLoeschen'.", repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschenInfo, new RecordItemIndex(2));
+            Validate.Exists(repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschenInfo);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(3));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemUnterhaltungLoeschen' at Center.", repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschenInfo, new RecordItemIndex(3));
+            repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschen.Click();
+            
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(4));
             Keyboard.Press("{Return}");
             
         }

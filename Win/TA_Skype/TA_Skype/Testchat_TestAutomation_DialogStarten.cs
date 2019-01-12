@@ -41,6 +41,7 @@ namespace TA_Skype
         /// </summary>
         public Testchat_TestAutomation_DialogStarten()
         {
+            VornameUndName = "Sarah Pfister";
         }
 
         /// <summary>
@@ -52,6 +53,16 @@ namespace TA_Skype
         }
 
 #region Variables
+
+        /// <summary>
+        /// Gets or sets the value of variable VornameUndName.
+        /// </summary>
+        [TestVariable("c880ee55-32ec-4543-be01-a612266cf2bc")]
+        public string VornameUndName
+        {
+            get { return repo.VornameUndName; }
+            set { repo.VornameUndName = value; }
+        }
 
 #endregion
 
@@ -82,51 +93,46 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnChats' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnChatsInfo, new RecordItemIndex(0));
             repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnChats.Click();
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.NeuerChatStart' at 70;10.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.NeuerChatStartInfo, new RecordItemIndex(1));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.NeuerChatStart.Click("70;10");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.btnNeuerChat' at 70;10.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.btnNeuerChatInfo, new RecordItemIndex(1));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.btnNeuerChat.Click("70;10");
             
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(2));
             Delay.Duration(1000, false);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.NeuerChat' at 98;19.", repo.Skype.PopupMenu.NeuerChatInfo, new RecordItemIndex(3));
-            repo.Skype.PopupMenu.NeuerChat.Click("98;19");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemNeuerChat' at 98;19.", repo.Skype.PopupMenu.PopupItemNeuerChatInfo, new RecordItemIndex(3));
+            repo.Skype.PopupMenu.PopupItemNeuerChat.Click("98;19");
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.EchoSoundTestService'.", repo.Skype.frmSkypeMain.frmEinstellungen.EchoSoundTestServiceInfo, new RecordItemIndex(4));
-                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.EchoSoundTestServiceInfo, null, false);
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.SelfInfo, new RecordItemIndex(4));
+                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.SelfInfo, null, false);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(4)); }
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.JoergHoffmann'.", repo.Skype.frmSkypeMain.frmEinstellungen.JoergHoffmannInfo, new RecordItemIndex(5));
-                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.JoergHoffmannInfo, null, false);
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, new RecordItemIndex(5));
+                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, null, false);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(5)); }
             
-            try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.SarahPfister'.", repo.Skype.frmSkypeMain.frmEinstellungen.SarahPfisterInfo, new RecordItemIndex(6));
-                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.SarahPfisterInfo, null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(6)); }
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left DoubleClick item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner' at 105;48.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, new RecordItemIndex(6));
+            repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner.DoubleClick("105;48");
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.SkypeTranslator'.", repo.Skype.frmSkypeMain.frmEinstellungen.SkypeTranslatorInfo, new RecordItemIndex(7));
-                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.SkypeTranslatorInfo, null, false);
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmChat'.", repo.Skype.frmSkypeMain.frmChat.SelfInfo, new RecordItemIndex(7));
+                Validate.Exists(repo.Skype.frmSkypeMain.frmChat.SelfInfo, null, false);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(7)); }
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmEinstellungen.NeuerChatSarahPfister' at 105;48.", repo.Skype.frmSkypeMain.frmEinstellungen.NeuerChatSarahPfisterInfo, new RecordItemIndex(8));
-            repo.Skype.frmSkypeMain.frmEinstellungen.NeuerChatSarahPfister.Click("105;48");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmChat.txtNachricht' at Center.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(8));
+            repo.Skype.frmSkypeMain.frmChat.txtNachricht.Click();
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeldInfo, new RecordItemIndex(9));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld.Click();
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hallo Sarah, wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(9));
+            repo.Skype.frmSkypeMain.frmChat.txtNachricht.PressKeys("Hallo Sarah, wie geht es Dir?");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hallo Sarah, wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeldInfo, new RecordItemIndex(10));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld.PressKeys("Hallo Sarah, wie geht es Dir?");
-            
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(11));
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(10));
             Keyboard.Press("{Return}");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Was hast Du während den Ferien gemacht? :)' with focus on 'Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeldInfo, new RecordItemIndex(12));
-            repo.Skype.frmSkypeMain.frmSkypeMainAreaRechts_Chatfenster.ChatTextfeld.PressKeys("Was hast Du während den Ferien gemacht? :)");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Was hast Du während den Ferien gemacht? :)' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(11));
+            repo.Skype.frmSkypeMain.frmChat.txtNachricht.PressKeys("Was hast Du während den Ferien gemacht? :)");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(13));
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(12));
             Keyboard.Press("{Return}");
             
         }

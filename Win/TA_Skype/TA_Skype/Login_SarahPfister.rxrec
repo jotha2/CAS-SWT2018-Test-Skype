@@ -27,6 +27,16 @@ rxversion="8.3">
 	namespace="TA_Skype">
 	</codegen>
 	<variables>
+		<var
+		id="21a01815-62a6-473f-b38d-026eb4ea8248"
+		name="Username">
+			test_automation_hsr2@hotmail.com
+		</var>
+		<var
+		id="0272f0f8-52bb-4740-ba14-e1cc87ffba09"
+		name="Passwort">
+			CASSoftwareTesting19
+		</var>
 	</variables>
 	<recorditems>
 		<mouseitem
@@ -87,6 +97,10 @@ rxversion="8.3">
 			<comment>
 			</comment>
 			<bindings>
+				<binding
+				target="KeySequence"
+				variable="Username">
+				</binding>
 			</bindings>
 			<info
 			id="55b48a56-3677-451a-8f19-02eef2337ce4"
@@ -152,6 +166,10 @@ rxversion="8.3">
 			<comment>
 			</comment>
 			<bindings>
+				<binding
+				target="KeySequence"
+				variable="Passwort">
+				</binding>
 			</bindings>
 			<info
 			id="e64b8548-479e-4390-827a-e8f8f160e30c"

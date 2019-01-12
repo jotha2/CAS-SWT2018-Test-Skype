@@ -28,7 +28,6 @@ namespace TA_Skype
     {
         static TA_SkypeRepository instance = new TA_SkypeRepository();
         TA_SkypeRepositoryFolders.SkypeAppFolder _skype;
-        TA_SkypeRepositoryFolders.ExplorerAppFolder _explorer;
 
         /// <summary>
         /// Gets the singleton class instance representing the TA_SkypeRepository element repository.
@@ -46,7 +45,6 @@ namespace TA_Skype
             : base("TA_SkypeRepository", "/", null, 0, false, "bd9057c9-e431-44a7-ba05-6153dff61cc0", ".\\RepositoryImages\\TA_SkypeRepositorybd9057c9.rximgres")
         {
             _skype = new TA_SkypeRepositoryFolders.SkypeAppFolder(this);
-            _explorer = new TA_SkypeRepositoryFolders.ExplorerAppFolder(this);
         }
 
 #region Variables
@@ -111,6 +109,54 @@ namespace TA_Skype
             set { _VornameUndName = value; }
         }
 
+        string _Name = "";
+
+        /// <summary>
+        /// Gets or sets the value of variable Name.
+        /// </summary>
+        [TestVariable("9f23f7ce-42d9-43e0-ab0e-b5326cbb30d8")]
+        public string Name
+        {
+            get { return _Name; }
+            set { _Name = value; }
+        }
+
+        string _Vorname = "";
+
+        /// <summary>
+        /// Gets or sets the value of variable Vorname.
+        /// </summary>
+        [TestVariable("ca8b6c9f-adb8-4d94-8d82-75c3385a5a50")]
+        public string Vorname
+        {
+            get { return _Vorname; }
+            set { _Vorname = value; }
+        }
+
+        string _User1 = "Sarah Pfister";
+
+        /// <summary>
+        /// Gets or sets the value of variable User1.
+        /// </summary>
+        [TestVariable("1c26cd50-e613-4082-ae24-9afd09c60555")]
+        public string User1
+        {
+            get { return _User1; }
+            set { _User1 = value; }
+        }
+
+        string _User2 = "Test Automation";
+
+        /// <summary>
+        /// Gets or sets the value of variable User2.
+        /// </summary>
+        [TestVariable("14d679fa-89b0-472e-ba39-cbfe925e5099")]
+        public string User2
+        {
+            get { return _User2; }
+            set { _User2 = value; }
+        }
+
 #endregion
 
         /// <summary>
@@ -133,15 +179,6 @@ namespace TA_Skype
         {
             get { return _skype; }
         }
-
-        /// <summary>
-        /// The Explorer folder.
-        /// </summary>
-        [RepositoryFolder("8bcb160c-943a-47ae-9989-292a54479cd6")]
-        public virtual TA_SkypeRepositoryFolders.ExplorerAppFolder Explorer
-        {
-            get { return _explorer; }
-        }
     }
 
     /// <summary>
@@ -162,7 +199,6 @@ namespace TA_Skype
             TA_SkypeRepositoryFolders.PopupMenuFolder _popupmenu;
             TA_SkypeRepositoryFolders.PopupWindowFolder _popupwindow;
             RepoItemInfo _btncloseInfo;
-            RepoItemInfo _unterhaltungloeschenInfo;
 
             /// <summary>
             /// Creates a new Skype  folder.
@@ -176,7 +212,6 @@ namespace TA_Skype
                 _popupmenu = new TA_SkypeRepositoryFolders.PopupMenuFolder(this);
                 _popupwindow = new TA_SkypeRepositoryFolders.PopupWindowFolder(this);
                 _btncloseInfo = new RepoItemInfo(this, "btnClose", "titlebar[@name='Skype' and @classname='ApplicationFrameTitleBarWindow']/?/?/button[@automationid='Close']", 30000, null, "800e7cb4-3e1d-448f-ab90-44eab8d8a0fc");
-                _unterhaltungloeschenInfo = new RepoItemInfo(this, "UnterhaltungLoeschen", ".//menuitem[@name='Unterhaltung löschen']/text[@automationid='TextBlock']", 5000, null, "27d4ad40-9213-4154-bcaf-3dd055e29f33");
             }
 
             /// <summary>
@@ -224,30 +259,6 @@ namespace TA_Skype
                 get
                 {
                     return _btncloseInfo;
-                }
-            }
-
-            /// <summary>
-            /// The UnterhaltungLoeschen item.
-            /// </summary>
-            [RepositoryItem("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
-            public virtual Ranorex.Text UnterhaltungLoeschen
-            {
-                get
-                {
-                    return _unterhaltungloeschenInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The UnterhaltungLoeschen item info.
-            /// </summary>
-            [RepositoryItemInfo("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
-            public virtual RepoItemInfo UnterhaltungLoeschenInfo
-            {
-                get
-                {
-                    return _unterhaltungloeschenInfo;
                 }
             }
 
@@ -304,11 +315,12 @@ namespace TA_Skype
         public partial class FrmSkypeMainFolder : RepoGenBaseFolder
         {
             TA_SkypeRepositoryFolders.FrmSkypeMainAreaLinksFolder _frmskypemainarealinks;
-            TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechts_ChatfensterFolder _frmskypemainarearechts_chatfenster;
+            TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder _frmskypemainarearechts;
             TA_SkypeRepositoryFolders.FrmEinstellungenFolder _frmeinstellungen;
             TA_SkypeRepositoryFolders.FrmKontaktHinzufuegenFolder _frmkontakthinzufuegen;
             TA_SkypeRepositoryFolders.FrmTelefonnummerHinzufuegenFolder _frmtelefonnummerhinzufuegen;
             TA_SkypeRepositoryFolders.FrmProfilFolder _frmprofil;
+            TA_SkypeRepositoryFolders.FrmChatFolder _frmchat;
 
             /// <summary>
             /// Creates a new frmSkypeMain  folder.
@@ -317,11 +329,12 @@ namespace TA_Skype
                     base("frmSkypeMain", "element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]", parentFolder, 10000, null, false, "5aa5a870-123d-4704-a329-534311aa601d", "")
             {
                 _frmskypemainarealinks = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaLinksFolder(this);
-                _frmskypemainarearechts_chatfenster = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechts_ChatfensterFolder(this);
+                _frmskypemainarearechts = new TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder(this);
                 _frmeinstellungen = new TA_SkypeRepositoryFolders.FrmEinstellungenFolder(this);
                 _frmkontakthinzufuegen = new TA_SkypeRepositoryFolders.FrmKontaktHinzufuegenFolder(this);
                 _frmtelefonnummerhinzufuegen = new TA_SkypeRepositoryFolders.FrmTelefonnummerHinzufuegenFolder(this);
                 _frmprofil = new TA_SkypeRepositoryFolders.FrmProfilFolder(this);
+                _frmchat = new TA_SkypeRepositoryFolders.FrmChatFolder(this);
             }
 
             /// <summary>
@@ -358,12 +371,12 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The frmSkypeMainAreaRechts_Chatfenster folder.
+            /// The frmSkypeMainAreaRechts folder.
             /// </summary>
             [RepositoryFolder("412b5203-a9e8-4a5f-a98e-4d28fe688301")]
-            public virtual TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechts_ChatfensterFolder frmSkypeMainAreaRechts_Chatfenster
+            public virtual TA_SkypeRepositoryFolders.FrmSkypeMainAreaRechtsFolder frmSkypeMainAreaRechts
             {
-                get { return _frmskypemainarearechts_chatfenster; }
+                get { return _frmskypemainarearechts; }
             }
 
             /// <summary>
@@ -400,6 +413,15 @@ namespace TA_Skype
             public virtual TA_SkypeRepositoryFolders.FrmProfilFolder frmProfil
             {
                 get { return _frmprofil; }
+            }
+
+            /// <summary>
+            /// The frmChat folder.
+            /// </summary>
+            [RepositoryFolder("b25d8986-48a8-4796-ab2a-197e588db187")]
+            public virtual TA_SkypeRepositoryFolders.FrmChatFolder frmChat
+            {
+                get { return _frmchat; }
             }
         }
 
@@ -719,11 +741,9 @@ namespace TA_Skype
         public partial class DetailbereichFolder : RepoGenBaseFolder
         {
             RepoItemInfo _btnkontakthinzufuegenInfo;
+            RepoItemInfo _btnneuerchatInfo;
             RepoItemInfo _listitemkontaktInfo;
-            RepoItemInfo _neuerchatstartInfo;
-            RepoItemInfo _chatfenster_testautomationInfo;
-            RepoItemInfo _sarahpfisterInfo;
-            RepoItemInfo _chatfensterInfo;
+            RepoItemInfo _listitemchatuserInfo;
 
             /// <summary>
             /// Creates a new Detailbereich  folder.
@@ -732,11 +752,9 @@ namespace TA_Skype
                     base("Detailbereich", "container[3]", parentFolder, 10000, null, false, "5735fb83-eb90-491d-9581-9d117dc21cd5", "")
             {
                 _btnkontakthinzufuegenInfo = new RepoItemInfo(this, "btnKontaktHinzufuegen", "button[@name='Neuen Kontakt hinzufügen']", 30000, null, "8eb3a25b-f19e-4644-b0cd-3396ceea227a");
-                _listitemkontaktInfo = new RepoItemInfo(this, "ListItemKontakt", "container[1]/container[1]/container[@classname='ScrollViewer']/?/?/listitem[@name=$VornameUndName+',']", 30000, null, "51a6586f-d516-4a68-bb0d-7a9a4db7b80c");
-                _neuerchatstartInfo = new RepoItemInfo(this, "NeuerChatStart", "button[@name='Neuer Chat']/?/?/container[@orientation='None']", 5000, null, "c2410e72-a0ec-4a1d-99b0-ccaa48386078");
-                _chatfenster_testautomationInfo = new RepoItemInfo(this, "Chatfenster_TestAutomation", "container[@classname='ScrollViewer']/?/?/listitem[@name~'^Test\\ Automation,\\ Chat,\\ Wa']/container/container[@orientation='None']/container[@orientation='None']", 5000, null, "87733f58-8125-4580-89a8-b0f8fb146bd6");
-                _sarahpfisterInfo = new RepoItemInfo(this, "SarahPfister", "container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\\ Sarah\\ Pfister,\\ C']/container/container[@orientation='None']/container[@orientation='None']/container[2]/text[@name='Sarah Pfister']", 5000, null, "2269d5e2-67d0-4862-95e3-22a85c308742");
-                _chatfensterInfo = new RepoItemInfo(this, "Chatfenster", "container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\\ Sarah\\ Pfister,\\ C']/container/container[@orientation='None']", 5000, null, "e690fda8-ff26-440d-8f1b-ce0f6d61c63f");
+                _btnneuerchatInfo = new RepoItemInfo(this, "btnNeuerChat", "button[@name='Neuer Chat']", 5000, null, "c2410e72-a0ec-4a1d-99b0-ccaa48386078");
+                _listitemkontaktInfo = new RepoItemInfo(this, "ListItemKontakt", "container[1]/container[1]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^'+$VornameUndName]", 30000, null, "51a6586f-d516-4a68-bb0d-7a9a4db7b80c");
+                _listitemchatuserInfo = new RepoItemInfo(this, "ListItemChatUser", "container[@classname='ScrollViewer']/container/listitem[@name~'^*'+$VornameUndName]", 5000, null, "3594b34d-8aa5-48dc-a59e-017e09a0fb5c");
             }
 
             /// <summary>
@@ -788,6 +806,30 @@ namespace TA_Skype
             }
 
             /// <summary>
+            /// The btnNeuerChat item.
+            /// </summary>
+            [RepositoryItem("c2410e72-a0ec-4a1d-99b0-ccaa48386078")]
+            public virtual Ranorex.Button btnNeuerChat
+            {
+                get
+                {
+                    return _btnneuerchatInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The btnNeuerChat item info.
+            /// </summary>
+            [RepositoryItemInfo("c2410e72-a0ec-4a1d-99b0-ccaa48386078")]
+            public virtual RepoItemInfo btnNeuerChatInfo
+            {
+                get
+                {
+                    return _btnneuerchatInfo;
+                }
+            }
+
+            /// <summary>
             /// The ListItemKontakt item.
             /// </summary>
             [RepositoryItem("51a6586f-d516-4a68-bb0d-7a9a4db7b80c")]
@@ -812,123 +854,45 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The NeuerChatStart item.
+            /// The ListItemChatUser item.
             /// </summary>
-            [RepositoryItem("c2410e72-a0ec-4a1d-99b0-ccaa48386078")]
-            public virtual Ranorex.Container NeuerChatStart
+            [RepositoryItem("3594b34d-8aa5-48dc-a59e-017e09a0fb5c")]
+            public virtual Ranorex.ListItem ListItemChatUser
             {
                 get
                 {
-                    return _neuerchatstartInfo.CreateAdapter<Ranorex.Container>(true);
+                    return _listitemchatuserInfo.CreateAdapter<Ranorex.ListItem>(true);
                 }
             }
 
             /// <summary>
-            /// The NeuerChatStart item info.
+            /// The ListItemChatUser item info.
             /// </summary>
-            [RepositoryItemInfo("c2410e72-a0ec-4a1d-99b0-ccaa48386078")]
-            public virtual RepoItemInfo NeuerChatStartInfo
+            [RepositoryItemInfo("3594b34d-8aa5-48dc-a59e-017e09a0fb5c")]
+            public virtual RepoItemInfo ListItemChatUserInfo
             {
                 get
                 {
-                    return _neuerchatstartInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Chatfenster_TestAutomation item.
-            /// </summary>
-            [RepositoryItem("87733f58-8125-4580-89a8-b0f8fb146bd6")]
-            public virtual Ranorex.Container Chatfenster_TestAutomation
-            {
-                get
-                {
-                    return _chatfenster_testautomationInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Chatfenster_TestAutomation item info.
-            /// </summary>
-            [RepositoryItemInfo("87733f58-8125-4580-89a8-b0f8fb146bd6")]
-            public virtual RepoItemInfo Chatfenster_TestAutomationInfo
-            {
-                get
-                {
-                    return _chatfenster_testautomationInfo;
-                }
-            }
-
-            /// <summary>
-            /// The SarahPfister item.
-            /// </summary>
-            [RepositoryItem("2269d5e2-67d0-4862-95e3-22a85c308742")]
-            public virtual Ranorex.Text SarahPfister
-            {
-                get
-                {
-                    return _sarahpfisterInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The SarahPfister item info.
-            /// </summary>
-            [RepositoryItemInfo("2269d5e2-67d0-4862-95e3-22a85c308742")]
-            public virtual RepoItemInfo SarahPfisterInfo
-            {
-                get
-                {
-                    return _sarahpfisterInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Chatfenster item.
-            /// </summary>
-            [RepositoryItem("e690fda8-ff26-440d-8f1b-ce0f6d61c63f")]
-            public virtual Ranorex.Container Chatfenster
-            {
-                get
-                {
-                    return _chatfensterInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Chatfenster item info.
-            /// </summary>
-            [RepositoryItemInfo("e690fda8-ff26-440d-8f1b-ce0f6d61c63f")]
-            public virtual RepoItemInfo ChatfensterInfo
-            {
-                get
-                {
-                    return _chatfensterInfo;
+                    return _listitemchatuserInfo;
                 }
             }
         }
 
         /// <summary>
-        /// The FrmSkypeMainAreaRechts_ChatfensterFolder folder.
+        /// The FrmSkypeMainAreaRechtsFolder folder.
         /// </summary>
         [RepositoryFolder("412b5203-a9e8-4a5f-a98e-4d28fe688301")]
-        public partial class FrmSkypeMainAreaRechts_ChatfensterFolder : RepoGenBaseFolder
+        public partial class FrmSkypeMainAreaRechtsFolder : RepoGenBaseFolder
         {
             RepoItemInfo _txtwillkommenInfo;
-            RepoItemInfo _chattextfeldInfo;
-            RepoItemInfo _nachrichthiereingebenInfo;
-            RepoItemInfo _chatfenster_textfeldInfo;
 
             /// <summary>
-            /// Creates a new frmSkypeMainAreaRechts_Chatfenster  folder.
+            /// Creates a new frmSkypeMainAreaRechts  folder.
             /// </summary>
-            public FrmSkypeMainAreaRechts_ChatfensterFolder(RepoGenBaseFolder parentFolder) :
-                    base("frmSkypeMainAreaRechts_Chatfenster", "container[2]", parentFolder, 10000, null, false, "412b5203-a9e8-4a5f-a98e-4d28fe688301", "")
+            public FrmSkypeMainAreaRechtsFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmSkypeMainAreaRechts", "container[2]", parentFolder, 10000, null, false, "412b5203-a9e8-4a5f-a98e-4d28fe688301", "")
             {
-                _txtwillkommenInfo = new RepoItemInfo(this, "txtWillkommen", "?/?/text[@name='Willkommen, Test']", 30000, null, "e0c5c5a9-6bc3-4300-8e17-90883f25db01");
-                _chattextfeldInfo = new RepoItemInfo(this, "ChatTextfeld", "container[2]/container/container[@orientation='None']/container[2]/container[1]/container/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']", 5000, null, "2b072423-2400-4295-9a67-01825c2c6536");
-                _nachrichthiereingebenInfo = new RepoItemInfo(this, "NachrichtHierEingeben", "container[2]/container[2]//container[@iscontentelement='False']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/text[@name='Nachricht hier eingeben']", 5000, null, "f8ba80de-8a26-46f3-996f-af7256356113");
-                _chatfenster_textfeldInfo = new RepoItemInfo(this, "Chatfenster_Textfeld", "container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']", 5000, null, "e125d5e4-8989-41ec-a7d1-2e025f05ed7b");
+                _txtwillkommenInfo = new RepoItemInfo(this, "txtWillkommen", "?/?/text[@name='Willkommen, '+$Vorname]", 30000, null, "e0c5c5a9-6bc3-4300-8e17-90883f25db01");
             }
 
             /// <summary>
@@ -978,78 +942,6 @@ namespace TA_Skype
                     return _txtwillkommenInfo;
                 }
             }
-
-            /// <summary>
-            /// The ChatTextfeld item.
-            /// </summary>
-            [RepositoryItem("2b072423-2400-4295-9a67-01825c2c6536")]
-            public virtual Ranorex.Container ChatTextfeld
-            {
-                get
-                {
-                    return _chattextfeldInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The ChatTextfeld item info.
-            /// </summary>
-            [RepositoryItemInfo("2b072423-2400-4295-9a67-01825c2c6536")]
-            public virtual RepoItemInfo ChatTextfeldInfo
-            {
-                get
-                {
-                    return _chattextfeldInfo;
-                }
-            }
-
-            /// <summary>
-            /// The NachrichtHierEingeben item.
-            /// </summary>
-            [RepositoryItem("f8ba80de-8a26-46f3-996f-af7256356113")]
-            public virtual Ranorex.Text NachrichtHierEingeben
-            {
-                get
-                {
-                    return _nachrichthiereingebenInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The NachrichtHierEingeben item info.
-            /// </summary>
-            [RepositoryItemInfo("f8ba80de-8a26-46f3-996f-af7256356113")]
-            public virtual RepoItemInfo NachrichtHierEingebenInfo
-            {
-                get
-                {
-                    return _nachrichthiereingebenInfo;
-                }
-            }
-
-            /// <summary>
-            /// The Chatfenster_Textfeld item.
-            /// </summary>
-            [RepositoryItem("e125d5e4-8989-41ec-a7d1-2e025f05ed7b")]
-            public virtual Ranorex.Container Chatfenster_Textfeld
-            {
-                get
-                {
-                    return _chatfenster_textfeldInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Chatfenster_Textfeld item info.
-            /// </summary>
-            [RepositoryItemInfo("e125d5e4-8989-41ec-a7d1-2e025f05ed7b")]
-            public virtual RepoItemInfo Chatfenster_TextfeldInfo
-            {
-                get
-                {
-                    return _chatfenster_textfeldInfo;
-                }
-            }
         }
 
         /// <summary>
@@ -1067,11 +959,7 @@ namespace TA_Skype
             TA_SkypeRepositoryFolders.FrmNachrichtenFolder _frmnachrichten;
             TA_SkypeRepositoryFolders.FrmBenachrichtigungenFolder _frmbenachrichtigungen;
             TA_SkypeRepositoryFolders.FrmKontakteFolder _frmkontakte;
-            RepoItemInfo _echosoundtestserviceInfo;
-            RepoItemInfo _joerghoffmannInfo;
-            RepoItemInfo _sarahpfisterInfo;
-            RepoItemInfo _skypetranslatorInfo;
-            RepoItemInfo _neuerchatsarahpfisterInfo;
+            TA_SkypeRepositoryFolders.FrmChatPartnerAuswahlFolder _frmchatpartnerauswahl;
 
             /// <summary>
             /// Creates a new frmEinstellungen  folder.
@@ -1088,11 +976,7 @@ namespace TA_Skype
                 _frmnachrichten = new TA_SkypeRepositoryFolders.FrmNachrichtenFolder(this);
                 _frmbenachrichtigungen = new TA_SkypeRepositoryFolders.FrmBenachrichtigungenFolder(this);
                 _frmkontakte = new TA_SkypeRepositoryFolders.FrmKontakteFolder(this);
-                _echosoundtestserviceInfo = new RepoItemInfo(this, "EchoSoundTestService", "container[@name='Neuer Chat']/container/container[4]/?/?/listitem[@name~'^Echo\\ /\\ Sound\\ Test\\ Service']/container/container[1]/?/?/text[@name~'^Echo\\ /\\ Sound\\ Test\\ Service']", 5000, null, "be130923-b3b5-4813-9f0f-276c3ed78d4b");
-                _joerghoffmannInfo = new RepoItemInfo(this, "JoergHoffmann", "container[@name='Neuer Chat']/container/container[4]/container/listitem[3]/container/container[1]/?/?/text[@name='Jörg Hoffmann']", 5000, null, "21fa7003-2dc7-41d6-87a1-e8d8fa0ddd55");
-                _sarahpfisterInfo = new RepoItemInfo(this, "SarahPfister", "container[@name='Neuer Chat']/container/container[4]/?/?/listitem[@name='Sarah Pfister,']/container/container[1]/?/?/text[@name='Sarah Pfister']", 5000, null, "4d047e05-0752-4e37-9591-799697a7aee9");
-                _skypetranslatorInfo = new RepoItemInfo(this, "SkypeTranslator", "container[@name='Neuer Chat']/container/container[4]/?/?/listitem[@name='Skype Translator,']/container/container[1]/?/?/text[@name='Skype Translator']", 5000, null, "4b48abe7-3798-428d-92cf-87dbd8f54e77");
-                _neuerchatsarahpfisterInfo = new RepoItemInfo(this, "NeuerChatSarahPfister", "container[@name='Neuer Chat']/container/container[4]/?/?/listitem[@name='Sarah Pfister,']/container/container[1]", 5000, null, "73140961-53c4-4c92-ac4b-95954b7882c9");
+                _frmchatpartnerauswahl = new TA_SkypeRepositoryFolders.FrmChatPartnerAuswahlFolder(this);
             }
 
             /// <summary>
@@ -1116,126 +1000,6 @@ namespace TA_Skype
                 get
                 {
                     return _selfInfo;
-                }
-            }
-
-            /// <summary>
-            /// The EchoSoundTestService item.
-            /// </summary>
-            [RepositoryItem("be130923-b3b5-4813-9f0f-276c3ed78d4b")]
-            public virtual Ranorex.Text EchoSoundTestService
-            {
-                get
-                {
-                    return _echosoundtestserviceInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The EchoSoundTestService item info.
-            /// </summary>
-            [RepositoryItemInfo("be130923-b3b5-4813-9f0f-276c3ed78d4b")]
-            public virtual RepoItemInfo EchoSoundTestServiceInfo
-            {
-                get
-                {
-                    return _echosoundtestserviceInfo;
-                }
-            }
-
-            /// <summary>
-            /// The JoergHoffmann item.
-            /// </summary>
-            [RepositoryItem("21fa7003-2dc7-41d6-87a1-e8d8fa0ddd55")]
-            public virtual Ranorex.Text JoergHoffmann
-            {
-                get
-                {
-                    return _joerghoffmannInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The JoergHoffmann item info.
-            /// </summary>
-            [RepositoryItemInfo("21fa7003-2dc7-41d6-87a1-e8d8fa0ddd55")]
-            public virtual RepoItemInfo JoergHoffmannInfo
-            {
-                get
-                {
-                    return _joerghoffmannInfo;
-                }
-            }
-
-            /// <summary>
-            /// The SarahPfister item.
-            /// </summary>
-            [RepositoryItem("4d047e05-0752-4e37-9591-799697a7aee9")]
-            public virtual Ranorex.Text SarahPfister
-            {
-                get
-                {
-                    return _sarahpfisterInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The SarahPfister item info.
-            /// </summary>
-            [RepositoryItemInfo("4d047e05-0752-4e37-9591-799697a7aee9")]
-            public virtual RepoItemInfo SarahPfisterInfo
-            {
-                get
-                {
-                    return _sarahpfisterInfo;
-                }
-            }
-
-            /// <summary>
-            /// The SkypeTranslator item.
-            /// </summary>
-            [RepositoryItem("4b48abe7-3798-428d-92cf-87dbd8f54e77")]
-            public virtual Ranorex.Text SkypeTranslator
-            {
-                get
-                {
-                    return _skypetranslatorInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The SkypeTranslator item info.
-            /// </summary>
-            [RepositoryItemInfo("4b48abe7-3798-428d-92cf-87dbd8f54e77")]
-            public virtual RepoItemInfo SkypeTranslatorInfo
-            {
-                get
-                {
-                    return _skypetranslatorInfo;
-                }
-            }
-
-            /// <summary>
-            /// The NeuerChatSarahPfister item.
-            /// </summary>
-            [RepositoryItem("73140961-53c4-4c92-ac4b-95954b7882c9")]
-            public virtual Ranorex.Container NeuerChatSarahPfister
-            {
-                get
-                {
-                    return _neuerchatsarahpfisterInfo.CreateAdapter<Ranorex.Container>(true);
-                }
-            }
-
-            /// <summary>
-            /// The NeuerChatSarahPfister item info.
-            /// </summary>
-            [RepositoryItemInfo("73140961-53c4-4c92-ac4b-95954b7882c9")]
-            public virtual RepoItemInfo NeuerChatSarahPfisterInfo
-            {
-                get
-                {
-                    return _neuerchatsarahpfisterInfo;
                 }
             }
 
@@ -1318,6 +1082,15 @@ namespace TA_Skype
             public virtual TA_SkypeRepositoryFolders.FrmKontakteFolder frmKontakte
             {
                 get { return _frmkontakte; }
+            }
+
+            /// <summary>
+            /// The frmChatPartnerAuswahl folder.
+            /// </summary>
+            [RepositoryFolder("4b48abe7-3798-428d-92cf-87dbd8f54e77")]
+            public virtual TA_SkypeRepositoryFolders.FrmChatPartnerAuswahlFolder frmChatPartnerAuswahl
+            {
+                get { return _frmchatpartnerauswahl; }
             }
         }
 
@@ -2748,6 +2521,72 @@ namespace TA_Skype
         }
 
         /// <summary>
+        /// The FrmChatPartnerAuswahlFolder folder.
+        /// </summary>
+        [RepositoryFolder("4b48abe7-3798-428d-92cf-87dbd8f54e77")]
+        public partial class FrmChatPartnerAuswahlFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _listitemchatpartnerInfo;
+
+            /// <summary>
+            /// Creates a new frmChatPartnerAuswahl  folder.
+            /// </summary>
+            public FrmChatPartnerAuswahlFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmChatPartnerAuswahl", "container[@name='Neuer Chat']/container", parentFolder, 5000, null, false, "4b48abe7-3798-428d-92cf-87dbd8f54e77", "")
+            {
+                _listitemchatpartnerInfo = new RepoItemInfo(this, "ListitemChatPartner", "container[4]/container/listitem[@name~$VornameUndName]", 5000, null, "73140961-53c4-4c92-ac4b-95954b7882c9");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("4b48abe7-3798-428d-92cf-87dbd8f54e77")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("4b48abe7-3798-428d-92cf-87dbd8f54e77")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ListitemChatPartner item.
+            /// </summary>
+            [RepositoryItem("73140961-53c4-4c92-ac4b-95954b7882c9")]
+            public virtual Ranorex.ListItem ListitemChatPartner
+            {
+                get
+                {
+                    return _listitemchatpartnerInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ListitemChatPartner item info.
+            /// </summary>
+            [RepositoryItemInfo("73140961-53c4-4c92-ac4b-95954b7882c9")]
+            public virtual RepoItemInfo ListitemChatPartnerInfo
+            {
+                get
+                {
+                    return _listitemchatpartnerInfo;
+                }
+            }
+        }
+
+        /// <summary>
         /// The FrmKontaktHinzufuegenFolder folder.
         /// </summary>
         [RepositoryFolder("8d5da8c9-94d8-434d-a729-46b7cfac64f4")]
@@ -3591,6 +3430,72 @@ namespace TA_Skype
         }
 
         /// <summary>
+        /// The FrmChatFolder folder.
+        /// </summary>
+        [RepositoryFolder("b25d8986-48a8-4796-ab2a-197e588db187")]
+        public partial class FrmChatFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _txtnachrichtInfo;
+
+            /// <summary>
+            /// Creates a new frmChat  folder.
+            /// </summary>
+            public FrmChatFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmChat", "container[2]", parentFolder, 5000, null, false, "b25d8986-48a8-4796-ab2a-197e588db187", "")
+            {
+                _txtnachrichtInfo = new RepoItemInfo(this, "txtNachricht", "container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']", 5000, null, "68432825-263f-4e87-8bd0-50a0e2cec3c0");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("b25d8986-48a8-4796-ab2a-197e588db187")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("b25d8986-48a8-4796-ab2a-197e588db187")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtNachricht item.
+            /// </summary>
+            [RepositoryItem("68432825-263f-4e87-8bd0-50a0e2cec3c0")]
+            public virtual Ranorex.Text txtNachricht
+            {
+                get
+                {
+                    return _txtnachrichtInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtNachricht item info.
+            /// </summary>
+            [RepositoryItemInfo("68432825-263f-4e87-8bd0-50a0e2cec3c0")]
+            public virtual RepoItemInfo txtNachrichtInfo
+            {
+                get
+                {
+                    return _txtnachrichtInfo;
+                }
+            }
+        }
+
+        /// <summary>
         /// The FrmLaendervorwahlFolder folder.
         /// </summary>
         [RepositoryFolder("601baf19-5e57-496d-80f6-7dd89fb4fd2e")]
@@ -3776,8 +3681,8 @@ namespace TA_Skype
         [RepositoryFolder("6881d33b-d464-4b89-82f0-89bf156cf329")]
         public partial class FrmLogOnFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _txtloginfeld_emailadresseInfo;
-            RepoItemInfo _txtloginfeld_passwortInfo;
+            RepoItemInfo _txtloginemailadresseInfo;
+            RepoItemInfo _txtloginpasswortInfo;
 
             /// <summary>
             /// Creates a new frmLogOn  folder.
@@ -3785,8 +3690,8 @@ namespace TA_Skype
             public FrmLogOnFolder(RepoGenBaseFolder parentFolder) :
                     base("frmLogOn", "container[3]/container/container[@name~'^https://login\\.live\\.com/oa']/container[@name='Bei Skype anmelden']/container[@automationid='i0281']/container", parentFolder, 30000, null, false, "6881d33b-d464-4b89-82f0-89bf156cf329", "")
             {
-                _txtloginfeld_emailadresseInfo = new RepoItemInfo(this, "txtLoginfeld_Emailadresse", "text[@automationid='i0116']", 30000, null, "55b48a56-3677-451a-8f19-02eef2337ce4");
-                _txtloginfeld_passwortInfo = new RepoItemInfo(this, "txtLoginfeld_Passwort", "text[@automationid='i0118']", 30000, null, "e64b8548-479e-4390-827a-e8f8f160e30c");
+                _txtloginemailadresseInfo = new RepoItemInfo(this, "txtLoginEmailadresse", "text[@automationid='i0116']", 30000, null, "55b48a56-3677-451a-8f19-02eef2337ce4");
+                _txtloginpasswortInfo = new RepoItemInfo(this, "txtLoginPasswort", "text[@automationid='i0118']", 30000, null, "e64b8548-479e-4390-827a-e8f8f160e30c");
             }
 
             /// <summary>
@@ -3814,50 +3719,50 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The txtLoginfeld_Emailadresse item.
+            /// The txtLoginEmailadresse item.
             /// </summary>
             [RepositoryItem("55b48a56-3677-451a-8f19-02eef2337ce4")]
-            public virtual Ranorex.Text txtLoginfeld_Emailadresse
+            public virtual Ranorex.Text txtLoginEmailadresse
             {
                 get
                 {
-                    return _txtloginfeld_emailadresseInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _txtloginemailadresseInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The txtLoginfeld_Emailadresse item info.
+            /// The txtLoginEmailadresse item info.
             /// </summary>
             [RepositoryItemInfo("55b48a56-3677-451a-8f19-02eef2337ce4")]
-            public virtual RepoItemInfo txtLoginfeld_EmailadresseInfo
+            public virtual RepoItemInfo txtLoginEmailadresseInfo
             {
                 get
                 {
-                    return _txtloginfeld_emailadresseInfo;
+                    return _txtloginemailadresseInfo;
                 }
             }
 
             /// <summary>
-            /// The txtLoginfeld_Passwort item.
+            /// The txtLoginPasswort item.
             /// </summary>
             [RepositoryItem("e64b8548-479e-4390-827a-e8f8f160e30c")]
-            public virtual Ranorex.Text txtLoginfeld_Passwort
+            public virtual Ranorex.Text txtLoginPasswort
             {
                 get
                 {
-                    return _txtloginfeld_passwortInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _txtloginpasswortInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The txtLoginfeld_Passwort item info.
+            /// The txtLoginPasswort item info.
             /// </summary>
             [RepositoryItemInfo("e64b8548-479e-4390-827a-e8f8f160e30c")]
-            public virtual RepoItemInfo txtLoginfeld_PasswortInfo
+            public virtual RepoItemInfo txtLoginPasswortInfo
             {
                 get
                 {
-                    return _txtloginfeld_passwortInfo;
+                    return _txtloginpasswortInfo;
                 }
             }
         }
@@ -3964,7 +3869,8 @@ namespace TA_Skype
             RepoItemInfo _popupitemabmeldenInfo;
             RepoItemInfo _popupitemtelefonnummertypInfo;
             RepoItemInfo _popupitemprofilanzeigenInfo;
-            RepoItemInfo _neuerchatInfo;
+            RepoItemInfo _popupitemneuerchatInfo;
+            RepoItemInfo _popupitemunterhaltungloeschenInfo;
 
             /// <summary>
             /// Creates a new PopupMenu  folder.
@@ -3976,7 +3882,8 @@ namespace TA_Skype
                 _popupitemabmeldenInfo = new RepoItemInfo(this, "PopupItemAbmelden", ".//text[@name='Abmelden']", 30000, null, "af79c8cc-bc67-4a90-b82f-fafcdcdad07a");
                 _popupitemtelefonnummertypInfo = new RepoItemInfo(this, "PopupItemTelefonnummerTyp", ".//text[@name=$TelefonnummerTyp]", 30000, null, "a354cecb-9f0c-472b-a171-beb730b4f3b6");
                 _popupitemprofilanzeigenInfo = new RepoItemInfo(this, "PopupItemProfilAnzeigen", ".//text[@name='Profil anzeigen']", 30000, null, "6c0f8cb4-9d77-4337-84ce-ea99879b44d0");
-                _neuerchatInfo = new RepoItemInfo(this, "NeuerChat", ".//text[@name='Neuer Chat']", 5000, null, "eb135aef-016f-40e2-bedc-71109af55ca6");
+                _popupitemneuerchatInfo = new RepoItemInfo(this, "PopupItemNeuerChat", ".//text[@name='Neuer Chat']", 5000, null, "eb135aef-016f-40e2-bedc-71109af55ca6");
+                _popupitemunterhaltungloeschenInfo = new RepoItemInfo(this, "PopupItemUnterhaltungLoeschen", "contextmenu/menuitem[@name='Unterhaltung löschen']", 5000, null, "27d4ad40-9213-4154-bcaf-3dd055e29f33");
             }
 
             /// <summary>
@@ -4100,26 +4007,50 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The NeuerChat item.
+            /// The PopupItemNeuerChat item.
             /// </summary>
             [RepositoryItem("eb135aef-016f-40e2-bedc-71109af55ca6")]
-            public virtual Ranorex.Text NeuerChat
+            public virtual Ranorex.Text PopupItemNeuerChat
             {
                 get
                 {
-                    return _neuerchatInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _popupitemneuerchatInfo.CreateAdapter<Ranorex.Text>(true);
                 }
             }
 
             /// <summary>
-            /// The NeuerChat item info.
+            /// The PopupItemNeuerChat item info.
             /// </summary>
             [RepositoryItemInfo("eb135aef-016f-40e2-bedc-71109af55ca6")]
-            public virtual RepoItemInfo NeuerChatInfo
+            public virtual RepoItemInfo PopupItemNeuerChatInfo
             {
                 get
                 {
-                    return _neuerchatInfo;
+                    return _popupitemneuerchatInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PopupItemUnterhaltungLoeschen item.
+            /// </summary>
+            [RepositoryItem("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
+            public virtual Ranorex.MenuItem PopupItemUnterhaltungLoeschen
+            {
+                get
+                {
+                    return _popupitemunterhaltungloeschenInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PopupItemUnterhaltungLoeschen item info.
+            /// </summary>
+            [RepositoryItemInfo("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
+            public virtual RepoItemInfo PopupItemUnterhaltungLoeschenInfo
+            {
+                get
+                {
+                    return _popupitemunterhaltungloeschenInfo;
                 }
             }
         }
@@ -4238,46 +4169,6 @@ namespace TA_Skype
                 get
                 {
                     return _lblpopupwindowtitelInfo;
-                }
-            }
-        }
-
-        /// <summary>
-        /// The ExplorerAppFolder folder.
-        /// </summary>
-        [RepositoryFolder("8bcb160c-943a-47ae-9989-292a54479cd6")]
-        public partial class ExplorerAppFolder : RepoGenBaseFolder
-        {
-
-            /// <summary>
-            /// Creates a new Explorer  folder.
-            /// </summary>
-            public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("Explorer", "/menubar[@class='Shell_SecondaryTrayWnd']", parentFolder, 30000, null, true, "8bcb160c-943a-47ae-9989-292a54479cd6", "")
-            {
-            }
-
-            /// <summary>
-            /// The Self item.
-            /// </summary>
-            [RepositoryItem("8bcb160c-943a-47ae-9989-292a54479cd6")]
-            public virtual Ranorex.MenuBar Self
-            {
-                get
-                {
-                    return _selfInfo.CreateAdapter<Ranorex.MenuBar>(true);
-                }
-            }
-
-            /// <summary>
-            /// The Self item info.
-            /// </summary>
-            [RepositoryItemInfo("8bcb160c-943a-47ae-9989-292a54479cd6")]
-            public virtual RepoItemInfo SelfInfo
-            {
-                get
-                {
-                    return _selfInfo;
                 }
             }
         }

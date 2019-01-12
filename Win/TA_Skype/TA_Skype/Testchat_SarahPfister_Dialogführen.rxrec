@@ -27,6 +27,10 @@ rxversion="8.3">
 	namespace="TA_Skype">
 	</codegen>
 	<variables>
+		<var
+		id="c880ee55-32ec-4543-be01-a612266cf2bc"
+		name="VornameUndName">
+		</var>
 	</variables>
 	<recorditems>
 		<mouseitem
@@ -64,10 +68,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="87733f58-8125-4580-89a8-b0f8fb146bd6"
+			id="3594b34d-8aa5-48dc-a59e-017e09a0fb5c"
 			sourcename="ElementTree">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Test\ Automation,\ Chat,\ Wa']/container/container[@orientation='None']/container[@orientation='None']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^'+$User2]
 				</path>
 			</info>
 			<matchname>
@@ -94,10 +98,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="87733f58-8125-4580-89a8-b0f8fb146bd6"
+			id="3594b34d-8aa5-48dc-a59e-017e09a0fb5c"
 			sourcename="Recorder">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Test\ Automation,\ Chat,\ Wa']/container/container[@orientation='None']/container[@orientation='None']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^'+$User2]
 				</path>
 			</info>
 		</mouseitem>
@@ -118,10 +122,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="e125d5e4-8989-41ec-a7d1-2e025f05ed7b"
+			id="68432825-263f-4e87-8bd0-50a0e2cec3c0"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']
 				</path>
 			</info>
 		</mouseitem>
@@ -137,10 +141,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="e125d5e4-8989-41ec-a7d1-2e025f05ed7b"
+			id="68432825-263f-4e87-8bd0-50a0e2cec3c0"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']
 				</path>
 			</info>
 		</keysequenceitem>
@@ -168,10 +172,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="e125d5e4-8989-41ec-a7d1-2e025f05ed7b"
+			id="68432825-263f-4e87-8bd0-50a0e2cec3c0"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']
 				</path>
 			</info>
 		</keysequenceitem>
@@ -199,10 +203,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="e125d5e4-8989-41ec-a7d1-2e025f05ed7b"
+			id="68432825-263f-4e87-8bd0-50a0e2cec3c0"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']/container[@automationid='ContentElement']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']
 				</path>
 			</info>
 		</keysequenceitem>

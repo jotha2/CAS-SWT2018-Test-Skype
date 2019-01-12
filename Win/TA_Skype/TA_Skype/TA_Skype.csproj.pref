@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <Array name="active">
-    <Element value="TA_Skype.rxtst" />
-  </Array>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Testchat_TestAutomation_DialogStarten.rxrec" />
+    <Element value="Testchat_SarahPfister_Dialogführen.rxrec" />
+    <Element value="Testchat_TestAutomation_DialogLöschen.rxrec" />
     <Element value="TA_Skype.rxtst" />
+    <Element value="Login_SarahPfister.rxrec" />
+    <Element value="Verbindungstest_Abspielen.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

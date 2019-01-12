@@ -29,157 +29,29 @@ rxversion="8.3">
 	<variables>
 	</variables>
 	<recorditems>
-		<mouseitem
-		action="Click"
-		button="Left"
-		duration="500ms"
+		<validationitem
+		action="Exists"
 		enabled="True"
-		loc="59;10"
-		movetime="300ms"
 		optional="False"
-		searchpropertyid="5547b004-2adb-4e16-96a5-80a51ebcf9eb"
-		sx="113"
-		sy="269"
-		warnoutofbounds="False">
+		searchpropertyid="d53f1005-e2aa-49ef-924f-928e9e4550c8">
 			<comment>
 			</comment>
 			<bindings>
 			</bindings>
 			<info
-			id="2269d5e2-67d0-4862-95e3-22a85c308742"
-			sourcename="Recorder">
-				<element
-				capabilities="uiautomation"
-				dontcache="False"
-				enabled="True"
-				flavor="uia"
-				hasfocus="False"
-				index="0"
-				prefcap="text"
-				rect="54,259,90,20"
-				role="text"
-				snapElem=""
-				valid="True"
-				visible="True">
-					<attribute
-					name="caption"
-					type="System.String">
-						Sarah Pfister
-					</attribute>
-					<attribute
-					name="text"
-					type="System.String">
-						Sarah Pfister
-					</attribute>
-					<attribute
-					name="classname"
-					type="System.String">
-						TextBlock
-					</attribute>
-					<attribute
-					name="controltype"
-					type="System.String">
-						Text
-					</attribute>
-					<attribute
-					name="frameworkid"
-					type="System.String">
-						XAML
-					</attribute>
-					<attribute
-					name="iscontentelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iscontrolelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iskeyboardfocusable"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="ispassword"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="isrequiredforform"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="localizedcontroltype"
-					type="System.String">
-						text
-					</attribute>
-					<attribute
-					name="name"
-					type="System.String">
-						Sarah Pfister
-					</attribute>
-					<attribute
-					name="orientation"
-					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-						None
-					</attribute>
-					<attribute
-					name="processid"
-					type="System.Int32">
-						5484
-					</attribute>
-				</element>
+			id="3594b34d-8aa5-48dc-a59e-017e09a0fb5c"
+			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\ Sarah\ Pfister,\ C']/container/container[@orientation='None']/container[@orientation='None']/container[2]/text[@name='Sarah Pfister']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^'+$VornameUndName]
 				</path>
 			</info>
-			<helperscreenshot
-			guid="cfd03d2e-43fe-4478-98de-e5b11dcb0767">
-				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
-			</helperscreenshot>
-		</mouseitem>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Right"
@@ -197,19 +69,42 @@ hjk0AW2CxrK4jTdtQ4IztJ68UuyPmUqAfKVsBAQM9TjpVLc3PzH5uvPWlEjhgwdgQMAg9BQA+4KM
 			<bindings>
 			</bindings>
 			<info
-			id="e690fda8-ff26-440d-8f1b-ce0f6d61c63f"
+			id="3594b34d-8aa5-48dc-a59e-017e09a0fb5c"
 			sourcename="Recorder">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^Favorit,\ Sarah\ Pfister,\ C']/container/container[@orientation='None']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^'+$VornameUndName]
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="d53f1005-e2aa-49ef-924f-928e9e4550c8">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="27d4ad40-9213-4154-bcaf-3dd055e29f33"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//menuitem[@name='Unterhaltung l&#246;schen']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
 		duration="500ms"
 		enabled="True"
-		loc="88;13"
+		loc="Center"
 		movetime="300ms"
 		optional="False"
 		searchpropertyid="0101e297-c46a-49e7-8b66-297f2b652469"

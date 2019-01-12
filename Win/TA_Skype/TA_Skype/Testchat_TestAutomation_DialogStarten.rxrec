@@ -27,6 +27,11 @@ rxversion="8.3">
 	namespace="TA_Skype">
 	</codegen>
 	<variables>
+		<var
+		id="c880ee55-32ec-4543-be01-a612266cf2bc"
+		name="VornameUndName">
+			Sarah Pfister
+		</var>
 	</variables>
 	<recorditems>
 		<mouseitem
@@ -243,150 +248,12 @@ wh+7sOFPHvRRQBBKgimkjUkhHZRnrgHFNoooAKKKKACiiigAooooAKKKKACX/Up/vN/SoqKKAP/Z
 			<bindings>
 			</bindings>
 			<info
-			id="be130923-b3b5-4813-9f0f-276c3ed78d4b"
+			id="4b48abe7-3798-428d-92cf-87dbd8f54e77"
 			sourcename="ElementTree">
-				<element
-				capabilities="uiautomation"
-				dontcache="False"
-				enabled="True"
-				flavor="uia"
-				hasfocus="False"
-				index="1"
-				prefcap="text"
-				rect="661,498,398,21"
-				role="text"
-				snapElem=""
-				valid="True"
-				visible="True">
-					<attribute
-					name="caption"
-					type="System.String">
-						Echo / Sound Test Service .
-					</attribute>
-					<attribute
-					name="text"
-					type="System.String">
-						Echo / Sound Test Service .
-					</attribute>
-					<attribute
-					name="classname"
-					type="System.String">
-						TextBlock
-					</attribute>
-					<attribute
-					name="controltype"
-					type="System.String">
-						Text
-					</attribute>
-					<attribute
-					name="frameworkid"
-					type="System.String">
-						XAML
-					</attribute>
-					<attribute
-					name="iscontentelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iscontrolelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iskeyboardfocusable"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="ispassword"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="isrequiredforform"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="localizedcontroltype"
-					type="System.String">
-						text
-					</attribute>
-					<attribute
-					name="name"
-					type="System.String">
-						Echo / Sound Test Service .
-					</attribute>
-					<attribute
-					name="orientation"
-					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-						None
-					</attribute>
-					<attribute
-					name="processid"
-					type="System.Int32">
-						11220
-					</attribute>
-				</element>
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[4]/?/?/listitem[@name~'^Echo\ /\ Sound\ Test\ Service']/container/container[1]/?/?/text[@name~'^Echo\ /\ Sound\ Test\ Service']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container
 				</path>
 			</info>
-			<helperscreenshot
-			guid="4785eb57-7386-4699-bb18-dfffdd92e15b">
-				/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
-YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCAA8Ad4DASIA
-AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
-AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
-ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
-p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
-AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
-BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
-U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
-uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDEwKMC
-t2DRIlUGaRnb0XgVM2j2bDAVl9w3+NVYnmRzmBRgVpXukSQKXhPmIOoxyP8AGs2kNO4YFGBRRQMM
-CjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAo
-ooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAM
-CjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCjAoooAMCo5Oo+lSUyTqPpQAyiiikB3SJuGS
-cL607y0bhX596WVT5akdAKjRSzACrMttBCCDg9a5/WbQQTCWMYSTqPQ10k4ww9cc1ma0obT2J/hY
-Efy/rRugWjMCEAucjPFL5i/88xRB98/SteZEi02FkjsgWhy3mj52OO3vWNk5O47JydzI8xf+eYo8
-xf8AnmKsyWEcNurT3KpMyb1i25z+ParuoadFLPJ5MiRukW/ylTGR65p8iHyRMnzF/wCeYo8xf+eY
-q7FpassQkuVjmmXcke0nIx3PaqDRsspiI+cNtx70ciDkiO8xf+eYo8xf+eYqzqSxwNFaxqu6Jf3j
-Acsx561ehjQ2ET2dtbXBVczK4y4Pt+tHIg5ImR5i/wDPMUeYv/PMVbg01Xihaa5WJ5/9Wm3Of8Ka
-+mtHBveTDed5RXH65o5EHJEreYv/ADzFHmL/AM8xV3+ylE1yj3IVbcKSxTqCM+tKdIIuAvnr5Pl+
-YZSvQfSjkQckSj5i/wDPMUeYv/PMVev4IItLtjCUkyzfvAuC3XrUmlSJJDMr21u3kxFgxjySfejk
-QckTN8xf+eYo8xf+eYrRTTWvVWdikBlHyJHESvHqR0qJ9LEVp508+04PCxlhxxgkdKORByRKfmL/
-AM8xR5i/88xV3UrS1t7a3eGTLOueh+cevt9Kl06ON7E/Z4reW63ZZJhnj2/SjkQckTN8xf8AnmKP
-MX/nmKvx6Y908ssn+jqZNoRYy2D9B0FN/spUSZ7i5EaxPsJ2Fs8DB/WjkQckSl5i/wDPMUeYv/PM
-Vcj0vzTbFJspMpYtt+5jr3qQ2Jnt7RIjH+8ZsOI9pwO5OeaORByRM/zF/wCeYo8xf+eYq4mmxzTi
-O3uxKACXYIRtxjt361Ff2Js/LO/ekgOCVKnj2NHIg5IkHmL/AM8xR5i/88xUVFPkQckSXzF/55ij
-zF/55ioqKORByRJfMX/nmKPMX/nmKioo5EHJEl8xf+eYo8xf+eYqKijkQckSXzF/55ijzF/55ioq
-KORByRJfMX/nmKPMX/nmKioo5EHJEl8xf+eYo8xf+eYqKijkQckSXzF/55ijzF/55ioqKORByRJf
-MX/nmKPMX/nmKioo5EHJEl8xf+eYo8xf+eYqKijkQckSXzF/55ijzF/55ioqKORByRJfMX/nmKPM
-X/nmKioo5EHJEl8xf+eYo8xf+eYqKijkQckSUOpYDyxzTZQBIQOKRPvr9aWX/WGklaWgkkpaDKZJ
-1H0p9Mk6j6VZoMooopAd2ZCY9mKER1cHbUYIIBUgg8ginFmbqSasxv3HTNukPtWPr0wW3SEH5nbJ
-+gq7d3kNomZGy3ZR1Nc3c3D3M7SyHk9B6D0oZUVd3Eg++fpVt9Qglt4o5rPeYk2q3mkfoBVKNgjZ
-PpTsxf3TWWzegXak9CzLfxzwKs1qrzKmxZd2MfhUh1XN49x5H3ovL27+nv0qlmL+6aMxf3TRzeQ+
-byLseqKqRF7ZXmhXakm4jHpkd6r2lwiXv2i4DPglsKBy1RZi/umjMX900c3kHN5DZHaWRpHOWYkm
-rtvqMNsA0VmonCbfM3nB464qpmL+6aMxf3TRzeQc3kXIdTVY4hPbLM8J/dvuxj8O9EeqHy3W4gWb
-MnmA7iMGqeYv7pozF/dNHN5BzeRbk1PzGuz5OPtIUfe+7gY9OacNWIZMwBoxF5TqW+8Py4qlmL+6
-aMxf3TRzeQc3kWLu9Se2jgjgESxkkYbNMs7v7KJhs3+ahTrjFRZi/umjMX900c3kHN5FqPUI/s0c
-VzarP5X3GLYx9fWlh1Fbe0aKK3IZl2ljISDnqdvSqmYv7pozF/dNHN5BzeRNcXi3FpDE0OHiAUSb
-u30p1peW8Cxl7MSSxnIfzCvf0qvmL+6aMxf3TRzeQc3kXBqnmJIl3brMrvvADFdpqJr0G0mt1hCi
-STeMH7vTjH4VBmL+6aMxf3TRzeQc3kWbfUmgsXttm4nIV8/dB606LVHhjtlSMZgJ5J+8D/KqmYv7
-pozF/dNHN5BzeRcTUooZxJBZrGpBDrvzuzj8ulVbmWKUr5FuIVA6bixJ+tNzF/dNGYv7po5vIOby
-CV4mjjEcPlsow7bidx9faoqlzF/dNGYv7po5vIObyIqKlzF/dNGYv7pp83kHN5EVFS5i/umjMX90
-0c3kHN5EVFS5i/umjMX900c3kHN5EVFS5i/umjMX900c3kHN5EVFS5i/umjMX900c3kHN5EVFS5i
-/umjMX900c3kHN5EVFS5i/umjMX900c3kHN5EVFS5i/umjMX900c3kHN5EVFS5i/umjMX900c3kH
-N5EVFS5i/umjMX900c3kHN5EVFS5i/umjMX900c3kHN5EVFS5i/umjMX900c3kHN5DE++v1pZf8A
-WGnBogchTTHYM5IpLWVwV3K9htMk6j6U+mSdR9KssZRRRSAtxXM8P+qldR6A8VK+o3jjBnb8MD+V
-U8mjJp3FYezFiSxJJ6k0lNyaMmgY6im5NLuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAt
-FJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0U
-m40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSb
-jRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtMk6j6UuTTX6j6UANooopAf/Z
-			</helperscreenshot>
 			<matchname>
 				Text
 			</matchname>
@@ -405,144 +272,12 @@ jRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtMk6j6UuTTX6j6UANooopAf/Z
 			<bindings>
 			</bindings>
 			<info
-			id="21fa7003-2dc7-41d6-87a1-e8d8fa0ddd55"
+			id="73140961-53c4-4c92-ac4b-95954b7882c9"
 			sourcename="ElementTree">
-				<element
-				capabilities="uiautomation"
-				dontcache="False"
-				enabled="True"
-				flavor="uia"
-				hasfocus="False"
-				index="1"
-				prefcap="text"
-				rect="661,554,398,21"
-				role="text"
-				snapElem=""
-				valid="True"
-				visible="True">
-					<attribute
-					name="caption"
-					type="System.String">
-						J&#246;rg Hoffmann
-					</attribute>
-					<attribute
-					name="text"
-					type="System.String">
-						J&#246;rg Hoffmann
-					</attribute>
-					<attribute
-					name="classname"
-					type="System.String">
-						TextBlock
-					</attribute>
-					<attribute
-					name="controltype"
-					type="System.String">
-						Text
-					</attribute>
-					<attribute
-					name="frameworkid"
-					type="System.String">
-						XAML
-					</attribute>
-					<attribute
-					name="iscontentelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iscontrolelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iskeyboardfocusable"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="ispassword"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="isrequiredforform"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="localizedcontroltype"
-					type="System.String">
-						text
-					</attribute>
-					<attribute
-					name="name"
-					type="System.String">
-						J&#246;rg Hoffmann
-					</attribute>
-					<attribute
-					name="orientation"
-					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-						None
-					</attribute>
-					<attribute
-					name="processid"
-					type="System.Int32">
-						11220
-					</attribute>
-				</element>
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[4]/container/listitem[3]/container/container[1]/?/?/text[@name='J&#246;rg Hoffmann']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[4]/container/listitem[@name~'Sarah Pfister']
 				</path>
 			</info>
-			<helperscreenshot
-			guid="d1bbf7b0-eb35-41db-8c60-7c8da6268add">
-				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
-			</helperscreenshot>
 			<matchname>
 				Text
 			</matchname>
@@ -550,321 +285,8 @@ aNxoAWik3GjcaAFopNxo3GgBaKTcaNxoAWmSdR9KXJpr9R9KAG0UUUgP/9k=
 				J&#246;rg Hoffmann
 			</matchvalue>
 		</validationitem>
-		<validationitem
-		action="Exists"
-		duration="100ms"
-		enabled="True"
-		optional="True"
-		searchpropertyid="02613043-d61d-4441-8363-f1a38d40568a">
-			<comment>
-			</comment>
-			<bindings>
-			</bindings>
-			<info
-			id="4d047e05-0752-4e37-9591-799697a7aee9"
-			sourcename="ElementTree">
-				<element
-				capabilities="uiautomation"
-				dontcache="False"
-				enabled="True"
-				flavor="uia"
-				hasfocus="False"
-				index="1"
-				prefcap="text"
-				rect="661,610,398,21"
-				role="text"
-				snapElem=""
-				valid="True"
-				visible="True">
-					<attribute
-					name="caption"
-					type="System.String">
-						Sarah Pfister
-					</attribute>
-					<attribute
-					name="text"
-					type="System.String">
-						Sarah Pfister
-					</attribute>
-					<attribute
-					name="classname"
-					type="System.String">
-						TextBlock
-					</attribute>
-					<attribute
-					name="controltype"
-					type="System.String">
-						Text
-					</attribute>
-					<attribute
-					name="frameworkid"
-					type="System.String">
-						XAML
-					</attribute>
-					<attribute
-					name="iscontentelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iscontrolelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iskeyboardfocusable"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="ispassword"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="isrequiredforform"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="localizedcontroltype"
-					type="System.String">
-						text
-					</attribute>
-					<attribute
-					name="name"
-					type="System.String">
-						Sarah Pfister
-					</attribute>
-					<attribute
-					name="orientation"
-					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-						None
-					</attribute>
-					<attribute
-					name="processid"
-					type="System.Int32">
-						11220
-					</attribute>
-				</element>
-				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[4]/?/?/listitem[@name='Sarah Pfister,']/container/container[1]/?/?/text[@name='Sarah Pfister']
-				</path>
-			</info>
-			<helperscreenshot
-			guid="be3b3afd-625d-4d7e-86c8-4900044f20eb">
-				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
-KHYscgf5pC5yOgyegqnmL+6aMxf3TRzeQc3kXjqqGaZvsoMcygSIXPJ55z2qJb9EFwsVsESVAgAb
-7vv79arZi/umjMX900c3kHN5EVFS5i/umjMX900+byDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TR
-mL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iK
-ipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6a
-ObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf
-3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm
-8iKipcxf3TRmL+6aObyDm8iKipcxf3TRmL+6aObyDm8hiffX60sv+sNODRA5CmmOwZyRSWsrgruV
-7DaZJ1H0p9Mk6j6VZYyiiikBPRk0zJoyaYDqKbk0ZNADqKbk0u40ALRSbjRuNAC0Um40bjQAtFJu
-NG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40
-bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRu
-NAC0Um40bjQAtFJuNG40ALRSbjRuNAC0Um40bjQAtFJuNG40ALRSbjRuNAC0yTqPpS5NNfqPpQA2
-iiikB//Z
-			</helperscreenshot>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				Sarah Pfister
-			</matchvalue>
-		</validationitem>
-		<validationitem
-		action="Exists"
-		duration="100ms"
-		enabled="True"
-		optional="True"
-		searchpropertyid="791041a4-7cca-4ed8-a7d5-8d558de92872">
-			<comment>
-			</comment>
-			<bindings>
-			</bindings>
-			<info
-			id="4b48abe7-3798-428d-92cf-87dbd8f54e77"
-			sourcename="ElementTree">
-				<element
-				capabilities="uiautomation"
-				dontcache="False"
-				enabled="True"
-				flavor="uia"
-				hasfocus="False"
-				index="1"
-				prefcap="text"
-				rect="661,666,398,21"
-				role="text"
-				snapElem=""
-				valid="True"
-				visible="True">
-					<attribute
-					name="caption"
-					type="System.String">
-						Skype Translator
-					</attribute>
-					<attribute
-					name="text"
-					type="System.String">
-						Skype Translator
-					</attribute>
-					<attribute
-					name="classname"
-					type="System.String">
-						TextBlock
-					</attribute>
-					<attribute
-					name="controltype"
-					type="System.String">
-						Text
-					</attribute>
-					<attribute
-					name="frameworkid"
-					type="System.String">
-						XAML
-					</attribute>
-					<attribute
-					name="iscontentelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iscontrolelement"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="iskeyboardfocusable"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="ispassword"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="isrequiredforform"
-					type="System.Boolean">
-						False
-					</attribute>
-					<attribute
-					name="localizedcontroltype"
-					type="System.String">
-						text
-					</attribute>
-					<attribute
-					name="name"
-					type="System.String">
-						Skype Translator
-					</attribute>
-					<attribute
-					name="orientation"
-					type="System.Windows.Automation.OrientationType, UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-						None
-					</attribute>
-					<attribute
-					name="processid"
-					type="System.Int32">
-						11220
-					</attribute>
-				</element>
-				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[4]/?/?/listitem[@name='Skype Translator,']/container/container[1]/?/?/text[@name='Skype Translator']
-				</path>
-			</info>
-			<helperscreenshot
-			guid="cf7b28d2-1d26-446b-866d-c1d03a3b98ce">
-				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
-			</helperscreenshot>
-			<matchname>
-				Text
-			</matchname>
-			<matchvalue>
-				Skype Translator
-			</matchvalue>
-		</validationitem>
 		<mouseitem
-		action="Click"
+		action="DoubleClick"
 		button="Left"
 		duration="500ms"
 		enabled="True"
@@ -1153,6 +575,30 @@ iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
 KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=
 			</helperscreenshot>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		duration="100ms"
+		enabled="True"
+		optional="True"
+		searchpropertyid="02613043-d61d-4441-8363-f1a38d40568a">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="b25d8986-48a8-4796-ab2a-197e588db187"
+			sourcename="ElementTree">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				Sarah Pfister
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -1170,10 +616,10 @@ KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=
 			<bindings>
 			</bindings>
 			<info
-			id="2b072423-2400-4295-9a67-01825c2c6536"
+			id="68432825-263f-4e87-8bd0-50a0e2cec3c0"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']
 				</path>
 			</info>
 		</mouseitem>
@@ -1189,10 +635,10 @@ KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=
 			<bindings>
 			</bindings>
 			<info
-			id="2b072423-2400-4295-9a67-01825c2c6536"
+			id="68432825-263f-4e87-8bd0-50a0e2cec3c0"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']
 				</path>
 			</info>
 		</keysequenceitem>
@@ -1220,10 +666,10 @@ KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k=
 			<bindings>
 			</bindings>
 			<info
-			id="2b072423-2400-4295-9a67-01825c2c6536"
+			id="68432825-263f-4e87-8bd0-50a0e2cec3c0"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[2]/container[2]/container/container[@orientation='None']/container[2]/container[1]/container[@orientation='None']/container[@orientation='None']/container[@orientation='None']/container[@classname='NamedContainerAutomationPeer']/text[@name='Nachricht hier eingeben']
 				</path>
 			</info>
 		</keysequenceitem>

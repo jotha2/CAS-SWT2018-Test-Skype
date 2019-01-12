@@ -27,6 +27,16 @@ rxversion="8.3">
 	namespace="TA_Skype">
 	</codegen>
 	<variables>
+		<var
+		id="c301a966-2afa-4edb-a383-c13b1e73b0fd"
+		name="Username">
+			test_automation_hsr@hotmail.com
+		</var>
+		<var
+		id="c9a4babc-9433-4fe2-89fc-08d4104e2081"
+		name="Passwort">
+			CASSoftwareTesting18
+		</var>
 	</variables>
 	<recorditems>
 		<mouseitem
@@ -87,6 +97,10 @@ rxversion="8.3">
 			<comment>
 			</comment>
 			<bindings>
+				<binding
+				target="KeySequence"
+				variable="Username">
+				</binding>
 			</bindings>
 			<info
 			id="55b48a56-3677-451a-8f19-02eef2337ce4"
@@ -152,6 +166,10 @@ rxversion="8.3">
 			<comment>
 			</comment>
 			<bindings>
+				<binding
+				target="KeySequence"
+				variable="Passwort">
+				</binding>
 			</bindings>
 			<info
 			id="e64b8548-479e-4390-827a-e8f8f160e30c"
@@ -184,7 +202,7 @@ rxversion="8.3">
 			</info>
 		</keyitem>
 		<validationitem
-		action="AttributeContains"
+		action="Exists"
 		duration="100ms"
 		enabled="True"
 		optional="True"
@@ -462,7 +480,7 @@ ooAKKKKAP//Z
 				Text
 			</matchname>
 			<matchvalue>
-				Willkommen
+				Willkommen, Test
 			</matchvalue>
 		</validationitem>
 	</recorditems>
