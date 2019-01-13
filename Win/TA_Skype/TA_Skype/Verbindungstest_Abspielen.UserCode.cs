@@ -66,11 +66,12 @@ namespace TA_Skype
         	Process.Start(@"C:\SkypeGit\Win\TA_Skype\resources\CreateSoundStatistics.bat");
         }
         
-        public bool CheckSoundStatistics(string statisticsFile, int expectedFrequency, int deviationInPercent)
+        public void CheckSoundStatistics(string statisticsFile, int expectedFrequency, int deviationInPercent)
         {
 			string search = "Rough   frequency:";
 			string line;
-			bool returnValue = false;			
+			string errorText = string.Empty;
+			bool hasValidFrequency = false;			
   
 			System.IO.StreamReader file = new System.IO.StreamReader(statisticsFile);  
 			while((line = file.ReadLine()) != null)  
@@ -85,14 +86,30 @@ namespace TA_Skype
 						int maxFrequency = expectedFrequency * (100 + deviationInPercent)/100;
 						if (frequency >= minFrequency && frequency <= maxFrequency)
 						{
-							returnValue = true;
+							Report.Log(ReportLevel.Info, "Die Frequenz von " + frequency + " Hz liegt innerhalb des Bereichs" + Environment.NewLine + 
+							             "Minimal: " + minFrequency + " Hz, Maximal: " + maxFrequency + " Hz");
+							hasValidFrequency = true;
 							break;							
 						}
+						else
+						{
+							errorText = "Die Frequenz von " + frequency + " Hz liegt ausserhalb des Bereichs" + Environment.NewLine + 
+							             "Minimal: " + minFrequency + " Hz, Maximal: " + maxFrequency + " Hz";
+						}
+
 					}
 				}
-			}  
+			}
+			if (!hasValidFrequency) 
+			{
+				if (string.IsNullOrEmpty(errorText)) 
+				{
+					errorText = "Es konnte keine Frequenz ermittelt werden";									
+				}
+				Report.Error(errorText);									
+			}
+			
   			file.Close();
-			return returnValue;  			
         }
     }
 }

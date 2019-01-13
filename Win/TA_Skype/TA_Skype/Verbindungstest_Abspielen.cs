@@ -174,8 +174,8 @@ namespace TA_Skype
             //PlayWav(DateinameFuerWiedergabe);
             //Delay.Milliseconds(0);
             
-            AnalyzeRecording(DateinameFuerAufnahme, DateinameFuerStatistik);
-            Delay.Milliseconds(0);
+            //AnalyzeRecording(DateinameFuerAufnahme, DateinameFuerStatistik);
+            //Delay.Milliseconds(0);
             
             CreateSoundStatisticsFile();
             Delay.Milliseconds(0);

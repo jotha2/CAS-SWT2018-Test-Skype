@@ -107,32 +107,35 @@ namespace TA_Skype
                 Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.SelfInfo, null, false);
             } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(4)); }
             
-            try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, new RecordItemIndex(5));
-                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(5)); }
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$VornameUndName' with focus on 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.txtSuchen'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.txtSuchenInfo, new RecordItemIndex(5));
+            repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.txtSuchen.PressKeys(VornameUndName);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left DoubleClick item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner' at 105;48.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, new RecordItemIndex(6));
+            try {
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, new RecordItemIndex(6));
+                Validate.Exists(repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, null, false);
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(6)); }
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left DoubleClick item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner' at 105;48.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartnerInfo, new RecordItemIndex(7));
             repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.ListitemChatPartner.DoubleClick("105;48");
             
             try {
-                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmChat'.", repo.Skype.frmSkypeMain.frmChat.SelfInfo, new RecordItemIndex(7));
+                Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmChat'.", repo.Skype.frmSkypeMain.frmChat.SelfInfo, new RecordItemIndex(8));
                 Validate.Exists(repo.Skype.frmSkypeMain.frmChat.SelfInfo, null, false);
-            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(7)); }
+            } catch(Exception ex) { Report.Log(ReportLevel.Warn, "Module", "(Optional Action) " + ex.Message, new RecordItemIndex(8)); }
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmChat.txtNachricht' at Center.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(8));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmChat.txtNachricht' at Center.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(9));
             repo.Skype.frmSkypeMain.frmChat.txtNachricht.Click();
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hallo Sarah, wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(9));
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Hallo Sarah, wie geht es Dir?' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(10));
             repo.Skype.frmSkypeMain.frmChat.txtNachricht.PressKeys("Hallo Sarah, wie geht es Dir?");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(10));
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(11));
             Keyboard.Press("{Return}");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Was hast Du während den Ferien gemacht? :)' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(11));
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'Was hast Du während den Ferien gemacht? :)' with focus on 'Skype.frmSkypeMain.frmChat.txtNachricht'.", repo.Skype.frmSkypeMain.frmChat.txtNachrichtInfo, new RecordItemIndex(12));
             repo.Skype.frmSkypeMain.frmChat.txtNachricht.PressKeys("Was hast Du während den Ferien gemacht? :)");
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(12));
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(13));
             Keyboard.Press("{Return}");
             
         }

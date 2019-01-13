@@ -708,8 +708,41 @@ rxversion="8.3">
 						searchtimeout="5000ms">
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[4]/container/listitem[@name~$VornameUndName]
 						</item>
+						<item
+						addcaps="text,uiautomation,uiautomationvalue"
+						capname="text"
+						id="57475739-8be4-497c-9a98-474a89b1a8da"
+						name="txtSuchen"
+						refimgid="e38df0df-fff8-4785-bd3e-233d73eac482"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[2]/container[@name='Suchen']/container/text[@classname='TextBox']
+						</item>
 						<basepath>
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container
+						</basepath>
+					</folder>
+					<folder
+					capname="container"
+					id="81ac63ea-9d03-413e-a9b4-dc49dff8d6db"
+					isrooted="True"
+					name="frmAudioUndVideo"
+					refimgid="e2f536d3-86f4-4090-9edd-c5718002129d"
+					searchtimeout="5000ms"
+					usecache="False">
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name~'^Audio-\ und\ Videoeinstellu']/container[@classname='ScrollViewer']
+						</basepath>
+					</folder>
+					<folder
+					capname="container"
+					id="f91acc22-eb0a-4991-80b9-2239e25dd03d"
+					isrooted="True"
+					name="frmAnrufe"
+					refimgid="35f9a136-2918-4ec2-9b89-ea50411e80e9"
+					searchtimeout="5000ms"
+					usecache="False">
+						<basepath>
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Anrufeinstellungen']/container[2]/container[@classname='ScrollViewer']
 						</basepath>
 					</folder>
 					<basepath>
@@ -946,7 +979,7 @@ rxversion="8.3">
 					name="btnKontaktLoeschen"
 					refimgid="3287d5e8-b468-4979-8056-6e5779e8f7c0"
 					searchtimeout="30000ms">
-						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profil']/?/container[@classname='ScrollViewer']/container/container[1]/container[10]/button[@name='Kontakt l&#246;schen']
+						/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profil']/?/container[@classname='ScrollViewer']/container/container[1]/container/button[@name='Kontakt l&#246;schen']
 					</item>
 					<item
 					addcaps="button,uiautomation,uiautomationinvoke"
@@ -1161,10 +1194,27 @@ rxversion="8.3">
 				addcaps="text,uiautomation"
 				capname="menuitem"
 				id="27d4ad40-9213-4154-bcaf-3dd055e29f33"
-				name="PopupItemUnterhaltungLoeschen"
+				name="MenuItemUnterhaltungLoeschen"
 				refimgid="5231d4e9-ac87-434f-a514-4c81056543bd"
 				searchtimeout="5000ms">
 					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Unterhaltung l&#246;schen']
+				</item>
+				<item
+				addcaps="text,uiautomation"
+				capname="menuitem"
+				id="a67d461a-ff42-41cf-a154-563e83275b84"
+				name="MenuItemAusFavoritenEntfernen"
+				refimgid="5231d4e9-ac87-434f-a514-4c81056543bd"
+				searchtimeout="5000ms">
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Aus Favoriten entfernen']
+				</item>
+				<item
+				addcaps="menuitem,uiautomation,uiautomationinvoke,uiautomationvirtualizeditem"
+				capname="menuitem"
+				id="abba98c6-3bbf-4598-be94-9f40fe79420f"
+				name="MenuItemEinstellungen"
+				searchtimeout="5000ms">
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Einstellungen']
 				</item>
 				<basepath>
 					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']
@@ -1249,6 +1299,7 @@ SUVORK5CYII=
 		<var
 		id="ca8b6c9f-adb8-4d94-8d82-75c3385a5a50"
 		name="Vorname">
+			Test
 		</var>
 		<var
 		id="1c26cd50-e613-4082-ae24-9afd09c60555"

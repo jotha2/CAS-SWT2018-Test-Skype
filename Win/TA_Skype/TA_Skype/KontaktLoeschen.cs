@@ -122,27 +122,31 @@ namespace TA_Skype
             Validate.Exists(repo.Skype.frmSkypeMain.frmProfil.SelfInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmProfil.btnKontaktLoeschen' at Center.", repo.Skype.frmSkypeMain.frmProfil.btnKontaktLoeschenInfo, new RecordItemIndex(8));
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmProfil.btnKontaktLoeschen'.", repo.Skype.frmSkypeMain.frmProfil.btnKontaktLoeschenInfo, new RecordItemIndex(8));
+            Validate.Exists(repo.Skype.frmSkypeMain.frmProfil.btnKontaktLoeschenInfo);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmProfil.btnKontaktLoeschen' at Center.", repo.Skype.frmSkypeMain.frmProfil.btnKontaktLoeschenInfo, new RecordItemIndex(9));
             repo.Skype.frmSkypeMain.frmProfil.btnKontaktLoeschen.Click();
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupWindow'.", repo.Skype.PopupWindow.SelfInfo, new RecordItemIndex(9));
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupWindow'.", repo.Skype.PopupWindow.SelfInfo, new RecordItemIndex(10));
             Validate.Exists(repo.Skype.PopupWindow.SelfInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupWindow.lblPopupWindowTitel'.", repo.Skype.PopupWindow.lblPopupWindowTitelInfo, new RecordItemIndex(10));
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupWindow.lblPopupWindowTitel'.", repo.Skype.PopupWindow.lblPopupWindowTitelInfo, new RecordItemIndex(11));
             Validate.Exists(repo.Skype.PopupWindow.lblPopupWindowTitelInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupWindow.btnLoeschen' at Center.", repo.Skype.PopupWindow.btnLoeschenInfo, new RecordItemIndex(11));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupWindow.btnLoeschen' at Center.", repo.Skype.PopupWindow.btnLoeschenInfo, new RecordItemIndex(12));
             repo.Skype.PopupWindow.btnLoeschen.Click();
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmProfil.btnBenutzerprofilSchliessen' at Center.", repo.Skype.frmSkypeMain.frmProfil.btnBenutzerprofilSchliessenInfo, new RecordItemIndex(12));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmProfil.btnBenutzerprofilSchliessen' at Center.", repo.Skype.frmSkypeMain.frmProfil.btnBenutzerprofilSchliessenInfo, new RecordItemIndex(13));
             repo.Skype.frmSkypeMain.frmProfil.btnBenutzerprofilSchliessen.Click();
             Delay.Milliseconds(200);
             
-            //Report.Log(ReportLevel.Info, "Validation", "Validating NotExists on item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemKontakt'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemKontaktInfo, new RecordItemIndex(13));
+            //Report.Log(ReportLevel.Info, "Validation", "Validating NotExists on item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemKontakt'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemKontaktInfo, new RecordItemIndex(14));
             //Validate.NotExists(repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemKontaktInfo);
             //Delay.Milliseconds(0);
             

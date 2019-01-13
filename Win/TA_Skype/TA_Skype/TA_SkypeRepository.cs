@@ -121,7 +121,7 @@ namespace TA_Skype
             set { _Name = value; }
         }
 
-        string _Vorname = "";
+        string _Vorname = "Test";
 
         /// <summary>
         /// Gets or sets the value of variable Vorname.
@@ -986,6 +986,8 @@ namespace TA_Skype
             TA_SkypeRepositoryFolders.FrmBenachrichtigungenFolder _frmbenachrichtigungen;
             TA_SkypeRepositoryFolders.FrmKontakteFolder _frmkontakte;
             TA_SkypeRepositoryFolders.FrmChatPartnerAuswahlFolder _frmchatpartnerauswahl;
+            TA_SkypeRepositoryFolders.FrmAudioUndVideoFolder _frmaudioundvideo;
+            TA_SkypeRepositoryFolders.FrmAnrufeFolder _frmanrufe;
 
             /// <summary>
             /// Creates a new frmEinstellungen  folder.
@@ -1003,6 +1005,8 @@ namespace TA_Skype
                 _frmbenachrichtigungen = new TA_SkypeRepositoryFolders.FrmBenachrichtigungenFolder(this);
                 _frmkontakte = new TA_SkypeRepositoryFolders.FrmKontakteFolder(this);
                 _frmchatpartnerauswahl = new TA_SkypeRepositoryFolders.FrmChatPartnerAuswahlFolder(this);
+                _frmaudioundvideo = new TA_SkypeRepositoryFolders.FrmAudioUndVideoFolder(this);
+                _frmanrufe = new TA_SkypeRepositoryFolders.FrmAnrufeFolder(this);
             }
 
             /// <summary>
@@ -1117,6 +1121,24 @@ namespace TA_Skype
             public virtual TA_SkypeRepositoryFolders.FrmChatPartnerAuswahlFolder frmChatPartnerAuswahl
             {
                 get { return _frmchatpartnerauswahl; }
+            }
+
+            /// <summary>
+            /// The frmAudioUndVideo folder.
+            /// </summary>
+            [RepositoryFolder("81ac63ea-9d03-413e-a9b4-dc49dff8d6db")]
+            public virtual TA_SkypeRepositoryFolders.FrmAudioUndVideoFolder frmAudioUndVideo
+            {
+                get { return _frmaudioundvideo; }
+            }
+
+            /// <summary>
+            /// The frmAnrufe folder.
+            /// </summary>
+            [RepositoryFolder("f91acc22-eb0a-4991-80b9-2239e25dd03d")]
+            public virtual TA_SkypeRepositoryFolders.FrmAnrufeFolder frmAnrufe
+            {
+                get { return _frmanrufe; }
             }
         }
 
@@ -2553,6 +2575,7 @@ namespace TA_Skype
         public partial class FrmChatPartnerAuswahlFolder : RepoGenBaseFolder
         {
             RepoItemInfo _listitemchatpartnerInfo;
+            RepoItemInfo _txtsuchenInfo;
 
             /// <summary>
             /// Creates a new frmChatPartnerAuswahl  folder.
@@ -2561,6 +2584,7 @@ namespace TA_Skype
                     base("frmChatPartnerAuswahl", "container[@name='Neuer Chat']/container", parentFolder, 5000, null, false, "4b48abe7-3798-428d-92cf-87dbd8f54e77", "")
             {
                 _listitemchatpartnerInfo = new RepoItemInfo(this, "ListitemChatPartner", "container[4]/container/listitem[@name~$VornameUndName]", 5000, null, "73140961-53c4-4c92-ac4b-95954b7882c9");
+                _txtsuchenInfo = new RepoItemInfo(this, "txtSuchen", "container[2]/container[@name='Suchen']/container/text[@classname='TextBox']", 5000, null, "57475739-8be4-497c-9a98-474a89b1a8da");
             }
 
             /// <summary>
@@ -2608,6 +2632,110 @@ namespace TA_Skype
                 get
                 {
                     return _listitemchatpartnerInfo;
+                }
+            }
+
+            /// <summary>
+            /// The txtSuchen item.
+            /// </summary>
+            [RepositoryItem("57475739-8be4-497c-9a98-474a89b1a8da")]
+            public virtual Ranorex.Text txtSuchen
+            {
+                get
+                {
+                    return _txtsuchenInfo.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The txtSuchen item info.
+            /// </summary>
+            [RepositoryItemInfo("57475739-8be4-497c-9a98-474a89b1a8da")]
+            public virtual RepoItemInfo txtSuchenInfo
+            {
+                get
+                {
+                    return _txtsuchenInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmAudioUndVideoFolder folder.
+        /// </summary>
+        [RepositoryFolder("81ac63ea-9d03-413e-a9b4-dc49dff8d6db")]
+        public partial class FrmAudioUndVideoFolder : RepoGenBaseFolder
+        {
+
+            /// <summary>
+            /// Creates a new frmAudioUndVideo  folder.
+            /// </summary>
+            public FrmAudioUndVideoFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmAudioUndVideo", "container[@name~'^Audio-\\ und\\ Videoeinstellu']/container[@classname='ScrollViewer']", parentFolder, 5000, null, false, "81ac63ea-9d03-413e-a9b4-dc49dff8d6db", "")
+            {
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("81ac63ea-9d03-413e-a9b4-dc49dff8d6db")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("81ac63ea-9d03-413e-a9b4-dc49dff8d6db")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The FrmAnrufeFolder folder.
+        /// </summary>
+        [RepositoryFolder("f91acc22-eb0a-4991-80b9-2239e25dd03d")]
+        public partial class FrmAnrufeFolder : RepoGenBaseFolder
+        {
+
+            /// <summary>
+            /// Creates a new frmAnrufe  folder.
+            /// </summary>
+            public FrmAnrufeFolder(RepoGenBaseFolder parentFolder) :
+                    base("frmAnrufe", "container[@name='Anrufeinstellungen']/container[2]/container[@classname='ScrollViewer']", parentFolder, 5000, null, false, "f91acc22-eb0a-4991-80b9-2239e25dd03d", "")
+            {
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("f91acc22-eb0a-4991-80b9-2239e25dd03d")]
+            public virtual Ranorex.Container Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Container>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("f91acc22-eb0a-4991-80b9-2239e25dd03d")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
                 }
             }
         }
@@ -3353,7 +3481,7 @@ namespace TA_Skype
             public FrmProfilFolder(RepoGenBaseFolder parentFolder) :
                     base("frmProfil", "container[6]/container[@name='Profil']/?", parentFolder, 30000, null, false, "991122e7-cf67-416b-929b-725745789040", "")
             {
-                _btnkontaktloeschenInfo = new RepoItemInfo(this, "btnKontaktLoeschen", "container[@classname='ScrollViewer']/container/container[1]/container[10]/button[@name='Kontakt löschen']", 30000, null, "dbbaa41d-6935-4b02-8ed6-c7951b6575c0");
+                _btnkontaktloeschenInfo = new RepoItemInfo(this, "btnKontaktLoeschen", "container[@classname='ScrollViewer']/container/container[1]/container/button[@name='Kontakt löschen']", 30000, null, "dbbaa41d-6935-4b02-8ed6-c7951b6575c0");
                 _btnbenutzerprofilschliessenInfo = new RepoItemInfo(this, "btnBenutzerprofilSchliessen", "container/container[1]/button[@name='Benutzerprofil schließen']", 30000, null, "49542d19-3c47-4c6a-83b2-b66f20895d40");
                 _lblprofiltitelInfo = new RepoItemInfo(this, "lblProfilTitel", "container[1]/text[@name='Profil']", 30000, null, "b6143d18-b1d1-485f-b1c1-9a7a7971952f");
             }
@@ -3896,7 +4024,9 @@ namespace TA_Skype
             RepoItemInfo _popupitemtelefonnummertypInfo;
             RepoItemInfo _popupitemprofilanzeigenInfo;
             RepoItemInfo _popupitemneuerchatInfo;
-            RepoItemInfo _popupitemunterhaltungloeschenInfo;
+            RepoItemInfo _menuitemunterhaltungloeschenInfo;
+            RepoItemInfo _menuitemausfavoritenentfernenInfo;
+            RepoItemInfo _menuitemeinstellungenInfo;
 
             /// <summary>
             /// Creates a new PopupMenu  folder.
@@ -3909,7 +4039,9 @@ namespace TA_Skype
                 _popupitemtelefonnummertypInfo = new RepoItemInfo(this, "PopupItemTelefonnummerTyp", ".//text[@name=$TelefonnummerTyp]", 30000, null, "a354cecb-9f0c-472b-a171-beb730b4f3b6");
                 _popupitemprofilanzeigenInfo = new RepoItemInfo(this, "PopupItemProfilAnzeigen", ".//text[@name='Profil anzeigen']", 30000, null, "6c0f8cb4-9d77-4337-84ce-ea99879b44d0");
                 _popupitemneuerchatInfo = new RepoItemInfo(this, "PopupItemNeuerChat", ".//text[@name='Neuer Chat']", 5000, null, "eb135aef-016f-40e2-bedc-71109af55ca6");
-                _popupitemunterhaltungloeschenInfo = new RepoItemInfo(this, "PopupItemUnterhaltungLoeschen", "contextmenu/menuitem[@name='Unterhaltung löschen']", 5000, null, "27d4ad40-9213-4154-bcaf-3dd055e29f33");
+                _menuitemunterhaltungloeschenInfo = new RepoItemInfo(this, "MenuItemUnterhaltungLoeschen", "contextmenu/menuitem[@name='Unterhaltung löschen']", 5000, null, "27d4ad40-9213-4154-bcaf-3dd055e29f33");
+                _menuitemausfavoritenentfernenInfo = new RepoItemInfo(this, "MenuItemAusFavoritenEntfernen", "contextmenu/menuitem[@name='Aus Favoriten entfernen']", 5000, null, "a67d461a-ff42-41cf-a154-563e83275b84");
+                _menuitemeinstellungenInfo = new RepoItemInfo(this, "MenuItemEinstellungen", "contextmenu/menuitem[@name='Einstellungen']", 5000, null, "abba98c6-3bbf-4598-be94-9f40fe79420f");
             }
 
             /// <summary>
@@ -4057,26 +4189,74 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The PopupItemUnterhaltungLoeschen item.
+            /// The MenuItemUnterhaltungLoeschen item.
             /// </summary>
             [RepositoryItem("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
-            public virtual Ranorex.MenuItem PopupItemUnterhaltungLoeschen
+            public virtual Ranorex.MenuItem MenuItemUnterhaltungLoeschen
             {
                 get
                 {
-                    return _popupitemunterhaltungloeschenInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                    return _menuitemunterhaltungloeschenInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The PopupItemUnterhaltungLoeschen item info.
+            /// The MenuItemUnterhaltungLoeschen item info.
             /// </summary>
             [RepositoryItemInfo("27d4ad40-9213-4154-bcaf-3dd055e29f33")]
-            public virtual RepoItemInfo PopupItemUnterhaltungLoeschenInfo
+            public virtual RepoItemInfo MenuItemUnterhaltungLoeschenInfo
             {
                 get
                 {
-                    return _popupitemunterhaltungloeschenInfo;
+                    return _menuitemunterhaltungloeschenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MenuItemAusFavoritenEntfernen item.
+            /// </summary>
+            [RepositoryItem("a67d461a-ff42-41cf-a154-563e83275b84")]
+            public virtual Ranorex.MenuItem MenuItemAusFavoritenEntfernen
+            {
+                get
+                {
+                    return _menuitemausfavoritenentfernenInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MenuItemAusFavoritenEntfernen item info.
+            /// </summary>
+            [RepositoryItemInfo("a67d461a-ff42-41cf-a154-563e83275b84")]
+            public virtual RepoItemInfo MenuItemAusFavoritenEntfernenInfo
+            {
+                get
+                {
+                    return _menuitemausfavoritenentfernenInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MenuItemEinstellungen item.
+            /// </summary>
+            [RepositoryItem("abba98c6-3bbf-4598-be94-9f40fe79420f")]
+            public virtual Ranorex.MenuItem MenuItemEinstellungen
+            {
+                get
+                {
+                    return _menuitemeinstellungenInfo.CreateAdapter<Ranorex.MenuItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MenuItemEinstellungen item info.
+            /// </summary>
+            [RepositoryItemInfo("abba98c6-3bbf-4598-be94-9f40fe79420f")]
+            public virtual RepoItemInfo MenuItemEinstellungenInfo
+            {
+                get
+                {
+                    return _menuitemeinstellungenInfo;
                 }
             }
         }

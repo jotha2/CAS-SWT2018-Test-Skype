@@ -1,13 +1,15 @@
 ﻿<Properties>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Testchat_TestAutomation_DialogLöschen.rxrec" />
+    <Element value="Login.rxrec" />
     <Element value="Verbindungstest_Abspielen.rxrec" />
     <Element value="TA_Skype.rxtst" />
-    <Element value="Play.cs" />
-    <Element value="Verbindungstest_Abspielen.UserCode.cs" />
     <Element value="Testchat_TestAutomation_DialogStarten.rxrec" />
+    <Element value="EigenesProfilBearbeiten.rxrec" />
+    <Element value="KontaktLoeschen.rxrec" />
+    <Element value="Play.cs" />
     <Element value="Testchat_SarahPfister_Dialogführen.rxrec" />
-    <Element value="Testchat_TestAutomation_DialogLöschen.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

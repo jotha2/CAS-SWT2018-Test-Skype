@@ -95,14 +95,29 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Mouse", "Mouse Right Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUserInfo, new RecordItemIndex(1));
             repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemChatUser.Click(System.Windows.Forms.MouseButtons.Right);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.PopupItemUnterhaltungLoeschen'.", repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschenInfo, new RecordItemIndex(2));
-            Validate.Exists(repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschenInfo);
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.MenuItemUnterhaltungLoeschen'.", repo.Skype.PopupMenu.MenuItemUnterhaltungLoeschenInfo, new RecordItemIndex(2));
+            Validate.Exists(repo.Skype.PopupMenu.MenuItemUnterhaltungLoeschenInfo);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemUnterhaltungLoeschen' at Center.", repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschenInfo, new RecordItemIndex(3));
-            repo.Skype.PopupMenu.PopupItemUnterhaltungLoeschen.Click();
+            Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(3));
+            Delay.Duration(1000, false);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(4));
-            Keyboard.Press("{Return}");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.MenuItemUnterhaltungLoeschen' at Center.", repo.Skype.PopupMenu.MenuItemUnterhaltungLoeschenInfo, new RecordItemIndex(4));
+            repo.Skype.PopupMenu.MenuItemUnterhaltungLoeschen.Click();
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupWindow'.", repo.Skype.PopupWindow.SelfInfo, new RecordItemIndex(5));
+            Validate.Exists(repo.Skype.PopupWindow.SelfInfo);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupWindow.btnLoeschen' at Center.", repo.Skype.PopupWindow.btnLoeschenInfo, new RecordItemIndex(6));
+            repo.Skype.PopupWindow.btnLoeschen.Click();
+            
+            //Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.MenuItemAusFavoritenEntfernen'.", repo.Skype.PopupMenu.MenuItemAusFavoritenEntfernenInfo, new RecordItemIndex(7));
+            //Validate.Exists(repo.Skype.PopupMenu.MenuItemAusFavoritenEntfernenInfo);
+            
+            //Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.MenuItemAusFavoritenEntfernen' at Center.", repo.Skype.PopupMenu.MenuItemAusFavoritenEntfernenInfo, new RecordItemIndex(8));
+            //repo.Skype.PopupMenu.MenuItemAusFavoritenEntfernen.Click();
+            
+            //Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}'.", new RecordItemIndex(9));
+            //Keyboard.Press("{Return}");
             
         }
 

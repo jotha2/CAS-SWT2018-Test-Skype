@@ -99,6 +99,15 @@ rxversion="8.3">
 				yourtext
 			</matchvalue>
 		</validationitem>
+		<explicitdelayitem
+		duration="1000ms"
+		enabled="True"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</explicitdelayitem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -251,10 +260,104 @@ fnR9jj/vN+dFFAB9jj/vN+dH2OP+8350UUAH2OP+8350fY4/7zfnRRQAfY4/7zfnVe9jWJY1UkjJ
 PP4UUUAVaKKKAP/Z
 			</helperscreenshot>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="d53f1005-e2aa-49ef-924f-928e9e4550c8">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="9966cb01-28da-478b-87b5-63da0349945d"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@automationid='Popup Window']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="c565ca48-89b1-4ff1-b87b-e79acdddd1ec"
+		sx="295"
+		sy="260"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="e3927570-0182-415b-a70f-2dc09f1b3413"
+			sourcename="Recorder">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@automationid='Popup Window']/container[@automationid='Popup']/button[@automationid='Button1' and @name='L&#246;schen']
+				</path>
+			</info>
+		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="False"
+		optional="False"
+		searchpropertyid="d53f1005-e2aa-49ef-924f-928e9e4550c8">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="a67d461a-ff42-41cf-a154-563e83275b84"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Aus Favoriten Entfernen']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="False"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="0101e297-c46a-49e7-8b66-297f2b652469"
+		sx="299"
+		sy="233"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="a67d461a-ff42-41cf-a154-563e83275b84"
+			sourcename="Recorder">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Aus Favoriten Entfernen']
+				</path>
+			</info>
+		</mouseitem>
 		<keysequenceitem
 		KeySequence="{Return}"
 		duration="100ms"
-		enabled="True"
+		enabled="False"
 		optional="False"
 		presstime="100ms"
 		searchpropertyid="70afec56-b8b8-4002-91e0-b0194ef7fae9">

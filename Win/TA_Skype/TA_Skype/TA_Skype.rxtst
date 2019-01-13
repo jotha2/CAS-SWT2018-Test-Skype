@@ -5,19 +5,12 @@ rxversion="8.3">
 		<flatlistofchildren>
 			<testcase
 			id="0590c36e-8aeb-462a-93e9-09f254c1be1a"
-			name="TestCase">
+			name="T2.2_Logoff">
 			</testcase>
 			<testmodule
 			id="0add9909-e137-4685-855e-2ac61ae4444a"
 			name="Logoff"
 			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
-			type="Recording">
-			</testmodule>
-			<testmodule
-			enabled="False"
-			id="110ffc9c-3623-4fb5-934f-12733080a9db"
-			name="Login"
-			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
 			type="Recording">
 			</testmodule>
 			<setup
@@ -26,7 +19,7 @@ rxversion="8.3">
 			</setup>
 			<smartfoldernode
 			id="207d1a47-5f42-4431-be42-8b0f5e7e768e"
-			name="Login_TestAutomation">
+			name="Login_Test_Automation">
 				<parameters>
 					<param
 					name="Username"
@@ -50,7 +43,7 @@ rxversion="8.3">
 				<databinding>
 					<var
 					dataname="TestAutomation"
-					datasourceid="a1905381-c15d-49dd-abb1-eab24986dff3"
+					datasourceid="ad73f8a0-1623-4730-aabb-553dc6ee06de"
 					variableid="c880ee55-32ec-4543-be01-a612266cf2bc"
 					variablename="VornameUndName">
 					</var>
@@ -69,36 +62,45 @@ rxversion="8.3">
 				<databinding>
 					<var
 					dataname="NameUndVorname"
-					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					datasourceid="7261743d-451f-49d7-ac43-544f862f1883"
 					variableid="8a9aef5b-8d59-41ca-a2c0-9978215f7c68"
 					variablename="VornameUndName">
 					</var>
 					<var
-					dataname="Telefonnummer"
-					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
-					variableid="b385e338-b49b-4280-bc0e-bf8c96b59910"
-					variablename="Telefonnummer">
-					</var>
-					<var
-					dataname="Land"
-					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
-					variableid="744d9200-96cb-436c-897d-b2d708ef12b4"
-					variablename="Land">
-					</var>
-					<var
 					dataname="Vorwahl"
-					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					datasourceid="7261743d-451f-49d7-ac43-544f862f1883"
 					variableid="118a8ba9-effe-49dd-8709-1d9f58a69bf2"
 					variablename="Laendervorwahl">
 					</var>
 					<var
-					dataname="TelefonnumerTyp"
-					datasourceid="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
+					dataname="Telefonnummer"
+					datasourceid="7261743d-451f-49d7-ac43-544f862f1883"
+					variableid="b385e338-b49b-4280-bc0e-bf8c96b59910"
+					variablename="Telefonnummer">
+					</var>
+					<var
+					dataname="TelefonnummerTyp"
+					datasourceid="7261743d-451f-49d7-ac43-544f862f1883"
 					variableid="cf945fe1-cbed-4d3b-84d6-91fc9e758dfa"
 					variablename="TelefonnummerTyp">
 					</var>
+					<var
+					dataname="Land"
+					datasourceid="7261743d-451f-49d7-ac43-544f862f1883"
+					variableid="744d9200-96cb-436c-897d-b2d708ef12b4"
+					variablename="Land">
+					</var>
 				</databinding>
 			</testmodule>
+			<testcase
+			id="33c03e18-f14a-4e6b-b6ad-f3afd0c371f5"
+			name="T1.4.1_Eigenes_Profil_bearbeiten">
+			</testcase>
+			<testcase
+			datasource="Kontaktdaten"
+			id="38f10f7d-41dc-437c-b51d-9f1fff30163e"
+			name="T1.3.2_Kontakt_Loeschen">
+			</testcase>
 			<testmodule
 			id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
 			name="Login"
@@ -106,43 +108,27 @@ rxversion="8.3">
 			type="Recording">
 				<databinding>
 					<var
-					dataname="Username"
-					datasourceid="a11f4766-ba3d-415a-bdea-b20954792a92"
-					variableid="c301a966-2afa-4edb-a383-c13b1e73b0fd"
-					variablename="Username">
+					dataname="Vorname"
+					datasourceid="d60de9d9-1650-4683-afc5-4a55385294d7"
+					variableid="ca8b6c9f-adb8-4d94-8d82-75c3385a5a50"
+					variablename="Vorname">
 					</var>
 					<var
 					dataname="Passwort"
-					datasourceid="a11f4766-ba3d-415a-bdea-b20954792a92"
+					datasourceid="d60de9d9-1650-4683-afc5-4a55385294d7"
 					variableid="c9a4babc-9433-4fe2-89fc-08d4104e2081"
 					variablename="Passwort">
 					</var>
 					<var
-					dataname="Vorname"
-					datasourceid="a11f4766-ba3d-415a-bdea-b20954792a92"
-					variableid="ca8b6c9f-adb8-4d94-8d82-75c3385a5a50"
-					variablename="Vorname">
+					dataname="Username"
+					datasourceid="d60de9d9-1650-4683-afc5-4a55385294d7"
+					variableid="c301a966-2afa-4edb-a383-c13b1e73b0fd"
+					variablename="Username">
 					</var>
 				</databinding>
 			</testmodule>
-			<smartfoldernode
-			id="3c4ac060-1663-472d-909a-da7a46d7e5b7"
-			name="T1.1_Verbindungstest">
-			</smartfoldernode>
-			<smartfoldernode
-			datasource="NewConnector"
-			id="4a754bbb-8b7a-422e-aaf5-51d7428d29ac"
-			name="T1.3.1_Kontakt_hinzufuegen">
-			</smartfoldernode>
 			<testmodule
 			id="4e78a65d-e405-4a06-b624-330e73d1b4ff"
-			name="Logoff"
-			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
-			type="Recording">
-			</testmodule>
-			<testmodule
-			enabled="False"
-			id="506c5b33-1bd1-426f-a7c8-083aeb179c0e"
 			name="Logoff"
 			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
 			type="Recording">
@@ -155,7 +141,7 @@ rxversion="8.3">
 				<databinding>
 					<var
 					dataname="Sarah"
-					datasourceid="a1905381-c15d-49dd-abb1-eab24986dff3"
+					datasourceid="ad73f8a0-1623-4730-aabb-553dc6ee06de"
 					variableid="c880ee55-32ec-4543-be01-a612266cf2bc"
 					variablename="VornameUndName">
 					</var>
@@ -195,7 +181,7 @@ rxversion="8.3">
 				<databinding>
 					<var
 					dataname="Sarah"
-					datasourceid="a1905381-c15d-49dd-abb1-eab24986dff3"
+					datasourceid="ad73f8a0-1623-4730-aabb-553dc6ee06de"
 					variableid="c880ee55-32ec-4543-be01-a612266cf2bc"
 					variablename="VornameUndName">
 					</var>
@@ -207,6 +193,11 @@ rxversion="8.3">
 			ref="628edbaf-f045-4d8a-b74f-9d5a079bd8dc"
 			type="Recording">
 			</testmodule>
+			<testcase
+			datasource="Kontaktdaten"
+			id="81e91e72-e335-409b-8a0b-b6551c8d9293"
+			name="T1.3.1_Kontakt_hinzufuegen">
+			</testcase>
 			<testsuite
 			ReportTime="RelativeToTestSuiteStartTime"
 			TracingScreenshotMode="Foreground"
@@ -223,7 +214,7 @@ rxversion="8.3">
 			</testsuite>
 			<smartfoldernode
 			id="99d9cba6-d7c2-40b4-a33a-e745489d9f79"
-			name="Login_Sarah">
+			name="Login_Sarah_Pfister">
 				<parameters>
 					<param
 					name="Username"
@@ -239,43 +230,20 @@ rxversion="8.3">
 					</param>
 				</parameters>
 			</smartfoldernode>
-			<smartfoldernode
-			datasource="NewConnector1"
-			id="9b74e20f-6d22-4864-a976-723ddc010bfd"
-			name="T1.3.2_Kontakt_Loeschen">
-			</smartfoldernode>
-			<smartfoldernode
-			id="a11f4766-ba3d-415a-bdea-b20954792a92"
-			name="T2.1_Login">
-				<parameters>
-					<param
-					name="Username"
-					value="test_automation_hsr@hotmail.com">
-					</param>
-					<param
-					name="Passwort"
-					value="CASSoftwareTesting18">
-					</param>
-					<param
-					name="Vorname"
-					value="Test">
-					</param>
-				</parameters>
-			</smartfoldernode>
-			<smartfoldernode
-			id="a1905381-c15d-49dd-abb1-eab24986dff3"
+			<testcase
+			id="ad73f8a0-1623-4730-aabb-553dc6ee06de"
 			name="T1.2.3_Testchat_im_Dialog">
 				<parameters>
-					<param
-					name="Sarah"
-					value="Sarah Pfister">
-					</param>
 					<param
 					name="TestAutomation"
 					value="Test Automation">
 					</param>
+					<param
+					name="Sarah"
+					value="Sarah Pfister">
+					</param>
 				</parameters>
-			</smartfoldernode>
+			</testcase>
 			<testmodule
 			id="b71660f4-45ea-4d58-a19a-1a06d835cbdc"
 			name="Login"
@@ -308,10 +276,6 @@ rxversion="8.3">
 			ref="62ebbcec-66ef-468d-b4f4-c6a730429668"
 			type="Recording">
 			</testmodule>
-			<smartfoldernode
-			id="be8ae243-bbdb-48a2-966c-2c7318c7f600"
-			name="T2.2_Logoff">
-			</smartfoldernode>
 			<testmodule
 			id="c1698502-e39d-4db3-9611-0952a7540bec"
 			name="KontaktLoeschen"
@@ -320,22 +284,40 @@ rxversion="8.3">
 				<databinding>
 					<var
 					dataname="NameUndVorname"
-					datasourceid="500b6f58-eadd-4e67-bee1-03581a866776"
+					datasourceid="7261743d-451f-49d7-ac43-544f862f1883"
 					variableid="c880ee55-32ec-4543-be01-a612266cf2bc"
 					variablename="VornameUndName">
 					</var>
 				</databinding>
 			</testmodule>
+			<testcase
+			id="c5f104bf-efae-4ccd-ad5e-dcaba21a1a0b"
+			name="T1.1_Verbindungstest">
+			</testcase>
+			<testcase
+			id="d60de9d9-1650-4683-afc5-4a55385294d7"
+			name="T2.1_Login">
+				<parameters>
+					<param
+					name="Vorname"
+					value="Test">
+					</param>
+					<param
+					name="Passwort"
+					value="CASSoftwareTesting18">
+					</param>
+					<param
+					name="Username"
+					value="test_automation_hsr@hotmail.com">
+					</param>
+				</parameters>
+			</testcase>
 			<testmodule
 			id="db260212-4c59-43ef-b884-5abb4908f831"
 			name="StartSkype"
 			ref="3b73c879-7922-4f33-bbe6-9867a5ef85eb"
 			type="Recording">
 			</testmodule>
-			<smartfoldernode
-			id="e86331d6-26e6-4f26-8199-5057acfc72f4"
-			name="T1.4.1_Eigenes_Profil_bearbeiten">
-			</smartfoldernode>
 			<testmodule
 			id="f9f010e7-2a8a-459f-aa17-6904e2e086ff"
 			name="Logoff"
@@ -350,119 +332,202 @@ rxversion="8.3">
 				<testcase
 				id="26caff6d-67ac-4fb4-bb74-401c1ab18d6b"
 				name="TA_Skype">
+					<setup
+					id="205ff4b4-52b0-43ab-8b63-4c354f46e025"
+					name="setup">
+						<testmodule
+						id="db260212-4c59-43ef-b884-5abb4908f831"
+						name="StartSkype">
+						</testmodule>
+					</setup>
+					<testcase
+					id="d60de9d9-1650-4683-afc5-4a55385294d7"
+					name="T2.1_Login">
+						<testmodule
+						id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
+						name="Login">
+						</testmodule>
+					</testcase>
+					<testcase
+					id="c5f104bf-efae-4ccd-ad5e-dcaba21a1a0b"
+					name="T1.1_Verbindungstest">
+						<testmodule
+						id="bdc1106b-c61b-407b-a6bc-d36759d26172"
+						name="Verbindungstest_Abspielen">
+						</testmodule>
+					</testcase>
+					<testcase
+					id="81e91e72-e335-409b-8a0b-b6551c8d9293"
+					name="T1.3.1_Kontakt_hinzufuegen">
+						<testmodule
+						id="31a5ef2e-eba0-456f-b9bf-9cdcdcf806fc"
+						name="KontaktHinzufuegen">
+						</testmodule>
+					</testcase>
+					<testcase
+					id="38f10f7d-41dc-437c-b51d-9f1fff30163e"
+					name="T1.3.2_Kontakt_Loeschen">
+						<testmodule
+						id="c1698502-e39d-4db3-9611-0952a7540bec"
+						name="KontaktLoeschen">
+						</testmodule>
+					</testcase>
+					<testcase
+					id="ad73f8a0-1623-4730-aabb-553dc6ee06de"
+					name="T1.2.3_Testchat_im_Dialog">
+						<testmodule
+						id="70e19bf5-7554-4b6a-b15f-31f3583e4b24"
+						name="Testchat_TestAutomation_DialogStarten">
+						</testmodule>
+						<testmodule
+						id="f9f010e7-2a8a-459f-aa17-6904e2e086ff"
+						name="Logoff">
+						</testmodule>
+						<smartfoldernode
+						id="99d9cba6-d7c2-40b4-a33a-e745489d9f79"
+						name="Login_Sarah_Pfister">
+							<testmodule
+							id="5e665ea5-aaef-4681-8755-3aad0c9dea55"
+							name="Login">
+							</testmodule>
+						</smartfoldernode>
+						<testmodule
+						id="20dca20f-dbd0-4182-b5e3-85f1c14cd81c"
+						name="Testchat_SarahPfister_Dialogfuehren">
+						</testmodule>
+						<testmodule
+						id="0add9909-e137-4685-855e-2ac61ae4444a"
+						name="Logoff">
+						</testmodule>
+						<smartfoldernode
+						id="207d1a47-5f42-4431-be42-8b0f5e7e768e"
+						name="Login_Test_Automation">
+							<testmodule
+							id="b71660f4-45ea-4d58-a19a-1a06d835cbdc"
+							name="Login">
+							</testmodule>
+						</smartfoldernode>
+						<testmodule
+						id="57ebe6f8-3d49-4b3e-bcc6-425084a3df31"
+						name="Testchat_TestAutomation_DialogLoeschen">
+						</testmodule>
+					</testcase>
+					<testcase
+					id="33c03e18-f14a-4e6b-b6ad-f3afd0c371f5"
+					name="T1.4.1_Eigenes_Profil_bearbeiten">
+						<testmodule
+						id="78f55682-3825-4b3e-909c-dd2477f0c9e0"
+						name="EigenesProfilBearbeiten">
+						</testmodule>
+					</testcase>
 					<testcase
 					id="0590c36e-8aeb-462a-93e9-09f254c1be1a"
-					name="TestCase">
-						<setup
-						id="205ff4b4-52b0-43ab-8b63-4c354f46e025"
-						name="setup">
-							<testmodule
-							id="db260212-4c59-43ef-b884-5abb4908f831"
-							name="StartSkype">
-							</testmodule>
-						</setup>
-						<smartfoldernode
-						id="a11f4766-ba3d-415a-bdea-b20954792a92"
-						name="T2.1_Login">
-							<testmodule
-							id="3b4c70be-2ce3-4bfb-8140-73d7af59e034"
-							name="Login">
-							</testmodule>
-						</smartfoldernode>
-						<smartfoldernode
-						id="3c4ac060-1663-472d-909a-da7a46d7e5b7"
-						name="T1.1_Verbindungstest">
-							<testmodule
-							id="110ffc9c-3623-4fb5-934f-12733080a9db"
-							name="Login">
-							</testmodule>
-							<testmodule
-							id="bdc1106b-c61b-407b-a6bc-d36759d26172"
-							name="Verbindungstest_Abspielen">
-							</testmodule>
-							<testmodule
-							id="506c5b33-1bd1-426f-a7c8-083aeb179c0e"
-							name="Logoff">
-							</testmodule>
-						</smartfoldernode>
-						<smartfoldernode
-						id="4a754bbb-8b7a-422e-aaf5-51d7428d29ac"
-						name="T1.3.1_Kontakt_hinzufuegen">
-							<testmodule
-							id="31a5ef2e-eba0-456f-b9bf-9cdcdcf806fc"
-							name="KontaktHinzufuegen">
-							</testmodule>
-						</smartfoldernode>
-						<smartfoldernode
-						id="9b74e20f-6d22-4864-a976-723ddc010bfd"
-						name="T1.3.2_Kontakt_Loeschen">
-							<testmodule
-							id="c1698502-e39d-4db3-9611-0952a7540bec"
-							name="KontaktLoeschen">
-							</testmodule>
-						</smartfoldernode>
-						<smartfoldernode
-						id="e86331d6-26e6-4f26-8199-5057acfc72f4"
-						name="T1.4.1_Eigenes_Profil_bearbeiten">
-							<testmodule
-							id="78f55682-3825-4b3e-909c-dd2477f0c9e0"
-							name="EigenesProfilBearbeiten">
-							</testmodule>
-						</smartfoldernode>
-						<smartfoldernode
-						id="a1905381-c15d-49dd-abb1-eab24986dff3"
-						name="T1.2.3_Testchat_im_Dialog">
-							<testmodule
-							id="70e19bf5-7554-4b6a-b15f-31f3583e4b24"
-							name="Testchat_TestAutomation_DialogStarten">
-							</testmodule>
-							<testmodule
-							id="f9f010e7-2a8a-459f-aa17-6904e2e086ff"
-							name="Logoff">
-							</testmodule>
-							<smartfoldernode
-							id="99d9cba6-d7c2-40b4-a33a-e745489d9f79"
-							name="Login_Sarah">
-								<testmodule
-								id="5e665ea5-aaef-4681-8755-3aad0c9dea55"
-								name="Login">
-								</testmodule>
-							</smartfoldernode>
-							<testmodule
-							id="20dca20f-dbd0-4182-b5e3-85f1c14cd81c"
-							name="Testchat_SarahPfister_Dialogfuehren">
-							</testmodule>
-							<testmodule
-							id="0add9909-e137-4685-855e-2ac61ae4444a"
-							name="Logoff">
-							</testmodule>
-							<smartfoldernode
-							id="207d1a47-5f42-4431-be42-8b0f5e7e768e"
-							name="Login_TestAutomation">
-								<testmodule
-								id="b71660f4-45ea-4d58-a19a-1a06d835cbdc"
-								name="Login">
-								</testmodule>
-							</smartfoldernode>
-							<testmodule
-							id="57ebe6f8-3d49-4b3e-bcc6-425084a3df31"
-							name="Testchat_TestAutomation_DialogLoeschen">
-							</testmodule>
-						</smartfoldernode>
-						<smartfoldernode
-						id="be8ae243-bbdb-48a2-966c-2c7318c7f600"
-						name="T2.2_Logoff">
-							<testmodule
-							id="4e78a65d-e405-4a06-b624-330e73d1b4ff"
-							name="Logoff">
-							</testmodule>
-						</smartfoldernode>
+					name="T2.2_Logoff">
+						<testmodule
+						id="4e78a65d-e405-4a06-b624-330e73d1b4ff"
+						name="Logoff">
+						</testmodule>
 					</testcase>
 				</testcase>
 			</testsuite>
 		</childhierarchy>
 	</testsuiteentryhierarchy>
 	<datasources>
+		<DataSource
+		id="7261743d-451f-49d7-ac43-544f862f1883"
+		lastknownrowcount="3"
+		name="Kontaktdaten"
+		type="Ranorex.Core.Data.SimpleDataConnector">
+			<lastknowncolumns>
+				<column>
+					NameUndVorname
+				</column>
+				<column>
+					Vorwahl
+				</column>
+				<column>
+					Telefonnummer
+				</column>
+				<column>
+					TelefonnummerTyp
+				</column>
+				<column>
+					Land
+				</column>
+			</lastknowncolumns>
+			<maskedcolumns>
+			</maskedcolumns>
+			<table>
+				<tr>
+					<th>
+						NameUndVorname
+					</th>
+					<th>
+						Vorwahl
+					</th>
+					<th>
+						Telefonnummer
+					</th>
+					<th>
+						TelefonnummerTyp
+					</th>
+					<th>
+						Land
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Sarah Pfister
+					</td>
+					<td>
+						+41
+					</td>
+					<td>
+						100 10 01
+					</td>
+					<td>
+						Privat
+					</td>
+					<td>
+						Schweiz
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Joerg Hoffmann
+					</td>
+					<td>
+						+49
+					</td>
+					<td>
+						100 10 02
+					</td>
+					<td>
+						B&#252;ro
+					</td>
+					<td>
+						Deutschland
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Thomas Th&#252;r
+					</td>
+					<td>
+						+41
+					</td>
+					<td>
+						100 10 03
+					</td>
+					<td>
+						Mobiltelefon
+					</td>
+					<td>
+						Schweiz
+					</td>
+				</tr>
+			</table>
+		</DataSource>
 		<DataSource
 		id="52a558fb-5a7b-4b5c-96bf-bd2194be1c1f"
 		lastknownrowcount="3"
@@ -598,6 +663,33 @@ rxversion="8.3">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
+			<testcontainer
+			id="0590c36e-8aeb-462a-93e9-09f254c1be1a">
+			</testcontainer>
+			<testcontainer
+			id="207d1a47-5f42-4431-be42-8b0f5e7e768e">
+			</testcontainer>
+			<testcontainer
+			id="26caff6d-67ac-4fb4-bb74-401c1ab18d6b">
+			</testcontainer>
+			<testcontainer
+			id="33c03e18-f14a-4e6b-b6ad-f3afd0c371f5">
+			</testcontainer>
+			<testcontainer
+			id="38f10f7d-41dc-437c-b51d-9f1fff30163e">
+			</testcontainer>
+			<testcontainer
+			id="81e91e72-e335-409b-8a0b-b6551c8d9293">
+			</testcontainer>
+			<testcontainer
+			id="99d9cba6-d7c2-40b4-a33a-e745489d9f79">
+			</testcontainer>
+			<testcontainer
+			id="ad73f8a0-1623-4730-aabb-553dc6ee06de">
+			</testcontainer>
+			<testcontainer
+			id="d60de9d9-1650-4683-afc5-4a55385294d7">
+			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>

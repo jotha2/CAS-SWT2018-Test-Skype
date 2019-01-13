@@ -222,6 +222,29 @@ rxversion="8.3">
 				yourtext
 			</matchvalue>
 		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="25e634eb-f312-4e72-810d-4f6962f97b62">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="dbbaa41d-6935-4b02-8ed6-c7951b6575c0"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Profil']/?/container[@classname='ScrollViewer']/container/container[1]/container[10]/button[@name='Kontakt l&#246;schen']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"

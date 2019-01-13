@@ -261,6 +261,29 @@ wh+7sOFPHvRRQBBKgimkjUkhHZRnrgHFNoooAKKKKACiiigAooooAKKKKACX/Up/vN/SoqKKAP/Z
 				Echo / Sound Test Service .
 			</matchvalue>
 		</validationitem>
+		<keysequenceitem
+		KeySequence="Hallo Sarah, wie geht es Dir?"
+		duration="100ms"
+		enabled="True"
+		optional="False"
+		presstime="100ms"
+		searchpropertyid="4d02d1cf-6c5b-4930-8249-ff47e3566276">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="KeySequence"
+				variable="VornameUndName">
+				</binding>
+			</bindings>
+			<info
+			id="57475739-8be4-497c-9a98-474a89b1a8da"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Neuer Chat']/container/container[2]/container[@name='Suchen']/container/text[@classname='TextBox']
+				</path>
+			</info>
+		</keysequenceitem>
 		<validationitem
 		action="Exists"
 		duration="100ms"

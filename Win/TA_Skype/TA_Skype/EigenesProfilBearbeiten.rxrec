@@ -76,6 +76,29 @@ rxversion="8.3">
 				yourtext
 			</matchvalue>
 		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="abba98c6-3bbf-4598-be94-9f40fe79420f"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Einstellungen']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<explicitdelayitem
 		duration="1000ms"
 		enabled="True"
@@ -85,9 +108,33 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 		</explicitdelayitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="d9fce4a2-9ee2-4b79-8686-77b317607375"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="abba98c6-3bbf-4598-be94-9f40fe79420f"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Einstellungen']
+				</path>
+			</info>
+		</mouseitem>
 		<validationitem
 		action="Exists"
-		enabled="True"
+		enabled="False"
 		optional="False"
 		searchpropertyid="7278abf4-a878-416c-b3fe-b540581247f1">
 			<comment>
@@ -112,7 +159,7 @@ rxversion="8.3">
 		action="Click"
 		button="Left"
 		duration="500ms"
-		enabled="True"
+		enabled="False"
 		loc="Center"
 		movetime="300ms"
 		optional="False"
@@ -944,6 +991,29 @@ AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKrX3/Lv/12WiigDIuf+PqX
 		action="Exists"
 		enabled="True"
 		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="70ed95df-47f7-4461-86e8-4a9ff982d86a"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Allgemein']/container[@classname='ScrollViewer']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
 		searchpropertyid="13c9b861-19e3-4f00-aecb-49ded633e4ae">
 			<comment>
 			</comment>
@@ -987,6 +1057,29 @@ AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKrX3/Lv/12WiigDIuf+PqX
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="7d9bd5d0-bc42-4aeb-a139-cf08701db7a5"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Sprache']/container[2]
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<validationitem
 		action="AttributeEqual"
 		duration="100ms"
@@ -1035,6 +1128,29 @@ AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKrX3/Lv/12WiigDIuf+PqX
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="499ad638-dec7-4fc3-ade7-d03b3982d5cd"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='W&#228;hle dein Design']/container[@classname='ScrollViewer']/container[@orientation='None']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<validationitem
 		action="Exists"
 		duration="100ms"
@@ -1698,6 +1814,29 @@ ek35j/CtOik4p7kuKe5mf2Fa/wDPSb8x/hR/YVr/AM9JvzH+FadFLkj2FyR7EVtAttAsKElVzgt1
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="81ac63ea-9d03-413e-a9b4-dc49dff8d6db"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name~'^Audio-\ und\ Videoeinstellu']/container[@classname='ScrollViewer']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -1722,6 +1861,29 @@ ek35j/CtOik4p7kuKe5mf2Fa/wDPSb8x/hR/YVr/AM9JvzH+FadFLkj2FyR7EVtAttAsKElVzgt1
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="7ccabb5d-56e8-429a-b556-2274bfd1ad25"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/container[@orientation='None']/container[1]/container[2]/container[6]
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -1746,6 +1908,29 @@ ek35j/CtOik4p7kuKe5mf2Fa/wDPSb8x/hR/YVr/AM9JvzH+FadFLkj2FyR7EVtAttAsKElVzgt1
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="ed601bf7-0c85-4230-9a4e-569325a4e778"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Nachrichten']/container[@classname='ScrollViewer']/container
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<validationitem
 		action="AttributeEqual"
 		duration="100ms"
@@ -2341,6 +2526,29 @@ UAf/2Q==
 			</info>
 		</mouseitem>
 		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="b8174386-d07a-42e3-856b-1b82e0185f3f"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Benachrichtigungen']/container[@classname='ScrollViewer']/container[@orientation='None']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
+		<validationitem
 		action="AttributeEqual"
 		duration="100ms"
 		enabled="True"
@@ -2680,6 +2888,29 @@ KKKAJm/cKAPvsOW9BTpWMSCLOTjk/wBBRRQBXooooAKKKKACiiigD//Z
 				</path>
 			</info>
 		</mouseitem>
+		<validationitem
+		action="Exists"
+		enabled="True"
+		optional="False"
+		searchpropertyid="076fba22-f60b-426d-8444-c05b1b68a1a3">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="a52e1944-83c2-4990-9bb8-4633e1d6c559"
+			sourcename="ItemRecorderEditor">
+				<path>
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[6]/container[@name='Kontakte']
+				</path>
+			</info>
+			<matchname>
+				Text
+			</matchname>
+			<matchvalue>
+				yourtext
+			</matchvalue>
+		</validationitem>
 		<mouseitem
 		action="Click"
 		button="Left"
