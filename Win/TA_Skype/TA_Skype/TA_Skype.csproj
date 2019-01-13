@@ -35,6 +35,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback">
+      <HintPath>..\resources\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
     <Reference Include="Ranorex.Bootstrapper">
       <Private>False</Private>
     </Reference>
@@ -152,6 +155,9 @@
       <DependentUpon>KontaktLoeschen.rxrec</DependentUpon>
       <UserCode>true</UserCode>
       <id>80711dbe-2566-4928-8f46-7fe7c51547da</id>
+    </Compile>
+    <Compile Include="Play.cs">
+      <id>b069d8d0-0fef-45b8-99cb-f55c7bdd31b3</id>
     </Compile>
     <Compile Include="StarteEinstellungenDialog.cs">
       <BoundTo>3c765691-44c9-4ee8-b331-ea7f3d9fcccf</BoundTo>

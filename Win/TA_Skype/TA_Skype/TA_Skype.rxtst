@@ -14,6 +14,7 @@ rxversion="8.3">
 			type="Recording">
 			</testmodule>
 			<testmodule
+			enabled="False"
 			id="110ffc9c-3623-4fb5-934f-12733080a9db"
 			name="Login"
 			ref="be8e16e1-b2fd-4987-9305-f6cab9d6a2e3"
@@ -140,6 +141,7 @@ rxversion="8.3">
 			type="Recording">
 			</testmodule>
 			<testmodule
+			enabled="False"
 			id="506c5b33-1bd1-426f-a7c8-083aeb179c0e"
 			name="Logoff"
 			ref="17f5c6f4-53d1-4fad-a022-3e8df59bb7ab"
@@ -596,26 +598,11 @@ rxversion="8.3">
 	default="TestRun">
 		<testconfiguration
 		name="TestRun">
-			<testcontainer
-			id="0590c36e-8aeb-462a-93e9-09f254c1be1a">
-			</testcontainer>
-			<testcontainer
-			id="207d1a47-5f42-4431-be42-8b0f5e7e768e">
-			</testcontainer>
-			<testcontainer
-			id="26caff6d-67ac-4fb4-bb74-401c1ab18d6b">
-			</testcontainer>
-			<testcontainer
-			id="99d9cba6-d7c2-40b4-a33a-e745489d9f79">
-			</testcontainer>
-			<testcontainer
-			id="a11f4766-ba3d-415a-bdea-b20954792a92">
-			</testcontainer>
-			<testcontainer
-			id="a1905381-c15d-49dd-abb1-eab24986dff3">
-			</testcontainer>
 		</testconfiguration>
 	</testconfigurations>
 	<references>
+		<reference>
+			Microsoft.DirectX.AudioVideoPlayback.dll
+		</reference>
 	</references>
 </testsuitedoc>

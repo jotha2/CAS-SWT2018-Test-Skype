@@ -163,6 +163,15 @@ rxversion="8.3">
 						searchtimeout="5000ms">
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^*'+$VornameUndName]
 						</item>
+						<item
+						addcaps="listitem,uiautomation"
+						capname="listitem"
+						id="337ac08e-d2a9-4f41-afbb-446376a411a5"
+						name="ListItemEchoSoundTestService"
+						refimgid="d27c9565-9e72-4fb3-a3b0-c2d9a5fd3e38"
+						searchtimeout="5000ms">
+							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]/container[@classname='ScrollViewer']/container/listitem[@name~'^Echo\ /\ Sound\ Test\ Service']
+						</item>
 						<basepath>
 							/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/element/container[@orientation='None']/?/container[@orientation='None']/container[1]/container[2]/container[1]/container[3]
 						</basepath>

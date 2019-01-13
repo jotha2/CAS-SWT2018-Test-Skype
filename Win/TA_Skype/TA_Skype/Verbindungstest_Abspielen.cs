@@ -41,6 +41,11 @@ namespace TA_Skype
         /// </summary>
         public Verbindungstest_Abspielen()
         {
+            DateinameFuerWiedergabe = "C:\\SkypeGit\\Win\\TA_Skype\\resources\\audiocheck.net_sin_1000Hz_-3dBFS_2s.wav";
+            DateinameFuerAufnahme = "C:\\temp\\skypeSoundTestTA.wav";
+            DateinameFuerStatistik = "C:\\Temp\\skypeSoundTestTA.stat";
+            Frequenz = "1000";
+            DauerInMillisekunden = "16000";
         }
 
         /// <summary>
@@ -52,6 +57,66 @@ namespace TA_Skype
         }
 
 #region Variables
+
+        string _DateinameFuerWiedergabe;
+
+        /// <summary>
+        /// Gets or sets the value of variable DateinameFuerWiedergabe.
+        /// </summary>
+        [TestVariable("a6889816-0661-431d-af78-3826614d5312")]
+        public string DateinameFuerWiedergabe
+        {
+            get { return _DateinameFuerWiedergabe; }
+            set { _DateinameFuerWiedergabe = value; }
+        }
+
+        string _DateinameFuerAufnahme;
+
+        /// <summary>
+        /// Gets or sets the value of variable DateinameFuerAufnahme.
+        /// </summary>
+        [TestVariable("b28c63bd-2401-485b-be36-29fb80a76224")]
+        public string DateinameFuerAufnahme
+        {
+            get { return _DateinameFuerAufnahme; }
+            set { _DateinameFuerAufnahme = value; }
+        }
+
+        string _DateinameFuerStatistik;
+
+        /// <summary>
+        /// Gets or sets the value of variable DateinameFuerStatistik.
+        /// </summary>
+        [TestVariable("74b11ec9-8c89-4702-a95e-9921a9d98007")]
+        public string DateinameFuerStatistik
+        {
+            get { return _DateinameFuerStatistik; }
+            set { _DateinameFuerStatistik = value; }
+        }
+
+        string _Frequenz;
+
+        /// <summary>
+        /// Gets or sets the value of variable Frequenz.
+        /// </summary>
+        [TestVariable("5025294e-3198-49f1-b79f-a520b40fb7a5")]
+        public string Frequenz
+        {
+            get { return _Frequenz; }
+            set { _Frequenz = value; }
+        }
+
+        string _DauerInMillisekunden;
+
+        /// <summary>
+        /// Gets or sets the value of variable DauerInMillisekunden.
+        /// </summary>
+        [TestVariable("f1622b24-248e-431d-96ef-03980434407c")]
+        public string DauerInMillisekunden
+        {
+            get { return _DauerInMillisekunden; }
+            set { _DauerInMillisekunden = value; }
+        }
 
 #endregion
 
@@ -79,6 +144,45 @@ namespace TA_Skype
 
             Init();
 
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnAnrufe' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnAnrufeInfo, new RecordItemIndex(0));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.MainBar.btnAnrufe.Click();
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemEchoSoundTestService'.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemEchoSoundTestServiceInfo, new RecordItemIndex(1));
+            Validate.Exists(repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemEchoSoundTestServiceInfo);
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemEchoSoundTestService' at Center.", repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemEchoSoundTestServiceInfo, new RecordItemIndex(2));
+            repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemEchoSoundTestService.Click();
+            Delay.Milliseconds(200);
+            
+            RecordSound(DateinameFuerAufnahme);
+            Delay.Milliseconds(0);
+            
+            PlaySound(ValueConverter.ArgumentFromString<int>("frequency", Frequenz), ValueConverter.ArgumentFromString<int>("duration", DauerInMillisekunden));
+            Delay.Milliseconds(0);
+            
+            //PlayWav(DateinameFuerWiedergabe);
+            //Delay.Milliseconds(0);
+            
+            //PlayWav(DateinameFuerWiedergabe);
+            //Delay.Milliseconds(0);
+            
+            //PlayWav(DateinameFuerWiedergabe);
+            //Delay.Milliseconds(0);
+            
+            //PlayWav(DateinameFuerWiedergabe);
+            //Delay.Milliseconds(0);
+            
+            AnalyzeRecording(DateinameFuerAufnahme, DateinameFuerStatistik);
+            Delay.Milliseconds(0);
+            
+            CreateSoundStatisticsFile();
+            Delay.Milliseconds(0);
+            
+            CheckSoundStatistics(DateinameFuerStatistik, ValueConverter.ArgumentFromString<int>("expectedFrequency", "1000"), ValueConverter.ArgumentFromString<int>("deviationInPercent", "10"));
+            Delay.Milliseconds(0);
+            
         }
 
 #region Image Feature Data

@@ -1,20 +1,25 @@
 ﻿<Properties>
   <Array name="bookmarks" />
   <Array name="files">
+    <Element value="Verbindungstest_Abspielen.rxrec" />
+    <Element value="TA_Skype.rxtst" />
+    <Element value="Play.cs" />
+    <Element value="Verbindungstest_Abspielen.UserCode.cs" />
     <Element value="Testchat_TestAutomation_DialogStarten.rxrec" />
     <Element value="Testchat_SarahPfister_Dialogführen.rxrec" />
     <Element value="Testchat_TestAutomation_DialogLöschen.rxrec" />
-    <Element value="TA_Skype.rxtst" />
-    <Element value="Login_SarahPfister.rxrec" />
-    <Element value="Verbindungstest_Abspielen.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">
       <runOnBuild value="False" />
     </Properties>
     <Array name="recentusercodeselections">
-      <Element value="TA_Skype.KontaktLoeschen.HandleModalDialog()" />
-      <Element value="TA_Skype.KontaktHinzufuegen.SetPhoneType()" />
+      <Element value="TA_Skype.Verbindungstest_Abspielen.PlaySound(Int32 frequency, Int32 duration)" />
+      <Element value="TA_Skype.Verbindungstest_Abspielen.CheckSoundStatistics(String statisticsFile, Int32 expectedFrequency, Int32 deviationInPercent)" />
+      <Element value="TA_Skype.Verbindungstest_Abspielen.CreateSoundStatisticsFile()" />
+      <Element value="TA_Skype.Verbindungstest_Abspielen.CheckSoundStatistics()" />
+      <Element value="TA_Skype.Verbindungstest_Abspielen.StartAnalyzeBatch()" />
+      <Element value="TA_Skype.Verbindungstest_Abspielen.AnalyzeRecording(String recordedFile, String statisticsFile)" />
     </Array>
   </Properties>
 </Properties>

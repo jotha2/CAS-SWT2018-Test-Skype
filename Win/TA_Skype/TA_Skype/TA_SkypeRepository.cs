@@ -744,6 +744,7 @@ namespace TA_Skype
             RepoItemInfo _btnneuerchatInfo;
             RepoItemInfo _listitemkontaktInfo;
             RepoItemInfo _listitemchatuserInfo;
+            RepoItemInfo _listitemechosoundtestserviceInfo;
 
             /// <summary>
             /// Creates a new Detailbereich  folder.
@@ -755,6 +756,7 @@ namespace TA_Skype
                 _btnneuerchatInfo = new RepoItemInfo(this, "btnNeuerChat", "button[@name='Neuer Chat']", 5000, null, "c2410e72-a0ec-4a1d-99b0-ccaa48386078");
                 _listitemkontaktInfo = new RepoItemInfo(this, "ListItemKontakt", "container[1]/container[1]/container[@classname='ScrollViewer']/?/?/listitem[@name~'^'+$VornameUndName]", 30000, null, "51a6586f-d516-4a68-bb0d-7a9a4db7b80c");
                 _listitemchatuserInfo = new RepoItemInfo(this, "ListItemChatUser", "container[@classname='ScrollViewer']/container/listitem[@name~'^*'+$VornameUndName]", 5000, null, "3594b34d-8aa5-48dc-a59e-017e09a0fb5c");
+                _listitemechosoundtestserviceInfo = new RepoItemInfo(this, "ListItemEchoSoundTestService", "container[@classname='ScrollViewer']/container/listitem[@name~'^Echo\\ /\\ Sound\\ Test\\ Service']", 5000, null, "337ac08e-d2a9-4f41-afbb-446376a411a5");
             }
 
             /// <summary>
@@ -874,6 +876,30 @@ namespace TA_Skype
                 get
                 {
                     return _listitemchatuserInfo;
+                }
+            }
+
+            /// <summary>
+            /// The ListItemEchoSoundTestService item.
+            /// </summary>
+            [RepositoryItem("337ac08e-d2a9-4f41-afbb-446376a411a5")]
+            public virtual Ranorex.ListItem ListItemEchoSoundTestService
+            {
+                get
+                {
+                    return _listitemechosoundtestserviceInfo.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ListItemEchoSoundTestService item info.
+            /// </summary>
+            [RepositoryItemInfo("337ac08e-d2a9-4f41-afbb-446376a411a5")]
+            public virtual RepoItemInfo ListItemEchoSoundTestServiceInfo
+            {
+                get
+                {
+                    return _listitemechosoundtestserviceInfo;
                 }
             }
         }
