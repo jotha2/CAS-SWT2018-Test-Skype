@@ -94,10 +94,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="75e4319d-71ea-4037-ba9e-837b56213ef2"
+			id="abba98c6-3bbf-4598-be94-9f40fe79420f"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Einstellungen']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Einstellungen']
 				</path>
 			</info>
 			<matchname>
@@ -124,10 +124,10 @@ rxversion="8.3">
 			<bindings>
 			</bindings>
 			<info
-			id="75e4319d-71ea-4037-ba9e-837b56213ef2"
+			id="abba98c6-3bbf-4598-be94-9f40fe79420f"
 			sourcename="ItemRecorderEditor">
 				<path>
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Einstellungen']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Einstellungen']
 				</path>
 			</info>
 		</mouseitem>

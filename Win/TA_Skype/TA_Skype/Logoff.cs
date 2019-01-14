@@ -88,11 +88,11 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(2));
             Delay.Duration(1000, false);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.PopupItemAbmelden'.", repo.Skype.PopupMenu.PopupItemAbmeldenInfo, new RecordItemIndex(3));
-            Validate.Exists(repo.Skype.PopupMenu.PopupItemAbmeldenInfo);
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.MenuItemAbmelden'.", repo.Skype.PopupMenu.MenuItemAbmeldenInfo, new RecordItemIndex(3));
+            Validate.Exists(repo.Skype.PopupMenu.MenuItemAbmeldenInfo);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemAbmelden' at Center.", repo.Skype.PopupMenu.PopupItemAbmeldenInfo, new RecordItemIndex(4));
-            repo.Skype.PopupMenu.PopupItemAbmelden.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.MenuItemAbmelden' at Center.", repo.Skype.PopupMenu.MenuItemAbmeldenInfo, new RecordItemIndex(4));
+            repo.Skype.PopupMenu.MenuItemAbmelden.Click();
             
             try {
                 Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmLogOnOff.frmLogOff'.", repo.Skype.frmLogOnOff.frmLogOff.SelfInfo, new RecordItemIndex(5));

@@ -1145,50 +1145,39 @@ rxversion="8.3">
 			usecache="False">
 				<item
 				addcaps="text,uiautomation"
-				capname="text"
-				id="75e4319d-71ea-4037-ba9e-837b56213ef2"
-				name="PopupItemEinstellungen"
-				refimgid="162d4d4e-f2bf-4f86-94fb-dafee69e01ec"
-				searchtimeout="30000ms">
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Einstellungen']
-				</item>
-				<item
-				addcaps="text,uiautomation"
-				capname="text"
+				capname="menuitem"
 				id="af79c8cc-bc67-4a90-b82f-fafcdcdad07a"
-				name="PopupItemAbmelden"
+				name="MenuItemAbmelden"
 				refimgid="162d4d4e-f2bf-4f86-94fb-dafee69e01ec"
 				searchtimeout="30000ms">
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Abmelden']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Abmelden']
 				</item>
 				<item
 				addcaps="text,uiautomation"
-				capname="text"
+				capname="menuitem"
 				id="a354cecb-9f0c-472b-a171-beb730b4f3b6"
-				name="PopupItemTelefonnummerTyp"
+				name="MenuItemTelefonnummerTyp"
 				refimgid="162d4d4e-f2bf-4f86-94fb-dafee69e01ec"
 				searchtimeout="30000ms">
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name=$TelefonnummerTyp]
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name=$TelefonnummerTyp]
 				</item>
 				<item
 				addcaps="text,uiautomation"
-				capname="text"
+				capname="menuitem"
 				id="6c0f8cb4-9d77-4337-84ce-ea99879b44d0"
-				name="PopupItemProfilAnzeigen"
+				name="MenuItemProfilAnzeigen"
 				refimgid="910ce8da-0606-4d65-9ab5-1e517d8300f9"
-				refpath="/winapp[@packagename='Microsoft.SkypeApp' and @appid='App' and @name='Skype' and @classname='Windows.UI.Core.CoreWindow' and @title='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu[@classname='MenuFlyout']/menuitem[@name='Profil anzeigen']/text[@automationid='TextBlock']"
 				searchtimeout="30000ms">
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Profil anzeigen']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Profil anzeigen']
 				</item>
 				<item
 				addcaps="text,uiautomation"
-				capname="text"
+				capname="menuitem"
 				id="eb135aef-016f-40e2-bedc-71109af55ca6"
-				name="PopupItemNeuerChat"
+				name="MenuItemNeuerChat"
 				refimgid="06570720-2457-4165-99b0-e3523f2c3f0f"
-				refpath="/winapp[@packagename='Microsoft.SkypeApp']/form/contextmenu/menuitem[@name='Neuer Chat']/text[@automationid='TextBlock']"
 				searchtimeout="5000ms">
-					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']//text[@name='Neuer Chat']
+					/winapp[@appid='App' and @name='Skype' and @processname='SkypeApp' and @instance='0']/form[@name='Popup']/contextmenu/menuitem[@name='Neuer Chat']
 				</item>
 				<item
 				addcaps="text,uiautomation"

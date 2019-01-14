@@ -4019,11 +4019,10 @@ namespace TA_Skype
         [RepositoryFolder("8805602d-800e-4666-b193-10151d283d95")]
         public partial class PopupMenuFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _popupitemeinstellungenInfo;
-            RepoItemInfo _popupitemabmeldenInfo;
-            RepoItemInfo _popupitemtelefonnummertypInfo;
-            RepoItemInfo _popupitemprofilanzeigenInfo;
-            RepoItemInfo _popupitemneuerchatInfo;
+            RepoItemInfo _menuitemabmeldenInfo;
+            RepoItemInfo _menuitemtelefonnummertypInfo;
+            RepoItemInfo _menuitemprofilanzeigenInfo;
+            RepoItemInfo _menuitemneuerchatInfo;
             RepoItemInfo _menuitemunterhaltungloeschenInfo;
             RepoItemInfo _menuitemausfavoritenentfernenInfo;
             RepoItemInfo _menuitemeinstellungenInfo;
@@ -4034,11 +4033,10 @@ namespace TA_Skype
             public PopupMenuFolder(RepoGenBaseFolder parentFolder) :
                     base("PopupMenu", "form[@name='Popup']", parentFolder, 30000, null, false, "8805602d-800e-4666-b193-10151d283d95", "")
             {
-                _popupitemeinstellungenInfo = new RepoItemInfo(this, "PopupItemEinstellungen", ".//text[@name='Einstellungen']", 30000, null, "75e4319d-71ea-4037-ba9e-837b56213ef2");
-                _popupitemabmeldenInfo = new RepoItemInfo(this, "PopupItemAbmelden", ".//text[@name='Abmelden']", 30000, null, "af79c8cc-bc67-4a90-b82f-fafcdcdad07a");
-                _popupitemtelefonnummertypInfo = new RepoItemInfo(this, "PopupItemTelefonnummerTyp", ".//text[@name=$TelefonnummerTyp]", 30000, null, "a354cecb-9f0c-472b-a171-beb730b4f3b6");
-                _popupitemprofilanzeigenInfo = new RepoItemInfo(this, "PopupItemProfilAnzeigen", ".//text[@name='Profil anzeigen']", 30000, null, "6c0f8cb4-9d77-4337-84ce-ea99879b44d0");
-                _popupitemneuerchatInfo = new RepoItemInfo(this, "PopupItemNeuerChat", ".//text[@name='Neuer Chat']", 5000, null, "eb135aef-016f-40e2-bedc-71109af55ca6");
+                _menuitemabmeldenInfo = new RepoItemInfo(this, "MenuItemAbmelden", "contextmenu/menuitem[@name='Abmelden']", 30000, null, "af79c8cc-bc67-4a90-b82f-fafcdcdad07a");
+                _menuitemtelefonnummertypInfo = new RepoItemInfo(this, "MenuItemTelefonnummerTyp", "contextmenu/menuitem[@name=$TelefonnummerTyp]", 30000, null, "a354cecb-9f0c-472b-a171-beb730b4f3b6");
+                _menuitemprofilanzeigenInfo = new RepoItemInfo(this, "MenuItemProfilAnzeigen", "contextmenu/menuitem[@name='Profil anzeigen']", 30000, null, "6c0f8cb4-9d77-4337-84ce-ea99879b44d0");
+                _menuitemneuerchatInfo = new RepoItemInfo(this, "MenuItemNeuerChat", "contextmenu/menuitem[@name='Neuer Chat']", 5000, null, "eb135aef-016f-40e2-bedc-71109af55ca6");
                 _menuitemunterhaltungloeschenInfo = new RepoItemInfo(this, "MenuItemUnterhaltungLoeschen", "contextmenu/menuitem[@name='Unterhaltung löschen']", 5000, null, "27d4ad40-9213-4154-bcaf-3dd055e29f33");
                 _menuitemausfavoritenentfernenInfo = new RepoItemInfo(this, "MenuItemAusFavoritenEntfernen", "contextmenu/menuitem[@name='Aus Favoriten entfernen']", 5000, null, "a67d461a-ff42-41cf-a154-563e83275b84");
                 _menuitemeinstellungenInfo = new RepoItemInfo(this, "MenuItemEinstellungen", "contextmenu/menuitem[@name='Einstellungen']", 5000, null, "abba98c6-3bbf-4598-be94-9f40fe79420f");
@@ -4069,122 +4067,98 @@ namespace TA_Skype
             }
 
             /// <summary>
-            /// The PopupItemEinstellungen item.
-            /// </summary>
-            [RepositoryItem("75e4319d-71ea-4037-ba9e-837b56213ef2")]
-            public virtual Ranorex.Text PopupItemEinstellungen
-            {
-                get
-                {
-                    return _popupitemeinstellungenInfo.CreateAdapter<Ranorex.Text>(true);
-                }
-            }
-
-            /// <summary>
-            /// The PopupItemEinstellungen item info.
-            /// </summary>
-            [RepositoryItemInfo("75e4319d-71ea-4037-ba9e-837b56213ef2")]
-            public virtual RepoItemInfo PopupItemEinstellungenInfo
-            {
-                get
-                {
-                    return _popupitemeinstellungenInfo;
-                }
-            }
-
-            /// <summary>
-            /// The PopupItemAbmelden item.
+            /// The MenuItemAbmelden item.
             /// </summary>
             [RepositoryItem("af79c8cc-bc67-4a90-b82f-fafcdcdad07a")]
-            public virtual Ranorex.Text PopupItemAbmelden
+            public virtual Ranorex.MenuItem MenuItemAbmelden
             {
                 get
                 {
-                    return _popupitemabmeldenInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _menuitemabmeldenInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The PopupItemAbmelden item info.
+            /// The MenuItemAbmelden item info.
             /// </summary>
             [RepositoryItemInfo("af79c8cc-bc67-4a90-b82f-fafcdcdad07a")]
-            public virtual RepoItemInfo PopupItemAbmeldenInfo
+            public virtual RepoItemInfo MenuItemAbmeldenInfo
             {
                 get
                 {
-                    return _popupitemabmeldenInfo;
+                    return _menuitemabmeldenInfo;
                 }
             }
 
             /// <summary>
-            /// The PopupItemTelefonnummerTyp item.
+            /// The MenuItemTelefonnummerTyp item.
             /// </summary>
             [RepositoryItem("a354cecb-9f0c-472b-a171-beb730b4f3b6")]
-            public virtual Ranorex.Text PopupItemTelefonnummerTyp
+            public virtual Ranorex.MenuItem MenuItemTelefonnummerTyp
             {
                 get
                 {
-                    return _popupitemtelefonnummertypInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _menuitemtelefonnummertypInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The PopupItemTelefonnummerTyp item info.
+            /// The MenuItemTelefonnummerTyp item info.
             /// </summary>
             [RepositoryItemInfo("a354cecb-9f0c-472b-a171-beb730b4f3b6")]
-            public virtual RepoItemInfo PopupItemTelefonnummerTypInfo
+            public virtual RepoItemInfo MenuItemTelefonnummerTypInfo
             {
                 get
                 {
-                    return _popupitemtelefonnummertypInfo;
+                    return _menuitemtelefonnummertypInfo;
                 }
             }
 
             /// <summary>
-            /// The PopupItemProfilAnzeigen item.
+            /// The MenuItemProfilAnzeigen item.
             /// </summary>
             [RepositoryItem("6c0f8cb4-9d77-4337-84ce-ea99879b44d0")]
-            public virtual Ranorex.Text PopupItemProfilAnzeigen
+            public virtual Ranorex.MenuItem MenuItemProfilAnzeigen
             {
                 get
                 {
-                    return _popupitemprofilanzeigenInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _menuitemprofilanzeigenInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The PopupItemProfilAnzeigen item info.
+            /// The MenuItemProfilAnzeigen item info.
             /// </summary>
             [RepositoryItemInfo("6c0f8cb4-9d77-4337-84ce-ea99879b44d0")]
-            public virtual RepoItemInfo PopupItemProfilAnzeigenInfo
+            public virtual RepoItemInfo MenuItemProfilAnzeigenInfo
             {
                 get
                 {
-                    return _popupitemprofilanzeigenInfo;
+                    return _menuitemprofilanzeigenInfo;
                 }
             }
 
             /// <summary>
-            /// The PopupItemNeuerChat item.
+            /// The MenuItemNeuerChat item.
             /// </summary>
             [RepositoryItem("eb135aef-016f-40e2-bedc-71109af55ca6")]
-            public virtual Ranorex.Text PopupItemNeuerChat
+            public virtual Ranorex.MenuItem MenuItemNeuerChat
             {
                 get
                 {
-                    return _popupitemneuerchatInfo.CreateAdapter<Ranorex.Text>(true);
+                    return _menuitemneuerchatInfo.CreateAdapter<Ranorex.MenuItem>(true);
                 }
             }
 
             /// <summary>
-            /// The PopupItemNeuerChat item info.
+            /// The MenuItemNeuerChat item info.
             /// </summary>
             [RepositoryItemInfo("eb135aef-016f-40e2-bedc-71109af55ca6")]
-            public virtual RepoItemInfo PopupItemNeuerChatInfo
+            public virtual RepoItemInfo MenuItemNeuerChatInfo
             {
                 get
                 {
-                    return _popupitemneuerchatInfo;
+                    return _menuitemneuerchatInfo;
                 }
             }
 

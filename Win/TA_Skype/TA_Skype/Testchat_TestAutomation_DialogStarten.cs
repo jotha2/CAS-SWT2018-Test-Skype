@@ -99,8 +99,8 @@ namespace TA_Skype
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 1s.", new RecordItemIndex(2));
             Delay.Duration(1000, false);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemNeuerChat' at 98;19.", repo.Skype.PopupMenu.PopupItemNeuerChatInfo, new RecordItemIndex(3));
-            repo.Skype.PopupMenu.PopupItemNeuerChat.Click("98;19");
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.MenuItemNeuerChat' at 98;19.", repo.Skype.PopupMenu.MenuItemNeuerChatInfo, new RecordItemIndex(3));
+            repo.Skype.PopupMenu.MenuItemNeuerChat.Click("98;19");
             
             try {
                 Report.Log(ReportLevel.Info, "Validation", "(Optional Action)\r\nValidating Exists on item 'Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl'.", repo.Skype.frmSkypeMain.frmEinstellungen.frmChatPartnerAuswahl.SelfInfo, new RecordItemIndex(4));

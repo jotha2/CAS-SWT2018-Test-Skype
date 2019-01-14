@@ -110,12 +110,12 @@ namespace TA_Skype
             repo.Skype.frmSkypeMain.frmSkypeMainAreaLinks.Detailbereich.ListItemKontakt.Click(System.Windows.Forms.MouseButtons.Right);
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.PopupItemProfilAnzeigen'.", repo.Skype.PopupMenu.PopupItemProfilAnzeigenInfo, new RecordItemIndex(5));
-            Validate.Exists(repo.Skype.PopupMenu.PopupItemProfilAnzeigenInfo);
+            Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.PopupMenu.MenuItemProfilAnzeigen'.", repo.Skype.PopupMenu.MenuItemProfilAnzeigenInfo, new RecordItemIndex(5));
+            Validate.Exists(repo.Skype.PopupMenu.MenuItemProfilAnzeigenInfo);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.PopupItemProfilAnzeigen' at Center.", repo.Skype.PopupMenu.PopupItemProfilAnzeigenInfo, new RecordItemIndex(6));
-            repo.Skype.PopupMenu.PopupItemProfilAnzeigen.Click();
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Skype.PopupMenu.MenuItemProfilAnzeigen' at Center.", repo.Skype.PopupMenu.MenuItemProfilAnzeigenInfo, new RecordItemIndex(6));
+            repo.Skype.PopupMenu.MenuItemProfilAnzeigen.Click();
             Delay.Milliseconds(200);
             
             Report.Log(ReportLevel.Info, "Validation", "Validating Exists on item 'Skype.frmSkypeMain.frmProfil'.", repo.Skype.frmSkypeMain.frmProfil.SelfInfo, new RecordItemIndex(7));
