@@ -22,7 +22,7 @@ set  recordFile=c:\temp\skypeSoundtest.wav
 rem 5. Wiedergabe auswerten in Ergebnisdatei
 set  statistikFile=c:\temp\skypeSoundtest.stat
 set fmin=2500
-set fmax=2800
+set fmax=2900
 "C:\Program Files (x86)\sox-14-4-2\sox" --dft-min 8 %recordFile% -n stat 2>%statistikFile%
 
 rem 6. Prüfung des Frequenzspektrums
