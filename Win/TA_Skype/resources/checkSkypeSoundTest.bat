@@ -28,6 +28,7 @@ set fmax=2900
 rem 6. Prüfung des Frequenzspektrums
 set n=1
 echo off
-for /F "eol=; tokens=2,3* delims= " %%i in ( %statistikFile% ) do (  set /a "n+=1"  && if !n! equ 15  ( if %%j  lss %fmax% if %fmin% lss %%j (echo OK && exit /B 0) ))
-echo FEHLER
+echo fmin= %fmin% kHz fmax= %fmax% kHz 
+for /F "eol=; tokens=2,3* delims= " %%i in ( %statistikFile% ) do (  set /a "n+=1"  && if !n! equ 15  ( if %%j  lss %fmax% if %fmin% lss %%j (  echo OK= %%j kHz && exit /B 0) ELSE (  echo NOK= %%j kHz && exit /B 1)  ))
+echo SCRIPTFEHLER
 exit /B 1
